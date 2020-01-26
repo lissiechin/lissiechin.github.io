@@ -1,0 +1,1383 @@
+<!---- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_portfolio_gallery_filter----->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+   h1{
+    text-align: center;
+    font-family: garamond;
+    border: 1px solid black;
+
+    /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+
+    box-shadow: 20px 40px #caedeb;
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-shadow: 3px 2px #cacbcc;
+    width: 450px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 13px
+  }
+
+  body {
+    background-color:white;
+    padding: 20px;
+    font-family: "Lato", sans-serif;
+      transition: background-color .5s;}
+    img{margin-bottom:-7px;}
+    .w3-row-padding img{margin-bottom: 12px;}
+    ss="w3-content" style="max-width:1500px">
+  }
+     
+       
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+
+  .row {
+    margin: 10px -16px;
+  }
+
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+  }
+
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #ddd;
+  }
+
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+   <!------ styling the SIDE BAR --------->
+
+    /* the box-sizing enables the fitting (formating) of the website*/
+      * {
+        box-sizing: border-box;}
+    .sidenav{
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      font-family: garamond}
+
+    .sidenav a, .dropdown-btn {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-family: garamond;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;}
+
+    .sidenav a:hover, .dropdown-btn:hover {
+      color: #f1f1f1;}
+
+    .sidenav .closebtn {
+      position: sticky;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;}
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: sticky;}
+
+    .openbtn:hover {
+      background-color: #444;}
+
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;}
+
+    .dropdown {
+      background-color:#111;}
+              /* makes the drop down background lighter*/
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;}
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 75px;}
+
+              /* active class to activate when clicked on */
+    *.active {
+      background-color: #caedeb;
+      color: white;*
+
+
+
+    /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+   #page-container {
+      position: relative;
+      min-height: 100%;
+  }
+
+
+
+             /* ----------footer styling ----------------*/
+
+
+      #content-wrap {
+        padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
+      }
+
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;}
+      <!---------------- SOCIAL MEDIA BUTTONS: https://codepen.io/sazzad/pen/WbdzzQ/------>
+
+     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+    .footer-social-links{
+      font-size: 15px;
+      text-align: center;
+      margin-top: 20%;
+      padding-top: 5px;
+    }
+    .footer-social-links a{
+        width: 15px;
+        height: 15px;
+        line-height: 15px !important;
+        position: center;
+        margin: 0 5px;
+        text-align: center;
+        display: inline-block;
+        color: #111;
+        padding:5px;
+
+        -webkit-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    }
+    .footer-social-links a i,
+    .footer-social-links a span{
+        position: relative;
+        top: 2px;
+        left: 1px; 
+    }
+    .footer-social-links a:before{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -5px;
+        left: 0;
+        border: 1px solid #111;
+
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+    }
+    .footer-social-links a:hover{
+        color: #fff;
+    }
+    .footer-social-links a:hover:before{
+        background: #111;
+    }
+</style>
+</head>
+<body>
+    <div id ="page-container">
+      <div id ="content-wrap">
+                        <!---------- Side Bar --------->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div id = "mySidenav" class="sidenav">
+                <!-- The close button in the sidenav --------->
+
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+
+          <!-- create a home button leading back to the Home(main) page--->
+
+          <a href ="Portfolio Home.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
+          <a href="About.html" style ="text-align:center;">About</a>
+          <a href="Favorites.html" style ="text-align:center;">Favorites</a>
+                                          <!--drop down menu within the sidebar-->
+          <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
+            </button>
+            <div class = "dropdown-container" style ="text-align:center;">
+              <a href = "2D portfolio.html"> 2-Dimensional</a>
+              <a href = "3D portfolio.html"> 3-Dimensional</a>
+              <a href = "New Media.html"> New Media</a>
+            </div>
+            <a href="Photography.html"style ="text-align:center;">Photography</a>
+            <a href="Contact.html"style ="text-align:center;">Contact</a>
+        </div>
+
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+
+<h1>Photography</h1>
+<br>
+<br>  
+<div id="myBtnContainer" style ="text-align:center;">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('favorites')"> Favorites</button>
+  <button class="btn" onclick="filterSelection('art 205')"> Art 205</button>
+  <button class="btn" onclick="filterSelection('travels')"> Travels</button>
+   <button class="btn" onclick="filterSelection('people')"> People</button>
+    <button class="btn" onclick="filterSelection('photo shoots')"> Photo Shoots</button>
+     <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+       <button class="btn" onclick="filterSelection('close ups')"> Close ups</button>
+
+
+</div>
+
+<!-- Portfolio Gallery Grid 
+Template:
+<div class="column __">
+    <div class="content">
+      <img src="" alt="" style="width:100%">
+      <h4>Title</h4>
+      <p>Description</p>
+    </div>
+  </div>
+-->
+                                      <!------ one category: Favorites-------------->  
+
+<div class="row">
+                                                    <!--------one category: Art 205---------->
+  <div class="column Art 205">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Art 205">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column Art 205">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!--    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+                                           <!------ one category: Travels-
+  dash: &#8212;
+  cafe: Caf&#233;
+  Gazipasa: Gazipa&#351;a
+  
+                                          <!------------ TURKEY!!!!!!!!!-------------->
+  <!--<div class="column travels">
+    <h5>Copenhagen and <b>Gazipa&#351;a, Antalya, Turkey</b> (July-August 2019) </h5>
+  </div>
+  </div>-->
+  
+  <div class="column travels people animals">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/isNks8KqzAo3z8o9jQw21RbhrK3QjAemi3ZBEA6dqLwUwEE0cTZn2wkpy_X5TtRH8RKVD54RJmPZvX2i_f_uAeclDZARdM-h_6m2H_gkAZzrF7RKpaFOTdQY4WRNi_VWW7RFWuDmCwjuBQZX8CmcCs4daF-9Tml6TwkLdJb3QWxWIseajjE8CRCess00vac3WmWqZ0EwYk6rwyq_vj8nudjoIQNPBZ6Joy2ePW_EbwfQEkKCTbXp_5gPCLC4EZaxkW5cWvdJihfu-wchH_B0DY_z2RYc5147RueBCOTc7E4ro7_u9ezDIQ7T2jf-COXObVbvzj5FUfl2nsGmaADXDNh26LNKXLUuJBekwzaJ5NG_QIhwqOTEjYnbCgyNbx18FbZuZqRF7iCEZBbB6hjRgANNRzOyICOvsvCWDVb53L3YZTkxwDCGR8gcRCMnPlS9725gNu-HUvH5TqkL6bY65xAYjctsz-TXeWBVbcApNNpbzaKu3g7XIMYSH2IA0P6dLFMfCJ5Ht8KpCZqsKUl3aU9ztfjkvez0UakC2ADUY_AYYKw9xSl9tk7Q3VB6vVz0YWVGCb3AIm4HlcO9S28boZFHT_75ZFD1SGkA7JIwDAtZmeXULsoNLhycq02E7Vz8OjRhXkG6s8X0iJUthmBdifETaaOfsgpkfMBFQnWR4ET9t8F37F56l3jI=w1588-h2118-no" alt="Katie holding one of Konrad's kitten" style="width:100%">
+      <h4>Katie</h4>
+      <p><b>9 August 2019</b><br> Katie holding one of Konrad's kittens. Taken with the iphone XR on one the second-to-last day of the Turkey Internship in Gazipaşa, Antalya, Turkey.</p>
+    </div>
+  </div>  
+    <div class="column travels animals favorites">
+      <div class="content">
+        <img src="https://lh3.googleusercontent.com/Z5ldvR90NMDwBCqgtWuiXnh5frLdPUCfEpq-mChWluTuFbbqUJG2OJu6-BXTUtlXjczBzFaS8tElkzzXvZMTt4LaP2S-EwZ8JLpYpTP_rRgPF6tdhM4_hfs01O5fyaDa2cnYVXp-U5wucSgFQ0O3kdF9E1BceCVTUqHl3xqABWFjSDd8I8ecYw5kVMHSA5abATY6UUNbIeghJ2kbvCWisnyzsjyqG3EUFqS0xlPoTgHLePiH9PTLJY61TyAk0t_7KeLy3FrqYuG2qiC-ps2PlOD8RULncoH0tMjcFs0pvsaPDh8zyTT-_Pa1gFRKjYqigwD-JLoetIs1ntuSqDbQ5K_aePik3v5x6w9Ot9IfuiEI-9jeBMRNbVLJY09xHPfeQsRmW0l8XOdBcmyWic1Tfd5nSL75tAnJT66hFlus9PyCSCUSiOl31N3tkQD_ZHwyBnd2_K8X3zIqREoxbPQ3jeQ2C-EvNjsZ3RwWYG4q9hhQPw6H9ldWbbJYxkAirzR-blxihxORsSQDehd492gpAGBKAgDxNlrk3pDUL8L4z4kEPuAalH1i2bkUspX6XVTBPfqWonZP3lIQq4UHILMBCzoHGgBUexMXDk2tzai6LDUXXoS-44mMZDWdWFusiBZGBB_yrs7xZPfDDleRQuQ8FXV9DiFVdSVic19L5TGlksq6BOyXGkiXv3MX=w1792-h1195-no" alt="Kitty named Lissie" style="width:100%">
+        <h4>Lissie the Kitty</h4>
+        <p> <b>3 August 2019.</b><br> Captured this image of Lissie the Kitty, officially named by Konrad due to similar size, using Tim's Canon EOS Rebel T6s.</p>
+    </div>
+  </div>
+  <div class="column travels animals">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/DrIPSASXopPhx_HeePmRaCLJAub0mvTtOeWqwzVqbWDqfMXW76VMlXTvjJBXhSpWWe0RaHNyyc3lMS_Ds6a3kWNbdXbeI0YtYx7kpP4HD1R8RyZPIQnOo-EP145bCMD4yJoiA6r_IjPR2jGX6XmPXJcZr4VDHAzL0UHy1JASc5kkzA3Yw2NO3OnpsQmfQkhEiPBtvm1A32R5Z26IKRsMrfCc2KIMPWOaaw1CGKMxU1Jj0z24BEmtOacbYCEjBibKB9F9Uiv2AjXRaUThtDczm0A4euyJ1opxtqehAnbY6mCcLmvExAn4z-_6oOrL2B4RykPG3S-P6pyrGnOG9OfcUfoBJlnNd_I3VbBURV4Oz4wUhliw9uSfwGpvjSKzPj9xLsDstWCZXwZ_TqI10Q2EVpFWdPgRNA8WWWwZB4gJiBkwog9NHYrHSiTGRDC-CUmcyz8YVX0ZLGKDEEevOkZwuyJwmru1_jMIBHlFoALF1VyJDP9OBvtfTEK10jQ-zU9CmKmRAkaahafr0g1-CxHal8-39iH6-KNbnp_wB5r82I0SR_QKy8yl6BPzFCN-2GHQD4STz4xH258QxndB2hWsMJsyEMVs7fX5rtdz7pCXdb3OKfXbzS8jc9BKotcQH69yfUqrdbCR3ZG8dPnhzWNg_7XjI-uI7GhT4XbqN_PonKiMGfh3OHNzu-UW=w868-h580-no" alt="Konrad's Momma Cat" style="width:100%">
+      <h4>Konrad's Kitten </h4>
+      <p><b> 3 August 2019</b><br> Photo captured with the Canon EOS Rebel T6s at Konrad's (Green Oasis Caf&#233; in Gazipa&#351;a, Antalya, Turkey). </p>
+    </div>
+  </div>
+    <div class="column travels animals">
+    <div class="content">
+      <img src="https://lh3.googleusercontent.com/9F7NrbLGUvYEMLzXN8s-3aSqWWXqiJ1cnzJoIfxiyKarY96PPtDajce_NaNXutgfu0StOYnNaMiGlPQV4k813NQHKlHJvz0cblZf1Odc2czs0recqvRxzGvEKOpMr2zANsIxE-h81OC87Vk8oCL2g1zjSv0wEiQL4XIqjAYCBJh7tLlibPXEQ3B1odDq3Mwh8gYfZtV7a_Uk_2fuv5SjjOWjOruf2N4738eBTTSAdR1xTnExpIaMy0d6XPuLCO426loBaZyQS-1aKm7kTj5wfM2tGY_x4NaT3gR7ZzljpM4QyqoEdVOGvoerH8XMVgW5r0rAlfE1f8Tvzbd05PKcMHMO1PsOwgHeXzKrG5Ougo2gsp6CrZRIUr8giod0YRW76E1HdBbNQgmVjFEB92nj6Ub2kUJT5mfdRy7cHOIhd6qF7OAStesStJHzZJ5ddJKhDXeH209rTEWlqf_ZM3zOWauEOfQErS7hfeIqn10QuLGSe4qAlaoTLZgfs5x1nhV2UGUVzoorr6lD9j1hsMRIm5XOdlAoaw-TVxIuox5zetTdSljEzB37Ux_TGrCvs6i4wr_vJuf29WN_xf2fXwSrHBILOOad-kL0uW9RDBsDiJQ_tXshthxsDf0KyXv8sVzVSQx9-RCb4kMiua_CJeX19f4XkotBhJfz8Bkx6ellTNHMbj75nqocgSm-=w868-h500-no" alt="Lissie the Kitty is Shook" style="width:100%">
+      <h4>Shook</h4>
+      <p><b> 3 August 2019 </b><br>Captured another image of Lissie the Kitty using Tim's Canon EOS Rebel T6s. </p>
+    </div>
+  </div>  
+    <div class="column close ups">
+      <div class="content">
+      <img src="https://lh3.googleusercontent.com/fXIr7lNkOxavruDgEE_UFirp7hUu5yNY4O4UYT8IKGH8cD4I95czEgRRc0I66LllhU1rLtkTJZimW4imFErfAiz4OUGf1Iyo1rJvjVxdG1ncKXXKaU4Wo8aPq2fYcbTeZA39ST47jCyt8-K2iwDBM2oB98XufN81uyI0vbACAA6oevjWaubw0TaKsGZUvHuTZpAuWtMCJHH0byPAaTtC8MJEQ-GXRYrQfdq03P0m7jZz5t84Je43oJ3BARhHe3X72mRDZGDyWr0K_CN4eHFx-mWotdTIAq7xAbQXCMzCK7HLjiHf2uaf6aJXSJtmweDYFkRqGQ1k7MCmNbjW8GEZNh5qeOFeOQY8P-1ED1Yc2XmeAU9WMz-9Yh-KVNN8lQChKvo0wxxV-8xOoa1F-HtpFoh0dwBa9QhByhIJjqN5o26MGrIHWS3R9o1J-eYgzMekABSJxQvsjxKO241OxzzSpTIkJmtKi_cQCK80XC2lO_sLYuqhSO54weoF6bZenVaDpyM57KtEIGNoYGvQlCtbs8WF1g4LbnG4wiCXiArjgfp1atDYGxIxKaqAA740_9wuwtOU0eYgxBER6uDz5MWeaX3b_EGmd7MaKHrPiqCyZA_PKlF83kLa3J3RUbTI6T2jfqWaySrYJXiLLJZI6uWiiHWg4V8Xsglu30NMSxy1XHae5T7R3jZR91Je=w868-h580-no" alt="Car" style="width:100%">
+        <h4>Green Oasis Cafe Umbrella</h4>
+        <p><b> 3 August 2019 </b> <br> Shot using Tim's Canon EOS Rebel T6s. From the Turkey Internship.</p>
+      </div>
+    </div>  
+  <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+                        <!-----------Category one: Copenhagen --------------->
+  <!---<div>  
+    <div class="column travels">
+      <h5> <b>Copenhagen</b> and Gazipa&#351;a, Antalya, Turkey (July-August 2019)<br> </h5>
+    </div>
+  </div>--->
+
+    <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+                                          <!------------------------ HONOLULU,HI ------------------->
+
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/78N_GugPziVpfhSYZMH5YF8u2aNTm_5PGfqcLjBP_uTzsYh9SqsKwAU6WFS05PIk1c02UXLdzMi_KvUmH6oNOUi4PXXqHezT244ENpJhBtNeXgOpXgHyDyq199cUxbkH98IKyWnR0FhHBftfJ7v45eErkZ97a5MJvndmQ8ToEeHFPkzu0IoWfW7uCO4pjgCX2Iap50nxKdvfTCwAsiuX7xUWtlMz-rB8y-lW4AHT9loqXI7l0ePdn3lCLSbTm9-OcCZhvrL_v1oznHeD0EWI3MSU-2-ItzGM8h4zsNhcuZJzuEIN4XgtzmLIKAJu5v8iS7Se8Qny3rU1GNFPMpyWl9m1hwYVnGxEY_DsrUGtIQTQrYBDJsmR0tCFcQ7EtP8xVaGdA-A_z2isbCqS4m9XglFcvhLXLfV1Sy9jJ8z9C5F-285vM4Na6DfgAFhwfLqcpiAvhGpW5-gAnujJXTumGF04wiN1tuUXnimKUxTvM-ziBR7eIm9VNxHmglRtbJ-hjF9b6SrhymQLFsoCXO2vgoCOcAwuY2GiFU_u26532gNc_5uXZLYQ64nm1D0Ain48MJyXyPPzLKJKFhlnV_OWLxbM7vVPh-mXrzeXEkRuxAlgHgmJDoOCCPFORrtcRy2JKmmZLMjz8YfUxjdlwi7qhxOFxL_JD81fRzPwD9LmOWbFdIMO36Zp8Prw=w1620-h1216-no" alt="Airport Restaurant" style="width:100%">
+      <h4>Waiting for Food</h4>
+      <p><b> 6 June 2019</b><br> Honolulu Day 11 &#8212; Airport restaurant <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels people">
+      <div class="content">
+    <img src="https://lh3.googleusercontent.com/3h6RvMU_MJ_YIGr2s7FlfgnBs_ffMpJKwmYw7t0k07qKxLQbeMpopPccjJW5kNqRGxpQsDStzsLpsRbUsops9Qy81tB3tWyDg9716okzUxgDQ8ec-ClhcfH2t70MflznvX5Q4e0DuMnOhBNBNJB620-S2sr4M5piS6OL6WOPhegix_oQpEkpAU9rCQAAEplvtpAjVBBlmq4gTynafcBoDJDUVbrptCDcV53r560qBgQaByS1QaOBUTRn8wavuWLh9m24Y_EoqI0vSY9QVzfnMI8qksqHz9CwOEHU_cG3-k9H0laZ6odrQt4p7KScVBIdwVf_zjbd_vlNKB7k6Hy6Tp6mzbIS9cOJeUoKxlBHONblenPX2-Rh6BH2Dx8a0ajBApekE5XTQR-NJIPn_zru2sriw_F8yK8wZRD1YGl9hsg_zQJYzmQHr8uW_RffaA7GC1vbK2_mq2-AZSc2fADiIupZxX0cgMv4OKP2tzX0XJH7IX--LzE9--iU_8OUZfoPqvTTF3t78f6E7FU4OHrvAskgI27EQFGOxTOhmocU9mnJPGtVqkfsV69IJhJWIuNF-VrTqgiHj4GEbR3c6d6tWuy4LulJR28FqMauIRR_lnucAd1B-oj72lEZKHhYVGtjHVHppIjVE6DOgmZ_rW488v5kKpXQeUbLj1tevY0e6AN-dsPtpiQZ11ZN=w1620-h1216-no" alt="Mother, daughter selfie" style="width:100%">
+      <h4> Honolulu Selfie</h4>
+      <p> <b> 6 June 2019</b><br> Honolulu Day 11 &#8212; another selfie<br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/5iXnRz9tnxkUfhvlKgigPRdzIFERn8cPgpOJyDWdFJai-xH-djKEDzKY1OUxHh2iZweWYYqHg7AE7d4Mu4kdFtPPx4Vf4cpzStji88eheOBPV5D-eAndXeJr1qm0xTqI1Sov4F65AVIvQBuMzsei6v_P9wqJWR_ruAqJMkYaClcXvi7mispX92NqgEd6oY7-Oa67UWd7WhJjt96-qZpPaTgMRz84WQUnrRsp_q2MQzvNTiw3baxWw5PP7nNONwI6ag4APflk4yUIQhVP7Ow8Z4mIgBl8C_tfUug9Ulxu2Jtm0AEyvRTI7XYRkomPcDBgJFo8z_Tiyk4jujq49C1WU7Y5MwjezofDtHid3IkO62WGLkm979u5-t9-uxIhRB8Z47ky78M_GF6JnOEl7_9LLaZl4EjzXpyg4R1Ltg4BhH7oj3tjOQKaXUV1fbLiwI4SbrpNvTCaASMEPPAf3idMn7wNvzGhzLnrewRMa_HGcABfdG5F4ufWJcWdDPUP_d5ce_nz7I5yRcSGJ-Lge2ZMrITi8sjxydKtNgneKUfaU04Qj1dEC05_1Ovmipy2QkY9tmvhVDdOyXlCdUyvIjRsGQrSW2AU6a6CJuno25rJMiXkq98lR-_16OMVc12Vrjfkw4K1xFxiXGkbHp57JisfSfs-6oWnl-VQpVNEL367Uc2UIpJZauB3YBNd=w1620-h1216-no" alt="Shave ice" style="width:100%">
+      <h4>Island Vintage Shave Ice</h4>
+      <p><b> 5 June 2019</b><br> Honolulu Day 10 &#8212; our favorite shave ice place <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/RWHgzVYGuiYKQ4WlyFo15y5JJ564rC1mKPkuzqSS2Wj8s7Htad_TnZ29PEhjQ-Lbw-oSgmHF5Q7bvmVGR4vW78NbYWj4N-LiBO1IQJD0EJ1xJAHgW6xd6J6Wp_FidmeTkn3qcdij1wtgxZoRDb5kxdZTqMu8MjmdnEDERV5_XpeCcEkhXW9AOXL5JzkzKb5RDOGmEeSBihLRcpWKC0FbT3b06K3Afp7HvYQ-VbZOdShmzVVVWpUmn9x8n2SZHzjlhROC2Z_Oho-6w8Xr-2PPYlWqGyAx8zBHOinZRXTELHxffkjKNig-MWt9ULWFZJgQZFJDRTV7yHcaa8sr7EmE96tn4RGKz8RzonKXez8JbXOEOklEBSRGqF4dAQNIvX4PHqjZxsgi0lVgUL5hW-bBu20XcV52pupLMRII4yyUXqh-MfbA0_0nJRUDHKlCL_fSKC7bwdUP1bEql6HuE2qIs2GHn3dMTEueesjMVa5ebrLyHOQEoMIcMucQGXcofqw_06mRXktuasPHowLg5IQGivwoY4CBqp_tXuu0WOE9hg1uCKr_71cEJT4HPEsxW1ExbvgWqVjEud-XMzjA72f-fy2MfR0ZdcwuCs10xU_4uFCr3NS0rBYoPRgq-v_B4cgmzZ8GRaktvPiWdX7YH43dpZY-7DZJLHS7W53JfzpcKPrsw5J6NXIssYYK=w1620-h1216-no" alt="some little pond" style="width:100%">
+      <h4>Little Pond</h4>
+      <p> <b> 5 June 2019</b><br> Honolulu Day 10 &#8212; some little pond <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/ic3dlKUnf5mls0vdVO9V54ZqDKHwLKctzTe4P1soKbd8IcqvmoMkdEH_BE8198JNKKvu7ltoVB20ZwClA66R4YKMiT-ECrcrKDezJV041XrRSaZOvkflodzEDxaxc9gVItl30_IKt-6DbAgzQds4AgXra5P9vB2gWP_4DxrQlGXGQtNWlXa32UIocfWmQXgT3vZPVH3Xv5rD-Rb19uD6d2Yoeqh9m3ggEkY-uRXWZQx888_gjnA48MfF19341spBAdcgdAon9NP1x7NI2_nES1ZLYGSKMjt3Cz0wh5ux7qMPaRhsTXY15qLOXdvE7FH2QnRalWwerteSuUM40BYazlybd2ydWiUMa6eIDqRx9ckD9psukgNwr2MBbNgq9b8_Y-edxK_JDM08CfnyoIQ03o7_Px0rXGVoGU_yzpBBNO_DvNtqXOKC33q3yLRsNFo4SJQpVo_23dgl-1JWxtvuRRkMdc_-QuYGjD8IxSZcDoSFYDw07UpUbBSL7KUD1gbhHuWyVRRM81FR-7iCVvi3J36pCgPTCWZTZmOAmcR36FWRWVwRANKHixWD8j0dS8Aq2rkPsMKYXFkbUPMTomTxCUsGtLaw-e-dlmqEGnK8tNtpcNlC95SBj7krYJjgES8Oyl64VB8UvDwqX1Z7QufY5Qlz0cwEE_tOmamZ52aP1URsylhZKB4lqHVG=w1620-h1216-no" alt="Day at the beach" style="width:100%">
+      <h4>Kuhio Beach</h4>
+      <p><b> 5 June 2019</b><br> Honolulu Day 10 &#8212; day at the beach <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels people">
+      <div class="content">
+    <img src="https://lh3.googleusercontent.com/Us-Z4VjXlXDhpepT8v9X9-qbLbrUF9CsZvtJLjGFKDe8imJFh-GlML3XVYgtLs7f8mOVx93gVwQ2EnPT_g17F8Lvi-j7aRdcypFZH60xJA8aeoWNeKMPWoxj0mH0ti_xPcLb-0tytwNfColmspdv3imDHURbEJQ5-zX8xitxJ3I-UBpCj6kd7ZDw5NTzhFDkd9aJBRn1bGVElDu1TWMXbMVz5mRz6Z7aV4N_V_p8HY8LVKegoKPgMHS6M3veUCyqOlatCzJbjXroD_PleJtCPoJcbsnXAfui1fNA0dDYQoq4AJqLnm97bj0EU8wJ5ja_GEQMIm87_QMHc8IVZ0T_xMFam7jwwt5l3xFECD0Nek5W8RLQq9J_jO6QAV6zLh5v7FktWnAoG_z7c-_0OZswXmD5WY1fSUHNc7LWWSCNfIAzEgSzvlDOcEZgkZqjZL1ShjEASPwm3OFmAsV_f0MXyc4WqiHfllyhfEJkt6YwVogWZsuwhkbtzyiZh-38iwXS0il9M4hVhAHY5_4koeyvmOlhYDnvlp8JF6ZkH47mbLdXJ1Yx7GvBy1cc5asffXcgUPvASWgLgQKnDAbx2VJFijU2E-vhHlWZH3jPOkvFT_KxU_20Iv00SUqjMvoqXg4pdMC3nZqZ9UH1Pg1WPm7fsE6LdoMlpSVNNjIRDINku_t4HKX7XrkuUwDq=w2340-h1756-no" alt="Waiting for the trolley" style="width:100%">
+      <h4>Untitled</h4>
+      <p> <b> 4 June 2019</b><br> Honolulu Day 9 &#8212; A woman waiting for the trolley <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/tHbF9zq8M0IRPmV1P-Ge7narBr6_tlgvPcybN3PGtbLOa-wW-lAWHDp_IrVzc4zvxAITZ9Sem9Vw7CO-wimksEzjM3VG8mR_pasKqOZdLXvSzg2ATVYMuuvgzeCp3EaOv2nV_D5HB2qxb01Tr-I2HY8qnPBK03L_eZvyOTYNlXCXRV04p0p-MRSIEcgmjjvq3Njp1I9FJTF_wj-c0mm67wof5kMYo06MYuIvniEKbMpL-YeN2EWjnNelVvFtfNJ9Cr7PqE-xYqnnmCGwZ6u9LFyBDVbOJyMCBHE-r7cudSDo_3FfKTwobhW1GS8kHkgRi8XOybWNQ5xUwFx1ybrc0_EgURwJ79MwdlI-e1yFBCJSMTg1VfbSp7FWNSpeGeOc36xt2Gh9YNuUQ7gUxCj5dlxWNH4JXl2vJ7pihXpStl298Np8KtVksvDlEM7fKOE-T9lyMsIwynETJ564qp4W6bxsiSbF3fdEUv4AbNlsRzVMrNMRG3E9TpesMBHr3H_gjl3vsT6NMxWY6lQHHrym65bYvE73_Co5S2HUD3hMDSkMvFVJ2bmI0UDHPxRwOvzzxicxanvlaZtHyLuVRiE7MudWpkpSSTqFJIiTwuqJDmLNOwP4Fp0ZRS4gaVsRM7vRkRxMi0o6PevTl_yeDxMXNLI-QZ9Ri97y7OOghZ5-g4Ig9qsEtoZ-sM8N=w1572-h2094-no" alt="Iolani Door & Vase" style="width:100%">
+      <h4>Untitled</h4>
+      <p><b> 4 June 2019</b><br> Honolulu Day 9 &#8212; door within the Iolani Palace <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/4HirWALXZvBhlTNVPeYPWfO8aLlcOvg0LyJwQ18-cXsJhfY9yB2IdnCPjrPwL8TbhEzeLrUyg-6EKrR5ANOssgWzlPw9r55GV9FoS7CjI7x0b9b8xDwrStOJaK2O7wNj6jpwIKCht6LBAKViq9CWIbIMFucJhPRsPdCflju88rpzYG9oSLoSgg8b2fFz5D_qi0LuXIh8GiqQvSR6ZffZtz6RrmwHeN0JqZXGHwZkplv-B1jgJNC8_yGBZBuEhZEYB0Wc1IoW9tSDJKFAnVDu1yNpdpX0RiutqbJ0L85rwYHKCWwY0J-kaiRm_dAv95nNOmAb_VinTRByKx6CFq3WlVZGsjJipq699BpXRYO1NiygVZovQW_4IhOg7UxwrB8vRkiYwBVpcT5zWYD56OPS7xrpTUZS3-YKgPJqGT_sCp6BtVTah5_bbwSkDQcaoTQ12luAcWLl0pPMvZZ1ZZD7gfJys2ha4lrMfRNkdYSmGxlrhwEeYCRS4dRkdHtaGaA0H6-q5i1pAFfM-tXeUgJxlX55Po8dISKtMkSPpHSF1yIQVpjpOHaMwlEP4-c8B0aRdw28ROZOnlUqextIeq2qhVysuLlLAlL45QHPOt-kxBs9xC15_sPooIEtjAnhSHSxwBhO_3KopvV4ytjJz1taoQbWLI8jlW9IXDPYqmNUlby-ibSV22c3ddjJ=w1572-h2094-no" alt="Staircase Decor" style="width:100%">
+      <h4>Staircase Decor</h4>
+      <p> <b> 4 June 2019</b><br> Honolulu Day 9 &#8212; staircase decor <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/91gHRMh0HqZ3XvwJQ748tOQesHDgap0c8OUswYinsmcHm_nj7GAbXVKMdOlG_RduAUdm41pJA54h4GiuNUvdMNJYhMLJAcTzAhw-znhvN4XHoFQ5ox5ZEUC0JShUDrihFUWx9EQ0n_yvKUdzv6jqNavfIk_t3Q9I128YwNr_6Z10IHG5OELL8SLblzRbIKYi0ABsTRuLvJ8EnK15JXmlV1Ncemw7jIKoPd2KLvEeE43EPqiEYoZPJjjbsi-ParRrLBbmtpf9YNF6NtWv0wcV523YZi7ipl0pGGxIG04JVh7wHHF1uTt6knVmj7DedWz6CwlMeNAxucpSViG4gKZxtM-dYdxC63ehOTS1bmzyC8ohbglJLQsFouL5POktUIfHaNPNSybSfH-fpGNFP_93Je3N8Fiqand81UL0_-GDeluxCcFAqcV-evzUiJ2rezYGmRzSflJWG9r6jEU0hlydPpXa4XDnkoypAmmp2ORUpDPPWm7_hA1Pt5-SKa5HYMc0zIu2Ix8K-PuAHcbGhTSRM-c1r-w-i4P-L2KlO26kKNkH6DBBEUVVk6H-mJsJPFvyE2lZL3X3ddcKyCgfRhA3i7TjqsHlr8ASPMn2ryKBh9JEMC1EIlCw3p4LBAys-6qpMdkN_dWELV_cy3oxq5UTtMz6NavoQNwo9B5pRCzI5Oi8IhLbf9o-pgpZ=w1620-h1216-no" alt="Iolani palace staircase" style="width:100%">
+      <h4>Staircase</h4>
+      <p> <b> 4 June 2019</b><br> Honolulu Day 9 &#8212; Iolani staircase <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/XBQj90w7JqbwlIO3r9o8HuPQxoeB_8oT3hJx5iStK7R2n4NrPH0ldo_ZDR627k7fNeBly0VrdM1lTP7TfaIvX7VtmIE5wGjkaq7yUAzU8pSudKhs2L4ccrIGP6mZg09w7Hdcejq2NLBayhLenLD6ujPt2wJ6SCfsaZTBkRnEJUGODlVaOgZKXbgw8NRF1Drv9rRncaWngXnQhQUHS9nBaLRxwb-XC3ZUoKB_-ZyCNb3V701uFSbeAuPUQsbEFyvaxTYaL6x49zPpfU3hN7cwXkcrRSHlZqT-rDStclMolr_RcC0lIobgwZfC8Ee1ed1q1gjc4WBEGv5NtM32NkyPFaasEmjjideqDTafjW72zx1Od16yZo5ic-L-hNW4cA75uzMlkqixA8BMppAbzq7Hoa2i9WJinRenNfjyPKeQUV4YdKJQely5NmxaUJg78T2cE1CxLQtv9_1HCipwEHDJEmW__xVajQl_OHN5o3oEcTWWtuNR6ylE5YhUjpGhF9LIim-0X-FP2Ki9EEZkINMN2H6kFKETXnJ3Jl0ahhwSGhkM3Xm1uqMnhwmqhmymzFpb0-JucZ31uZVirZzSWcHbArLJXZGU-rIAkOZlWA7HSCUbwh7g8PUqZDfaJ1wGi78_bN0kZD7QbHshpeSJxTRhzh_qoHuQLkjgkNFqeSHLtW1pMdYrrsqRQXuI=w1572-h2094-no" alt="Tree Selfie" style="width:100%">
+      <h4>Iolani Parking Lot Selfie</h4>
+      <p><b> 4 June 2019</b><br> Honolulu Day 9 &#8212; Tree selfie waiting to get into the Iolani Palace <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/uoO7q4DaJe9vrHc03HdPdnG9EPNoqRCBZGhF-yYloa5PntLXm9EWoB5A3DdmBmHDoJtTTsVE2vQXLYGur78KPDkcAj72uCyy274OQgpI83hfsDB18u2TYvwx2UW-pjVUfnC8DwVtuCk3tHySYjJdaJlJ5TGoubURw5VeAcpHKvtsZ2mMGm0rVyrHnCkAghU8TP9T1zE74tkyliosHv9ltjF_TXwn72-prqf3hXJhmvrN0Js52dMTFZUVC6LQPOEck5SJLoAdmOf3YFutlqH2Tg61Ms5vkh5fd9nZavgFNE5JGKdWlrEvSLO1Rl9nghHmHPl--43A71-98Rh2hoSXpNMEJEeVsUXYbhOPkBhMxR6YbwKhiuJLu727bESmJm4pkcF81jebzPBhVrhZWZGlZlowurypJZ0h1WJDAzvlxlMKOLaNvv9i3dOsM8SgPT8BeArKMeTG18yj4_B5TMwxHYGz_UHXaAxXdaLlcALZOzabUbRIebhc4B1m6Xx8G7obiTfV-KzuTD-bpSAMPRVSfxqmAbIWMYv2RjrpYRggyGLlamgLobK_9qhqAihPPRVZYcANhqpewSOkoYDr2sN3OpkFGXbuT-oMibLHl8JERwTORIJYupVRX0x4rh1JCCSMM8xl7YHq7-CkN0DUrZ__72nRiYd7mqOL5JEyIgOZBJeW8BTPAMKsDRT5=w1620-h1216-no" alt="Palace front" style="width:100%">
+      <h4>Palace Front</h4>
+      <p> <b> 4 June 2019</b><br> Honolulu Day 9 &#8212; Iolani Palace front <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/ZQmyhelks9GXVAL8hvEbokTmfHt14LYibwa1Gkyoc4Mt47jqb5HMQkLlFGsInNFfq-1ziAiLHAY2devJ0c1ZaWDIKgcQjZgXgohmVVRis1sZmdz7QNbdgzq2fRf6vd72M-je13yl19UNCrNb2WplPJnAkxNmvMnLg6kdO9eph3V0I7_UwMB-NMOL4FuVpAphcrAFni-tp3N66_16S8fqKtpfSm3Ev6efHIGgEQ5dB81DOt3bzoZOSIqRjvuIogPfX26p4S5tgX9RWGpekm4OMBe-AH2f73zNgOglMOsu_umOSFNmEnUNvdAqC_WHbWkH415Sv_Sbg1XyBQGX4KbWkqqy8-JnYmBnbM0dZANAvtuUNn-VA-Grc-ZvOMFnkxC3XowNTYtWz1MR-z-crPsfGuyVXzhyuFOMij6wRDSFNbzVqy8Xmp4NKyitzVXh2NCaqz5_4WleY__Ts-xd1OSFiox_vvc4dW1O8FJ3x1XQuKWmyGXXVOtLSsLACPq2vF1Jmcs6P6mEihk-45b4KiD74fWn4J7pOmffLgKm7-L9b-DMP5vqQ6JImo_2iIQ5oJhirkvz7PfhSrXqytR-Cp5fJDvdyuk8YiYh3DrOd__cBv60qhJWTyD7FHGqz7NEF6WNhPjz7xgq6fApldkHeFTbl5l_Pqd8-ZF_MIldLu52CcNo9BNFfN9KlB10=w1620-h1216-no" alt="Quilt" style="width:100%">
+      <h4>Quilt</h4>
+      <p> <b> 4 June 2019</b><br> Honolulu Day 9 &#8212; Quilt in the Iolani Palace <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/U8h6GDVZ4IT6I26FJkPOjHhyNWE1zpGVsZ9ZQD1BM8tBKr1GmnWUcnuFJse9n4Rzl6_MiUsANwi-kPsaxcDl8TpTVBLPh__Xr-SHsrpkiXu4GfQuIJG9x-VVt6Zyqtsu8Xm0X8ZPcru11ApTOV_q8uauPuAmK5mKiFxATK1ntcsPbkJF6hp92q-CF91XIh_nLeF0H7Jbe_-OL8cPtQMlvXBXRjmo9I-fGsDzivmT5q07zIja4dqHkDwUyaaroYrQr5r0Mel-elmATAtXMRTiwFq7qGqfpOc0YxXWzmvcZU2Eggmw9LXPFl2hGt7bkC-t96wre4weRs_0_uVh2QYw3sOrKblMqSBAMeWZnkbMZhTNstJ6tTCSt9CSElUjKDGUKQGlTpQn75Xm2Do5ozd9DJljmDgm76WRnKD_hBGXxcwxRGmEIo34coJd2cMrquSpqbzoYIdTbVNFNifpUB6aEt8ovidW-3QwtNxkO6_2noRxdscaH9AshWEtlbNY7PTaB8Nf5l0hglLx_gkgiTIUizrtHq2ao6Hf0tmV9F7yJeXwxEHUA97nvpalN0fwBlIgIxkDmI9WVI9l5oEyd1ICeAPlX4Hx3oZ4xsVPqpfdqqqTTchiAEYh2fc2MGOPw3RG8DTfwQOrqcu5vpPVCKE7z5vQpVdlSi5XvVYQEO0c6CpxmXZIn7mHFyRj=w1620-h1216-no" alt="Iloni Palace" style="width:100%">
+      <h4>Street Art</h4>
+      <p><b> 4 June 2019</b><br> Honolulu Day 9 &#8212; Iolani Palace <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/45C8dauWBXbv4rn5OrqLq0ov7yiIfVDq_qesl871Y5964TeV92ntbcliXiEWIRlKWDBGP07seyRiZ7-3kJb5lqjMieoTkmQiHW99E_XY7GN5-aW9hFK6Ufrns6Au4s0MeWi9W3PE43jQaE3jxcqz5K9JuiHVigbIEhalGmaFeWGSVf_x-0H6HbVcb2Gm3L0SBY9NcHBqeYjjpz-NJM1TAknKQHi5o57R6a2CFFz0YffS7jjjua3wzf8pHMvA2Ca7QoeDvHGXNe7Wsx7l446kgXrL__E5QvZvRiy6iRx6OD_iYGnVUDvl42zrAQ4aIr3n4uHN5bpqikDtdh9LVojpTQfHKKVaAtGhtJLB6S6KIj2uSvIvjkQSTCe0mqPVOci7hepcrjs9YPAhipJj3gsY4G4n7-R8EB96piGTMHfGKYQ_bHIVULCs3a0tj94keHcDRzk0NlkvULg0R0szGDvYzG10o6PDZFRy8iIDurv2NYJnH0MArgguWBww19LtAMQQMokmoZeAsj5Zn9VSzr3ZXotUkLzomNjhytCRUJrhbCt8uM1jviIh6UIb4ds1o-t-GKEA3CjF_HSEHCbQyHoMpADXQxOAHbrkaaLZ87cZLhMGvK0MNYtOJ-CpkHaRpE4oDxdLtAy3S4YBSz0i6a5Yiob-444oMDhpYbI5dLn7MTxe-wInIw8kj-Me=w1620-h1526-no" alt="Street Art" style="width:100%">
+      <h4>Street Art</h4>
+      <p> <b> 3 June 2019</b><br> Honolulu Day 8 &#8212; Street Art <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>  
+  <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/wVRrdtup3-lf-IiM0VlsPK7ifPj7kvUV9zJqYhY4oCMQeOS_Y3SlNRMETBBQrBtwJAewSJMMskP8BbNfmP0VfiIXEn6GPj4y16cZpcfQK8nmv3TYoPi91F12IVVBIIz6I7iBYfgHgEb14nS5LvEqnVq4kILqLaxCgXY-_PtVYXkxJ_M4g5w0QdRBlax8AUHSkg7GpYpcSeblpAFK8rRqxsnErK20ojdUeDHmTC4WT_YFculBIXQUZKXdL2ZYzFkHx8QlHX8hvd3lxA6wonFH87Iyplc3Py2r5Eop3sMGSRHCBPVZssJqcnsTtbGntzzfL-Bj96MlA2su1iP2K5n2qf7zikFTw1kYnKAX-fq9kGzHoew0GNgy4LcOEesP48JanCy-HTtHGIAKZ-o2-5BjRi4hlY8luvB5A3mGsXzN4y7mwZHYivRkEbu8nOSORiUKz30pozRYAh15c7BvbJhAI8c4kPh-y0amm4ELuKXCYX4QMM6WDLANoGleD_6R3NsfAqUkAR8I8vKj8g70VHs0Jnny93V6kIfGw9TyW33ceqxpGEqQR4b4xKjoRc1onqJ7eCqLrVw8H5KsuqoLECJfa79ABF3eatz_27bmZdKE8utX8aA43Toih29_F-U5ZZWwyJ5m-wEyMjaLj0mPo-1uYxl0_R56j5ILm7R-KlJrD6GYrOtlbd9EZAyn=w1620-h1216-no" alt="Bishop Museum" style="width:100%">
+      <h4>Bishop Museum</h4>
+      <p><b> 3 June 2019</b><br> Honolulu Day 8 &#8212; just checking it out <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/iY4eTlaEikDVo8j-x53_6Id_yxN2a0m0PP-oWLdOA_DsblaMc6VrEYdDw5G00XXvsPqWP_jHfEgIQcWQKbCbWmopJyjevObKW0tsQr-HT1haMFHsamVZDDWdsi9qlI6goWkIV7NiQl99lpdOxVAIBUzCPaBaTim7xo2-v64ZYuo3caHeAD5X1ZPcMKZAmOfVD8HdBX1R5_eFL4tadgzMS9iE16PceIstAxrLviXtViKBow95sFTYnwxBFSOTVFp6z-tgojACXobhvqW_mKu8RokDwu-SfI_MISW8v5OtbY1YcoN-WVtEy3y-1372iKBc-PTCxCbgO3VjqZMykn3VGBjm7TWyIwIrUNp--1Chv5ENtbiR3mGDaVrnnyGf7aSshn2GJHviERoYlIcfirE3ycdnzLFUQRdKMJxy7bqX6FYrMUKL8P4ehym5_3uyCs8amhfQQghAbteFPLiKaiqpqcVnibbBLOMeVpQ8zPp53k52CnkGdBT6MKLp4V72ZergKALFTx6BcUujMR0IK1KLYkvxy1STd-puojN1XbgGbbB156Xmxr94TETUjurA4RhCZWoypcNiaIvGwuvCwYtaRNbSeJoEPWDztm7dXqT1k_1B6WxOquRqXnuaGz5BWpMlsA2SASEjD9jq1irZ4LsP5N8OGJf6veqP-dTzxZE2KIawodyis1ryUbUp=w1620-h2158-no" alt="Pathway" style="width:100%">
+      <h4>Pathway</h4>
+      <p><b> 2 June 2019</b><br> Honolulu Day 7 &#8212; Pathway inside the Royal Hawaiian Hotel <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/LhFIgmS2B5eozGQ3Uf_eRlV6vJtxQH9psEIFAI9CnVjSnVsW0m-tIPZ3tUIM3pfQmdeln9EUkQ0Zq8zvr9U6YuYNxZPfCf6Qn5CPlRptsluLcySElr7_wGrcZVI1nNs_AEoyYQYGuLVGU5Glq5nC5esYQJP4iSV0nNSGeRluj-1ehq0B5mZEWhokK69XaUCTMifIiBJ5Z6LATqZPsrHqHZnTWhurPw72aEepE3tNvCI-T8l0Srg1o9mrc8FMwat1s6MonwKKwgmc2yM6YNv3o79v7wRN83Mr2P79BuDyG7pqUaAvvpvk1KHHhANkTKPGjQzLppfntuGCbC_XsvPoZzdkiJfJcxPsuZgeR30e5WxgNSNKrEANFzEVHo3bPSI3ScNIfmnHSWEMM3AcsJZK79wPeK0vJn4V3eCjrc5zo0JpYC5CFSxNEharH_bNbUWEUVi-5MKDrY5ZtyAupVxCpHEct9trg1wRZIblYot5yxUAnZqSwr4zD0wdPLSC4Q3CzBTYQv1RivsxozwHKrh6X8Zu6bWSjIjOR1pUHaFe4G908UsR9fRfxNLO6AJqnpfgt_eubYexWIx9JiMbiGSXNjtUTPa6GgFwgHJTAHhL5IXwZNu81s8qukB9ku0N-CMgPP4guthl68KDo8G51vYh0kpA3yJXcK6PiY0tuwZtVj_KH7BcJ3yBAI1H=w1620-h2158-no" alt="Entrance to the Beach" style="width:100%">
+      <h4>To the Beach</h4>
+      <p><b> 2 June 2019</b><br> Honolulu Day 7 &#8212; Entry way overlooking the beach in the Royal Hawaiian Hotel <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/0rgyp8dTBA0OmhM_YNumnoddGaYOrJrFkNNEhI9OZrgY6QV2gJWnirkmPe6KFqmjqU8bYU9aKNr2_hPS0x_VuimhqGaHIOzp4b1pkwzZHPEjC5pp-6ffDC_jk8tXiJTXVdTw3wqZWUGKXc91a5PK9x57qr6YZyLbu8BQ9GRPhzlcjTrAk5u2If3obYHeJKic-9t-a84sPI2aKm5dVdxopIVh6Kpn0cu3FUHpxFgsLBg0K2JDkagR8Po-YFuUxHGB0jG_0b42tDNXQSI41zyUmX90qxx5rfxU0UtKl6DgDugdWMGdpCotIH-b9_kw9KNrsBU8n61qCUn5-zWKJUmnvtN4WHH3dGLbjG4EH5HeVh_BequNhf1LjUfTIghw4PV87gphjw0vSKRV28xFDI9rcAw_cv9LJwtzDxvyPJYofw1r_NGt6pCgsWW3mCulv_UhGKiGWYkrxlmrmwHehf18Z65w5CYMRjq39ZmB6D2a6sAfIG3dpyM9uQFjAKIGTDTYEWtQULYK0eF6LjpzYWP8yx0NKVW57W6Gim3LqfHMZSGqBV57nJsZfUPu9QnsAs0wdvLB7FuVvlS61YltDZBBmXCyxEbDvTVydy7VftHyLHrfKvLOiPJ-mZxmISt8C_4sJXWSuzsZJMa4HIDVJ2FqUmXwe4uq5SOLCG2jr-zTjC-STi4C6_CQnETE=w1620-h1216-no" alt="Royal Hawaiian" style="width:100%">
+      <h4></h4>
+      <p> <b> 2 June 2019</b><br> Honolulu Day 7 &#8212; Royal Hawaiian <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/SH_isWvQEDuNRsO02qu6cB52qKIVIRDq0ekgXffrh7epXk4f3CZnvB9eSBvAoBj1SwkIf7UF3IIwCLP-HHrYCwNPZVtDzys0AiwpkMr6T-5lfjaBTKeoGogmKPhrGMiP1GKHB7nMC_FYUU3cLMdg5FFlE6_UVw4YxxuaF1b9G8cTTm9H3a3qFa6IHzMOU16otldH0nGJ-GgSfDbAZRT75qmB3voj7tMSW74bag152zBMzBAsHIyXv4Iex63VO75-wGBYesyiow07osg6396dmSPAVfHJA5Yc6qp4gak-dKYr6fp62I9uaI38Ec9grdmfXVgMJCoJJmWEDqGNSnsTf4feIyVpDGUyAHHPq1qCDxApWSCVHTnyfP70lk45Xd5SNjjNywXc4et86KFlc8NHBlRxghP1pbdYrChb43PhFUlA2MjhuHU3_-9BcP4Hs-pJ06M0Z0D-69rkB0lIZbkdsKa6cQ9QupgfC_oilpnnnRa5I23AcmC-ofly6p9W8N-2wubnRdSszsXpozxSc94trZKDGHbyCI8ILz1jb5Dyui-vxMqAKxmBE1dWItJ61XLzR7e3HtPw3RUfoW48MQpEms1phh-xFZJ6Lx3K-WHWMzvnvkTJbIkfD1pcmvb8E8iM_b7tPlGzqiA9NayCDa07RlPk4HcHHlUKdCmzy-X0Rz1Rde7qnaM6QXAI=w1620-h1216-no" alt="Sky at Waikiki" style="width:100%">
+      <h4></h4>
+      <p><b> 1 June 2019</b><br> Honolulu Day 6 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels animals">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/wgaVrKnYmSAZoOiHdFHEdER_xkkdyML2w2c6WDrz0aBlFihItw3eic-f6PMpAcZQ5VqJkAEWsHP6NUzZ1pnLbLzon940Q6u9USuNUctiIDBlouzvwtWyPL2cpm2qqFfcUttNNG5dsQO7eX-H1HGflsJnWUxtujDfkgNg1La_KvLuUHpDwYXfTyjtozKfzL6G_j2fClEaQdihX8FUVxD9GqWUS_cj6-sq1PdeAIbmN7J3appwGI9W0hjF585xzxIGZLhitKax33ZVpT4ZQLIvNDTWUtAY_OEo6GEjWlzlRxnooCGVlF9Wmk41VSeOqrg1JbUNi3kni-LVjbR8lnym5zSBhf2RymNftEAyyaSNt8AWJMen-cL-WIzVZRusm_PnNmBK0Mr0u7rhWV97Lx4N2hEPGOEEJ9PiLzjOxYYLpQUWBV8aoHsoQ6O_-tIUGbQpzYreBXDMCykG7mhpy6WEucazLdim3ryQx3pi3hW3CRDlWr50oxO4yvuP9HI4AA3zwWSC9jqQFQv_aMByrvVyfF_KZeZPuL3vsclEhQ05wd9W73rq-xZPvD-p3i_lRezbj8EWmaYDYC8zMmfzJv9pigvfU4ZM9ZOUX8M8wQ7__wJwtgCqe-pF-oLq040wk_rkUjQ937YaJeYCsnS-Qgk8VbteM_6gw4hNaNpDr9YrA-e6vAq-5XZr6MCg=w1620-h1102-no" alt="Birdy" style="width:100%">
+      <h4>Birdy</h4>
+      <p><b> 1 June 2019</b><br> Honolulu Day 6 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/FJZ18gr2TcvsJnqI-BPytLHJLDQNJs4EONjQeqq1OD-FHZtiz5msMOn4_Dxcc_cXOp6jmJCJJaaZV8GQYj_iugtOc6uYEf7_a8oC9LX3T-bQylN2fLqBSjqJwIeGgOm7Xgd8hDZ6e8sD1uFJRYlAjvJYRutJJY6UIkH6B-nerSx_j4_iqnNqGJdv6UZ7I5FXqC1raDPwrB7rze5DOe5OwuFyEmgt2x2GgNcXaHitW-FDTKVrzjqYkb1d_EtsBjACoXuObwPqYIQHCHqjniqqPrB1fvG2dKOPi8Srg6RNzax_FZhToWZyck5ayRFBrGAi7Aeffy-Z4HuuHx8Yi9wiycE052zLXsqf5hFxQrfdLUwEIG8ekpGq015F-M_Z1XxszCCrnYjSzrXJ8IaDasFn1EhiX0gGjkSJrkwBWCMif8uTpKISeaPcrSnNdrQ28CMM_TiGJztiSzqMtxmjdckIHJkKVneH3VfjfXmDPAPEIopulwvBQMC5zXfX2FX1mipywSYEuGFcjlrtCHxUxWOaU9gCn8wCd2nST1YBq4coDUF78MOh2rJaGCi_jkJ0dZV4yZnuz7_R-a4JIg22YVmB_lpNWH2S7dMuw8toSueUhexEDiMmUDGDCJoB6Zvsa2-A-GElmSh1WBTFtjzwkcRDEWZf8zJ7TuHK7h24DGOD0QIKlQv_cZ67r9_y=w1620-h1082-no" alt="KCC Farmers' Market" style="width:100%">
+      <h4>KCC Farmers' Market</h4>
+      <p><b> 1 June 2019</b><br> Honolulu Day 6 &#8212; fun adventure to the farmers' market <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/5hTmaKFaQulD2vOIT9dG2YZOwcU7vU5d1i-O5xmP7jyY5obGi7kGGr8GhsIaB6lRB2O3M6mKHxOzjAas27eIhEi2uTTHJPu4qVxL_tajxRndaLrt_qJyyz-PV_IxaVkkRTUhUe9a3y5GEIH_6gY1OxxVMyyDR6DrXSB8QN6hyscr_ADu2R-ZR5UFGV3Ex1H_DhejtkW1OmWJqtOcfgrU61kzvcli9CAKNn9FmN_5z2GSKw3NpI177Hi2j9WLV8HtesNkHJqdzmv-9JiAlvYQXUORdAbMNHxQwlz7FZDfXNBzuFs-f48hjeBqxV36B9xnbJX268_MSJYvfRhfTzMdiwYMOxZw9Jc7Yw3Wv0HMZSSFac6FKsnRNmc39fffNaeDx2uqo03wzgcdekEsVZKuErl7iXAWCykcUoEIu6Kem-djwPFd4OnE6tyiW5OIuHVQcFArN16rb2THbPRgpcDhymINh-X24sQ4fyG0L2zj7EYQwSHbSa33slxyoq8v9lM3nJkfXPY8fZDkUkYsXz6E3oX49jyTEenXYdK_YeiPiB30tvwOTENlXFHM3LFRI6rEsKZNMRIw0btE2aPhG4wHNsEOE86nOyacSErBzYtS9AUiS_uuY4sO0QxOjkgSxpDTN_3JZckRHm46Ixx9etY2JJpnFtCXEJcksCgc1seElspVkF5cpFDIk_2F=w1620-h1216-no" alt="Diamond Head Beach Park" style="width:100%">
+      <h4>Diamond Head Beach Park</h4>
+      <p><b> 1 June 2019</b><br> Honolulu Day 6 &#8212; the trolley view as we passed the beach <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/c0gIjnDnP_QoY3OFTXlBgnbJbgFupDfvyk7HyFPEeW5fMC4XU5NaNL60wuaiGqUbYsnDFd3UPUzAEMomNquMJGzi6m_ZibdAKt87ElphzKMFF12t8xCDoSGPYoLNGqtGcYrFg_1xQcbf768CaRwlgNVUPXFItsrfjLSzu925bnK1pIiFXQo6sB2iZstmJz4KQqzc52YbFhBAkCUzGree6gccFWPTapamUKTGiMg_-_3GdqoH-SRkEdu7dqFMhm2arN3t6N5pwh7Yk88f_wzCntDrKLdkQF7k8sjs3mSuzHZnPTnxUKI0g76Y8e9hxq2xK_iLQVj552EJejtDtMASaixKLB2VbJqFfegRqXY6peOJtHjPChCsba0bz0fkElCi7-zzj_sbQuTglqk_XhhZdAyJUsH9lHOgCYb2w-y0ukhqzW8f_MOLICaJZOb5I9L5RPUPEQQNEdGzqUU9Lr_ZldhoUtYJYNffZb72dVh7dyOk4LLAXaNLzXWmkP1_qTVq0PfxmC9-JFsxizQ2gipcLx_txB6AesUvbejJ-b8fiQh25pTW2a_WojvCct9pL2LtY8rLFgr0s7q31n3OVS8MN_hmOIdxJtNt9tYJr9w0k1zXSrlduJLiSaE6THKWqe4alPwCq2TIx3-kMlnrucnbjRGCsEeotD0mLys4xEF1SHfc5881SSqBD1bO=w1620-h1116-no" alt="Waikiki Beach" style="width:100%">
+      <h4></h4>
+      <p><b> 1 June 2019</b><br> Honolulu Day 6 &#8212; Visit to Waikiki beach <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>  
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/NOaYaB6uoYolEjpsxsJt4M1Etq0CVKGEmPI775FB0m701xHPbB8SwSy-hU0rHeFdZt3ikGt_IMABxxSiCWw7iIsnMmDyMg5qnZzt45Ot98xyARpGicIzKGq8-YPILn3mgcxneJhXLZkeX5UqAY37jCNw1cvljC4i6wxeIYqFlH4npus1YcTrCVH1SxNtpNsYd6GvGkKRHF3-fai-q_0miFGsS5aODxMys3-MRMqk-kqwUO_n8A-DfgSYUWV_ugX6u-Gv138ejItWC15fcFPAI2DuXZN6Z4rjuw4vroPd2992_uBe2_mABWT5WMjoAlLt2GTXy_Om1bi_ktJSGAn5dKJ2f_CxbCdw1X1c6sR8W6tJpeiEW1nR0k9OCVbJWbmC7zce9BAAQNXEFCduK3MiPfpeLnnjVjJt_niTrNdSyvXHZ1JKSixlsoargMBo0SL0-yOVBcdOGHY7wROfSZTLGw0Q3ttSi4dP37_3ZFHf9qw07qpm-_dxvsQHk6PgkAqVC9snHUWK8R0Q4U6CzuMxXmmNHnIkU9wp_VWmZZK8vnYHzVn2Shi4LYmjtHTvQ7Fd7qK3qNb8aG88YVW2DxbBzrZOt6ZajkumUqZzXkPebe5PhQANzF0mYOXzfov9mlQ2BiC-64xGpmrS9th8-TWpiwr9qpNsRdehYzLPC7OqbSK7zndIugBbn5Ux=w1620-h1216-no" alt="Ilikai Hotel Friday night fireworks" style="width:100%">
+      <h4>Friday Night Fireworks</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 &#8212; late night fireworks show at Ilikai Hotel <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/egZtd-x02MetcTzn-3umkU2S7DstdimzvKiCtzKTcPnnjK_QjvS_z1zUf7gAUe_SAJzsHe3LR1Q6mLi0al4G_oyd8bRajLPesl-YpWx57wgXhC3XjBZOVYHxhGvI-lIXHBGn0jlyDCSATVowlULuAA9tSiBkO0x_fetwgi_JgkBT-tGuVF7GO8M33STWW8HmdO7JtY7AP1tQMGqspTAw-eM9rSMHR06A0lZR7hltyAGhXi5H6rtALPjRqpvzFY-N6-zNkmi8qGiCXCeQr71bxAh_up4t2eMrvxSv5Z8xf3ip4TQhQIqi7L3EiGeV3vmrcFv219F7f_GLe-iCYm13oa76mEoyv1lH8GQ-Tbmp0UpT1iUQfDDLUaqQc8aP-r15G2lmq1ytCzPtGWEeqM39PHvmcd0_shhDHdz431spLKVrqmQhNBwFMzAa765VVLYa2T2xT9-Z3RYm-hXEzKy1CKlMKZeTFBphN_XeOIa3YoLbGBKVbSZj_mBhhQM4KLp51_gp7ik2gWGiLIU3MZMUtkNXJTefpZj6uOcGL-Bkb25WEu8Vra4YEwplO_WWgsF0Zp8Uj-Nxg3kOCMO0nFQF-kuoCyIiGNTg66Ezh_x0lcNtp_eCv1yLrCWYf_xMDXN5qrmlhf4GsJhAZuFqu5SRpKtlDcNtYU0HONhOMq07Hl7cf-LAJ2qtUW7f=w1620-h1216-no" alt="Dock at sunset has got darker" style="width:100%">
+      <h4>7&#58;37 Dock at Sunset</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/fgg7xIuIKJyrtZp0zdjOaWcxh4I_eipe1dUROWLKvvQec77xkwxZ1ntevxPJwVDS_Owme555bA0omIN1CyLcRq5gAxEoXi5RRNxEoy6j793kOJxj8PS_BsA-ASYXF54p-4PHg-mvRW0gET8Y_pInlf7_Iq_lJD8Ues1VZXJ3jBGTe0kA-fdiOS28fMh_94mtaJZxADsUvM7_UCL_l_1JcdLV5epp-WxGzJT_GfyUVboKZ766vgYxvg9LiaJW-RgNJiw_yP_1ckC2IZMcEZopGYY8RhCHwqr3hdnlxYg2vFb1mv3aIUvfA5THE5FLeqgTnxUf-8R0FUJhjKmrAD3qtyUxlsnqUZ0rYxdeiohoMs8TGNvnCIMQylqS-gQIcV2Gr-1W3Mpujtdaq7oTeL3XNMP5Ebccce6Gx9kK99Dic9-KVy_Ns_diwvZdJuZude4Zq1twGvdFW22MrHjp6cTCm6LXGW40457xl6LktJP8CU0bvvHcygStYeTXEGBHkcwU63qEuZlrNWilqD3F8Ma-pukDZdBmVMNtGUafpCZ5RhzF7FSz4STloFaX8EP8XRUrwMnq3A4lIXj7Vix-H7c3w5jwduPykafVEuHjTjeK1tbCqxQpaEZSGRWOnud8TQ5Oxsxrq6w0apr_azBkHxc4H5YMVKucQ86kxVh-w0n0YDLGR7Qyn2FwABwu=w1620-h1216-no" alt="Dock at sunset" style="width:100%">
+      <h4>6&#58;58 Dock at Sunset</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/1l8PAnrfHoAoujbpMj--1rmt9doM8aCSNxUqa_IgHSNwVUuucaCSvrLMW-M28KaB5KzfSnpwaTw-DfDX-wV9jm0UlsIpkzi1om1aVrQG6-a9GABKcb1azgsPq0VCAusVdbSag153meL0Dfz9KqdK_KYkLzrZ_SBRVN2ygX_wcpvveNx6U6n_2yynkuBgkJoL6yAHGqc4fYggnv1rdz8r_pwESz5fwZmtJC9SgfkqdniOa1_fDZZV1o2OUyQQWXJqfi8YxTPzeZpNUmSd2gHTMpEUrsEWb1VB0v6REtdfKptQFNMFCEkogLXaTstB4guVusUIhUa1dFuZjkrhRtPiSfJQ9pjSE4On_e8EsynNC8EuUSOmqRZoiU5AGZk80syeIngOoE1McdbK8KxMv-VnzO2dNaY01ppACW-4AshTM_18sAnXsScj3IvIzSOn4pXrYH0Zi4fDEbgYpoBfMVOCj2B9P-A9gPgzBZ11_XdSpo7CPkIwmccZd2g6QcXyby7EWlHUSKfCV4Sve4fldL4s-SEDpahXQexV9ih5RC4C8P0tSWmpYzlludwPwhLQM8Rbi_Agbtd2k3Gz7V09lHXMo9G4oehhZImJaZh5rlIChs61tISloH6BpPW62KarPL3I-usZ8SnX6UDJbG-f1wYdrnSpkI91azZVp4lvWMWNHDcQ83Du3Iy20Hft=w1620-h1338-no" alt="The American Savings Bank" style="width:100%">
+      <h4>Bank</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/URf140GOxAW5MkLiE2kupIGuLEHSERBDiWnKqvzIqj1YYiSQEpgowxno6a9p6JVWNdoWGv0bWaGMLVGTlpf5rI7XEhi3YRrc79gA_vEVRpkgW4GzO1YLnhV_BJDdXv82rABnfR-zwsG25sPGrSpo185EmF_xKKfeu-VfjrqavUif62474Y8bUNf2-Jvre9FB1WdlppE1MyFMRq7maySD-_u_LJlnZ4cHioUPkzoL0GJEpKkWCcXOO3gG-8Po55iERxycrjf-zqVfjYjX7A3i7PRl-ma6fOFwypgOMCihwxUZEnGLq7TLFU9IkvHCHGAocWsnXfYruDCglDyO-MJVz-NP-HABLeAXk3aVx1oQhP-2z0_u1Ot8jniUrYefX_t7CjXv2YkoJIGQbKzeTmJvv5HZ43TbAYBxdKDXNJ_Rxo_MBRJrLqO6seAXNAmlMGwH0R8MI6Arm347-Wf_XdiyU7RRO-skpuO_09gy9aLcy5ssCKguEo_Y0Q7Jc2L-1zn7G0eIyVOVlqjSsAi0g0-xfB3FI7vPF4JnFPAF39Q06ETw_XmVBYB5bmN6TaRTipJgl8GNL6jAZ-dVLR7V4Nl7vjndHtQagPxCeAUcuWW1-I5GvvfNmrglIRhlbe430FdAVPfEF3cDcGRU-_YZTLMSsLxxbvrHeL4NL8Y64OKkjD3MF4s7wKulmjNv=w1620-h1256-no" alt="Streets of Kaka'ako" style="width:100%">
+      <h4>Streets of Kaka&#39;ako</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/SbqHQgEPvt_Nt5E7KXc1uKtaoXv4zA69qRNzOH2QXDMYDwTTwcbJ2426VE7hdiVJ88EKyVfa40ukTFFslDVluXysvmvWg4rh2zbei_onEERUMcqJF3DDrZKDzgeY1mmUfChP4I0T6YCizIE_8FKUKhTVrHAe0qVNaUtWBo7oEKQrwIMS_4h1w8IVmaGlMFXi8k8iBLQJ8C8U3wKI4SWEeAujAFK6wWsPT9LCP79wSxSY8PUN1rEMBXReYnuwb2qBGkKWXtkmzwRSOWfy_HgtFZuxhCsKWD4TPSy0vEiAATMOkGTZENImEPNDMpZu5yXtJYy8PHQ0oDFwnHWC4oN1fFJhMKlAXnTrHyJRuIhRoIdwGR4m-8cpyqr0ds0cpn4Y0_3oecwXjvA9t3QNVqfvie7fdM0rBi4UROheRF7EGNQs5OQR5zj7mWKrdRMcc_cOKQ7nAVHqtH91N_iNF3Y08r-LsMkavmXG_Kk054cC8mlTUJ6vvDiOc0-0PajU2UJS2d_RCKPMgeFCwdc-FX3IPXxhKRj4l-d3sRaOASYXVNCVyJkU3YXO_9fEZtn9HZxlnW0Kqi591tk4ab2uHsrDTt2vKGy0SmVpIVTn9GUlHnPcoMKM4ORW5tQbahyIOWe9vtAqHBdny47u0vQ8-iNJvUGmnXQGakCmuqTbkT_of8Eh1XquMfMeovSL=w1620-h1216-no" alt="Busy Street" style="width:100%">
+      <h4>Untitled</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 &#8212; busy street but beautiful place around pier 2 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/LB30_XqOSU7aHArOHldyhdyJBpqZnLB60taJgYAhDC6uiEmECaeHgN7Tl7yWBpAagnziWehP2vgPM5J3LdKlE8d-9_Tn64cDPcWauaum6L0pz76JeObuViogA-0TiK1cypGZaoPhJoyCUXdNCUz-V-dqd3uoOewsM6A8794Xbv-dVASfg9nLbFmYDENq_ZOZl7s1QwtYkPLqK8sw-Vbcx_fEAPLqXf-cGFdHeABhnHiKAIij51nodRfDSNpYEUvAthy7Tl3NQEz-_XIMaCRwNV1cDwygVNkwspEaw_voZZxPqUU50HQcRi83VHSq02lBbaYuiyGtXRFz8k1X5NNSxwx1FIrs4Ltg9B3imIYOAHF4GfgyUxlGTVCxJaKwRoEnaVCsUVdlNZKkibm_2nGbhDH_FDMWg68b5cxNm1LgXddjVANBj0ygThVkM9Jws8DXWAJYc6ASh_zzL5C1uPdY0J90urprPhXMCgPsEl3xvzNCebu7R8d9Y57BifV2T5RYBCG_98QbH0m1TsL_2gVqZf4IS6D_SiR3DQF8fUI6HuoZAQ0y7aGNTaDo4nALXg_pcdky_-A6Hn1aBuKmrKLULeDwL2aaq3yvoLWAunAcJ8w0JOtrgqecD0ZKrplKNbJ9fnKRBk5WK7zAK6Y5VvLvDq9Ukn1ALw9JTLXk63lJV3hdvXGJQXxktNRI=w2340-h1672-no" alt="Street art, trolley style" style="width:100%">
+      <h4>Street Art</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 &#8212; street art on tour <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/_oyQLmAvpeyHJjm5Rs3UFTMpmF6nJrBthV-3n4kteGBXMwrVhhKiS73RHsnh1-xeB-OfMWpCcg6_TxXJ5aeyTfsQXqWy3DvAwiWB_V-apXJWXcF2xSUfRbWB9tFw41btXYyuUmX81tB3LIvrQxz324LI9AyIwMlq22ALL9eZLYSUWApd7c2jDjySbwyCj-sMZexKd8VlHEFMcgWLsdNXuqFxDbyhkHKHPc1tyNK8dA4etbfwILeodfs0cC54dCWYLZOYD27jFwKTyQTSLaU-frUPjSzexavnJSkJXbLdN5Wnrv79UmH3dzT8meL3Y6LJQRGvHGtcZYT7zHv0RzpMms_Yahm1kIPA7Qqct_nSQGZgm21npMWDrC5D4ooxF12cVmFFjWY7SAz2QdC_oRQRW1l5s9a9Ce3CK4I0F_u2Kd7DoccZZMv6HDnFCRspMddWlbvVTnwUYYQu7E3Z1YoPzG-T3mqQa7e2U9wsRTaj-u8L0Q-NOgjh2Ra0bbY8BWzAc9dQQ1zc-t7aKfN_bsUwFADH7x2f1piSDL9ywrhH7Q4KTA8tvSSryFrlvl-58Ihm_PDy5jFSBeTw8IA8h7z_-f8NymVnivIpDhDp1aTIjCJ7NiM7NjjH8OLZEuiKAu95eOzkWcGvZrinuweoxBWRE30uDM6pxK3iKBOVyL0PKIOVH2p00hbUULY-=w1620-h1216-no" alt="Eating in Chinatown" style="width:100%">
+      <h4>Honolulu Chinatown</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels close ups">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/ibRgLhcmBebTmh30STlMtXA8AkISCLadnxso_Ex6KKGNqEFj2-Qh7_Wox-b1RPFzOluMtrYQRfIHYvf3_CGB4NBspW8dH4T3vdQsNH9WqDGEqn5iCzvmw8Gq24Zwy0tSdNINOASWaJiGxkq6BQRJgxBIQHrqn-A2MNNa93xvdMEPf85AkHKW4K8Q2yE97BXpc7PHWMi8dFAFS83iJI-h9pvRgvbqJVuPh6BKOHcv9MM1O_41x82qodvegi2DTk0_CO6ay0hTz7KAKXxL0iLlxKEvu5h5MdhFcPBJVJ0OsadUt0TqmS3U9RD-ETdN7my4U_ZxzrKqZgo6u41Dz8J_MJacoU0QDhEadqL9gq8JBAG7AhxwU1VKtRRQlPDO1stO6BvXHqwOoOKKXwddtSYDW_caVk1V60oecZFd8io7oooh3nvBq46nCMbyYTPjAdR_5RTRgRELxRstV0iAt4TUWd_xV47FEHKkSIWn40pUwx1t2I3s_6rwuSdVbpHILxQMKgcQ-QVaJCMpGM-bcHKWAnNKRFOlsrafq1BgWIeTtIvWLKYSSUeOksZg-uMagW4j6naQeRFtU_ySQpS4Fl98biVR-yEykhr-mkEePdjp5yW6sQrrJHeRS6Z3uh_SaG6YAnMPmz6oPrCMRFYsyPtYjzqqRedtOs6ySrVgD8z1rGpF17SAmhFO25iz=w1620-h2010-no" alt="Close up on trolley parts" style="width:100%">
+      <h4>Untitled</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/KYOHonhHvt7tDbFJNX2yO04QEmnDkJw19UZo0yR8nzcZ_a-WmpSd5J7r2riZlnxN2tWNTu66owupkxAxNNTOMhYYU_PDVwWytCKHCrI1gTVooNZgjLe6PsANEI7siCB_R_WAe84n-v4kcea985W_TGhpAaVLPtF8qJ-ETDIRBo3LUwfNkunZKSnZ72LLuECnqWKQGNFkOech5WxHYk2k7k4jd6v_EdER5wH-H6caweIz2Otqibj6GbTvNmapg0TFwcwyVAesKkWsUuldyDHCi0ougn5yQexgAOUBNC9ykp8g3LwbrcfmrraowQNQPC-wqELnCUFKXutIMInU-gyjOCv8W6jOaYm0Ywz4bqLk1zDMlM7EZ3Ewz2C86YqLjjSfVYsZfiuOdJb9mPp3FXzqnGXj94JP5weOYYz14mk8IzlEGofUw7BDQADz8JnfB4836chOccPOEGCZhgN7UmlMG7exf7r5hrDsGCbRhkbHJOB5zUwZcjYqEphU9tMFd98HXhTKfetMlIC2g7_ibmLMCS4dSokNez_vWQDjekAe1NAlMYTVEZCfFoJ01nRgbGuwDGcGPM9cj_PA57MZa7BW-O7-R8IZ4dbCpC86gnsMatOKGg_JycOIOQbMI3dgbzI_DmqovVl_yigAiHqq2fXBU9SlE9J19YFw4WaRDq1zlWYubgSchTGid8CC=w1620-h1860-no" alt="Trolley Selfie" style="width:100%">
+      <h4>Trolley Selfie</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/RAyv3zFTm_iSobm1VSfTSTtj9zOe1A1fQ582y1Na75Hvb4OT8TMlroSv6oX583NbEEldrpeL-4CrWmDlR2zy14h7MErnkOripxLvAjdgyia4RR6ac1S05Yr6g0AC6ZZcLWze63biG3ztS4zUJmzqXH0SSr65y_HnTetTl1if_aYPkWTM8THhrbmKfXVzn7d_bv3y8HGZJ1peRqOmNW2t74lFXknMmxFIGQ-QrVtkdAXtzvxnrcfZdznltY55P2RaVY1_G4n0C4-W9d_vWT7djnqvnTXBjakEJ5YQYY4T4S9WIzltKrYsjNS1kYU0REuGnBQ2Oa8yc2SdcFxTxQauINnZFkFx2lE9nRg2WAvJU8lonBbLaFXjH3c3nK6YmIpxe2t1IPx_08f6o1yc1m4ETQCNnhoyTbF0b7NzQo5XBQAPl95FZdT1_pRa2ItO6ab_5T5tRcHkLRYmrxUpfgho-aon_Y9p6aHmNyuEFGb-gGJ2Ar23_SUAcED37IPwBx9PUxym9xF5HqaQCNpMxIF6_8DsDd91f4uo75UlMXCVg7azPisQSfPs1SuO1bm0wz7hlpjAiOXddg4Yvy5JnXEa9QeVZ4wmlN4dx43SbilaUoUg_u2zpbpGCdhUskgU4kZ_LXley8W_O3fiBMZoWp0roW-qpaqJhdnlyAj5vVirRdmyxKuj1hHbdyAx=w1620-h1216-no" alt="National Memorial Cemetery of the Pacific" style="width:100%">
+      <h4>National Memorial Cemetery of the Pacific</h4>
+      <p><b> 31 May 2019</b><br> Honolulu Day 5 &#8212; One of the many stops of the trolley tour <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/33xjEqeyC5L8qd8JX6qkWXCZ7vT4LXqmFQ9haMaf5gsJ1_0TluYQJy3N4pGKfVw_SXH-meCAWv7bxvmko1mgGkSC9TRX9E4NnBt7XN0beMi1Rh1BbRAWmgiNaN5oyV5Gv-6bi3QgX8MPHunBFeAxOSyBNToZzjFzioV001kdftaWQGXZbhb-QuiirS4Sd_jxhdWtcauWtQZvTXOFw5Taiq7NprC4-XAoskhpIhOEf5vBPZbkHZ0WZUOqWN2t3mS-lJAXEHY39eiieY0WQf0owMk57Dhmv-bGHjJz8nKwSMatcfYa_PGoRDQOoaakKUWDTrWbzREjOPu9IYJYWfrWy7xtKgsZQXRGUYq1F1CbByIjMIYokvcXEeBUToWiftiG1dSv10UV4DsI_bySxjS99u_d3_nRNcDGuboxH5ZWUM_gK2zmDMkAs1xEiBTLaYXBuY-lqSaKEd_teDEfiYNKX6-DAUVygrPWDR1JA7Aywbs72ZBvfuffLYd5gQZ8qp-Ep7Xwy3CmIls5VkC4xKahBcpK5UZvyh3zpxYvx6BeCRnCacwtCQ9MnjSq6WyY_uK6wwKZ3Dn_8JIVcEXY8qeAaKcOwoQuUpEgrTnZEcMa-hn-FWTLfJ32s4SwMvrE_Z0Na0MhgmFdzABm9Dpn1xRGxi1sgS7xynXbLVi9gtE5TXsr4BL4CUWFckIM=w1892-h1420-no" alt="Look on the trolley" style="width:100%">
+      <h4>Aboard the Trolley</h4>
+      <p><b>31 May 2019</b><br> Honolulu Day 5 &#8212; The view aboard the trolley <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/LscZjkKFAriNaw_5T6tz9DqlVK1v94P2DuUeNi4xLCmt1wzuV9EiJZi_IGrA8Uva1UVEn3P30raAYSsp9pKiGyEbNcVh7a52EAnk3Tt9WBlbSysZPwbdZ5zyglGB9UlJe3dXJNb4LUbdm_7KnjWNEfNujMpbQ68A-_96i7R_ZDqeYauHQPZqUBh59KidemwdLEYeyWUbX_Q6Ie7GXQtLHgUKK0UkpCxNRNx19XRt-d6ieYmDvhH4J3XBcQjMZZhJONvl1D_m2vp03wQDbR8t-gYgI9MVBLdmN6dWTxg2K1DX_kYTyyqQqMhPy3Npiu07flcIyb3N38LBnqvzqadHWyH3sLBcc_mdemu4M7kAehHhFN5axdVB7Vb9VWANhnhzgTGrk4uLjk6JmOOfAmH4hGUwwflj_IU5qHVk-Pu41UV4hnnbxCb8t0ABC0B8FeVLCwfImI-X8GOkSDQIq9veHiUY6GB4-yXG33dB4NHhim5kWmCanb58bUugLWHqPyBHdoVLM7Vdatn6rujG9IgffG5yrADs5aHXKjNxMUhXoCjyHxTv-TwmwyT8VjvDZwU6YxQinL9kCLf_QhUcCxPlrxMraskWSaA27fkKpfp9D6o3f9HObj9Hywhu1h_HFue4CwtJsuMcdZkB0s3caqZVeXkSeWJOjYUQuxoD5Q_KYkvUb9FRI0ATF5fD=w1892-h1420-no" alt="Car" style="width:100%">
+      <h4>Hawaiian State Capital</h4>
+        <p><b> 31 May 2019</b><br> Honolulu Day 5 &#8212; Trolley tour, the Capital <br><sub> iPhone XR</sub>R</p>    
+    </div>
+  </div>
+   <div class="column travels people photo shoots favorites"> 
+    <div class="content">
+      <img src="https://lh3.googleusercontent.com/gsG9TrvSJznTHsogPaENxn5u2uBxKm6EuoLgbN1EZKTcwnYE01MyWRY_UoglZwkDhNGmkAtm9dnmvCVT1qCozCrmM0FriDcnUe3etyKNygTznH0meRVqLRRZpDU8ZxA82jBLLaC_SpE7K8W8FwaU17CyGKKKoygHvjlESZ9L8AW4e06LM5nXAquinvG8g8WmjznSMmjAeNlq8NhB8GcJGiM6eD2SV_euXw361pQNh4rn3Mu_wX1EM9NjTwwexXQFwUUgvgMr1y9LtCI5yp2cAKTuN7cy135gR6AsKoFyw0gX7idJ7OQezLhQDzLF8C6K_z_vxGpWpbPjfkvFlQ8C31zm-XM9lxFKati4IGZ8UMKlegbT9Fe6YWK5Ps-JWrtZMm_sqBCt3VRfl11nqUpMOSuIkZI4zG5ufHpx8xbWG7siMYN6UcjA7othcxot-ECNb-pr5ITYxA-XfoFsKnJJWtqlT71KRa3VxnxIKvTXDOh2bkU0Sz-TaELnHOnms3760ciGRvYpNXENPv7AHrR2MZn5-qAmnVtHRx2ykn_wz2GBaT_m-Eow3Wr8Wuy2CgqvnNxUjNztwMhnXkdkcfwWeAEJVepYn0y0f6mtKaSxvkczHW6JwIRcabU753m41E-t7Yek5EuZejMMCgc_7jLFp2wvwiBRKXOP0JdKYEhOu9zuT-E7pu4NSxyV=w1172-h880-no" alt="Hawaii Portrait" style="width:100%">
+      <h4>Patio series: Mom</h4>
+      <p><b> 30 May 2019</b><br> Honolulu Day 3 &#8212; Patio photoshoot <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>  
+<div class="column travels photo shoots people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/c2bR8KmQ-5HgN-CzaE6loU-Seds5DvZ4UkACVeYnJ1XcEyPqfv6jj272D12luRxBY2NLtOI2kpXCH76eZtlqILuXrPNu1-4yU-FMX-OpM7SOz8OiuPyTGP0PXUku1mrnAKPoOUWfYmi_4TXmHzl0RN3C__Vg9_B3XybM_ADHj0JHZhfsJYrigUR0oqC2X_5xHASjca4zG_q8wAAqQwbuuF06eRzI7ndqad4oQU02ZIwLkPAw1QqzG9jiKWnxEjipPb49P5nTdX0YfpwavUlQkNi86dC4gGlYmW7U2a6wWBAbq6rbR2bAAGIip0vA5wouXe6lgMpIywvZJ9RKN01MfCWThDiFMX_TP1HbTPk-NGgyMdwmV_7qDoEuw6mFkuoqMfMBOqLWvlwfR9J28KpCaT3xxrdmGXjW1b0RY1RNW-5saEJQdbfhWpeIpoaM278joqyNU0tFltXy7Lza5hkOIBYcMM41wRCIEOCqFPHSR-YJ_IkYiQuE8NLhkOdQ58AQ5VpVpBV1KWJqEdBT5keEpFLlbeh7t3lyKiKJGrWcj86TEMTEedWMr3-qBjEhc4gFjYbsX8gYHx6iMaNG1KnHcIu42gSJ3sPUd-Axzibu3SYY_NvrNts7bWlgb_TYAWwu27xgM49OOZk8jvBSyOQHJDdXWur9yGn1ntAopnKOmvTAQvk7IkcWZL0I=w1172-h880-no" alt="Photo shoot of me on the patio" style="width:100%">
+      <h4>Patio series: Lissie </h4>
+      <p><b> 30 May 2019 </b><br> Honolulu Day 3 &#8212; Photoshoot on the patio! Taken by my mother! <br><sub> iPhone XR</sub> </p>
+    </div>
+  </div> 
+<div class="column travels photo shoots">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/qc4IHyZ_8ruw4CdWkS7vzVwKI8HEmmwmHqdkr4NktnniXYNbd49zlyXyvPPwKY9yPWXW1FrqX_CDYgPLmEOe_e7s9hG6eEemmfeb-nQNvc934r4oSy4oB8mc0bpFD_XS2VwhjyDu1L14FJJwySz0cmxpyvNa1pH5xitEVDO3jMEykBOxHx15jwXwP8pM_zr--vBDgpf3QtrPaKGP13ic7JmFqjsniTsha1QHz89emMmxC_3Xvguihu-FdscreUwU0rOEiYZka2dUcgGmTUL-0dIshrq6yyqUWQF6Brok6FGhBWx3iizbg6fMdm0SubmgbBIRykP5oA_pmjBMJt4CmaLSUDyBJ7qoRs3Dt-FnE_2L650wq-OoK3FTbYA7-wJszVNSGOm2-AuCGMF51lOYxi_6c3nbGSXggL77d4dXrbaLUf1YiZGPRRIsJ-7rat7X12Zv8Ia61zHR8EEBoeuLEKR_R-YCm1l3UTVTDjzUmjqlMtI-0su4yhf4DguvzVI4BE9E_nKjwntZwTZslI9RgXakJY-VPJW--quUPV9qjq60bTXJm2G6nvy4tokJ1Bx34ohZ-Cp5vCdRMBQ4qpYDcOrx6VBf216F1CIaeB_EdhwensR42isstMNbixvstt9_Dbvg_3JjkyWYloIQeZ4SCofc4Q47hHwFHpMMvpk8TClGjCLoTfrp601z=w1620-h1216-no" alt="Dining Room Sunset" style="width:100%">
+      <h4>6&#58;53 Sunset</h4>
+      <p><b> 30 May 2019 </b><br> Honolulu Day 3 <br><sub> iPad Pro</sub> </p>
+    </div>
+  </div>   
+  <div class="column travels">
+  <div class="content">
+    <img src="https://lh3.googleusercontent.com/75MHIMzlQog95ZF9UQGRZENSpOJ4Dsn2pQozsQcB1jBSBhPH_kMIwugekIFJhxXhsnavkpmpm7cCT9TaUOiK7f8xH43H5ba34Xjnw7jdmIrgvJ4-n18R6-otDXpI-H4OXVGq87Wupj40UQZZBMhpJIaRNx-_FTTBmSj_SYmqsk00MA-ACjoLMVe_evr5S9onLtuzBCzLcnLzZ-2SfNClUywOsGJIYGqfcJ5XqSXMYRgz4ptTt4OhdQIJVGBgC8jspwhGC7mOAAqHFi5ossunDurWO1qavlVS8-rzhyhToPbSPH3WLAF8zlEcZYPoYJLKpraAuJDIgfftXt-iU530W4J22sWY_-lcpFW567aBXJ1XWESy1DCNjJxsWNbP-IsQAhegxRtYJbaxGfibLouxrCUapKPj6yYvhRELBwyczhbFzjcoSTF3nPPkT3hER__Wmh6Hzomto-uNK1D7gGsNOEPOg6WRbGyY0r5QKSZaV3FYm77CgKjo_-W0mHY1pvi6RCYc_VICXu0z2GcfB7W9Vb6c3EBhr51bmLgdLH5wZHcINjcJBYbWJ1fCuF-UIsWAsGGmW9-b-ujuqBeWGGv4eXLoLSHlF-mZIupxAicwZxnhvdwjSfjqhjdaOTUVQnLgqgLGJIeZqRulJhCJTtoXxSfe2M23lmlQyAi3qJZg3391z8ftJC88mJx-=w868-h490-no" alt="Shaved Ice" style="width:100%">
+      <h4>Shaved Ice</h4>
+      <p><b> 30 May 2019 </b><br>Honolulu Day 3 &#8212; Loving the shaved ice! So delicious and refreshing! <br><sub> iPhone XR</sub> </p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/kBnkk22FwfkrW5ZfCpPowjf3QidJPI3cJ88xDR9icjqu2J2fSe6maYgsI4YCRODUbwEK19cWg3np5j1tvOSpOoilbvF_mfnF1syFpIxJXOcWPUNeK70xLsRg8_1TuWc3cEuBG--dpH8TovPlNFoyXYNbnOp5h8iXWjj4QJtkVNc5QnGmLr_nF-zCkPezTj9LCKmmfE44yK4BkR203XnoUNW9W-55BV9wGTy-J8HQ7q85e8otTNrYo7r_GWfc4p4zapH0ZkCE6jFZwpUYXNfXsfplWDN_LBciPwMKe6l-RUepXyg2gKpO474OSO_awvp0yFQP4NXeyY8WdmVqsE4DwmA2H7iRMnV4D20WkhjBGx2twaveS12fUXxe9svvN3bPj8haZ_qjsuOQttfhx6JUMV4B6EV-CMCI6oinKXlFHeDuIGESZsP_VNtbWO6lNVLPtwHkn7irSU61cMHRp5yGXzmy-hxCixbz3_pYrUvv-N7eDcSvn5C3vxtltQB9gs_EefnlAiV0LVV61RVlD_BbPVgYOxdAPGEtHy3bXG3WpsJlh570ThPiKEGpYmkdg4gY3OkjQNbbmgWYBTdDK2z1WHuYcRmJNdk2hbzr4r-t9MiIXzCKvgF1sJ_5IfFN2hJbVszplEI2ldufe0afR_DhfFKYTDpGf-iD1LIg2ooArJTbM8YJRAuTYV0-=w1620-h1216-no" alt="Natural Bridge" style="width:100%">
+      <h4> Untitled</h4>
+      <p><b> 30 May 2019 </b><br>Honolulu Day 3 &#8212; Bridge in the International Market Place <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>    
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/1meACM9cSUDeIYpSaB6yAk55_68K0oCb6ooWu2WZlZMefzrKjZka0c40OgEBuMFCPGths1mKw38DZb6AdqV2_eHzM1iihgx41G42U3ihVnjyeJc71FyNU6q2SsQq5rE4n-RpUEaaqIJbtWtLyYxQyQalwKPJDtJGwtDTal2vC6FUJB1xIlkz6YubT_cQ0qBQ4JBl37l3afTwT1yW9tFzh-eU4FUmfi2uFsdoqf6RkGOQJ37G3prxA2qd4sEe_ZbKueqqFrE1eKu4kecNw_veiYtf0Uz8ny_M9whrd7Dhbm12YR4gQj-NP04LXx9slpmwk-F4_alLn-fKVmH2vsto04NokoplxpDamlibpO9liffs-VhCSgvLrY5YjD7TI8ze471MmJvJjtW7HGYcsIh0d-KZDyQJVb6UuQ1oORHnuYrdFVxnivtEJ0f9JtreHr8HASZSjG9U0FBrXUkOwi46t0dkRyO2aC7lvw2WWy0PZoSlbztbZ1biSkTfvsfdJiGRY5htO27VwnZZFx5DdJyqQtT9BcvX7LHsG6wPIAdgudOpQClPooerek34uM2KhydPFwkMqh-V-uGUOmyXunmGnvTZWc5AFrPoWUzgo2HWKjEfPlgOWJLQFDlnYqgj9VZ20OmCfKOrfbjMR109A5lePPc2EJNf3mPRC26o-LCtpBuGurL5J6EhMTv_=w1400-h1050-no" alt="Pond" style="width:100%">
+      <h4> Untitled</h4>
+      <p><b> 30 May 2019 </b><br>Honolulu Day 3 &#8212; Greenery in the International Market Place <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>  
+<div class="column travels favorites">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/EQbxNVu5YM5IdDzib5uhkpiFAePcOTI8pSJ3TrocxgLpzDvye2Hf5UeofN_Txs1tFAI9NYYIJZ6BWGFVqfEihchBK5rBYqSl3KR5blsYCix92TUauWTS2lnCzKNuowhugO-NvIIu2kFnVevV4BJhVxSLsHJ5xG06bsWM6fXcaXgtB4FDkR7uutvVz9PUtAb17yH1fKfiGdgRz92pqYVGZ5i1BthlVG9NNl_rYFhgPqsa_qLXSdhlRpZbawAqvEkspaXwL0D-CJRoLnllaETrJBVDzK91mXO6ijYoqJqx_bMaPNLH_P5RLlBVVgq46eYEeefDFPRTgnPjg_jBUEeUsamVBirNvPcPJO1Xbnd7kYGdyRuCL2eB4ludE1cb9Ab0UWuo2eObv3BQi6yTVJFEQO7BccwPmFsa_cNKOhemYqOTwWZyC_Pm7vquBAxQP7R9G6gUI4cdzBiZhb6_QMyoLpDJ3tHda2IPgNyzGNYf3FtJrl3ytIKFy0cxDh6ub1lqmWIu-h4qf8u_3l2H4fL25NAVXUUsmh4mDol7xk-fYOoWLdf36KjKrP-pEhQHsEmpCt2S2sVpZzLw49fK8ZwFYmAbNGpPdl4ZITXGZ-IQ_-8_wBqqfQ77JwEijnv46pOxonL0WJjJTqnbD7F3iie0dUfx84glN8pLySzgfxxXgOUB5j58I2SXuB6o=w1620-h1216-no" alt="Crosswalk" style="width:100%">
+      <h4>Kalakaua Ave</h4>
+      <p><b> 30 May 2019 </b><br>Honolulu Day 3 &#8212; Just on the outskirts of Waikiki and the shopping district <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/30JqW3BuDSXvlABX6ioTIrYbulQd7OnKk3TBD2Fggdvy2SJa48ig7MsSTTjfY_rWWopPYurlbTCuNQM1Bd3kY9z7zFgopamxmIRiUdTaH7OfLu1F3smSzT9mBa-4KPgVzxmgp48GK30kkxn1_WONE8XPNVqvGPCT1SaMI-5kG9DRL5dd5HEWoxKxWZCNd3QN5p0O0GoiFjqMm8vDhwhTImEpMIfxlfHZ6XRynfe6duL2JJ1-37F0BWZswePqJghu4aF0ov-KiiRS-KE0RH-ZoqBDjL5EP1KhihpAoQ0XayCgwAMpdaixOUGTWvsvNAioKcUUNdv_JypFF9qsroLbgZIZJ9x4jdT9kSjOOEF3ADeBXYjpCRlih-lOtxmvMFE0pzfslXVu6DI1CgfmY7nVPij-QdP27AeRI_us0KJyWTK6Gy-chDIrbvoTrqp8EjY0hZ_OyrwN3CFVAc35sBXnXsLQLpMF6X3wxWZrn3XPU18CC0gLlBVm260iScptIENnQ-IE_I-tU_aOZwh80s2tXAQxjnYyesS8ErVIW5UoCLG2oSNn_fAxTKIaWb8Z5KK7d9RWq-Y_rPxKTAyGqlhOGGx7VomQHKdkbQfrpf2rPHjmZN7ArSCRHybFnO1sfshPjV9N6QYJBBz3BI8wxoU2-XRAX5GzPg2iX-CzyET5gpONwykyZA4WG-iK=w1172-h1564-no" alt="Sky and palm trees" style="width:100%">
+      <h4>Look up</h4>
+      <p><b> 30 May 2019 </b><br>Honolulu Day 3 &#8212; Walking to Waikiki <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/9WG4HYMsKVa11a9lIhsiD60X0AAAZKP5IwT5FNBrOOfFKK7j1e8dbNWJPiArgtmmAYm6k72zpeyIEuEn0oJyRfcZBDhZ-YLZ3sS2UrsxohB2e9LszS0Jzb_zJ8BWtWrlCiCcqdQXarW0zeslu606Bu5YdgL-MQOnEXdJl0pqTyjydvWN17EYn4L2znMfh-mvqWmIjc2DSX1byjn8ShOTDmP9vDERJsWCgyYbLL3u9P2lQ-i3IzxNJBCnKAbfkFzr0FtH64PTvP95ouw5efAYAg4314asaaMtPBLofGuj5bns_xKQNtFNfWtytlyJ60w5GpsHOfWaSNPrDyzTrKt_SX1t_qzvTdzSa5gMvY-6AyBHE75-XQQHx6t5FxTs8NsaPq2nAeTxNK1gLSMd20h8OMiRVVf4LYaCPYbbOU3gYXKixcfkmkKo34L--GomshM4v_SN3XGL8sXzvXh_AZTjF7fL17ld-f4LJUJhvsfwNOu6RnC5eMIMG9gI-nEVEdek-RWizeCjcsz4SnEJiCux_yw-saHLTM1q2dH8Nzn7cUZomXwcmsH58KyFDkKIyeIP1F10mKjGnHFwKZTq3oMYqaio4fdMGaJYNl285ZbWOvFhOkHncVlfjEbGlCnMTquz_YQmzJvtS80nrXp45Zb09Wf8UMiPp9C6zwreZL3cGdNxNQ4PKdxQpiGT=w868-h712-no" alt="Playing with the Camera" style="width:100%">
+      <h4>Untitled</h4>
+      <p><b> 29 May 2019</b> <br> Honolulu Day 2 &#8212; After a long day, it's time to play with the iPhone XR camera! </p>
+    </div>
+  </div>   
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/tca_PWmgflhFsUN97vLwSeWj_VgUpfrp3K4VV-712MHgSSPi_UuL7PhXNjMD8k_oFwBC5qSfrEblM1SxMpizQwz1UwOHPeDChW6d5ubTVCF5i5qGXGV4LN3aokI8CKrrRXusOy_P5XrkiYxnnQupwIpJv_Ko74pw8Lc44wKTuHiVF8QGhGN4CCbzUJiiZXFKRvL29MFH8YbJAbZxncBZAHzsp3rjgsA8HCVAndBziQRBhK8xIhsIISWhrE9YF2j7ZFOXnKW8Ia0fkQhMIkDvZq76djuFAlsAziwHmA6iytzqi29VfbdCMjw3SRPjQbjrFOlfA0IjH2-WWupwgH5Z2hH-JdTd6ZNRjCQeo-l9SfV847VOF2JQwG0FI7TkXyJIx-0GIeL9_yoPfCcfFrxw_eqgcDdQ1gNNcqKr_TwIr0j-hstfLF6WbcrwYoWX6KFLBj3KFk_O4djkP1QzGGK8pbiNBZRfB2gtI2YjfqCDQo_S9WbpFtOtlVtpZVeWIQRjjSnWZXy9gCkdf66aYn8vk8GIw1tdOGByI7MFjUNB3pdbMoDzgIa-iiFbE35z52uopbIsRMTSnMyVdw3lPa5PnxwJo0wxGH_AQER4T3zQhOqPPtSn5dVbRA4J6YjNy1zZ-w1dZ0BRQtWmkTalc3texktHZSxb2e0tAnHuqUm-RRUCeqgkhTIv08bv=w868-h1158-no" alt="Car" style="width:100%">
+      <h4>Breakfast 2</h4>
+      <p><b> 29 May 2019</b> <br> Honolulu Day 2 &#8212; Breakfast at the Hawaiian Aroma Caf&#233; <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/ErUPdZhvKKbMQ9wEs4nQWrJbcvOAwYOdNcdrkPG00dE22zsHNgdHOLxAQChAfqNBjEAqHwRRGZ8E61IDmWJa6k2xWZ7wXs2GwEw3_tZF1hNieGRHrKNJqG45ydP0AnGWAs-bc2eQSsr_EF7CyoLjjCzIGrBc6JD7pHHyezzVXgpi0lgFo-W_wyW10GxQbCJ2Emi29p9tDroGdyIlPi6gWZJ0pewOeRNfhO7u_JzikxD6LV6qP1_R-BDeyNObG4z4ZaRk-wnVJkhck0bVv_wcEP6gg3owRwL-iWmtDphHiF1WzhOQYz-GmvPZ40LkRhiGUuN5MDu3wjR76AkQQT7qSblPMGRtdGyWUCW7lR61Um51r7kSBNiYLvxiIP4vnzT-7sGHHtqLKXTeKNF0PYui8xS5GDllaS7GRtlxnoLauYL2lEjOaB7-zfWWnWhkkVAYnZ3ySNITQQRZD3vI4Vsq1di3lRHucTKP8RAcnbLY37MP0iV0SYmNZEks6uuYm0-IKSPAAB2e99fEsIKP5g1h68GBdY-uke3lYcct0XZJAAxe9dta4ReeTXxIG5Er-0c6zxwkIA_bClYtNynS4b7yDTo_UvJcQQ9GiUME7Okgz3T7BnFkj3dBgsmjoHRhCpL8hy1tBZzf6gb8SXQFvV7tTbA0I7Uqz7zU4AmeSlcxW3U4__2uHUJNZpH0=w868-h1158-no" style="width:100%">
+      <h4>Breakfast</h4>
+      <p><b> 29 May 2019</b> <br> Honolulu Day 2 &#8212; Breakfast at the Hawaiian Aroma Caf&#233; <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/uMyF9V2YtJYeDyN7Z5Bh08LLvY7FVvTktimN1mK7cxiwVOS2WVkrSh4gfgYVOviWpt2em2wbtmVQv6G2ntx-3Bbbe6JYGRJOz9F0EsJg7Vy-P5r72KvPMBo39Nlwn2fheU5TbIE1ChW9G4oxKjECDFl5Ownn-qMf6G3m7HtLr9G3EcXw_bk2x1QHSCsO4xzZ7KI0wh06AbM-pjgVdK0rTjPbGJl3wFUW9GvJTYwJPi_9TYA1isFKepoovAULOUsOdXsYsI4i2cwaG-hA_MxWtE_CooeYCRzSEl2mAAEfYvbb176WiB93sOJM4QL3I2b_GDsQPc7XXQBrDaOzNc20JQe_KUgTvx4wd_jfm9ouQv48Me9BYBDTK9eNvALlpUf-eP37RSjl5qv-6qEYLsYw6B5Nt4ORN3bfNj0MH1EaNOeWtOR27gppiXNo1uFIi1wmMFQ-IMEsxvZhVAGzTig6_n2W60BElYoQYHkwtyr4eKkS0r22EfNoEKynOC8GKw9f-gaGxCZOpBKFV7Izpyw5gaqBqUECCQebM4n6gblTPvhFCNUkwAssSpKTJVyhGHrnMT3W6ZExAyF5nAfZrxGCEMCJ6NudBTN1M5C-uMImDCHhC1Etljvoap17LI7t0cPxvNakjrDH26ocYpjUDpOzVQdMRkZTohjgOCnJegpt_GC1OCe9Ifakxabc=w868-h652-no" alt="Patio view" style="width:100%">
+      <h4>Sunset</h4>
+      <p><b> 28 May 2019 </b><br> Honolulu Day 2 &#8212; Sunset from the patio <br><sub> iPad Pro</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/7GMgMssu1CXDfluDKtDlB-CbloevbpLxe8yxzbyXsSWXh9x_1VV0Vk4X8e4rtgZ4bvgRAcMahNg7oNgnDkiEDt3b6m_Nhmk3676fVk1Mzt0BQEbj0I2nLyPQpnLJjvh0bk9q-gWjYHaURS1Pz4227n5N4LGGvw7HPdfZn0RoHd2hnVrIVaW4YTNJh_2bMefSYxo0cCb3pte3ul8QsLcqTlbUMzFg7Cr6zLSzk-BYo5CTtF18JUKPYrf6gzHjNJ-ra7_yoNzbkFWQNgceAR5NHGz-rQJtfdDorqtHnUQiK5sGAcJOXOEXqfKqDsWaAKiqw6lypi9GQtHWlL0hGp0cXdyexzPSyqDQrPwC8EiIc0IU2jtOJeoNUpiVlKA9Ug7EH_dzcHDARpjh0YyqITracWyJgziEyrLJX6mVAE5jTOPt-E_pFRkOmfZozaibinykkKlYggpG_4J2g591P7TJzDMxn8EvpoynxCbeJRXetqFBvMUrQqVyFbG9d9agLrg9YZYh_tgEFBfLGl1PwlzaA3TkvPUyEiEkgrT8M3hAvpnHeRorkSrbGL_Akyp3eBsswPvcnghnQGn3j-VwLroUaTok9ZiXkyWj1myJ09IYG2zeNVFLAC2E3gJl3L8mTNlz3flGCQr774CkrRjUqo1aIHqTYFdaB-zlpJkxui14w8ulIlW7kQPRAt55=w868-h652-no" alt="Sunset on the dining room table" style="width:100%">
+      <h4> Untitled </h4>
+      <p><b> 28 May 2019 </b><br> Honolulu Day 1 &#8212; Sunset on the dining room table <br><sub> iPad Pro</sub></p>
+    </div>
+  </div>          
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/1ZVlTVcjjNt4McTf8dgDeJsXxqQa4jYvTaojtcBOyn_8Xl6Q3rQDRdIJTOvYLYyRR_7EGBx1CdEdYGOvjiWt-gZHjl21KuznS8dMFGS5grUTv8d5633X7ooD0WANRuxvUqMPggH7sTWVURQFl5uXs_fm9YfySN77RTfvS-9LzxW-rt3KS0TaT8bgr3Z-H-mrH_sH_7uGbHkVYpCuHbs_S5nUetECLGmNvfs-eXrGm8PDMctMPMcKeSqen8cE8pm7jNL67afwTHHCQiAYJ6Uwn13avSLi4YbfY70d_qonwLcBovMEWbKUc8u5zHveuN-ZQ_P2uiqvFKk0Fy6V6FsbPRQU0P6NrWuDPO05w_iyX4zBx5nNnwF0C25bzhoOpUEaAtwD3STcHnjcdx3fMWSguAt5w6zMNUKiU-xfath4fAlLXJ2-vXkhtEXhiqWUgv09Qbo7CS-qe6v_iWqEyuKoHqkNDonS4B6myu0GCCmdleuJxGxjkqkBj-NLcsBO8dvJ6NXmRBzR1jifGdacTbU240W6vJi2Ixr_2VDtQ23vPbTfsVjPwy0k0BRO9PpQCEBevXM0Gc_qbD11y3dASWyE2Olf_TH_9PoaTBj8gIrznbtj-xtRx-wjd4xB63JnkxXBEkoQefFE5-gEy4s2LYkTWdF5avt4J8Ft50RuUjS7clQDRpr7TjIcIQPv=w868-h1158-no" alt="curtain" style="width:100%">
+      <h4>Curtain</h4>
+      <p><b> 28 May 2019 </b><br> Honolulu Day 1 &#8212; The curtains of the apartment<br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels close ups">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/uhAwXOUr39TEM3GVbnJjtqTTL24bzL-23DCFB-A47SdcVxkLa-Q4WMujZRm9DUkOfmr1j8vNDbFWMTOYb3bheO0iph7zUtRdla712TSLHmwB6DHPWhetajEKBaD519t0nzHOS-2GoaLkpTh9dntmVqhWRAJe1uX7Y2rogrVXl61Qk-bPENfAvqGM1b0IrHs1blGfLI_DhKRX9WRK5ZagkZvRTS5mooYDBB-ixrbQsIdXG3XDkU4E_EOIs2Hwa8obbpSR4FXtYA9v-Ee-aLQRxKYN2Hd_Y0lk-_zOXrhnWxhGqVV1BzNhHdfmCYurWD-T1WRiP6Yp2gegwcPbcvc4AzYF3mmWCnRTDeccTdB1csr1o6-4hV6erz0FcX91fw1uwj3Q1SkoOUuG67rCVBJFtQn6rtcA-RWK7edieWCEW1JjYhD0Wohi8RYZvsL8trGgjp6q3njp69SCIyiwqseptQ-NcEahZrK6Qr4VIzTjxEFOQprk1gK5mNI3ciw-Vswey8lT_g4Uh7YIRm1MxGCcgkb0gxxWOM3QnsylapR5kjpwHUtv6KFclZAQlZIQZbvZ-bYnohNj_P_UCsPwQeo0avf40otuN3yg12eCbWaQp710XD-BD3PU3W0y3SfASkMEqhN5u4GD6MGYYbVnbGBpiX1N0ljDF2D4Sqdep77EerV1yB8oLd3dH3-9=s868-no" alt="The top of the dining room table" style="width:100%">
+      <h4>Dining Room Table </h4>
+      <p><b> 28 May 2019</b><br> Honolulu Day 1 &#8212; The apartment's very aesthetic dining room table at a closer look! <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+<div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/R82FDRcZ956z5s0Y9p4KQg9EI5HqDWO7HdZG8X7bey7S5lqZPEwdZL08VaGL1aUG2xfS-Z-ah0q-ZSc_FVWenWhYHlgTljUMGlXa0cqb2FWkQLTtyoy6JAEnP1LN7OEBrVXTDeaaalsOSiQWSHOMqcJSpz92TrRgUHkbiBzwDBsUo-7RE2djnYLdkDA5TJFv3V8DtJZ2PlmrbVQJDiuLjogjrPafTrqVB58QSci52Fo8ZGGL8BUIOw4ggrvSueNZbyItJUz_kPNGsJBfRjYc3P9wWSpxH9ciUcwNoO3xlIur0Nodt4Bs7yR0TYfZVDy2OlxNdjF9w3fDsIbvccXCrR-6PxaNHFOg160qzVCMo005Yoi5XRjIhAdF54KYmGkDwzDIb6wGDBiJe9pbIv-NeODgv0DEH6TLd8nk68t_kciWC0HQXlJaxFF_03F-9UCYVDcw3Pq6ytuGDadym81ISH9OMj0VD4sXNAHR_enFd7td2NfafFgaNbcCKX2jpBiCg4g9Guzheuq9N9KcwXGkOB-z0_J-ec0S_zMLImHq5YITHB7TEUHef4cG1l_96zNjS7fqsAHpWaejM9jpwEBFZw3ZjrOIJu3l2wu6hnQAQ-dv4ETY8veUHxi3wDIF-Ve2X-yx54sw0zq-FcCdSK3koSIRy7xkwIumd6kJS0YgmNGsK3ZfnMaadlet=w868-h652-no" alt="Dining Room Table" style="width:100%">
+      <h4>Dining Room Table </h4>
+      <p><b> 28 May 2019</b><br> Honolulu Day 1 &#8212; The apartment's very aesthetic dining room table! <br><sub> iPhone XR</sub></p>
+    </div>
+  </div> 
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/lHqqXuCJ-nbU0mtlF4aYbGf0nMzbNKRaJMRsXlWPQ3mPbChkA9hFAdoy-bz-4bliBI8c9n5Vr8NssN6DUEzT83pGI1tq4qeYiKi5VJNFZ-QSsrYRQBYxC5XjIh6VR-r_nYjP5G0zQ95IFOEi4P9lQ0yMBY3cvQOeDtTURs9Hk4gyqau_6nSgUYBxHARFwMyun7jFFmXeG0MG31UJqvnFH-tK3iQ1C_LaAmldmIWlmqQkwTx8eLkan9AqT1e73U04XKz2hl8gJv6B9wrk21VK68qq4o7LXim7PsaqvqzZJZ4c-2Y39BPKTYGxnfC8wcxkCvtux2gE25_73cduWtb-6YtueS_MNqSVms2YUpsj8XsQN14akBg21J1T3pwvUlti4U8UP3TPZ_R-leac_bxqzIzLyMQVdQ3O16Y2l_GNuKvn9NzyF-fzB3rKc93IUJNs2MlhTAW9zTNQhAHy-rTMJ_ICsj6I_m2vbkMoXtEKCqT7AKSNirEL6xDoQRP8mNB2o4JFw5HQqdYfC06R_c1aUn80wdNptjLft9KZ48mikRe7wMvQKmvzJ3katu5Fa5NUTqbSdkQHxZAKlP00z7BISC5mlYUwU_kl9Ke8AUjAq5PiZIz1mp5yXNksnMOrRRYOojufE-tTOSPIUS6TtxK7m0KhFQ_dFtPgIYf-1D-S9E-X0ql7ZfkhYomw=w868-h652-no" alt="Entrance" style="width:100%">
+      <h4>Welcome to Honolulu, HI </h4>
+      <p><b> 28 May 2019</b><br> Day 1 &#8212; Trip to Honolulu, Hawaii right after the end of my first year at college! This is the entrance to the apartment we stayed at. <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+             <!----------------------------one category: Japan-------------->
+
+  
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> Japan 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> Japan 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> Japan 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> Japan 1 &#8212; </p>
+    </div>
+  </div>
+   <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> Japan 1 &#8212; </p>
+    </div>
+  </div> 
+  </div>
+   <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> Japan 1 &#8212; </p>
+    </div>
+  </div> 
+          <!--------------------------------Kyoto, Japan---------------------------->
+  <!--<div class="column travels">
+          <h6> <b> Kyoto, Japan</b> <br></h6>
+    </div>--->          
+   <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> Kyoto </h4>
+      <p><b></b><br> Japan: Kyoto Day 1 &#8212;  </p>
+    </div>
+  </div>  
+   <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> Kyoto </h4>
+      <p><b></b><br> Japan: Kyoto Day 1 &#8212;  </p>
+    </div>
+  </div>   
+     <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/sVTlg9thM-AHFLaJQZfN8v2STFX4paOUChn6V_gKOMoaNUAHAD0UN6fTJqmqLJpaRkpgxlnGMgVQfWXfbB0-BpAxvo1xUkEl3cJ1unyG19oPWxOfLOGM9EbPCz4gchYXb8V7gtbtpe5zhkIhllw9dKhkBMxcEfjFXY0kTUJY8lzR8tVn4akqL-vKXp2SVbAF2bT11qyTTIJkd2nonUS8n6iDRsR3NLmHsg8bbEYpwFW2P0WwvlyFKehO1lWfM2L7PR9igzEg-kGXI3pIDjmqFuH5EyOSVkWNLbixKROTD6S8oy7LVCVjCSmP5nkY3sbqQgCOtHpZF6Gzoin8Zv6aoQ8WUnx4fe6xAZG1xEXAcB4Q0xdvJqtD5POPGu3x1AzVWa2CyLB98xwn8rl7S5j3kKTvodKoXmJmJ_5x6wO7K7ZisF2HBTZMeEKBiXVZzmK-Zex6BXCyKd3jSDZpYnxXv7GSVVqIgIoEOrjIw6uEc9xT80IpaigMOA09cswnvfwqn2H8YLOwD8h2fgvpR4Z-GQtSWyLaYYyC2-I_oHoODwM9pXiICi9pUPH4_fgX_m1t8Z-myHqHNsy8eF0JcsVh_yhycYmjBWzEr7QjAnpV7eArgyhdF36vyjDfcevjTykZ0hlKxV8zzRhLba_3CjP3qTRtcT1nVsQer-G02atGD447z2LnqJTuyBk1=w1620-h816-no" alt="" style="width:100%">
+      <h4> Kyoto </h4>
+      <p><b>27 January 2019</b><br> Japan: Kyoto Day 1 &#8212; A group of us went to stay at Fushimi Inari inn for our free weekend before having to head to Tokyo. A couple of others also joined us later on <br><sub> iPhone XR</sub><br><sub>Fushimi-ku, Kyoto-Shi, Kyoto</sub> </p>
+    </div>
+  </div>   
+          
+                              <!----------------------------one category: China pt2-------------->
+
+          
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+
+                                      <!------------ Nanjing -------------->
+
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+   <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China Day 1 &#8212; </p>
+    </div>
+  </div> 
+  
+                              <!----------------------------one category: China pt 1-------------->
+
+          
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="" alt="" style="width:100%">
+      <h4> </h4>
+      <p><b></b><br> China 1 &#8212; </p>
+    </div>
+  </div>
+  <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/4I7y1okSIqR0wnHZE4T9J8C4dbY_03Bw67KGCCqCEfJpXZibQ_LJE9zffscn-9fw8NTaiBj2Wjr3G9rVsuLFfXcbog9gIVQuktQdORnBhVVvx-1iuIISu79fjp7WlofkFdI4mWIwAy_SL3kRNIE-rtytUjI1idVXQzkoEj9tvOGj1yuyAIyt9iW-Cn1qgL9ouYHgg-qgn3aE_e3_-3ZandfkJsm8AZdMttswmz488RgH4Zjj_Y6jrYvS-0Asfe4nqfPUbKzpDsvTenAU4psHUy1X5JPOjl-O2T9vyKk39HeU3K0ddpt1v5XiRw6n5S6ATTF-8VgmDtr8yyoRNqu7ij0tgvf6SxvTqlMF2chSb99EWkhnriTlERYaGjLvIz4PHlZHuot8VjJC90bLPhZuHaktCM9he1emeb0s3nN9n7n_hnhcWCvdQj9EVzXuMXlyyXC-gWRwbAbna2gB5mHv8rU488ghU14ZEsxiUf45b02O01LWMxnD6gToOrARC8QWbyk9az896AnZTU06064-GsTaYXMlerMe31l7y2lUr7jJMJDnSkmmxam5gZhPScTzoJiQzawa7FodHSacdtdZUTunG9yOifgkvSPaFUE-9LIJp0hstrjHyb3PUZjcIkImdzCD5WOkB0Oj8U_F-6xDI6iefzGVH27st59xmZRA4tIeWnwLjG2JU94A=w1400-h1050-no" alt="" style="width:100%">
+      <h4> Enjoying the Garden</h4>
+      <p><b>5 January 2019</b><br> China 2 &#8212; Relaxing area overlook the center pond in the Garden <br><sub>iPhone XR</sub></p>
+    </div>
+  </div>
+      <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/dbJ-7pliwILdAl22b6iUdd4zi_ngwo10KvuB7RTQUBd2ikxTfbL27UE1gD-_GX9p9L7yqtkH_GdDvdgav-FYtzUHbUbNyUeiFvm9fTI0yx1LVkiL831tWMN9dE6sVld_uyDhLB0yxGnm_wf_7XDGljlk_xuzQbWvGdCSc7vPVBpRYg_fmMVx9Xv5Awef9_TvXAJLw0n3JU2n21f5455gC2K6gyVclIaEhaqVP1TH_nJWXHJSN4YsFW7y1H9y-3AGcipVCq6aNi1DxKPX81dgSBDzGdM3tvScAijtrWWnjVXfzBvXRuF70j8f9AhcO8PMrDOP7-9G3sN3SXdklEZFjGyhkrg6GSeAJYpN2_77iyw4QKrdVwBrkWyL-7Jb9UA0RyDbLKKCMRZXq4yAMKfjbMTMjhVdxPgQ_1hwlBKbVAbKuCgO_VPMI2e9-4R8Yq6h2urkqIGEuTuYFgSKU1oi_dlCKvm315TFFu-WysEePE_SWpnMJPjvVqpjZkOVgHIl8C6RtN6q0JQysEndVLAx1HgAQu4mR5DV3n-CIYUsZIrvwRSFA5kxz1tmu7jvuAr9JOxFYOC7rHGpa911Rfc9hEe9B-KxOLJnfOvW8bjfzKu8xyFsU0t6v50CLiEHT2SzFHlnHc7c7NLm2UM-1c6u_7Uj0vKNABhoKGSLiuXZU9woJNKgW254Nw0C=w1612-h908-no" alt="" style="width:100%">
+      <h4>Untitled </h4>
+      <p><b>5 January 2019</b><br> China 2 &#8212; Decorative "window"? <br><sub> iPhone XR</sub> </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/-JUMDMzPFLbmppIW6_As_fMEth1KieOZVp5GL6qinaYV_nBzRHyj_bsp9CAPxEaTDByJ3Zn33HSgDERjikVYHqIxqjNhLCOC7Y3P8APU2m3379mGlQDqToY11KOM0I5yaKOV-phuwduziFul368cexy0sbKAhfM-YhiujUkHJwOo5snFIlPLaWcDy7TJPke7Lnx6XzKwsW2ivDFI-yf8KdKIX0QrIYGUaWuGKez0x6XP7cPPrL9HBOWGZUXPdugQ0yK7nJxUSgLKx44YswM8D5WiqwkWWjR3WiPyv24SZGKXMpHn2fshPZnq2zGM06kwwL0N57AGCj9jjzOfXxg-qgDHJQFOdHJBokcalT5YoqIHXwR_OKXvCnOLENIcKlPniy5DINcQSFh73ET2je6zJHh0m34xLOIhIlBwnuYRjsj0aQ7oplhq1dtmePC5nD0KOTdAtp-iBn7hDA8hPxeWncYaak2uVydUWQrypOr63XWqcp_VoJjvVAXEyUKeXVnLUK4zOjN9xDPrMBI2NTmWn4xaeamO6s0eTk87HMAjsKrtwimtoQPkhpFpAeET1mXSsJFocGJqDVCvrJdy7shm2NmOlbOenLvZOtcrIqISttYhz4ldyBvPtZCYocJeZUE1Fxmkk55vAggQtIHLrWPRzvorkOf7LNKhryqr_OR0Y3edtPTjHJ35-y1-=w1400-h1050-no" alt="" style="width:100%">
+      <h4>Untitled</h4>
+      <p><b>5 January 2019</b><br> China 2 &#8212; Inside the garden <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/cCLov0wbhlCbnmx3l-Mi8ftpBhCDra85oqYDrypfF2zKEcu1cFerby5SVTxlBUYRnJyOeMbBk1JghU7DE6XyyUUwHDjWQ0_MoU9z6py72Mc1a9YT2NNUH15kCBcRk3xMwNrAPYnCCSt5W0BhPO34huHTmM0DUTeNFXlGZC4i8XVEz9qr5xOVng-J7vgoIocF3aRlxsU8R5L6D5TMvzWCbthves_hJofNNaN1Lvcddwihj4tzKteZ7A9WX2Hu2ujFPZtyKxdwt1C7AsU85aDTLKxqJRWf9VSFZ4c5f_MjCxME5TwV6EOLhrHUHiZ6bhViBW9pfIehvnxZvMECiP-7hwM-IWM43UjgFNXGcTlHokbmEloYF0mBg_B0gkydeHgwEdc0lQ8lWSQ8_OxW24_VUWANWja6q8SQEiSB3GOznCp4-7ltVDpT1YVZa-nW5lsP7QVvzMxM6hsgiqqCOfotY01GneCZpmkl3N9T0eptyYocKIrh3lk3tN8WYwo69kHzSpPPNBKU6saAN-1EqEnS6a97N4OcG-Urm61iW_7l_AsVD-w6gYCSOKVstiLBb82jiQEcbXPB5bUEDo8B3_rvX-I2EueDdmxzAt3_MoKZm5FsJgSfuf5bgDHhI6CXHSVN6sC2OoROtgcg8EUYXsybK7Ux7wR3kMhQDtRbkvNIYdhG-wLm8duNZcJF=w788-h1050-no" alt="" style="width:100%">
+      <h4> Rainy Street</h4>
+      <p><b>5 January 2019</b><br> China 2 &#8212; Walking around the Yu Garden <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/9XavGHbLJ2KS0hSU7P-qABI9EidxpZEpQzWy1qpbafZZzYr6QidES-l9soB9GlmgNtDW64NOM9oXv6_NVzxQhxAm-0o3anWLqujsfYUMZBsTMNzkYFEQnoaZW27vqLGFL1iez1z9n8f4wTlnLemih92BRBWAYFh3CTpB2uIUsdrvwVRPVLPBEIyJzzBstybwly9Ci7hDR9mjQewnrgwDNyBoIWs4-JqNCLJhfduhK84FwNC3xjCPzUm761jITSApzChVmxeYw4rbBStkUqX7S5LZv_Kq9NMPswAqgUsugWODIg0OPFDgimQv86pHRYzS8dU594iC5ZmtA2TKUoz0Rj9CkjvNM7mOVIqDeBTYgtpdbY2zJpolTARxhM7LwUZHyN06yh95eOlBv-5yn28IKp24AVm2GQQ-TFo-w2EXafYv4vhQURvca5zQszdN98JnzAXvj4HYlg2-j-HHwqD6vuvBwOUdfYDpgripfwW2mdTqJ0A2VKVd5QmMu_SQhiz2PgFtbGb23WT2SLYZPZ7o98xQ3E8cVMEWlTj0krqIGP87ZyH3hyK9yuuNOWVsTLJjfFN5X0ifXF4I3HzHjeIpNEx1kVbAoR5wsJ1WTsU-eM3marIg0jicg9WvKZXln9S8VunjnuXCDAuuHqB-Ypp3FCGbLVeU_mhotSdToHvaiYTUehi4QX0dCRlQ=w1612-h1002-no" alt="" style="width:100%">
+      <h4> Architecture</h4>
+      <p><b>5 January 2019</b><br> China 2 &#8212; Architecture in the Yu Garden <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+      <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/CslZqyO0j8aHuam1dj0CkGQE2lOd3JeIJUK6RKXXB2C07sqNlB0rYdLnvRe9Nb7qwu28oXC3SdFp_sHW6SBVREHYCE4Kf7TQr__lpI0IcN_4zN7-Zx56tPotteWBdxH3BbpK2PSnxmmQTtuM0TDv3njpB2mS3wiwWA9ACp-Mpk2HblUYL-rXWJBBojKX8F0A70MgDT1P76HeMwvkKlTb5ON-D74t3lNafGraly1FxhHvzo0x3HDIOLBfLdl_NfFUX4aZabhZbQknc1aTN0WGaGRn1xNpsAEqE9w2rYoAhocW38Vw2UGd6Nokn_Trw0XQ08BAntbstRn8ir-ORs5xvW62dqdJnv0Dt1dV1WN3NoKqhrJ8Jcns9UTqKkNCxF7cpS3SGVumggOTEJCTcRtZu-lOrPQpT4KwsegqBh6NVZzbLpUuXUACYmkxBYAXvhneqYDA0S9DGxknZLvicI-CiA1fRUI6V1lLpQNyxH_kqbfvLcXnDiHnlg5kVsYfXFKFURk4WPBS-0A2ZAIz_nD_gb1nusn9u9Onc-eku4hI4RWB4sxyRtiZvzKzX4yMDG9MIgUJlcOFRTmsGcCUuVbc_AHB6Npnrlq0pgDTzHv_pSyDGxuTszgBfg7UB__j0VyUcKQtOmMUqhDfV1O_Kb_SFPI_CcNV0Q4XrxPr6ChQ1CYaiXcKZ-b4qouT=w1612-h672-no" alt="" style="width:100%">
+      <h4> Yu Garden</h4>
+      <p><b>5 January 2019</b><br> China 2 &#8212; Walking to the Yu Garden <br><sub>iPhone XR</sub></p>
+    </div>
+  </div>
+      <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/RfDp0hSNBmIsUFha4P-oswzgu8rOuXROLhxIdRcAWbVIO6AMv63xPkeW3Vp4nCKbcDqb8j_yaeY5WvjICeHTBPjLWW26hjoE_P_2-H_fcjc8MMBwZgGtYGDfaSxrvVXJTjlQEXC_lqmVbiI_wM-twkcHT2qTtT1bo3AHpQ0Oz4CG8Q2KpASTXLiWS9BsdNb4jZTRziHucBQ1eX5xVFiR7ybTw-yU-akk3JBNO4oORjAV_lfoYITaQPsYset1z7XIr0Ai6lE-glkxW2kCNokrC21EH5383Mhloh7ZLNx0lAO_e23_ian-ON_tlwgpsc_aeiibM7MczLpCQKoX-nFYj4JCBlZJ-y1KrfDbd8yGjPmlF_PYCQwZLm8tn2v4Rak6iDinQtWg-pkob7yZ6uN8jgKDIPsjHoWsCtK5GcJMS36pGqAIpTl1wwOpiY_0uWYGTblirYwnOGJLvTCwUXAyKQejJRPLtL9ymn73N2jdFgANvVgvDFUOeuawDVUuDY0xr_85HL9yjWgPnZVRqn4S5kM1CLQ1EkliCm6-ieqfgyR2jye5UGWcvkokheAez7rrzPKYb7sv6oZVi9BHdX22a_JXqmhiHzK38h3TMGvDIxOzL9wfHFZhcyzcleEQjDbOvRJvnshLU2h-AbRhlBIx5q8GJ01WkQFEmE4ZrtEDJJMJkN0RgrChTVWC=w1400-h1050-no" alt="" style="width:100%">
+      <h4> Global Harbor Selfie</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; One of the many group selfies on this interim trip <br><sub> Taken by Noah <br>iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels people">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/FYolTv3gZwMZzEFtnJYY90gz7_9YpsNdG4ywB2Ovd_6gqlUCz-KuHeZcrk3vPqQIjl2_zpXc-LYxLtzmwSaUBJGeFrOp-EI6r9XeqSPGxDIcGY2aRqfZ17cqoxSk3Z-qNNjmqCW8sF9tsAjLtArdwhuM_2eZ7mD75nb5PFmUIlndtRaSenGGGkzPdfNzIg1fX5974jYZLnooOVHCLLM89XAzd9AETiys0iwN0VRnLbSV9eqV3DP9UM2s-2FOMgxEBHZjoXB233ivTIGIBYl7DbXZO9wXXinCaCn3rq8F-OA8HmQ6vZKowyIRuBWAMs2GrQ-3hIXwRJjZ6Gka9yrykKHx7Bko_-kVyE5WaCfAwYfOtU6AWviujAtL0qIPqQo6obF-YYoXpwDWfpxMOgGa9zWl5XuzBoDphuBHF-Hhb8AOz-uFm9jtKNMQ-128sM7P28LmAtRVqX33-sw248VleLuVooxi0L3CBRFis7eVDy2VpL33VjoUVw74dqNLGjbH6BKcORpA-DF7NQ-R4Wo6qSYFAcivTFgWP5zLtU0kDgiVCYdIZJFXgydDR2WE1GLAzbNrWeuKtcB5DoIvqPDs6pj9mSePSn6YvqVWWGiFFvDQcUHdlISwpblZeCmscUPoOlhGFSAWNB186T90ZQdk0mBzDE6sM77_20PsPkQyvFNNDMLVdT5C0Qy6=w788-h1050-no" alt="Rafa with boba and jack in the background" style="width:100%">
+      <h4> Global Harbor Day 1 Boba</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; First day in China, boba first <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels people photo shoots">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/XAmixBWg4W4IyzLGK5keBeH17xSPaKAyIbH1ZhJyCLbcNsfKdQ6zxzq-eRwsCw57_JKlNUVHJOKxB8PEB2yraHAyJfEeNGHValzOHWLYeB4JVUpd7_ROmCNuj6GnuTeCL17ad_lYgtm50c98t21OPdphUQDoELZxCdNG52o8pcygPHqor6HKWhqs-vBsbIg71APdDbbgUOd5c6Yfax4TRgSq7GMrH8J_t085ToLosCHHGjiARCiwjl5pbDe7xnNwmGeT4n8JaCgA7c-1n1VDrV83T9_zX9NyfC-jTrB0uu4ZOgyxdzaGMpO8oxJZO5r1dK1xgS4EGnFEzrYndLgplKUla59z03eXvBnz6S-Qzymjr1IoV4AwXCUj0Qw3ro-JVRbZWAwfIAhX00kG5kNiWfP19WYgxkb5PdLUG1yih6A80rkKCjsVsQmnyJTNa7II0kzCge8iAn-AwDfBtRM9KbHYiUVXwNNz7bE5teTr7HYnIzmNySMTegeI2toF8p-2QFSoMVIeslbYeSdZXBBq6zBsXCnDVIpxITsWhR28W4THtRQnpthBauUR-WNdCFyioGCuyocBRO3uTZvMDKXJDfPtB0ZXaPuggZq2Nsk2VtwqhskNkRR6XtwNgUXvS9TCmq_vZ7nVvuvPmQMNF61refI4youFlIvty6mnlZ-qhDl4gNjjK1hk0pFx=w788-h1050-no" alt="Rafa and Rhea infront of the mural" style="width:100%">
+      <h4> Global Harbor Photo shoot Series #4</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub> iPhone XR</sub></p>
+    </div>
+  </div>  
+  <div class="column travels people photo shoots">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/cKHdyAIlbVa4l0C1yGwR1GeT5Ke3cIhbUAMimQEo14P2PFmq3FzIJCdy3pm0oMsYZOcnxBM_TDeM5fmDuqRd8zNmWoTAkVAfH2zVRaA_zp5sa61X1Kp41L4_m6TkmsyncByy3f6wvxBWKky9pvHIEDKkEi3bjCMD6p0KuUAIhKDW_zh3ovqE0C-mIOr72xFE-2NWvX3WAclpH8sxcfIwWEmz19Lg4TmbYAfLtSQVfTM2JR7oLgPvlZ-MFEjwj9ZljKJ6oRSHcOL6-i1lc5XCcm4nT8srk5zgEfZyCmNszmTfqS1UI51jKZTiB2teuXIo_7Evov_tukzt8GWyqNhu20pqcwQidEH3mJ7cuN8olUBABroYlkILY8NUNqdMaZtcLUKAvBL5o1GmySn8N6JTs78-_67wrati6jARj1-dH7MMcE3Is-V5lu6RNoGnQcJOqtl0wxAkcpOv7XEb8ruucMFSsfmj3JdLb4wxYapmqAqcaTfyyZmv6SZmlCGXxje1bFFJjKNIEarCbQfcFJOk_H9ZE40FRwnu_LmZQi98ua4L8SMoQcY0PRRfT5zEoq_kRLVCov_RdrYCiYm28ZHBHXZxhYnJT-HZGc-uePjTvLzcVpbblJyywDzPHut9FU0Yj_KocyXPBFVAwKxpTChJrUwOB4H5yaqupYNbvsJojTm9XSqfH0MfuYnW=w788-h1050-no" alt="Lissie, Ellen, and Janeve infront of the mural" style="width:100%">
+      <h4> Global Harbor Photo shoot Series #3</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub> Taken by a friend <br>iPhone XR</sub></p>
+    </div>
+  </div>
+    <div class="column travels people photo shoots">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/I6lQ_MvVm_Dn9XOEkhsiUykO5e1dBKZYcxnDXlSBtl63_3q1Yyx8cUPK_MdiEIoDbJ5nHBNklmxaiEELvVIyDvmej4r7DE3b5x3nHFnZ-u3vQ30WJ8Zx9N8RxwUp02nYQv61xpM5qo-yJ5zke10lwr2dceFp9AUa_NfYUcTdatVkzjPctfRlrNJl1CecjmlKBPv-I5EMBEt65xvQktsOed48hUSUj9g5pTB96ekd7FjgNwzGpqvav1JYCpULNH8PQMote4FIgaSl7A7g2jAQZVuQ7iqgm_mFq0KGdwISaXchpcYLE057-MPBjX_zATcDsElSZR0XHNgYzd3ypgz32J9dg_bAqMfC69eLqeBzz_iNi5Xv03ymw9_Obf_K3NlxJqB3011N1fg4vaz2pVsy1IuBIL85soLevu1KMgR4YsJ-Zi79znscFs8o_AC-0IFJYNzulyiCDHZTHin9fU-iHh68VrWW-A8yfF0vwVVqYptpUVCoBFxOJIDzjf5-neIuram2w5qFY_Uwh9DNRdsfbM2Z6II99AI5tsSePMLggZuGOU4vaijxUxHeBmRCaMsqWzvJ9tyImassZtw5ryEhSPn5ifATUe-8wN_bRaCAAPW0X9Kl7LUDVOEWZpK-YIiOdYGY9ns5iTLFxhCn8RlEobKGEmmNQIzpLgWVJiHnkoomRkXbugZh7IuK=w788-h1050-no" alt="Ellen and Rafa infront of the mural" style="width:100%">
+      <h4> Global Harbor Photo shoot Series #2</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub>iPhone XR</sub></p>
+    </div>
+  </div>  
+    <div class="column travels people photo shoots">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/zuKG7xw4KRu9xpXq_owc4fA7QiY6Up2Ve1liOqV_0agDo2U6XOtoSwPLwMR8-u9RRTVrfGMPePmZNl5kNg_Oj3Y08SERuA3JUKafCdij7xFNY_u_rDtvJhgbCmlc_WKdVFHjTfnGcOYME15MGF5zntYM8DEUFrRTmArThSKkuWv-Vb1WL3QuF3MeU6Zb1lPNfpS_vTCx3H1WfmSWVaJY6nfODGpIP496DryyFMR0LnvMM-KkNG9xac1cz0d1rhbFpztnUmqiH5hUieExr2u0J09lk_Cb62Xq0iUj-O7wBaDMxiPQDE4BFuIVGdUhx39DQSy7lidh9VSCh4pqwppFKJDTv2eof4Sjl6EJNVpY1Bp6nmfEKMo-jwoIbLdc4Q-259Ka5NVrD5N4RAgrr_BdmnEiFxfefBKJizjHKRryMLkaGkz5K98ASd7QUgefggBzRPdONb8_0NyTXglYK8Lz-UJTA36VQEYeLQboA_6Ws7qA1AiO9mOVocjWja-Ig78aMAfrk73zNa52UhBIq_CP97CtHThpbDjE43ZVIrRYVe10CF16LQlkae7Ax-qGMBkNzyIrjAKDlmFY_sGIZWrWU1cqzm0YmQqouFBWJgvqRD0THH-orBdVkgIHquWDgtelfLXBznqsZgAYdfC14fZVoCtU39Q_SmCkx5Fk_6bk0SZaFo2OgiFGJHZT=w788-h1050-no" alt="Lissie and Rhea infront of the mural" style="width:100%">
+      <h4> Global Harbor Photo shoot Series #1</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub> Taken by a friend <br>iPhone XR</sub></p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/S8XLoLcX75GRyRAXs5UwVh_AZ5VtMClUKqMofyb6KvKE7ABHbtmVHOyoH7mygyEeKUXITj5wPQDyWP8TdApII-PRdDH8jhCw1oq_iLu4AFbL-o3vazgFRscOxwvbOfaB3iamSwePHeXft4CgCaS5Eu-3oYlRiQ8uMIf0sbsQ7AR1RzpPvGj0KTrYSXJ8dZ8JqD61DFhTX6hWyOIS26AvqeNxQL-ZIU-n3JnYONGyTQ9JOc3bzG7durSI50zFPoUYZ6kVSOIuvaNgin9tcutwHjbMTGCtYQDF5VwB5pDG9w1aPkf8L23hAbGIUrrzTtX-BTZNzswlOvXAUj6uqDg7WVa5bMpTb04fFR4zx9N9dSwRm_e-6qS_Ek7JXcS-uE66araLITQgHj-4q26ziV2z63gNLLNYgnR27YOJnJ2CFmPIODfSsglihj1W1OuITMbiNn9SphiXwfd_zHu4oDyiOycr2C5WxUDfExzz65XoPWQ2Tjhvvwp5vZr3qv7q1d_reX2RNfMweU6Y4PJNPmHBWYlzWMm3BBKlFnPThbWUwfC9i3lffcG1hBxCAYJuHxRoYD51cMM_WGHZGusPk3OhYXEj8yXNkm6wvtGzGxXgbwUmsFJyt9Q_KJvW4PmyOYVVHP__9ybLvQtPbtgqVRcp4Qk-ykaA_SA7Qiezng6zd1k09FTA8CvzedML=w700-h1050-no" alt="" style="width:100%">
+      <h4> Global Harbor</h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; Entrance of Global Harbor celebrating the year of the pig! <br><sub> iPhone XR </sub> </p>
+    </div>
+  </div>
+  <div class="column travels">
+    <div class="content">
+    <img src="https://lh3.googleusercontent.com/O6geYLmZ0Ksgb8U33YfZKFyneqDGM-Jyjovnhsn4I6tuPvznr-p8VX_Yb75QG3arHMPw_bThPOLSsDtJ-dEs7zWbQw1a7VO4x1HJUM88DkvD-RTefSOpuT70PvDAoGYudsm30-JeZGLA06EXp66BVexjBVYYe9jKe6EUvgABgZtK6QwloV-31L7obbgJjRqGEpXVt8HgSVAEX86ggU4JWmm8iRX4BYNwTZkTx5msFC8513TYCP5hFOOkJoHQOEX6atpZcMSJrT1J55oPfStN0uBGEab9sNGQflTXBMXjFi3UT_us_ySlvazt_YVAG0zdqo3L5f-QpjBKj6kv2zA-rNKTF48y5UZRBSMW22ieOvoTKJ_oM3wMFMK0LjAsTzsyO2UGPpb_IH77GBjrNkyCHVm28V0MEwYA-Cu-nmo4OkrTWEHia8Kk7dmOuYghh3gbzj8qU8PgVC56dF0soX245BQEnBpksvQSjvjeGrJodKsK8W36jT-W38kXEAaUNMrcxt45vy1Y3OYoXjK_KtGM0Gh1mr1pZIoQ214vPYgWY0imx2KfzV06xZQyt5by1O2iMzL80vM8Gh8alyv8FRtiHxDp5xX0TNor95njqYMhlMzjeH8ow0Pv1SBTzkFOdKcvzzJRZ_2Uprx-SXJuSN8XfaR6ELi5dg1KhleM_avVPbFy_gkMrMw72SVZ=w1018-h1050-no" alt="" style="width:100%">
+      <h4>Shanghai, China </h4>
+      <p><b>4 January 2019</b><br> China 1 &#8212; Apartments across from the main entrance of ECNU (East China Normal University)<br><sub> iPhone XR </sub> </p>
+    </div>
+  </div>
+                                                <!------one category: People--------->
+    <div class="column people">
+      <div class="content">
+        <img src="https://lh3.googleusercontent.com/ZwCH-wuLLov2o7AIDyB0KbUpW969DqavOKpzvSlOtSvnMLiIfrOkEmSguZ96P94ZSpLGC4r2bF1LXNp9uOAWt8UrlJC6HVjT2bjiIHakNEISi05YhWrP9eK3TSC7e7obLQhDIlSQFrjoU6WDfqml8b88_v3P8NuOtuTA_wXbOagibJebulHU89Kp3osRAWSSKQ4c-NxmjJMTijNHKQkXFa5Pl3212pISAWW2jeZjvZlGsge_pKLQKymn7ix4OjoEW-9O94DdTaBUr5ZAA4Z_lA9T3eQnfnKnNcy9MoEXjTZHVVKKOGH_CamLGZ6u9eY3fYt3BVuCH4rsPjzSrfBbi6EH9fz8K1vL23u2M94gExVUPbAvx8vLKQkWMS5LPuyNgSygNpaiPA623dp0GZkl7H8BTrSrY_E1tW0UVB1NXC5kfDrLfuGRQkGCRWfuB1osgy4WjyTR-tDw7OCGEWOIAGqwLF3W--JMfbyD2zrrS-ULlPnUxgMuGU7i9dNyVB9KzZZsv50eA1e-2TK3tERhN8q14LFY5KmiCSbKLet1XhFtBWjuy8jlMB4emp5K3fSeEPjSGH7WAJ4aeq5heCyEoyh7e7zk7BfiMUkTB3EJ7ztQ0-3qUkHsq9wiOsLlFP0zCwQ_ZFOjZKhfMoW4bFWQrHC3ApV1De-0MnC2idXGRqh7Kax0tSeUX7zr=w2130-h1548-no" alt="Bad Bad Hats Concert" style="width:100%">
+        <h4>Bad Bad Hats</h4>
+        <p><b>18 January 2020</b><br> Photo captured at a Bad Bad Hats concert at St. Olaf College<br><sub> iPhone XR</sub></p>
+      </div>
+  </div>
+    <div class="column people">
+      <div class="content">
+      <img src="https://lh3.googleusercontent.com/Xn8bJmcTDuuCQhEhg8oVmztgudZoB1QHxRMKfH1IbjKRGcSY5HyWKupPKmQ4jDifeUaQN_Jqw-kr3jMJZp74gvfiENLgq11G2OR6fypoHM184uxLATdPkAriIhjDGRf0uhNbEFPwzD9L-BVQcx3Qx1aI8VcmBc5XDKiujtDccpUb_fRTZFo9tF0V3PwryGgpdojcIa1S8AuXFYAFNWSj84JIZ_F5GXud_MxN93M0c_CDk5x-kJB0gxV-BW4pURwvxBpeMmEeTslzJd3pA5oT-3l_4pRKEnFrCI71SUtPDo7o2O7DHoaPneYEDT60VGYAo5TenOeZE-ybdBcZvzivqsvO4SqHQ_ElOrBj1eTFWcUTQ_zAEk-0xaeXThtTwHM-EaKejG2K9ckLl9jjU36dE56OjAQyYG2bgc-TmgNuFOvSKDKzP-S2aaujC2Hvt_6O9d28AZWP8kqJcHyMKgbTv9_NP70KOdPxClDG-MeK_vSoUKCB43XvGwIzXdN0mxAUe5iGxw97TaTp4wGTWYuAXcR_HQUkZfa5Sl2IO7OTNJj74rviSdj5TAYEOUvwSz2Ocq0Al_qMZar7ZLQpF_NpHkumKQry2QDclipI-tAkoE0CXYhjgEBXazRBbRh-xHIR7ToC-iGIdJdVLgvjjcnTz74LF110nNbT9D7YM8n3OV0_nV56R_ZF9Gx0=w1472-h2208-no" alt="My Mom" style="width:100%">
+        <h4>My Mom</h4>
+        <p><b>20 August 2019</b><br> One of the first photos I captured using my Canon DSLR 77D.</p>
+      </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+                                          <!--------one category: Photo Shoots---------->
+    <div class="column photo shoots">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column photo shoots">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column photo shoots">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+    <div class="column photo shoots">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+                              <!-------           one category: Animals            ----------->
+    <div class="column animals">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+   
+                      <!-------           one category: Close ups      ----------->
+    <div class="column close ups">
+      <div class="content">
+        <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+        <h4>Girl</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    <div class="column close ups">
+      <div class="content">
+      <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+        <h4>Man</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    <div class="column close ups">
+      <div class="content">
+      <img src="" alt="Car" style="width:100%">
+        <h4>Woman</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+       <div class="column close ups">
+            <div class="content">
+              <img src="https://lh3.googleusercontent.com/4yWPg52viqA8kj7iHirppeOjLjWUR1Kuroz0QQDK7CO2IJn0Y4u_M-R4GMYoxG4folIjd1tafn44Nj8d3GsIWH-Q6sZILr0kEo2gz3bB391CGXd8gpqr4Mn8gD-D555M3LJzc8Z8M4bKi1CiKI0O0VcEjv_S-GOMr9BpFcm8ebtvXyiRH3ZEBuPd48IWOIe61PoXqwEsd7zM6kp-3Gq0dWH2V2UlSKxJ7EYDc45zRXM2OfEI6zqNn_K_1PXXFd9QSx5WzBcX-txFK-0qvelFp-X6Z0i7ykDM0LrzJBPcWPXlVOIN3uDZ6lQSaCoQQXYnX_jHXK9MjOpgF3P5A431i1ptLvs5lonMxSYZjQOVdOJyYktuJDqIbC8HHTBMdfHkZg_2rJpn3v-369D0Iv4Vs5C5R5bA5R4LRjK1pES09ph690cfzuUJ1lrWdwR1M6VpkhYs-w9cDKHUVxco1qjIFHvRDFrbi1vpIbqst2_bdsojH5u9hJwrHs-ooi4tl94Q4km8ZvjilirCGi8tHll_GJkG99OhnNX3B8LPQT7n13cMx2-wysatqWQLEze6vUKM39u0XkIbpZdbPYFWnWiyiDXsLrr_NX13Ge6jZFDH_5rKMcgPRvUYa90nGQeCknsLRtu_TANtSyYaUMs5IcB4rLbTx4mFEk4MazDGF0c3uWcTtTchW0k0vEGE=w1588-h1060-no" alt="Metal Basket Series 1" style="width:100%">
+              <h4>Metal Basket Series 1/4</h4>
+              <p><b>22 August 2019</b><br> Close up of metal baskets <br><sub> Canon DSLR 77D.</sub></p>
+            </div>
+          </div>
+       <div class="column close ups">
+            <div class="content">
+              <img src="https://lh3.googleusercontent.com/eQ2Ckfw9tUSYr3zddEB7Ez2OgvVZQE6N2II4ta5kmMQCmIgApedssSUD2LyDFqHI6-uJWrV1UiZcHpA_NTHjIrF9lTXieeUNYO3oI5mn4BQzfY5PWtH3XCqzkeSzel0InrQu89BPQao2KlyB4Qq-K-X69pwR0ORId6gSAwRs-GoTqKpWNBSP46kNCxtHZY6Jx6ytp3cGjJaU71XpnqJIdChYTVB-W1p_96z0-RrvwSqKDzgY-aLfLfXTC7dnMwoh_GhIxAgDcAS-6fuhAMyKN--izsn3FZptzYgRLxrweqvZj4uKgHic4UgOtTXmbow5aUB-SbyNYmpqn5wQ4Nfo3DvdOeb6cl4tUKlMSa8fACANN7D8tunnRomHIglhwu8lftV05RtQBakVA2xxu6pdqFZ0yGf9TBW1Zfr-OLa83wCBiZQJ8Jc7GiL0nslmHOzE37BDhmmM9p-7fBG23Ba_ULYvkveiXUxvXtJO5qlDkIHFfA7nxdsRTYzPkUdLsVbMOP3u-pASWXSiP6p8VObssT_RkXJOSPd4YC8lwAqDdb9zdilBia-adxETKk06aKRLZ-Z3lcGungayEWXUfI2QZah-M_GHS1rG8xjzxi20cVV9ANPIMchGnv0Y72sHSDKXSiAjEVCMcW8b8oKSp1HLuiA__XmabVwucPwlKRdVrFeYlz89CQ2ntiFy=w1588-h1060-no" alt="Metal Basket Series 1" style="width:100%">
+              <h4>Metal Basket Series 2/4</h4>
+              <p><b>22 August 2019</b><br> Close up of metal baskets <br><sub> Canon DSLR 77D.</sub></p>
+            </div>
+          </div>
+       <div class="column close ups">
+            <div class="content">
+              <img src="https://lh3.googleusercontent.com/RJtAeRWLKZHu7zR-4XXj9hnlD-LCBgcYcDv1D6okBvYilDUfox81gfdbRMkSwAJsTxOMEhHyPdkBAXmjCG2JcO3OFx0bHduu4XQ7eI08rcxefCV2bHaMGpyWEn1i1bkzzbMs3oVh4hyW7cS8G19BsmbtQpntOawQKEzAVCmN2IFPQbOibCzfUpfuL-iPoYNU-5nNwMHVH78Vez5FSgnE8ZujuCuz21BZfG73NuBto-RwFDkPRl-3nHO6UAf7JWR9o0I28r9qFURMhHRGb7wtuWP5c-wYV9DP6Q-Hf9hu7qAlEvZGUQqHpL2p-_5oLL2eaE3Q3meeXxX4UB8Rf3_14RrApwd8h2oo_84xzs8-Hszvk5qRO7dMSzJ7TnkHGDwoNGW1hkuVw1PMtTxq81QC1ubXcoJhlsmTPFxRJkg2hg_q1bgh5MMrdC8191EuteuGPL59ndkvIh_3qN393yX2w_ol4iLZWKs4YQTSs5ujxyqnRbQ6NqiURn5U8VUjp2MsXsDoc9wCghfQg2dPwy-Tepx32tOjvU40ybf47mgNBhZbFNCIwkyzzY1NzH5IgI5P2MuFi8ev86mKf0nySACGFSgtHoBfIIShWznyxz5j0oXZNsTJ4Z7rpCPAJhzGvJTz6-wNdZjudkkMxHkIM5X85iPD8trIpEMaepUmFdJuJ2l-3oLSFQvzu2iG=w1588-h1060-no" alt="Metal Basket Series 1" style="width:100%">
+              <h4>Metal Basket Series 3/4</h4>
+              <p><b>22 August 2019</b><br> Close up of metal baskets <br><sub> Canon DSLR 77D.</sub></p>
+            </div>
+          </div>
+       <div class="column close ups">
+            <div class="content">
+              <img src="https://lh3.googleusercontent.com/76Dcbxj05OsYMkRYCF2A7eeXLCfMlk9t46jVHh5WKlJ_O-fPMyg-cu3U-ln6TzWdvD3vfpGjvlySvUQyT6VzjTdUnLsEKP73ENGPnzPqs-qGZtFi8dFBeGVEJHFeWXG7GsaHRW3KMsdEiWD0Tmd4zpHG6EZivw4IRRVwZHU02tB6JKDz-HUx9iEF9-WKeUhBjYdJo3WTlCvGUr4eQjJirsLsRsNaHlrgo-QCfzeejpUDtWu3zPDl5f9oOseXNL2QT82VH2zeyOk349133sgfrPcDtUH2O8paQ_p5YrHt8k2HT5gI-B9Mt8eFs92WMCgR7EEqJDL_ch5tCDdoY37SIYPoeLOsJb3C8smnLeaQjoRn2jZZyRB9yDY96So5-XwFdXqvGwQ263hyZnTC0l4COnV0EzRo5k1hyBM7vSvm2Q34foo8iJ0ETRuUWI3zQ5jQOdr78ojns5qrqsBAnaprIns45LmuJSn_r49FJBIH3bbM9uhPTPNrph1n7jr2O3WsBwiTEiPEJSydo3kHwlzuuCXl2JBiEV170mYGCJvg9jCT9bt-w5IwpmVG_cMl7wVnH9AqfXSXfLipViI_7S-crZhQe18P8JhroAmgd3c64gtQaJuBEF0nz-h59slT2iH-c8XR3T7kc0q7lUU7_ofCSjrZ1EEmoepDE0bGeIWTyHOUtmKL_z5oc4Ki=w1588-h1060-no" alt="Metal Basket Series 1" style="width:100%">
+              <h4>Metal Basket Series 4/4</h4>
+              <p><b>22 August 2019</b><br> Close up of metal baskets <br><sub> Canon DSLR 77D.</sub>.</p>
+            </div>
+          </div>
+       <div class="column close ups">
+            <div class="content">
+              <img src="https://lh3.googleusercontent.com/85R58IkoSbKBJ5W7sdDrQhJMFCn4zUj77MxQSc9f0uOYYynEQOfI4WY9_L_Fvrl05gmXDcyJ1jthRrQOv4piiDIN8ah77690gZ1MJ_GrCsePHg9WUCjmYI7vLTPYERvl2sJmRSUi2UeTEe_msT84GfySkXJk4tsfa3p9oiBnsu_7WyGgG4ToDB6_5WStoF6eR3SWNNi5oFaih3ddSe5loK9duwIBtnWTjnzjd2RQ-RdTgXnz9nhkpbKkcNPAv1im2SJDSGZQTwXc0uERnfRaJQO9k9ub5lnZsSF8rK_k7aolnggcOIiwzrF72ei3hrONhyVXoxe6iVtZ57HFKS5mKbBGqMjKHMK1KRHRugBpbT6lkhWjuX6GUlfCPOcoEr8oBqQ8LfLPAokKME6StMYGjfBR5WISKuVOJFhWVesxhKiobYNKJBXxSi43hZf8R4dmWPW-ZcsZB4If64ql2ldfN-MMRJBc7N17d_YhP9lDHjelJoGDVEAIcEyFcVKJMxTfHec3QtZNEDdDGdXdsklL7WV1JinRpz8b8lo9LvFB_cbpzJh_GQNba6IYEQm-SHTY9OJcXoAtuaXgrkMQuyVYDhyIJjxPEuQbJrNABpSxfStFZEoHBZLsE32RUJRNaOGJEKjqJVefupgyHFFIof_Xs_T_51r_CHt88JZllHb68ax373zgEDvWpYhH=w1588-h1060-no" alt="Metal Basket Series 1" style="width:100%">
+              <h4>Front Door</h4>
+              <p><b>20 August 2019</b><br> Close up of front door shot <br><sub> Canon DSLR 77D.</sub></p>
+            </div>
+          </div> 
+       <div class="column close ups">
+            <div class="content">
+              <img src="https://lh3.googleusercontent.com/vgm_M_lnBtNcJV5jqoLD_R3zeTau6suGfhPZx4b-pzGKFOROYUtjzkf655vs7cZCh3-64rm5SRpan_qN4WCa_VUMpoemCn0ezz5WVDg1Xf_2aqq_ggplO_5Z1GCd-zixFwHzP2kHRblj4qNdxF7drrn29wyETGLutnPH7Ladnn7XTlhrYJadjXQCg3z6gU2PYSx1q_aIkL2Ea191XemRhhUVKEuq6jjv_Kdt_HCs1NiWeeMEnxv6rja9qxtqcTo8Hti7zlqFk-yMs3Rz0X7SnPnvY_aAN4k-diyxRuf0v8wNKzXD-MnDKeF4bIMwrFmDwJZR4tg1zasY8PTPMFZWSTIWXAqdnHTQ8LjAmX07RRkXdgELn2NlU6XPHHSKId2rQPRNXoM8SUu2uRyOvuq4vW-SXT25Oaq1JXtBNwWZjyNsjihQHLlA39c4dtRySsDZlmL_lbPikCJE2E3kXw1XVxIsJa-obtbCodXHBayNaZkhL373Fh9W2hwS2MWyZCLFK0BwN07VRrVM9nIlrz5JsKUYVjOmzzW8Qp-oOa2Wy2mHVEOz7Piu08vtd1KoL3NyTPIYPHPqz_zai3bGHskEWPSUP2DFM6mQvp5P88A5eUN8frypRaRl6MWDgh6PETs9Yol1KY5PSspuudq2i0mesl4sC30SE8Xa9P-WXmJt2EO2JoIIO8zigVry=w1588-h1060-no" style="width:100%">
+              <h4>Untitled</h4>
+              <p><b>20 August 2019 </b><br> Close up of a plant in our garden shot <br><sub> Canon DSLR 77D.</sub></p>
+            </div>
+          </div>
+    <div class="column close ups">
+      <div class="content">
+      <img src="https://lh3.googleusercontent.com/5rl0iMUKkPvXbvvI7CkdT33jwLlJGnieg8JnMVnf7HMI55b73Sakjh41nG4yuxIbgd-QEHdfEUPX8J2zNVNlBJX82arwL_fhSUtK2XMGrI6y0zFZ5u-typN81vZUgCUWTrVdp__fMKBcnNnIqiGAICjUPOM2I9RTksPICKmLAjNawMdMfPuIdzuHVqkw-h-IJwo0Mw76kTqcL_U_Jv6uzBIZESd-Pys47Flap8qR1PBJpPvper9LSyIjRLdzIl3v6V67GIEfK7T7X0cQlmW9U96Vci5K0Y0HRbJ25LyM6KAYyRI46ThbGFzhgvpBtwTncRWyrFkpy7NyFjaUTP597SEO9sUcy3B6VFf03N-6YvI28dErXUd4xg2hlBWMU6q50ExzU_i6zMURyrbZG76dXmBkK3ffxiMdsfHDPj7wt2u-wjf8TwtkBD9hS4pY1PUAtoGa7rOhl-cNXlsd4EzUy0AmHMSaWRkA8ZCWZF3JpMf6dgYGIYazm6wjs2pv5QTfCbpMhHy_d0BJVfEQieHMX8JDDTCc9zmW3q0SikXXOrO2EChVk8Uu8jg3Wjf3rv7QLLnwVv33pfpRUoy6SLd15GBvT7OKh5sfXcdF4jtZe1hKKJd-6L4Bo_I1og_oOyWCKURY58Y6FOE3x-Co_vQ8x-eg-zw5PwouzdLux-azRdPCBuqZNuehbIk0=w1620-h1556-no" alt="Fruit platter with plums, orange, pineapple, blueberries and peach" style="width:100%">
+        <h4>Splash of fruit</h4>
+        <p><b> 27 June 2019</b><br> Fruit Platter and their beautiful colors <br><sub> iPhone XR</sub></p>
+      </div>
+    </div>  
+    <div class="column close ups">
+      <div class="content">
+      <img src="https://lh3.googleusercontent.com/UNrHr1qvuKyjMKQBYSGKyPYmU8u-fBb50DgHPbG1P4lUocZq6IqiwNG3xzfFIilN__soBLax-nk-ujrR3vJN9NdZLmMCAqjQ-4jeXO6q25vlA47ewpwkRr5aJvX45t8gne2B7lQPuvx8CnZW_Y46bUXPrZZSsKKMxkYXXvRKcNmlq1AleIdSsJU7bPanoC7elLHiSzGls7sVPKips1ATGU9A_UCrI01kTjvpJilL2u7QbgIOaCFYib2FP56F41LWHwZ-Vx6UAxaH4-2I0VymxlZ6od-PiHz1RgLJ0BSjoCYDleJAMjHwqdiy62z7JCyvqctlTJ_53U7tL_E_veESpdL2vhRuP79OD7qC69yF3EBIEeEN0tTyZXQ9viuD0KN3-7rrGu4xQQXVFpFFadxqSTigwcksqZHeAyHxYQxdQ8COV7xZi7vlMNfwxeCFQ2UY8FhQCkUnMjCTxY6sQdI5l5eSqPZZFBdNh_01zIf_5qgeYZK2sEpXGN1KY50zupPPs6ZEOMluJMeo2aKWooLfInq0nzyYsOZbrmq6kqeFPdLT2ZKkr6_T3ZWiTQFt2N6U4sBYZ1VhSThBqyIHbdS6jptetSnLofZxvwcEG3YlceYQLSVfS7A00bBdZMPwom8n4I-pz6C2MG0XHR3JVVOxTxKR_eI-gIrd3sMFNhVYju4hqx0A00MUgdrK=w1620-h1216-no" alt="Bed Sheets" style="width:100%">
+        <h4>Sheets</h4>
+        <p><b> 22 June 2019</b><br> Light reflection onto the bed sheets <br><sub> iPhone XR</sub></p>
+      </div>
+    </div>
+    <div class="column close ups">
+      <div class="content">
+      <img src="" alt="Car" style="width:100%">
+        <h4>Woman</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>  
+          </div>
+          
+<!-- END GRID -->
+  </div>
+<!-- END MAIN -->
+      </div>
+    </div>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          /* makes the right side fade to a dark gray */
+          document.body.style.backgroundColor = "rgba(0,0,0,0.25)";}
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";}
+
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+        
+</script>
+  <div>
+ <div footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer"> 
+      <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+      <footer>
+    <div class="footer-social-links">
+      <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+  </footer>
+    </div>
+
+</body>
+</html>
+

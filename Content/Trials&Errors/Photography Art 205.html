@@ -1,0 +1,509 @@
+<!--- parallax scrolling?? https://www.w3schools.com/howto/howto_css_parallax.asp--> 
+
+      <!--- PHOTOGRAPHYYYYYYYY Art 205----------->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<!---Image Grid https://www.w3schools.com/howto/howto_js_image_grid.asp-->
+<html>
+<body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;}
+    img{margin-bottom:-7px;}
+    .w3-row-padding img{margin-bottom: 12px;}
+    ss="w3-content" style="max-width:1500px">
+
+    #page-container {
+      position: relative;
+      min-height: 100%;
+    }
+             /* ----------footer styling ----------------*/
+
+
+      #content-wrap {
+        padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
+      }
+
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;}
+      <!---------------- SOCIAL MEDIA BUTTONS: https://codepen.io/sazzad/pen/WbdzzQ/------>
+
+     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+    .footer-social-links{
+      font-size: 15px;
+      text-align: center;
+      margin-top: 20%;
+      padding-top: 5px;
+    }
+    .footer-social-links a{
+        width: 15px;
+        height: 15px;
+        line-height: 15px !important;
+        position: center;
+        margin: 0 5px;
+        text-align: center;
+        display: inline-block;
+        color: #111;
+        padding:5px;
+
+        -webkit-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    }
+    .footer-social-links a i,
+    .footer-social-links a span{
+        position: relative;
+        top: 2px;
+        left: 1px; 
+    }
+    .footer-social-links a:before{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -5px;
+        left: 0;
+        border: 1px solid #111;
+
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+    }
+    .footer-social-links a:hover{
+        color: #fff;
+    }
+    .footer-social-links a:hover:before{
+        background: #111;
+    }
+    
+                  <!------Image Modal Stylings-------------->
+      #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg:hover {opacity: 0.7;}
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+
+      /* Add Animation */
+      .modal-content, #caption {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+
+                  <!------ styling the SIDE BAR --------->
+
+    /* the box-sizing enables the fitting (formating) of the website*/
+      * {
+        box-sizing: border-box;}
+    .sidenav{
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      font-family: garamond}
+
+    .sidenav a, .dropdown-btn {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-family: garamond;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;}
+
+    .sidenav a:hover, .dropdown-btn:hover {
+      color: #f1f1f1;}
+
+    .sidenav .closebtn {
+      position: sticky;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;}
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: sticky;}
+
+    .openbtn:hover {
+      background-color: #444;}
+
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;}
+
+    .dropdown {
+      background-color:#111;}
+              /* makes the drop down background lighter*/
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;}
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 75px;}
+
+              /* active class to activate when clicked on */
+    *.active {
+      background-color: #caedeb;
+      color: white;*
+
+
+
+    /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+  </style>
+  <link rel="stylesheet" type ="text/css" href ="main.css"/>
+  </head>
+  <body>
+    <div id ="page-container">
+      <div id ="content-wrap">
+                        <!---------- Side Bar --------->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div id = "mySidenav" class="sidenav">
+                <!-- The close button in the sidenav --------->
+
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+
+          <!-- create a home button leading back to the Home(main) page--->
+
+          <a href ="Portfolio Home.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
+          <a href="About.html" style ="text-align:center;">About</a>
+          <a href="Favorites.html" style ="text-align:center;">Favorites</a>
+                                          <!--drop down menu within the sidebar-->
+          <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
+            </button>
+            <div class = "dropdown-container" style ="text-align:center;">
+              <a href = "2D portfolio.html"> 2-Dimensional</a>
+              <a href = "3D portfolio.html"> 3-Dimensional</a>
+              <a href = "New Media.html"> New Media</a>
+            </div>
+            <a href="Photography.html"style ="text-align:center;">Photography</a>
+            <a href="Contact.html"style ="text-align:center;">Contact</a>
+        </div>
+
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+
+
+                              <!-- TEXT ~ BODY STARTS ------------>
+          <body2>
+              <!-- !PAGE CONTENT! -->
+              <div class="w3-content" style="max-width:1500px">
+              <div class="w3-clear"></div>
+              <header class="w3-center w3-margin-bottom">
+                <h1> Photography </h1>
+                <br />
+                <br />
+                <br/>
+               
+             <div class="w3-container">
+              <div class="w3-bar w3-black">
+               <a href="Photography.html" class="w3-bar-item w3-button">Photo Favorites</a>
+                <a href="Photography Art 205.html" class="w3-bar-item w3-button active">Art 205: Photography</a>
+                <a href="#" class="w3-bar-item w3-button">Travels</a>
+                <a href="#" class="w3-bar-item w3-button">People</a>
+                <a href="#" class="w3-bar-item w3-button">Photo Shoots</a>
+                <a href="#" class="w3-bar-item w3-button">Animals</a>
+                <a href="#" class="w3-bar-item w3-button">Nature</a>
+                <a href="Photography For Fun.html" class="w3-bar-item w3-button">For Fun</a>
+                <a href="Photography Tags.html" class="w3-bar-item w3-button"> Other Tags</a>
+                </div>
+              </div>
+            <br/>
+                <h2 style= "text-align:center;font-size: 40px;"> Art 205: Photography</h2> 
+                <p class="w3-padding-16"><button class="w3-button w3-black" style= "position:absolute; text-align:center;"onclick="myFunction()">Toggle Grid Padding</button></p>
+
+            <!----https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_photo&stacked=h----->
+              <div class="w3-row" id="myGrid" style="margin-bottom:128px"> 
+                <div class="w3-third">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                </div>
+
+                <div class="w3-third">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">                  
+                </div>
+
+                <div class="w3-third">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="" style="width:100%">                  
+                </div>
+              </div>
+              <!---https://www.w3schools.com/howto/howto_js_image_grid.asp--->
+
+               <!------center pagination---->
+            <div class = "center">
+                    <!----- then edit in style (text-align: center) --->
+              <div class = "pagination">
+              <a href = "#"> &laquo; </a>
+              <a class = "active" href = "#"> 1 </a>
+              <a href = "#"> 2 </a>
+              <a href = "#"> 3 </a>
+              <a href = "#"> 4 </a>
+              <a href = "#"> 5 </a>
+              <a href = "#"> 6 </a>
+              <a href = "#"> &raquo; </a>
+              </div>
+            </div>
+    <style>                         
+            * {
+              box-sizing: border-box;}
+
+            h1{
+              text-align: center;
+              font-family: garamond;
+              border: 1px solid black;
+
+              /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+
+              box-shadow: 20px 40px #caedeb;
+              font-size: 40px;
+              letter-spacing: 15px;
+              text-shadow: 3px 2px #cacbcc;
+              width: 400px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding-top: 13px}
+      button{
+        margin-left:50%;
+        margin-right:100%;
+        font-size: 20px;}
+
+         /*----------- Pagination styling --------------*/
+            .pagination{
+              display: inline-block;}
+
+            .center{
+              text-align: center;}
+
+            .pagination a{
+              color: black;
+              float: left;
+            /* spacing between; first*/
+              margin: 0 4px;
+              padding: 8px 16px;
+              text-decoration: none;
+              transition: background-color .3s;}
+
+            .pagination a.active {
+              background-color: #caedeb;
+              color: white;}
+                    /* color when mouse is hovering over a non-active # */
+            .pagination a:hover:not(.active){
+              background-color:#ddd;}
+
+    </style>
+
+        <!-- function telling the website to either close or open the menu navigation bar -->
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          /* makes the right side fade to a dark gray */
+          document.body.style.backgroundColor = "rgba(0,0,0,0.25)";}
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";}
+
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+          // Toggle grid padding
+        function myFunction() {
+          var x = document.getElementById("myGrid");
+          if (x.className === "w3-row") {
+            x.className = "w3-row-padding";
+          } else { 
+            x.className = x.className.replace("w3-row-padding", "w3-row");
+          }
+        }
+                // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+      </script>
+      <footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer"> 
+          <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+              <footer>
+        <div class="footer-social-links">
+          <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </footer>
+        </footer>
+   
+</body>
+</html> 

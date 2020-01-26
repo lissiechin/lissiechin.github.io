@@ -1,0 +1,439 @@
+                      <!--- PHOTOGRAPHYYYYYYY TAGS PAGE--> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<!---Image Grid https://www.w3schools.com/howto/howto_js_image_grid.asp-->
+<html>
+<body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;}
+    img{margin-bottom:-7px;}
+    .w3-row-padding img{margin-bottom: 12px;}
+    ss="w3-content" style="max-width:1500px">
+
+    #page-container {
+      position: relative;
+      min-height: 100%;
+    }
+             /* ----------footer styling ----------------*/
+
+
+      #content-wrap {
+        padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
+      }
+
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;}
+      <!---------------- SOCIAL MEDIA BUTTONS: https://codepen.io/sazzad/pen/WbdzzQ/------>
+
+     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+    .footer-social-links{
+      font-size: 15px;
+      text-align: center;
+      margin-top: 20%;
+      padding-top: 5px;
+    }
+    .footer-social-links a{
+        width: 15px;
+        height: 15px;
+        line-height: 15px !important;
+        position: center;
+        margin: 0 5px;
+        text-align: center;
+        display: inline-block;
+        color: #111;
+        padding:5px;
+
+        -webkit-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    }
+    .footer-social-links a i,
+    .footer-social-links a span{
+        position: relative;
+        top: 2px;
+        left: 1px; 
+    }
+    .footer-social-links a:before{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -5px;
+        left: 0;
+        border: 1px solid #111;
+
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+    }
+    .footer-social-links a:hover{
+        color: #fff;
+    }
+    .footer-social-links a:hover:before{
+        background: #111;
+    }
+    
+                <!------- TEXT ON IMAGE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text
+    
+      Button on Image stylings: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_image--------->
+ 
+      body {
+        font-family: Arial;
+        font-size: 17px;
+      }
+
+      .container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .container img {vertical-align: middle;}
+
+      .container .content {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      }
+              <!------ styling the SIDE BAR --------->
+
+    /* the box-sizing enables the fitting (formating) of the website*/
+      * {
+        box-sizing: border-box;}
+    .sidenav{
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      font-family: garamond}
+
+    .sidenav a, .dropdown-btn {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-family: garamond;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;}
+
+    .sidenav a:hover, .dropdown-btn:hover {
+      color: #f1f1f1;}
+
+    .sidenav .closebtn {
+      position: sticky;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;}
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: sticky;}
+
+    .openbtn:hover {
+      background-color: #444;}
+
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;}
+
+    .dropdown {
+      background-color:#111;}
+              /* makes the drop down background lighter*/
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;}
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 75px;}
+
+              /* active class to activate when clicked on */
+    *.active {
+      background-color: #caedeb;
+      color: white;*
+
+
+
+    /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+      
+  </style>
+  <link rel="stylesheet" type ="text/css" href ="main.css"/>
+  </head>
+  <body>
+    <div id ="page-container">
+      <div id ="content-wrap">
+                        <!---------- Side Bar --------->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div id = "mySidenav" class="sidenav">
+                <!-- The close button in the sidenav --------->
+
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+
+          <!-- create a home button leading back to the Home(main) page--->
+
+          <a href ="Portfolio Home.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
+          <a href="About.html" style ="text-align:center;">About</a>
+          <a href="Favorites.html" style ="text-align:center;">Favorites</a>
+                                          <!--drop down menu within the sidebar-->
+          <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
+            </button>
+            <div class = "dropdown-container" style ="text-align:center;">
+              <a href = "2D portfolio.html"> 2-Dimensional</a>
+              <a href = "3D portfolio.html"> 3-Dimensional</a>
+              <a href = "New Media.html"> New Media</a>
+            </div>
+            <a href="Photography.html"style ="text-align:center;">Photography</a>
+            <a href="Contact.html"style ="text-align:center;">Contact</a>
+        </div>
+
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+
+
+                              <!-- TEXT ~ BODY STARTS ------------>
+          <body2>
+              <!-- !PAGE CONTENT! -->
+              <div class="w3-content" style="max-width:1500px">
+              <div class="w3-clear"></div>
+              <header class="w3-center w3-margin-bottom">
+                <h1> Photography </h1>
+            <br />
+            <br/>
+            <div class="w3-container">
+              <div class="w3-bar w3-black">
+                <a href="Photography.html" class="w3-bar-item w3-button ">Photo Favorites</a>
+                <a href="Photography Art 205.html" class="w3-bar-item w3-button">Art 205: Photography</a>
+                <a href="#" class="w3-bar-item w3-button">Travels</a>
+                <a href="#" class="w3-bar-item w3-button">People</a>
+                <a href="#" class="w3-bar-item w3-button">Photo Shoots</a>
+                <a href="#" class="w3-bar-item w3-button">Animals</a>
+                <a href="#" class="w3-bar-item w3-button">Nature</a>
+                <a href="Photography For Fun.html" class="w3-bar-item w3-button">For Fun</a>
+                <a href="Photography Tags.html" class="w3-bar-item w3-button active">Other Tags</a>
+                </div>
+              </div>
+              <br>
+                <h2 style= "text-align:center;font-size: 40px;"> Tags </h2>
+                <div class="w3-row" id="myGrid" style="margin-bottom:128px"> 
+                  <div class="w3-third">
+                                  <!------ Buttons on Image(s): Favorites, foundation class, 
+                                  travels, people, photoshoot, animals, nature, etc--------->
+                    <div class ="container">
+                      <a href="Photography.html"> 
+                      <img src="https://lh3.googleusercontent.com/_-h1vnGdtRcsGgw6t_oKgwDv9sMBsuhjmuRDQA_SpjT5Xdil1goD5erdne31qAFNWiu026BiEUHy3G6XrFhS4hsfCCGpNTkt7rtty0G2600UoyH6JhSj4Qgo3heM-sdy7hzKIsHkwZHO6HmYHz6GqH20RO3FhTtSnw-0DwNkx0kb81iyq3uPbbc3RX4Kkh9NsZUkGYSVYr3_71unbfs6BERTu5TtFCl2IVZrTxLyWxZLYcY2G56rYibTPOtoyWS_0Om2T6vjq1dRTk6ASEjOkjCOJvCkXaS8lbqe5I3nnv79474xqHfAjpff6EUd14qL7wxOgcL3cERPpG2P3B5WmwglscH44G7gioKY_MHvmc5mbgCkceeA9RnG7yU_5lKIgu0lciQTQqXhnSGDN3fXEDYsdx_SmeeYVunUiPqxWJIRSBlk0PcgKW-d4RqNHIQ9YHJV_xCoC4sy0wF0876-HpxpIIa5CSXKt-f1R04BhHtubtU-YSLmzaCEs1REGgulvXH8iSvq_491BYlJWcFzrQ2ro_or2tQ_4IVaxpMomye7X_UXZavAjj5fLK-UujQoxKLvAhT2moP_cmiSwow5NLPAdosp6j8NNZwEk9euBrH765s2WS5TOeFIUb4dKNod_vRMBTmSmG2-JAdaDxgbHdQn7OTwCiQnxxPG-aQukcjcp7NpNVuLs2RT=w2416-h1812-no" style="width:120%;"> </a>
+                      <div class="content">
+                        <h2> Favorites </h2>
+                      </div>
+                    </div>
+                    <div class ="container">
+                      <a href="Photography People.html">
+                      <img src= "https://lh3.googleusercontent.com/I_3kpltvgLMUsLBHgxWpN0RaMujHlzL6-Q3CM3b34gx_DfjrYghF7rvXyxyKpizR5DLFLRU_1PDlxdF_OxfIejbBB1TPAvYrC8w9T_fzL-AgFPRuGuosKD1kV16NAbt_XQ4eWfMhouObSxp4QDns54ihBLPpDFa4aTJCxe1aCKK5J3pXY1O9I8Wlkn0l98ChN3b8bc1Wqzm4Iccb7piNhrU67EZ4pY5sNqexzWMIeJ7awzJ7Shp4IGmeF5vnoqMmeGP2msfsUFeb_KI1fopflTizjX0zLoplrhnPKnY6__kI8ieQzPM_aUyLIGqD4GRET_xyKrr-FoPuOX2vusQfr7uFmhWJTebn-uSsnGOU6_uHFJ2oGLeHJicHAaYb5BTke7GyiheUF7Yde14d2qBQsv_ADTvvtrpaUXgasC8HvyaIJSnMYLeR7ENQo48u71mI20BcKaPSpNZGRN6VNlYplJHSJfyr40PwWPDzEr3XwuYR5wm9JZCBRm3__3JYa9Wo59rr_jRRV1k4wVlcw9WVnDuW2MKl60tR0cxv47Tq795GEcai72qDBhCdh-HQn0SJnWw5ocmh2PO8XIxEvquqvJKFCmASOlSms-ZqITV8_Z5OarmTSzNXSE7DgwVwxEe63uiGMbAD25LU82qPnP8UIhXYuPyAhxu8ibLEg-ijCDqmEmlmieVlrmx7=w2416-h1812-no" style="width: 130%;"> </a>
+                      <div class="content">
+                        <h2> People </h2>
+                      </div>
+                    </div>
+                      <div class ="container">
+                        <a href="Photography Nature.html">
+                        <img src= "https://lh3.googleusercontent.com/PTTIgr0WpvekQDv9MCelZaJaAqQ2kdNd3yVFBWAQJ6JuQY4n7xNLLJyY_GuJ_e8XdlbtHy9EzSOyzHCv9Bja_XU21_N-0dWnOUckFngLaU1JrFUdVIkkWTxFT97gJJ1Xzyu9mvTb3nL98VzdyFUgDh4ieO8MlctIopnTtKGid8ZBS9QBibxYTFy3Ys-oAGbgybd6GsCUiyBc8vnebUeD0vUL3xZcnze6CEjWyd9CSFCpuioaxcNbxLpz4-UTQ3Din1q1ad0ioQF3cipRXdII1MZnRXFP7wuie5FrRcdXnj_9ic7gJyevB1oSNsc4Cw8u324LA4YjV6GVOXXTLeYsKKO1D34-8-g-QVH7sve8eje7gDzEHhPOkT9chE-bEdX6fAef2JHR7kVN9Ur6i9qwm5SkAfQQhwE7Sj9Z5F0WV0Ld-PAx_R-xHXscmSk7KKLCYALNE-IDegESK-MMRNTUah0755LFLym3zw6jP_Bdt_yz83J5W4kt0a6h1wa_KyBIO3qtBu_xWndcbXH9T0UJRdQWYrk7KQw6h3hQ9bG5Cf2_iKf5Cu58TNQrrex7X13-FopCDsrUYMcAfIobRWI2dg0dTIXvy0kG-G_L9G_AF2oeVs8iLJPZXEKIOMcGQqT9pbnteJCEk0rlfvr10mZSP8ww8MAoe_gLhP0Uthj7BzcLSiBaQMQ67T2L=w1522-h1016-no" style="width: 100%;"> </a>
+                        <div class="content">
+                          <h2> Nature </h2>
+                        </div>
+                      </div>
+                 
+                   
+                  </div>
+                    
+                                        <!----------------------------------->
+                    <div class="w3-third">
+                      <div class="container">
+                        <a href="Photography 205.html"> 
+                        <img src="https://lh3.googleusercontent.com/iTav09ybXMMST-proS6lST80vA9CxnZS9qI9FiR6lMDCmORG6A3ra9VMIFle6xyGlYTGmYw0Cs1Lk29shwpyOrVzYFnu0ytb2wew8mj3-eS22GekpGO5IrpsUfRw8AIDnOGP8rGHXXAl3eYtN-br4eTz7y2iIf0Wua59-q9Q-ueiOv3K2V2PIQjhFsgK-lgTRcOxjsZu8R0AGj74OhjFV7BhHSfLtz6CE6lW3yJRSyoZtuPBzm3fvuaPAh8YHyNTRuxm2MWJ_EMRaEPpjAwXSm4Q5roW8p_D7Od80wsUqC_SOyHinnMYOOVSRGjSBjV_b-C-2bYaTee0F8zh3K5F0pTkiQXHJ0YSe6zFSDn-MvKtOKSkdr8_m9d9WjpV1-LfD-iSWB4xIYOF8EivyU6JJMlLQAozjrw4KGx_TsD4JcF5iHNAxKfbU2_7pInw3SAKKajJTuu1-a3u-STabxHaXoAQLKvYNieey8oI0w5CpKv1xyN8JyF8mkwz6nAOTj-vDwhZchdavjIJc_U1LB1sCM50iihsM4MDeVKQOShLMPXIf0yP8mHGeALRR2aUAcDZOsZMsNUqTSjO_iTbTymgbP_zDU-wCotNdZAGc2vHsZpcDo41Eqbi-TxZQRHDuBjg95wWf_5jAVJ5AoRF42ma0TJsaGeFnQgMsdzizKjJToNvOc3c1nUSlswb=w2324-h1744-no" style="width:100%;"> </a>
+                        <div class="content">
+                          <h2> Art 205 </h2>
+                        </div>
+                      </div>
+                      <div class ="container">
+                       <a href= "Photography Photoshoot.html">
+                       <img src="https://lh3.googleusercontent.com/xCZyRPZkqdIm1649P-NHkROdFbqV0aclAZ__Lrj8mOGFoqtFx76kTOLHQpCoIk6v8VwdxKYTil_0UH3ZFFTDrjcvWQCD5RLvE-Zu4H4PproFnhQ-m1DaO194Wfm9g0_uBFHx4nRmUsVjPZRq8LbidZYUV2Ba0jNR-M2KoVeIvBR04VJoxAiHiYmTNyPiaf4zekzfNihRzmjrJ1WOuHnQg0dXs3F0S1jfnqaHYLzc2f0zkNbI7LZJgjdwsxGLFbp7tpUbr-XFXIPaEe_AIRKqNowQjFf6Ak6RDxDAwkF9GTeWnmGs_lGYEnkZn0parlm97gFtrAf2PNtqqyjh05rs_08M9XG_8XWxmtzLDaEOcu3F884SBSSifMiYufKGNGPEZJTNe_ik2w2X36lrz2Sj4om2-aBwsm02DoWh8M3zyFqIW7BFErB1LulaAy2IIWUHP4Zk5bJOdW01SzrCBQbugt7pfowK6FdpguVlGkqPXIoOcpp74a0AEXkR2HHSxh-CfbQEdOBmHcKhZsHf5YvrM0ISwRVOzxbZB6fj33_gXuUtGxOtVqkRZbbaxvpIrVe3hOeoRqI_3icOMvE_tQ9G5nSTTRh7O78BvkLMjz5XKl0dJpSk4pisEeo8fiFMq6eIpeCsX-rwEem7NHfztqHaEiPTx2xm_dfMapQL36LijoxaWPaT4O_wxkE2=w1608-h2144-no" style= "width: 100%;"> </a>
+                      <div class="content">
+                        <h2> Photo Shoots </h2>
+                      </div>
+                  </div>
+                      <div class ="container">
+                       <a href= "Photography Close Up.html">
+                       <img src="https://lh3.googleusercontent.com/4V2El7a4t67VYqWK0-Fp9gdMjbBckAdxWRcEnOKBBZ8xaemRZv_NbCCxLnkeXHLU9v5mTYSEI6Mbs5vXtdpdJ7Oy91lkddJz7_BSo59Jd91aoHvHww0mDkMHmboeyWEtma-cfrR_YCYyc_rMYTV4hErT1ZhVi_-auZ4ZSkbSRQUh85PwavKFrpy7tm4YESpNHYECCaZsLtM0N7gWBo_-lLmM9uYEYRiwCTIh62Os0du_I3CpUd61-jqenw1h8VTwmsHVVpczSzFDW9u5CR9H6sxURXSPvnz61jUHhfQEipuHdFMPXlfP7Xrz1OsHcEXfbYTCmOi1XxttJMlIIuKArotJjycJkJZUl3bUBEOimXkxJ-5ak_pQasX9I-Jx8bEsFeI4_8SrcHjXBIGdi693avfk6os6Wry0zIHITQfZpFI-QM4VY72TwPag2ALT1_Zw76n8-NnHJ8EBODVWy4wHDSh8sdxIb38aJbpH9tBhasM5G-t0eYiSX5zo7efOh0EP0uhu4F-wmSFdAVr0Pxo4TMxAMnY7eQzQkf-2-wbQ6XkgWrlZ2NuVGxHmSAeOsp_VnzvnCkDmrTwYoFTHHqtbJB8mzc9jFVE3nVoWwIYrnddKM0GdEuQ-F32eQlmWKWtwbql3vijrfRWroXcbRJJaJ6-9526aA_-P9KJZUck_K3TWzyDTN3KtfrXE=w2812-h1876-no" style= "width: 100%;"> </a>
+                      <div class="content">
+                        <h2> Close Ups </h2>
+                      </div>
+                  </div>
+                    
+                    </div>
+
+                                        <!----------------------------------->
+
+                                      
+                    <div class="w3-third">
+                     <div class="container">
+                      <a href="Photography Travel.html"> 
+                      <img src="https://lh3.googleusercontent.com/z8b64VWVCaRdUwzDUxOikMkCrCTSnWPUlDxr52-4TmCQa_Vk1S94nfVjeQQypOiFX8LpxVLrkJBkfoFA-ZAJ5HOczCHqyXG1G67-lrVEZqVA6M_dZ30LuSrRlNqaa1A2VCdWgCI8Q-kzzGBqVeWqROlziBo_qe9kkkPr8tX6bi7whg7A_lJ4ooCh0lmYjMEKkw5qzSx7mPEWArT9Ukh2z-pcsATSPgTXJh8AAECw_ggH_DF3mMGT8PVfHdISXA7KhUu8tScUPEeqarUlWKZNfcGX54Qrp8cECKMYRI-jJR7rXX-CK0AwtDpU8DcRBVnTDFswfWIVn1sjkZCEWG3j9q3GAw4yr_XkY2DH5-SSYhUh5VsXk0LbJFuQS1YGB4ivXpIiowINWLVwNJFy44Jb8o9FajjkX3faWmIoeMi0ND80lJ_cyHs5DoD9-UHvk_fXvg_ce9anDRtL2TZJsboD21_ooDx-jHKX6PO6g6knGi50nCSzBGiQnQZ0cuJvjTcip5qFh_TGjjgGGuJiY7L5RRpuoxFcrt2tx47ry_a5zwRn5-_hj8-hicuYOZ1k_eSz8CIxqbJzLCJOwHFjjR0ovU576NUJkuSMvgZU1wrgJVL4j64An8BUi3of6aVuXV-L5WfHrhVovNwDDvEO9m2bZbfm5Ig-2otx93zsbKsmSK2hlrIgRvoh05eK=w1574-h2098-no" style="width:100%"> </a>
+                      <div class="content">
+                        <h2> Travel </h2>
+                      </div>
+                    </div>
+                      <div class ="container">
+                       <a href= "Photography Animals.html">
+                       <img src="https://lh3.googleusercontent.com/gJ0GDOw9fkQ1PKlwyU_vbVK44wLQeEB20935Zn8kHUdbwG_KmMMpAa15cPysiB2rfkBGyuUNeFAS-U3YCEjuUleGsznNM7DdNK3BuIJpzHHa0PvnCSt16566kM5gKFwWD-9vY1bshwSFzY2kHIpK1Jkfch14CuP-G041aYCLY9yRWFo9bWA3rP0262tjcFKMGpi0xfoAM9AFgVDjTK_W9GmgHMfsMEO7e91W3DTYds23WTj4UbN60eAPtwt20BTsGHtJb6j6-mGcUgfWbjwKNpNRRLaak7wWESebf63xLecyYSnc5cQSdgYI8swGmzl3jSwrFFMHeCoXdUN4JyDLlucQm1hEH6S0Fz_iIlLfLKWfzfJ4uM2_Dv_V4YUZg1mHJvwW_VTzj72wLhjcYv8AQ_LbDAQj0OhqVhWu8dTWzOOT4Z8w3QoYtKZEyfRM615KQtSzBoGUyP7mkguvjkqRyf447yhDqpxkNsQnq1aPAj-tYA30LqpaYEQQO3lyQ-hOqHYhOdYZq6gqfMGYFc1VAO00ewIpT400EfinUAgG8bZ5S8bIn73319rcOH2rHAPZqFA9QDxMNecPUmV-Z0bASgm_0PIJhyiUoX1Ad0BOt-z04dvCyThJeeTMuGbWWBtQqinp8vva0KAcmk73wsV2SKHMPsuTJRMr3yRm4FjbVOloCQ5Xjrh5pKls=w335-h224-no" style= "width: 100%;"> </a>
+                      <div class="content">
+                        <h2> Animals </h2>
+                      </div>
+                    </div>
+                      
+                  
+                    
+                </div>
+        
+    <style>                         
+            * {
+              box-sizing: border-box;}
+
+            h1{
+              text-align: center;
+              font-family: garamond;
+              border: 1px solid black;
+
+              /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+
+              box-shadow: 20px 40px #caedeb;
+              font-size: 40px;
+              letter-spacing: 15px;
+              text-shadow: 3px 2px #cacbcc;
+              width: 400px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding-top: 13px}
+      button{
+        margin-left:50%;
+        margin-right:100%;
+        font-size: 20px;}
+
+         /*----------- Pagination styling --------------*/
+            .pagination{
+              display: inline-block;}
+
+            .center{
+              text-align: center;}
+
+            .pagination a{
+              color: black;
+              float: left;
+            /* spacing between; first*/
+              margin: 0 4px;
+              padding: 8px 16px;
+              text-decoration: none;
+              transition: background-color .3s;}
+
+            .pagination a.active {
+              background-color: #caedeb;
+              color: white;}
+                    /* color when mouse is hovering over a non-active # */
+            .pagination a:hover:not(.active){
+              background-color:#ddd;}
+
+    </style>
+
+        <!-- function telling the website to either close or open the menu navigation bar -->
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          /* makes the right side fade to a dark gray */
+          document.body.style.backgroundColor = "rgba(0,0,0,0.25)";}
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";}
+
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+                  
+      </script>
+      <footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer"> 
+          <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+              <footer>
+        <div class="footer-social-links">
+          <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </footer>
+        </footer>
+   
+</body>
+</html> 

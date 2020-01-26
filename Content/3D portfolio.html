@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+  <link rel="stylesheet" type ="text/css" href ="main.css"/>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('https://lh3.googleusercontent.com/ERBG9daQQ9SLTx3USxRBpKmw5p3OWB0D4uSsrYTFOYp3EDZrByAl-P4sTxBtYZjDipK82tTlWqOqWUC1JR5oXV0HyE76_2f8gPjHC49uI-vhWyzqJQ95r0vcjHG0ltBbCha4zEj0Mf6toN4Mi1R09BLw73rbSCJN3fyMeB4euhASt2y9k-9s6ux_xKE72lpAmDVcFXMubPMJa5bF85Fyb6jlUYk0ipuiJeAFMtBcFbd8X-WdM4AemZM-Ey2luygR2PkbhzEAA4S5SMZ9jdeEA9IBaCri0r4nqaWH94wSK9PA_UtgaiKZZm29WuMz0fSU1TEf8Tuvl_dnY2xvpvxSL9es9Ks51Vh8YXG0ak5y-LPQna9HPwFLXFE7H-sK-6oQpkm5a8k69HGXPRuxrODAcqNL2K9eIUdtvWtQuQpzioxjy8vKKotZZTb890IiGlbSCqem4rlidzPzVkYItEjH1vJLsL3VEqHuuFw-VSCaoTRGRKCJIyOIE5JHHLL6m_ee55SHLqyGhGmy03ZTJCOLxESm7HMB5Eg4sJGVfo9-uogdkmQ6AYPglj5WlOSEnKV79O6ccTZEnpjCHYYtlOHbpfep3L8LhQjUCS_dTarg03VcIuLWRgC1td5-OrUXVHfZwxw34h_p6fTlllbZEz8nnUP_M_hRiSPvjmTlSP0bRfh7U7B49fZerQFH=w2160-h1440-no');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+ 
+  h1{
+    text-align: center;
+    font-family: garamond;
+    border: 1px solid black;
+
+    /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+
+    box-shadow: 20px 40px #caedeb;
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-shadow: 3px 2px #cacbcc;
+    width: 410px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 13px;
+    background-color: white;
+    margin: 5px;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
+  }
+
+  #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;}
+  <!---------------- SOCIAL MEDIA BUTTONS: https://codepen.io/sazzad/pen/WbdzzQ/------>
+  
+ @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+.footer-social-links{
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20%;
+  padding-top: 5px;
+}
+.footer-social-links a{
+    width: 15px;
+    height: 15px;
+    line-height: 15px !important;
+    position: center;
+    margin: 0 5px;
+    text-align: center;
+    display: inline-block;
+    color: #111;
+    padding:5px;
+    
+    -webkit-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+    -moz-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -o-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+.footer-social-links a i,
+.footer-social-links a span{
+    position: relative;
+    top: 2px;
+    left: 1px; 
+}
+.footer-social-links a:before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -5px;
+    left: 0;
+    border: 1px solid #111;
+    
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    
+}
+.footer-social-links a:hover{
+    color: #fff;
+}
+.footer-social-links a:hover:before{
+    background: #111;
+}  
+  
+  
+              <!------ styling the SIDE BAR --------->
+  
+/* the box-sizing enables the fitting (formating) of the website*/
+  * {
+    box-sizing: border-box;}
+.sidenav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: garamond}
+
+.sidenav a, .dropdown-btn {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: garamond;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;}
+  
+.sidenav .closebtn {
+  position: sticky;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: sticky;}
+
+.openbtn:hover {
+  background-color: #444;}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;}
+  
+.dropdown {
+  background-color:#111;}
+          /* makes the drop down background lighter*/
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;}
+  
+.fa-caret-down {
+  float: right;
+  padding-right: 75px;}
+  
+          /* active class to activate when clicked on */
+*.active {
+  background-color: #caedeb;
+  color: white;*
+  
+ 
+
+/*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="bgimg">
+  <div class="topleft">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<div id = "mySidenav" class="sidenav">
+        <!-- The close button in the sidenav --------->
+  
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+  
+  <!-- create a home button leading back to the Home(main) page--->
+  
+  <a href ="Portfolio Home.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
+  <a href="About.html" style ="text-align:center;">About</a>
+  <a href="Favorites.html" style ="text-align:center;">Favorites</a>
+                                  <!--drop down menu within the sidebar-->
+  <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
+    </button>
+    <div class = "dropdown-container" style ="text-align:center;">
+      <a href = "2D portfolio.html"> 2-Dimensional</a>
+      <a href = "3D portfolio.html"> 3-Dimensional</a>
+      <a href = "New Media.html"> New Media</a>
+    </div>
+    <a href="Photography.html"style ="text-align:center;">Photography</a>
+    <a href="Contact.html"style ="text-align:center;">Contact</a>
+</div>
+  
+<div id="main">
+  <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776; Menu </span>
+  <div class="middle">
+                          <!-- TEXT ~ BODY STARTS ------------>
+    <h1> 3D Portfolio </h1>
+    <h2 style="font-size:20px;">COMING SOON</h2>
+    <hr>
+    <p id="demo" style="font-size:30px; background-color:#caedeb;"></p>
+  </div>
+  <div class="bottomleft">
+    <p style="font-color: white;">Some text</p>
+  </div>
+</div>
+<div id ="page-container">
+    <div id ="content-wrap">
+      
+                      <!---------- Side Bar --------->
+  
+
+
+
+<div>    
+<footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer">           
+  <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+              <footer>
+      <div class="footer-social-links">
+        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </footer>
+        </footer>  
+      </div> 
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  /* makes the right side fade to a dark gray */
+  document.body.style.backgroundColor = "rgba(0,0,0,0.25)";}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";}
+
+  
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html>
+
+
+

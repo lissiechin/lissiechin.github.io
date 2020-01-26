@@ -1,0 +1,406 @@
+<!--- parallax scrolling?? https://www.w3schools.com/howto/howto_css_parallax.asp--> 
+
+      <!--- PHOTOGRAPHYYYYYYYY FOR FUN SECTION----------->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<!---Image Grid https://www.w3schools.com/howto/howto_js_image_grid.asp-->
+<html>
+<body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;}
+    img{margin-bottom:-7px;}
+    .w3-row-padding img{margin-bottom: 12px;}
+    ss="w3-content" style="max-width:1500px">
+
+    #page-container {
+      position: relative;
+      min-height: 100%;
+    }
+             /* ----------footer styling ----------------*/
+
+
+      #content-wrap {
+        padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
+      }
+
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;}
+      <!---------------- SOCIAL MEDIA BUTTONS: https://codepen.io/sazzad/pen/WbdzzQ/------>
+
+     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+    .footer-social-links{
+      font-size: 15px;
+      text-align: center;
+      margin-top: 20%;
+      padding-top: 5px;
+    }
+    .footer-social-links a{
+        width: 15px;
+        height: 15px;
+        line-height: 15px !important;
+        position: center;
+        margin: 0 5px;
+        text-align: center;
+        display: inline-block;
+        color: #111;
+        padding:5px;
+
+        -webkit-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.5s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    }
+    .footer-social-links a i,
+    .footer-social-links a span{
+        position: relative;
+        top: 2px;
+        left: 1px; 
+    }
+    .footer-social-links a:before{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -5px;
+        left: 0;
+        border: 1px solid #111;
+
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+        -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+        transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+    }
+    .footer-social-links a:hover{
+        color: #fff;
+    }
+    .footer-social-links a:hover:before{
+        background: #111;
+    }
+
+
+                  <!------ styling the SIDE BAR --------->
+
+    /* the box-sizing enables the fitting (formating) of the website*/
+      * {
+        box-sizing: border-box;}
+    .sidenav{
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      font-family: garamond}
+
+    .sidenav a, .dropdown-btn {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-family: garamond;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;}
+
+    .sidenav a:hover, .dropdown-btn:hover {
+      color: #f1f1f1;}
+
+    .sidenav .closebtn {
+      position: sticky;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;}
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: sticky;}
+
+    .openbtn:hover {
+      background-color: #444;}
+
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;}
+
+    .dropdown {
+      background-color:#111;}
+              /* makes the drop down background lighter*/
+    .dropdown-container {
+      display: none;
+      background-color: #262626;
+      padding-left: 8px;}
+
+    .fa-caret-down {
+      float: right;
+      padding-right: 75px;}
+
+              /* active class to activate when clicked on */
+    *.active {
+      background-color: #caedeb;
+      color: white;*
+
+
+
+    /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+  </style>
+  <link rel="stylesheet" type ="text/css" href ="main.css"/>
+  </head>
+  <body>
+    <div id ="page-container">
+      <div id ="content-wrap">
+                        <!---------- Side Bar --------->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div id = "mySidenav" class="sidenav">
+                <!-- The close button in the sidenav --------->
+
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+
+          <!-- create a home button leading back to the Home(main) page--->
+
+          <a href ="Portfolio Home.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
+          <a href="About.html" style ="text-align:center;">About</a>
+          <a href="Favorites.html" style ="text-align:center;">Favorites</a>
+                                          <!--drop down menu within the sidebar-->
+          <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
+            </button>
+            <div class = "dropdown-container" style ="text-align:center;">
+              <a href = "2D portfolio.html"> 2-Dimensional</a>
+              <a href = "3D portfolio.html"> 3-Dimensional</a>
+              <a href = "New Media.html"> New Media</a>
+            </div>
+            <a href="Photography.html"style ="text-align:center;">Photography</a>
+            <a href="Contact.html"style ="text-align:center;">Contact</a>
+        </div>
+
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+
+
+                              <!-- TEXT ~ BODY STARTS ------------>
+          <body2>
+              <!-- !PAGE CONTENT! -->
+              <div class="w3-content" style="max-width:1500px">
+              <div class="w3-clear"></div>
+              <header class="w3-center w3-margin-bottom">
+                <h1> Photography </h1>
+                <br />
+                <br />
+                <br/>
+               
+             <div class="w3-container">
+              <div class="w3-bar w3-black">
+                <a href="Photography.html" class="w3-bar-item w3-button ">Photo Favorites</a>
+                <a href="Photography Art 205.html" class="w3-bar-item w3-button">Art 205: Photography</a>
+                <a href="#" class="w3-bar-item w3-button">Travels</a>
+                <a href="#" class="w3-bar-item w3-button">People</a>
+                <a href="#" class="w3-bar-item w3-button">Photoshoot</a>
+                <a href="#" class="w3-bar-item w3-button">Animals</a>
+                <a href="#" class="w3-bar-item w3-button">Nature</a>
+                <a href="Photography For Fun.html" class="w3-bar-item w3-button active">For Fun</a>
+                <a href="Photography Tags.html" class="w3-bar-item w3-button">Other Tags</a>
+                </div>
+              </div>
+            <br/>
+            <h2 style= "text-align:center;font-size: 40px;"> For Fun <br><h2><p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+
+            <!----https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_photo&stacked=h----->
+              <div class="w3-row" id="myGrid" style="margin-bottom:128px"> 
+                <div class="w3-third">
+                  <img src="https://lh3.googleusercontent.com/M0tWKYhUtrf_yNB767OBIfQ3YGODe8rHFgZvZ6jBWip7h3QGwhgZFzUx-G7dFwZzFgRcWMtkhAU5dys60bAt-qVvTq5f4r-vOgaIoZOsLyNj7XDyGNZ4av2TOCCbfVacE2yS3LEDjuzrh5h0nt0-7dc1CQ_C9PQdSUx606kFHspvSS2aeiorpGqpFUzko5jVKaWnQzzd83krwOwEpsIo0t85RShktRJQk6BQ8cmRRWVo9WVIBHTwBH1rOn85ThWyV4ayvkhFzqQE7I9KCIqfu-ioBP9D31FdXy5v1YNb6Rj6mtIedtidD_3QqCPQXM_YXOV6m1TqIGAyz2JBaLySIyTcL8QqB5wz_IaoNaFzUqPYySmHGSXHJBhxJ1usSqI2qwSUYzDH2rQCwYXpzzuWrMeLiOtf3wTJGTETkdzj1_EciCKxjZOcqA0uQh0-09gc21gM4Xkj_rYM-2Y2Y6t5-HCAR_KRI9PUpgHRlhDhbNznR5Orgu9-NtcdHLszJGP0U9Dvs_ggrHx54bNo1N_PfWblsyMRGSbShCHTcl9eG2YYTxpu09kK_A9nLbLiTThonyXYsImMJp4-iY720onIrOc0EgwfvDmNg8_uaNIcwxo7zyAEZYuXuUT-rP0C24Pt2g_pnCEM433qJy4BVC4jHfVX5fb5efQU1ledEJ54Xe340EHSW8L4xL4w=s1696-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/o87Uv4raZtUMXN3POlSUhU2fjeJVXlWa6qDVUug8xX-8boMG_c6ymewvaUtKjbvohAj6ekFY6VQ0fvSlCbGVuWtB43UfRptHsyNvR6b9XFmbOOfbNEoU2H8aH0S8KgGt56_ucJ8GXEONpgyq-JeStiplXzLAfiiRKyexkzdIC9TvlO-dV0FGhlHRcOcE_SkLGkZ78wVLPLltIhDWmfpSu_-YFQURI4ddWtBkmPrUA7iM-alIt2wH9c4hu3zQVEQngvUX7-eKFnS-D3IEkdFsqZLjXsx5xUiGD66F1Hspg-6iWZqEdFp6MIMCJKWuHfR7buTS7aH1wgKEGISlc-s7gfpnJkGItweZbFI2vpgTuZhFSeMQL_-ku-_ngi2_g70BTJeAtCYEYeGb1RmZ2Ahzz7fl1hS2Sb1bR1ztqU9TF6rfPeyyRTHIgiB5HKWQtQGck08FRGYkxcv8NIiKVhGfT6b_f1KahwPS_8hUYSQe7zu6kJ9V5dyNW3ggOllVVZv0YNQIhRkKN7AV0xU4AFfBWkYtXZBYvLf9x_oZiAHiIDsMQEV211fBxfioeTMdFA4gXXgsyekw4PEt0DCxTn5Yyi6voxBqTbgH1y7ZIp7YXvTOEOXyGLB8dAlMAitoOY0pvpgc7LDNarhJhqewwap0M7-RZROBI0CpgUz9vfXBpPQ9Kbe7g1s_D6sU=w1616-h2154-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/bYrpmR0ZHSP6rgPLfXvnXVkczKIoM5AD5K4tu-cTdO3HvNHQFiVHSIxqlP_m5GLy6uv8lYki4AHqDOiX51EIDaARk4AGIwFwRbOFeO6OcBXI_xDKCUTdkIjgnAlincfGU3VytuGm1WE27O0F7W1x9IdEUIpw89EwT7vdsZPtNiO7FFo8QYSjztlqs-631ln9HwdtegDvAtMbo3AqyFX1Ma6YjfZzVFi6kFFTdvucYxUQH46APIUDSaU19n9O0CvdGoWSXJAxGkEo7aQYboSidMhciUOjIM_HmUzzjgc7NYudvEhJjy7hZLlw5riDyMfmeC9j8Al_saHcgvm9Bnl_Ceckqgb5E92YcyY1vSSbT-PIHKPU1QslME-SENi8VxYWNVNq1WeZ9Xv4xpPoTJOS_09n_vc31BWi57--EIjjGewhoQS3PDwJLntbFDOVtmZkBmuErN3K0J8zmRpfXoy-FmaWaPXfSkfHOI5oIELWGNpPnPNPiMMN0EjzBg2ciHYwIK1E0YKYZlJX0ursgnAtRs3eKmAG9e6EVM6ecZ45Dcr-81gCJLeSZ81afcjpr2OTnkkiz8rPVElQ9f0XVHZ_zhCWPTjnlPsnfmtm22j4yilhxr5HLm3o54l6uN9frY1g_be7_ZzNrBfDAV-xlGQNnZVBfulfKiKiVjdlmfB_yJO1jaIdH3Pleoal=w1616-h2154-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/4l5beJVeSCVDURHrgSA3LOnelpJWKN2c4DyA8Th4JAMySvX26XNQtTXySqjrGSlV_KYVMgQi0BvPq6OEKK_1pMf8HJQH_fW6ibAto8WrSX_ff9RWaMtiZw8HMMHKM0nYPmUCj3DDshWVARa_-ikMI6j1xUARRJHX_zmuKbJFW62RTxURij6UzBOkqDULuTb1ZBBKSBbb94XBhCF3bFZxK5opCsA71bAxn7WFac-M3iVA-lNmL_gmLZxbPsrDPvKCRIdMeafOwXCFv1nCMM9yd6YtIlgSIajYs99ZaW0nZQ0izp4BZ3BBng1Oo03do6BxrKf9GW26IDzczrPg2gtMmAYAZuuPyw-vvT1FEUI18SC9OhXWa7kWOPynhMy1wgyZz1J50GQDNVzV0eaNPHnGxv2zHtn48aEF_gBFtNCWKdeGHjewpQ4jT-8iDH8iGx1nADP734KvbPqspY9K71311GrBtpggiR8qb9OmSbSA9_VGRU0r7hbtbk2GXOTItnszJGxIcJ3QjKQBULxnmdTX6PxKHiyK9VCkTxlKJQgdgpuXsNS9G1tyA-U0zwRi8oG22OQtAFgYYTBO4JO7JIgI39jf5hXisqsqOTaTl2ot3lv3RJBYmWtEbY_wK0-TxR9itZiXrriw1NGTBusJO-wkNtrJEBQx9jYh-as9tPihceZFkqYDnMYZxxcW=w1696-h1272-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/8ZBgt0O9crHAD-XuMWpUME8kz9xkU6dOzSrZSNUlqaHrzeEMyocqUEMx6DlqDqNdBOEIOvxuidD8KzmP_9yBYG9sKKUeBkKcoXjjc3zLLLpJeD8KPEPsugmjQGKKk-46TexwENKHW8Wq9z0qz6V6wqJNZQq2h3biTvS2QzOVj0-eKmAmwRt0wZWhuXYm2KcHgANeqZTof2TIpEuAzi4xsrcIco1NcFl-t3d80vncvvM8XkoBeb2i8DfHInD4LbcVf7YvXgTIAa-cyiyJ98M1Q1u9y9hbXJiu3x2Qft-9HDX-CvlZvg8RX3chKo5eXlhRGe8U6hAsmN_qPsqYz_zeRuIpDzKMzNvFQ7PmSMo6eKHT-9oJ-t2HX-WCKlj3up-RnfVGRs_4mlsKF1ZssPF9TK-cHH3LNgxQASLbOQqVTnHbMy3MkM7C4bgnveJaTTR7fKn2IlT0XVwT4QlugMuHWkQh0vwcizzTfweZxgQBQ0P_2PUO8wP8EOo51yZ8uQ3SEzuwBIeCsGLlKhdz0R0VSkgMAc5he6ZeY-mUuisPvErjW4PvyqGWjg44pcF_t7mue5U9Pvlc6LkVqvuXI1Es6H_D0doITvXTOjrwHUK8iuJ8QF9LHxc4-rsvKThppYDegjz52XQA-5lKS8O0P_Xupdhy3IYYHpkXRvIRay5mR0pg3NzUzdvlIt_q=w1616-h2154-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/kFTA0UO2wmOPk3Ldv4Scqv7Kndq0VdAr4_DyPRkJsZvdIHAfwH13jPurCmtO7iLA-Z9BgdXAqBzC60SU0CWyK4ysMdH0V3ByW1VSTPU2jT2_pHr1MdBdF9CuCyayMCTr8YsbGbdCi6cCR2iuwytP4TXf7g8d8HwWSEuklvB0RjTJqPquzTA9Qn1vbkNcSg9WbGjQcjIiGhmmV32w8VcbizKp4ivtgBwzIUHlcJohNn8JKLhrTLF0Cig-c7oGu8Nh0mNpBVWHNNP_DlUExxC-qpjksDVPdEbQP6jdHvtrh_DSVtnmYujfH15_tQtFyYyRG2TAwAo3oCF0KblGNuCWoZf-dowwylYc721TbTsEaONNnzid6DsHOHuY4xAAZf9G76a9biWqPSq_eJ48MJ324ZpEdse_9KasPMMRJ_o9tMmg-B0qg4oZdmO8nFIOKkeeYftXgpTOxHYM4eqqtqposubCnQzXsRyv4_DQC4PSMAvPo9PlJd55OtkKL-HFPfXzXJHZenn0RLODxKAhwY7zaUGOJqMeMbDitXlISMKSp6zDqAutVB1NvuIbRA_NBwQRudc9yA1Kb_n-15fnnXPUg2_hJ6aZ7G-_gwwKxLpWNF7oHOOdqcOYwrNNi9lFvhQofBi6DzjOEO2DogddXTTJwAOvQSomuEU_WSxO0_fQU9ObP5jvSUrgZVR9=w1696-h1272-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/_TXIxJG38RYIHMGuUo_PPUR4DFEZ0BDCrn6MiaLhnfb5d9FGUSc5qnopngxP6RlBCKRBlc6mGpF_viww7JoUGe9hMbndlW1Y1GTdCtF5XsVW5-UEPvsfxnmrfBQbUNbFoO-xXBkx8Xp_exYtIDWoBVD6r3qTcAG9zWvS88X4b9YPq04DUBR8osoNgNbsRzPFSZHlpo6RYMH6DTTBuFRW9VSH6X56BeuWg-Rl0qAQkSIStSDfWtYONGYuEery3SvC9yjUfpZNZOMiOve8Fxp9cvYZ8BeEyp-PoeChW-KpcDoMkVzgX1IGgu8UDKCbfWBuHW36KQ-FEngrvC3eVQ6eHoAT9Sdo13g-EaJdTLOYf2dHH-RQbADt1SO0G4KixqLFjbtBZuR6FSYcknr6hljo3Ed74U4aloWefUJI0pXQIQ92TuTDlWI1rOWjJWQpbBRRYnou1cC1ujILZwc2gSYnEV7k6oBolHh-dFlK3AuWfd5X59SkGpNmCyrvboKiR4LV9CqOujpmJeXAVe4NaJTZDsN3hLplxF8PhdpCnRRR8pezO2GNImQYHjfhgtkoljkyn7O1z2xU2GIXvybhuwvEovffVNqpIZ0jRH9ODIykMZirUHXaUaViI-8v4_cMJlmExYAbGASzBD8XiVxCMm3YjuzMAF-svan97SyTDMKsxIMJ086D6NxPrtTM=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/0z0dQCHYVPs0oQC8opQcz7Lg2vS0ZaO0XXgEQ2C2ZDXF423Rke8AODgTPfgYE3U7AEfMrheVqAAdGUBuWPuAck0oRZddukiX7Zc4OuXmNb5iT9wI-AdjbuR0UrzZ-WQHcv70HWVbrIWAK-CBoABczIVRarooji1xbf-LMqPtg7AtLYhGlUpXRdYBspjBrf-_8teAPCbZrQUjndGCE0uzrjLJdFgyOoHUMqH2dTDiG1fqLsvO_HFH85q9XK19FaEa3xGrIuw357Bzf-dnh8lvGun30RqCBOGENoYuZ-QIHxSh8kGJ6fNNVC7iVGiiso0fQR20uXaeUbbVi_qk7vtjyanQqcm24D2Z6jTWClHgIX4u74g2kEI9rdoJaEGWzX_4Pm9TRlvydPyWV6EZqTZIbBqak3e17kn9FBX5b0Fe-env4mDRYKecCazs-sdg86VuEecyrZ16P1coRoB8qF1R1-wSAJa2NUiXASdLvtrKVGhV_BAHXMNn4OiqJmoZyqvg7S3A3x5Li8Q9sGm5-m2EhJqE_AmiClyfi0UNwSZsTS8HNuYRHn617LbZu9N6yHCDfiQPJMPyMH5sAbS3F6I7H-9lbm6KiV1ESH8B3EKOhyUljSRKNJIJboSDwUIVRehUuVtAH6WmPgjL9g7pyW5dw-bTZyJU2geFv6v50RaFuXkK3qKtqyZ517kD=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/CeMlZwzBiAY-xHjUV0yAwfi6a3R38QLdMY-IVlziOmsgHDuqixpLAML6PCZCtj2Juqe8SYMdVmnGKU5eqaPEinNpJNMimey2ACvMQrRk459LGdDIUGmEr65g7SbzD5T81s2DmZ6nJzRq_ROJ4IcMtm5n_gWUj1JXpDsJb9tZ0F9XIK3XrBocX2vYkib0pwN77xQqun1E9Mx5Hda7CzM2h1KvdQGRhbqKJMB9UpcYOb53Ehurh8rGcIsjdBZ8-vVhmVQlEcMdgnTcOGOUJMdMOYRll7sF87RW__9Dh9w8A7k3pZXNL6kV6zSjpybcYr6nV9_5hy2QD4rIo3-mYqPW0TzF-9DBa2ULC4rKB62igOOgis1g2aSYeRVbcEC_eaQAvlCInDbp_geN22scSVIAWwDV_zJTBVWNPhYnbthCeiGh5__SnirhpzFZuWSCRFYhjqoaiQDw2iYOCpd5ScBMGsJ7biIoeuxcuFvgMSgRx4R927HK3oyV-DKjMhGQS93TCmU-CqJ1uNJIw6NxA7Kaqyqx1baYSUq8oTv3ix2iJUJBQwV3Fq4wffpQkhwBL_duvBbRqtV2lKas71JBQGeYz9kZBtmVoaE8zQb51_kha7jic89bRMSWcRopx6voSsDoWkEzP7BzmZgYO5RKK7JjS-y5ssmKlfygoRWx_t3CwP4RaXmtT10dwyFv=w2098-h1858-no" style="width:100%">
+                </div>
+
+                <div class="w3-third">
+                  <img src="https://lh3.googleusercontent.com/Mmp7kXCguZTwe0BnEmlZwBGyJti11rN99ca5KiI5f7UgU_X--8lKGKFHrXNKA5r2Baa1j0W2hOWA0bRvamTBPcroWxwgrSQSAgth0Ok-mhG-HUmzLfExsG8ZxOifX3DwRet_x1PVUs0RiSkHoIbhbRIel-roJwevOzNQfXJ5boLAsaDEvnm2UG5NKh5R_luRTo6S7mSde188n0SqiqxLfbbXHGHSrrEqNBQE9ENAnOllfq7giD97dcewSnCyZ7sYG_Fz9_M3rlMJrFdI4jiynrwV-OZbIRxYwd3A5PcPEI5-aMGn6UVDJgf7hIGQKdItOHXXfJPuaFKJzbbNf98ndlBY8ZpArZlU-HbHoOTxbvf4XyxskjDbqbxykIlnpdvYZZQTh__LaqHZyAroTXcL5FPCJAX7g6ePytiChdT39VI5rwf8FpAG2qnsbFyyDAUG-njdlqVmcTjjgvDnwb01hDzriggJmI9EbMcDhmILqOKw6-KCF3fScqfUFkeBv9hwg3p2mwPzgI1paM6sHi4GMa2S2oCHW1Kq7qvUpX5ar-UCSRa9ifdzkcZr09aAXAnORQVBRgDXb8XZY4jh26J3xjb5WTSvq_WAHugG2JLjDSErX7TK7mXKWucY0mAfad4JUe9g67rEnB7qK0fCtbgwiLgjjNB4ST3hRt97NFbyWXZHcN37GMdQ1dU1=w2058-h1544-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/0q8f-JwznvjbxQwkpUZ4d0oe06-0UxtJRGfTl1PBG_L8ym2uNPEj7mdHT1e6BvgX5RO_6g7qbDt766lQVQQH59DFg6MxLhmSYvRg2X5k1mgJ0FPKRCn2v8Dms8BVAU2Ca4cRcDcu6Ns_DRgz5bpbk37H1G9Os2qmQPyUzzPtFKByQE9z6Lf-zD-AYmwBR-ntiQFgW7NP6lJybrFSnN6JFapE9L_ImAECMWKjvPBrNVcsD4mbbUDLzBAGOx5p3CZtX04N2p1Og6oWwLZa7JJ9u_Ix7hIeq1cfkhvqoWjCPZMaSXl2MPrfOpuXHHcpzv5ncoKiAxL0lVs7-Cp_wrJasQlHq8c2LUTqqivtGdlQz4MOAYqPLLpXahiT1KSM9rmbvYLaIHE4NoSGO81hciJ2OkiRw1dFlkf6zANyMLKogh2rrrCIjbRrRBN0V-6yDkzEp09jlWJV2z0BTQG46cqmd2iwb1cLTPllTVE_y-CmOBGUomSNrtLQXe4HS0W1hHXjB4yxD9moSiq994zeIcah1t5fCrVcSNG4ocTR9E8YXejLeurNMH_ty5jvQ1U5X5eoHvC27l-yglNQmq0KuYEURD1CpB0lS4x91INgTYKJmUUSxiONU5jmyEamFAuLeiD_5Wyzn-EuGWdBDv-nKUDjm23GQyaQV7ZTr2NG0ShbglQbshAexGWBWMxt=w2058-h1544-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/8JWZvhZCZIyavopYcoS-6GGviKCD81rtjVEooE_TgTL0kDeXrzKYlq_FHvZOBum4m7ugmIYpmxmeKZabf_5ZUYP0e6_qB5vdB8wcM71zVJoiN9Zi3cZijr9CVXzqg6fLe8boutw1wTkZKY6edsoN0I1fg7S7uO-dxK5x8AKHrLZ6_fsE5w3vQTxf2IpmdUpiB_ulxsOa07kSKmegG0qRGXxgQD7nbGCmkxBb4UTh0EpZsGy87PwaV6TmT4gRECUdBApmfSP0VSeaJo9NyX_mx7CSBMAFlRbIzmEXyuku-FxTQ68GSHKH5evuByDT47huOxF3_pKkxj112_aMtwJnxH7AL5srHxwU2OOPeE0eIe0y60ORlUbSzvoz35M8vFgn58H_OWiSHZlO7Tsj7rHkzgWOxyxJxC421T4MUMgxQ5NL9n2NSW6pzsBlS-Ri1MSU86cuyzFPh6FRnFWAex2ukkpArwHJQHHDYmwpY6RV4lIEIrCImM7JmItvh6J4uV-TMnZT34Z3UXFFUnIuddKIlrP4cISEH54VsooNYxd4Ey_l1mrlkDmUVYBEtCR9rKyFrOYZ6AvRg_e56Fm0eX-5DmNVdIQFvKfJEWgNM-OECHcFc2v9j5u0r17MhYKXT9APyAB6mFvmCpi4HVecRErdZutMGfd2pKgXIuOmAIn9--T6nMA_64K0YuWd=w1684-h2244-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/HW0h-rTOav1-C9Wcn5Bs2qFbYFPnLcXMSpjdBcfLYMBfcbVFjWQYoBm6VeHqcZjYlJnD6rgLIgU8zpUpPDq8oBch1jhqrWMtNs3K5_YUQOP2E1cznOUqphUpGR6lY_haJ0TKzF1OBQIifKCKCUc_gTrsIsq2lMpPNBG0NkTEzVYNUPzn2KK24Ia0ApqUYRYanG_OJIR3nKRZSND_TFJtCLl5Ula5S5K8i8eWl4ks-8-y9vbX4r1gtrMiZWnNivhVm0eHBv3pae00wwcpipYLpsE-D-E6F9jV74qjPB6UMzV3diC4L6IRBMgca41wQEJKlgaPpXDtPyJM9ejgLHzAJBQYm30jiI2Wc_4GDUl_URGlpo1hbsQ0ioSLwivNXcpusEamF1cDAOBep64Fu9q2lKO7UpcB63R-zLKUMs0bWwA2YvYzsRQapvhYRUazR19ERo7NVb3cYFx72EvBfRY-HUwK2NPJojCqUzvNiROeTHDP1MdUzq9XUvyNmuNm6Pjst47YbRFchxbx9mAXNrMZ6oJCRtKtYpM3Kx3cfZj-OzfizkyNqtg9wo8Ka4KwoCAG9JsCwOpGd7ay6zhK-XnAe58LNWGXP5-Z3dm9p42kO6h8qo1lnibifk6pzQtyTTNELeVcOs71rN7dHWKuVOGKQhhRlIu_dYdGJX7rOARyOCu9Rq-EZVNJA-ee=w2058-h1544-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/w4Axvc_pGlrvLVAFRAd4zsRzh7-HJlRTodHiOaR_5NQv0KaFGuPXfdmBSBd2rjs8yPlqQSv3t4UE6kym7jP-7sKfJ7gX0qTrIrRv-7ir_PNy1GSQN5o0VauA56oJi6Z24g_h6Zsl_qpTDsaZSeGIG62cvdYWaslLHa_iQfZpskomGc3R0DZEMAlnEtSSTSnBdZvxI1aCdS1nc5h4P0FfTWf8L0bI8LR09FsOYn9E7eJIV6NnvwXxH1T4thVlon6xqJzpKeMTSEOMecLxsqjy_kY5rHadP-kUo59kvtPCAtAqwrWWS4nnyxDrrzHQQR43cpQJG4JQkzP4IVq4AF1y9fClwQrrFtNTNfeJnn8lVM_plGYyRqJmCA1Kl0CUuHi_-b4iEpyNDJk-_KDdsU1fYZYG0GgvWMmJLdlauXDofYz88gNK2OYoj_MJvrgDvqdGVz1FT2_weNfddaaA_nyWO_-SfNgUTBEds5k1aETcI4PKpFUh27ISzmtMDorqPUWGqaa_Y-l6xZsSfLqUEtFr0MIBIZrMwCMh080Tw2CzHF6vt0GxWu2JLngCCafWLqo0kr_aPZi_AOMHnKM3UZLzrZ9tiNeIHJknzkkfl48au4EsXG25_mGZxWsD5NX2xBej3s3id5Tdo0gyJNXTBKOdh834NsLqlCgxMj0pLnMWzbTxxInCLMv2_bY0=w1722-h2294-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/Xf0ede4O7-15icGF2NKLddfe9hbPC65VUffGBNHMo26M0YG0AoM4VsI9HD8iT4-sPtoVSd2dmdOM8iH0PE8nrJGZ19XjdIcnJzU3i_NAn8IdkadVKWiBLo43KVaijnvsDJJJqpIbY1kVXDJRWQKnPthL-CajF8bzHBleZpYVncv7hWASKgdgbQZW3K1FmEI2xRTCxVykXNEONWDaUe8OWlWFxJJEBIwgezSJMXLEa1Typnmz5DL3EWdm5I4QjmydpEH62XjCjCLB3i3-X2XbQ187vzwb4T-TA8YC7EiBFAN3LEvTd9_iq4W_dku76nK-ptTRQrrpzPGnVN-_RUg2UEE5q6KblhfzMUiQEzLEhHzrayacVc_AhFniBWW0kuJNej1hmPAr42UjVO1_n61xoHDZuH_crPTK5eVVWyYUyF-eQA4THrKH_Jic6KMDLzrPN875KA8_amRiCWznCRMuXhz448SYD6njofrwyy_AGxtM8oEK6hCNBPlPaH2hRWx_9NumQTDLCqGU5OPx_MrlnH9gVEMxM7DnIgSXwqggB2x7AReybIgeS0XJ9UkSDZQnmwU1HTrN4QWXpoUWkHHMJ8uZ6iYYunEqssqg3n2jMY9EhN3YjbFsdNfTHOhWHVaAtOoNyL0SRgfM7COLq4eLCkHUkxfAfeiZGLxnqzXTJ3LGnQgoX39sE00u=w1722-h2294-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/7uQesGhELQBtEiZSc0V9pjROIXG6TayFwd29seSswYCmHxEtH6c7UpMeuA_SP7Bp6J4PetNnwegAkPXdaNFp5gOCVz1_PSu7onUGWruPIdZBu9LqGNAJtF6qSCvLkxPk1hn24Wyq7t5vdCpYdaPSBBZgpMlAq5V-HJziE1aYQxFY-fLVk0u5p93PMFRmh9Rdp_y4F1ciG9y8BwhfKVM2LKo46jUUYh6k0sBtXoLJ5tl23cR8TlrYgwJ7tYMKdaPJqu5SE0bEQqMrsLjIsk2z6z5V5ZO6bjys4aGeM288bDSP4g-ddQizF1kxqHhzfwpNpnYre49LTaybI8wEwZOmza4e-h0ZILTD9qh3mvCaWe9Fnas5T0DWcfZmnh_6-nBGRvhOMacPY9KVqCDMUZPult5mZExe_h1ChSn5-D_0jH9xIp6HJijtqRfc8IB9phur-ENc66peRbPiWwwd4wumgFTkSkQaYmSYjkYcsDgHG9Q19Si3gJzeadUxjCBHKKb7c_x0LoXFt0lnmjRxTCKhsgkqV3grsYzkrRrPJGX_QBs6eIrcaJUL43b_S1fMGYAZVS7g-AUqPoqkmPb5FurZ8n7EJzNdJVGu44f7eZGNqi6hlG0cSA-FJBUCv3pnEW282k7XVp6Oz8cAOjaLQHfdIKaO2AIXJ4YYb1awDN2CpqwnRYCPm2T3SNGn=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/los18_G0NnJuEm6yjD5IMc2A1dldI8fpytUI8qkMGm0Wi5inuokJb29UKrvXv4CRmwzpHd8gYtPF9jv6Trnbjq6vNcoiXomQRE_lpg1QzK80XaBZX_4LryG9chw5LF43Wcqvok1xNVaJXy96KCOkeL83oncH6j6r_P7yF3E0YgVuvXF5ykWv-aFuLP9-FC9L2X8KzKy7boHTdgAX6D4wwsbWEJgicsZMBZMve_ewT3I6Nml89Rm7duKmX99IjZSBInMXWW5NazXXVlR7DrI_QMUiS_9li_415rUfblNRtPgJBiOhyXAQCiwQm7zfvLph7BufP0TTQMKAvnfI7rsRO5KfKkeEfNEBNOYBB6tONEevnMa1igSpBGC-cKvgtNYgyE6BZRTIMWbHNnamuB4RrOqA2owe1MBkLf0aJbOyi0retppX_J7XAfwdPPjUqhMwiPB7ARii-vlDR2EvU1ne8al5ksMdC_hD8ljpvtMDiLgGfCtI6bWxH-7dlNmDbERZPsqtXAnHbk5lq3jIyXj-dHO22fPfp94OtlLtOvETxEzrl8AkIDbTSld0Ewd85GoV1r26TMMD9d4-VpjAJHKSfxBAcphSFrsxHMDRGa-7iPXgQ47hWkfDkRHyrTf7pJAOyWbDJsNqNnDantO6e7cfe0NTnsjaMlyWcPmh_K5_oEVVj1FrMFgLYyRl=w1722-h2294-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/R0F-fWVfh4ncq5GgUH7ObyjJjW5R8Xi1R7N4E8yOwClENb5L1CGR_D6tKaxoWHIgm363ujYDT4ZgOZrYIpukDGBcD-G5qoy32th2AIPCZWzgifahVI3UX5MXGIue-CBWzfzYkNXziGMW582bXzW5CD0tS8x8ydz8tDhmdntrj6SL_A3SYaoVbHoj_KpN2uTJu8ihmT4HL9gRhTgYdoIKUNyv6_aiH6ogbUh-M2uMj5qJ7YTBokHvxLWI6G50VPymbRgLr-pOxue39DImX50ZbzfJmYZi_kvF4gIREKztqhtC6AoXpDxiR59LBKexX3kkPQYby3yspPZ-tgQH7Uto7C0ynz4Lj7ntPeaVLKDLimUKgx_XcvOWQKbU5uVmRHNWvmPpA2UH67FIfJ5r_KKkeYXHMD3VWWYxTE-ViMnbBU-0ge1MaPPUfxxiK_qJZ5bKyP1Qv01Zh8pTnnrJnjO4EfgPmjD0PMf3IcY1lbXg9fQEDqIeoYDDY58MWuKXLunnvDj94NjW6QWz-8hjr3-yXr83aaRSvYfVI9U2PqsIyFiXU_uRSfYARpTSQ6Zr3ByBnco6KcRYj0YQ6HVa24tuVB6JrU-vEKHY4Q6xdrGPO4IqR_lVD0l8MJAV_V7vrXO5XxfkfaTNBC64hBAq_eWKmMPl3KBh7eZIBHfO9AvXv_U0XUFNMMLq-oLp=w1722-h2294-no" style="width:100%">
+                </div>
+
+                <div class="w3-third">
+                  <img src="https://lh3.googleusercontent.com/XPEw1nAKYOG7uXSt619vdbfkK2gvbfmoJXIkcpvnCBRq_NKX6PE8LadQf1tI26ZfnPxc5TY2d0aCKaWoXR4eluF9Nzu6vhjvfizcql3BjCUno9bXURKPzHSNDBCkDAJ_9hO24ehiTYcTIrut7H8xfBqAbkHOVack4V1gn1VUUytQHYZ9t_oFIllkihEO_X-M705GIgqtRUH_zuI6NPumHzsJFTMJzBPTFwUDK-UKiUvN7G6lNeeDfzEI3NMdvz8abGkqv-cv5JfPYcwgsoIK9CGpFcSBlncD2fIsmQqlf4vHayuLSjzyGwaL7rszjXcXTvrkLABx4sON83z_60qwbeHoUezcsw-yC9Fw8_djFKyXxdYSBFjxoJGXzgy-x6h80dqg7tPBEXEfarGdlCKxLIsXyXzaoRlwiBDYU-VJu78wUITgp8JKMc0xQuuPTze8zlFxH1_oqHt7yI9qlkffywTWV4qVSj38GarF1Bh0ZxGyuBUcdcdKERd2rUyTw4DrqWkZWOXvcQvSEZSw1KYRCosNgoT6mYAnbx-9uozelMM_Y8caU7uXRhx6oAxWbD5A01g1077jnqIMTo558EwbrhcDBZhTf0GO3PGJ010z_c3qenv8sVWnBZTdm5t9kyYrzk2Dbl803oTRFpPgFrLLlAejWxEg-UX4_U5cIUNzziwszuRldVsXvzu4=w2098-h1574-no" style="width:100%">
+                  <img src="" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/TgImHR5SjFwx8RSvmIJR-ZSCr9itqsd0-_IKEByvqlh4en9TdrFdM_Qb4RorzqSBIB0xvX5pNYEkiTJEK4VsZGXGHHrzmRU3Sobk7wlkBmL0XxW_5yrhV4jCpJBLf33G3s5iJHOXb8sAkG-7rTmvCxduLuomCLpSASs0U7yk5UrrzGW1Pk3p3zgWbEHtf8Ro06g4VqYt1MJezrvIHNM1GagMRuSmYh9pmtvUAnOTeX2zfmaKStuUj-G4h1713-ypvvZRd1PkeMVoG1U2guapC9wKFffsmumd5g3jBh2MlP9VKB7SKvASf-W3_ilzzAO7a_6hYLtNBwlZjpTLxwsUElbESP9ER4rOFnna1oMD7R7CtofnUHbgxk28Fy3_JuexfK6kulcJMRM3eSP-D5XQbNUu6OLe0EFzIAJq6Q6Y85Eo3se5r8KqQLqyIsdb1rzENOH4Rfjt2fLDqbnMaAAx40FzpWgj4kdkZZKXfeDMvdZ2Emfoa-rWPANOmmksMoim3qd2urAMNqijRvP51N6Im9wyitIcR42vED3wSow4dY66qtF12M6LnSGjDepDfij0Bv721ILThLsJjxu3-QyADURYqE0O4iU7XoICF7A2d4pXMCshQYb4Bl7L5N4_kAHOrxe96wYXmI4rtE9iFHhtGfvbqipKFZeQDt_t72TaKOwKjNR3R28n-N9l=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/StPX-upoudSg803UdZVHSXDCAKtKXZx0Q-cro44wDhrc3hsn2nQyVbZxYJdOWEB0PBqKhKbhvKdf-MZ3XAYbIF4MdgrVgs72IGNG1WOKI9ua7pcxcquMUWtoWq0tkk45jQehAc1y_PoDHWZ4mKq3Gd6uTrZbCiTPvdqnuEf2CkudRQeEpjYjYPz0ZDc5fTC2VWAhYEGfROG9VWs2aL78f3RWrr7ixODpHohgBjALs9A06G4UtSNhTKgR5vrjXbp6dc07dnbSN58Y-SdUCb1tG3l7G0HXN-Blbs4zwRCYro8eCGkhgZR8lEVcykFIYYAzFI6W0-VN9nxz3KyGVokj44wV5j1rsH78n9PeToDqjmjyn3-wpaxHrtYd1a8riF8rc1Scm83nSH03jAsRHXF1_UxEOhClqOCaILcs5ixmmkZ8hey2zsvFpzrzodoVPO5sTuoZH-STx3nzM419-BjOvBmMoqIZ5GSXtSCvykYlsUk8ciECBs5vmO-klHWu3bpKOyUZLrQl9r2Hy4jnzWLQlem1CDKe3DFNvs7F07g3CP4dzJFpiM4Fx0O1jxq75eLwlIwnWsfMBZOiG1huoMRdgEW2MACigRGG4m72QaJ4VvTkFtYyw50hh7Jxsk9EyCOktzszcQte-PiXCkr8ksrd3GLdO1XDZkq24tYJRz3NsWBYmqj1qL5NMHsm=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/fnDsMQaHhDTFv1hEEii9lvGXJp84CHjgArgMis8_ZOJZ_6Ttn8gHGc_-lBGiQZ2okUP9UINRLIZSNXj3GEEC2HOPUoljEa-wA2SMw7A1C8yrxltZrE1ZjRBvo0uAHP4Bar7jyXOQdd8-NeZGDRUcIqYeMCrTaXG9GjWu2FZgYLtjPsDbNE6wZF1STWuTHb_SOE-ipxVHlvuMOUEWEtiafhzt15SCXD_jydebvsm2na8ZegxfXX-56M1J-cltljh2KX3wf98FRPkZrBYLwe34h6eIRAJdf9SpXS_gV1qUD0vLo3eYrlWjXVPjj_Bk4sXxhAGHbAcfUa7hl8r2p_tzfN61YE0IRM31OxqWOpsT1z94DWwwisa4oIRpwwu9vgC9iEonw5xsCUpyErm1f3oxUpanpog_A3soCQusGav9TXNrC3z8own7NQfXsRlr9SL868wOB5D3xMXSFa2uuINeeQuNo_nwpig3C0roAWox5yIt4iWRkDyD5XFVoExVd5JqQuup_HMpJIxCcIiArv9PONIWHp3m-IINkDCe5zN24i6hyCN2LMbEtclzqIWCrOPFSk77-heHVRwyycID9ltn_mH_SXhl3sbLl_or_81TP_vEYpOIgvWDZaEmlDCsvt7rp8gjm7BDXMWwbu9t3-6li2jkyamh7apBLARA_KRdJrS_XFapFULuT_oQ=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/PyQ-7z4GHwAGIQPN4U3b_y7iUQeio3hWD8kNcCP8_6J1rmPV5fQ3SUiDIiZYjKb2y1fncReqHoON5T56i5PaMMpptMGWBWGSDHTQfdW6mU8W4r6M0J6nRJTz3QoCoHa0g-95mkTqZJ3mt5u4_6jfceBDCAKBlr6lyvFqicdq0M69rNBWc6eLmNdHWMkG56rT_rd626gkCXP1IsBlnj3--Ny_m0Zg5nadJ-DD4uoiJPb3AlVWkWY3Fo7TRqOFLseW8qRwqhErhL0cmv_CvkcIWG7ogxPtVB5LJbsb0jiYOGj3Sfcv6btGOL8KLgRVQp4baUGfwpMPFnj4vrUGsN82yPCKcZ73mcBhKCJEk6td6LrRqM0KIl-nAG-05GrH0V-nFHlaehYKVnLZdCtZrU95Q7GgT2jdI5xBX4C_uxNBbjyMGFYw6qCvjBsxARg6yA4WeagQOl9S5bBWh56goqhXT9FupRUiLbS0ykB3_p0cWym7iW1dx4USsff9YSMkKV19WzONdrHa0Nvs-qTwSNGcSuEhnCEAKhUsHZWl6DBsudprp1NidrT8RfoAipQqAnNA66D2Z86-TQnn56_iAfepe63ZBHpwtmrK2tl4rDIYfjYYv4xA2Z_n78K-ZQi_GmqkIWDKNAyOAAdncW4uT1FCdqOLCoreLFouz9KbbuDbCXGtiInm0TiTxWFt=w1722-h2294-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/ef3KssbAwI3rQAqVotsC23VqtUc5N50dUyFN3iCJrk5ItK8l7OEccr2eOqJKDykn_JOSUPCCuy5WCKOUQHbHLsb1XVWxHxXQPYPXCnNe5XOLFQDUCnbOOrdtm4sL8exXXSA0URSLb9ve0bS-YRvgt_2VwSX7_iBHwYrZJoXym3RQ9EnIrOgwN2_d1XEuh9dw90szFqfdTJsgLtCB82ai0SXA9J8FOc-ASOQua_EoD_w0e-cCVEMiXzSAmUNkWPi74-MUGh7LoGSoKKZ0IZrRZ5TN069g_DFcPN0Vmp5vsdmViPbInIbvtgzSv9lYcLHpEyYWlIBf5-rnujKWUOVcEy4trS8G1r483oJpAKX6JRttCt2_eNZS2WhejlJ8ALYKkL7w69rN5fhTAMmLAl5u9sTY8Jln8oDmqCGi3gfy3dIzcQ7V0U_mKq9oeOMHXV9WvyolEdcfnAD5a9QSuftoFr2JBqJ140Eo2En4T2qbGf2-UTvnNBijNRObA7FQgMmUzDNB4I44hydMXA11TNgXNZMjcGPO6jXIYQcDcmVgztq4vY6CGSgof-3Hh3mMIRvzWGM58jDA2yTZaLanqrxTeXrFqfnD26Y4nh4Oj-ENFkkNT4BcDFB5Wj6qPqOLJkqLe11wA5oKrV3fbStuHxlFdarY97asGsjOan9iC6sYairJVZeo7KxPSUfO=w2098-h1574-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/MCUJ1cEXMWO3TyEo6KRHi4qnam043HecsAM5l0WPr8OWEo0NcPuzqIHVZ-sWN6Yn2daeOAxU01yqB6HHZRg-VPEswIcIdk7vbFb9JxwxGdVlBMIgcg_xLw7yCsekHlJECCYUhgMv6qJfSB4v5ELdlZBl2glE52kP7ZqQRPOoI_UvWQLD7WHaFTiVJPTvGs81-x-sDSPN0xonIM1CvG5K1FZaxueig2fNRVmBkRx5O2nOeeN600B1scJDLpiF9tYvu0eXKqVWifLKK0qYco7co0-BG1I0bfQ5Ar9e3MeQk0C6Swk8XygWUu04Y634Fj1GlzNQ_TqMJ1jm-f1AgP6EbPPrcmqLaCN2p6touDwKFeKnc66miS2vfjjDvBbVlilqrHWju-CWAJ0GMbIN5gLJxD6b1IgypSJvJ2wv-MHLljinf3aEAw0HaNy-vC5mVcoyIC78cxW2MbppiQzo1LE0b-LGDp6hHMoyWShmMetPpQu1D5aLLw_7nblWh8nhcYC0X-9hlSjULwQJvCEgxAtN_VT8UG429NFxs3z-kkj_JrjiRyqBNsJqgQWwT6_vD38bPCb1JU_O-zzkzsYfMAZVln1KXFKMiMA1nXPc8qJ88UfX2FSJyVV-IjwgXsjvBUxiC3xU56Ns6Ur_bkU535ANaaTja6fV79Pjq-HG0ZG1TiZoWltfC4Fl5Hdx=w1722-h2294-no" style="width:100%">
+                  <img src="https://lh3.googleusercontent.com/bQqSSktIX2LLjd8qWAZAlxUvf2dhq5JF_9rduRwLlR79kyRYBf0U-AkwKcDPV5NcMmXC1gPXrcuX2T06nV-AyvU99Zx4HIHYX-LNrt5LqEqs9KUOUT-YNdqh9V0iG26xP2Dkyywb0-NpQmcN85e4leDJ-HDRn2v9yIYO7MOu6x7lo-KS1MNznYuj08qwMnqeqezWfynf6vWGGpDp7VuQrcZ8O-CVi9n7GuQmanRP6WnBaeSXCxu9V6XMZCkTo4qFd1jvRkD5g_32kI6z5k4mP68C48K5Jb5-UT1VQwJf66h7w5DtklfJ9doGNsKuSZex7mTmnCbp0XQDAcLsCPAILAL9LqfHnre97YpJk-cIBdBcQflwj_f1jVTDCmVhj-7OJjAYjbrNtTDfb7AsvY__pHZBdWdyZzhBwdjX2PKb3vx-SWGSPXRRjoCdEj2WJGEuLybmd2CAgZlSp52KOSj0lAqRr9RSGwTwd8q0R2_GBt0Dn-RyQLJUGczeI1mllXAlVfbv-44AIM1hOL92NhBXUst2IktQ2d8fH9Fe-7RZmizPZHsew6WFcmbrkSo-0Unm_vJ4BzbHbxsOUSV5vCfGpTO8KwbR6BJQ1ah6fxwwpdSTHSoSz8QUjsNEUhete6Slg3Y-ARBwJ85aaP6yxUlDWNDn9p6waIUS09kN3glN1yGh_-ykzaa-n28T=w2098-h1574-no" style="width:100%">
+                  <img src ="https://lh3.googleusercontent.com/H5QvlD9AOz3_nk_FgwgO5zvlITNuyr_V93Zyuq-fAt3ibSaL9NLtcsWvzCDegl_W26E2TtqmUBmCIutaNI0--us507BGnQABZklyOewo0dLuR5A55z5AyyTUNInvXC3zZfxPTty6p883TkcNikVXY7T8UVSkXmtVlsv5JJiLCiWhO4EegIcF34RmPJMVKH6NAgkfzZC11brvAT-diLCLyodqzGMLu7Tt9m1yYL7ADJ_BpfKiA0MWrZKKJXeoTgJSFv-XeCleTjJNss1Zh1nOCkQ-tJ2Pnp6aaMT6Of45e3m86zCv7rlUzBE44UDZJpc6fQ83oeQ_HxuFQFGvABuHI_hwH9FoH0ag_S3NFtKE-3tBc6OKxRw6avQWinhCFoCFQpZqOIclUq2q-U6BcSz7797W0KdWNLW5uyUV3itPJgO4ksoMYvSGkAhq3B9Nl4QTLInKmCkdgmBOcPbClVNmHGnN5Sx1S-Y30l_FnJvdXVvCmtRHOmgCRaX2dNY2TPIhFKj3csF2KtaIVXm07tO57x1QMqR7eInBMipjWjcMkM--s-EWywJaKOZ1SEitj0lbc3Odrp6k2QYv5x0gCBTBS1rzFmJBp83H97bjqTvU4UIYILjNNsiJbWx0MaS9ZYCFP6IBDGn2pgOD_x1sVpKU-LHGdzgx3maCFWUIyRUPP856s7dpkO4IE3b-=w168-h224-no" style="width:100%">
+                  <img src ="https://lh3.googleusercontent.com/-S__r-k2t1ZEAoQuW40hW_gkU12a-Wxc5HZOZV-fLtT1fsmpfX0VNPy3JZpl-13beU0V0t_kfKDh_CI7hyyJ7R1tD-lyP3WRTayrKbP7C2aizgSxfdLR_jepz5capSEIBzyuzTQ1gD6u1iHefaSEPZwJwcwn-kzgCl7j4kpCf_bL2zo7F6289Bd7LPklggjc2VRp3q-mrOOgivPQl2l5pZeYdkireWwYwWACOjXEDB2XDA1PbuO0L3vHJ9t4AG8QRVxP-Nm9OYGLwotjCLLWMJER8wBqJUMCwpqFfD_db8LnsmAG2qdrnRuPg-LGAiOW4OeCV2HJZS4Mt1m_kOm7_nlF60iFSoKHBDwS6jLuKZlBm6tNkiGnveeEJg74FVw2XZHMtddK2KM6dPhJHJkKaxDDR90_CtGcriZPZvJ0NNcYAljknCc3hpalEM0iF9sBi3EV3h3F2acYJ3k4KneXHHFMw3PTRgp_da-ob6qnLxvuWVq9cP9Q0f6L0zs6QfqXzAaFZnbcNq2cMyZuiuTPzuq7Ks_VDPPVwpXIO2FUUIPkbSTCr8OuzIYgBkx3wS12I3tOTQH7Q-ttkPTzyT9lyW7u3EbtIaJH_NYFHLyYJjUT_BvPf9MfGCfomjX-ko-K6cjNH8_PblB1ExJbcjOpj83T9hfXaycK6Vh6d5FcnFXxO-v2fs4Gfiey=w2098-h1574-no" style="width:100%">
+                </div>
+              </div>
+              <!---https://www.w3schools.com/howto/howto_js_image_grid.asp--->
+
+               <!------center pagination---->
+            <div class = "center">
+                    <!----- then edit in style (text-align: center) --->
+              <div class = "pagination">
+              <a href = "#"> &laquo; </a>
+              <a class = "active" href = "#"> 1 </a>
+              <a href = "#"> 2 </a>
+              <a href = "#"> 3 </a>
+              <a href = "#"> 4 </a>
+              <a href = "#"> 5 </a>
+              <a href = "#"> 6 </a>
+              <a href = "#"> &raquo; </a>
+              </div>
+            </div>
+    <style>                         
+            * {
+              box-sizing: border-box;}
+
+            h1{
+              text-align: center;
+              font-family: garamond;
+              border: 1px solid black;
+
+              /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+
+              box-shadow: 20px 40px #caedeb;
+              font-size: 40px;
+              letter-spacing: 15px;
+              text-shadow: 3px 2px #cacbcc;
+              width: 400px;
+              height: 100px;
+              margin-left: auto;
+              margin-right: auto;
+              padding-top: 13px}
+      button{
+        margin-left:50%;
+        margin-right:100%;
+        font-size: 20px;}
+
+         /*----------- Pagination styling --------------*/
+            .pagination{
+              display: inline-block;}
+
+            .center{
+              text-align: center;}
+
+            .pagination a{
+              color: black;
+              float: left;
+            /* spacing between; first*/
+              margin: 0 4px;
+              padding: 8px 16px;
+              text-decoration: none;
+              transition: background-color .3s;}
+
+            .pagination a.active {
+              background-color: #caedeb;
+              color: white;}
+                    /* color when mouse is hovering over a non-active # */
+            .pagination a:hover:not(.active){
+              background-color:#ddd;}
+
+    </style>
+
+        <!-- function telling the website to either close or open the menu navigation bar -->
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          /* makes the right side fade to a dark gray */
+          document.body.style.backgroundColor = "rgba(0,0,0,0.25)";}
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";}
+
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+          // Toggle grid padding
+        function myFunction() {
+          var x = document.getElementById("myGrid");
+          if (x.className === "w3-row") {
+            x.className = "w3-row-padding";
+          } else { 
+            x.className = x.className.replace("w3-row-padding", "w3-row");
+          }
+        }
+      </script>
+      <footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer"> 
+          <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+              <footer>
+        <div class="footer-social-links">
+          <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </footer>
+        </footer>
+   
+</body>
+</html> 
