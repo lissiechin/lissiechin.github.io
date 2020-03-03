@@ -190,16 +190,6 @@
 
              /* ----------footer styling ----------------*/
 
-
-      #content-wrap {
-        padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
-      }
-
-      #footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;}
         /*--------------------------------------Scroll to top button-----------------------------------------------*/
 
       #myBtn {
@@ -221,6 +211,16 @@
       #myBtn:hover {
         background-color: #555;
       }
+
+      #content-wrap {
+        padding-bottom: 2.5em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
+      }
+
+      #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;}
 
 
       <!---------------- SOCIAL MEDIA BUTTONS: https://codepen.io/sazzad/pen/WbdzzQ/------>
@@ -292,6 +292,8 @@
 </style>
 </head>
 <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <div id ="page-container">
       <div id ="content-wrap">
                         <!---------- Side Bar --------->
@@ -325,7 +327,6 @@
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
 
 <!-- MAIN (Center website) -->
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <div class="main">
 
