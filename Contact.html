@@ -4,7 +4,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type ="text/css" href ="main.css"/>
 </head>
+<body>
+  <div id ="page-container">
+    <div id ="content-wrap">
+                     //---------- Side Bar --------->
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<div id = "mySidenav" class="sidenav">
+        //-- The close button in the sidenav 
+  
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+  
+ //- create a home button leading back to the Home(main) page
+  
+  <a href ="index.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
+  <a href="About.html" style ="text-align:center;">About</a>
+  <a href="Favorites.html" style ="text-align:center;">Favorites</a>
+                                  <!--drop down menu within the sidebar-->
+  <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
+    </button>
+    <div class = "dropdown-container" style ="text-align:center;">
+      <a href = "2D portfolio.html"> 2-Dimensional</a>
+      <a href = "3D portfolio.html"> 3-Dimensional</a>
+      <a href = "New Media.html"> New Media</a>
+    </div>
+    <a href="Photography.html" style ="text-align:center;">Photography</a>
+    <a href="Contact.html" style ="text-align:center;">Contact</a>
+</div>
+  
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+                      
+                                            //-- TEXT ~ BODY STARTS ------------>
+  
+  <body2>
+    <h1> Contact </h1>
+                                //----contact form!----->
+    <div class="container">
+  <div style="text-align:center">
+    <p style= "margin-top: 50px; text-align: center;">Feel free to leave a message <br>or<br> check out my social media!</p>
+  </div>
+                              //---social Media buttons----//
+      
+   <div style="margin: 24px 0; text-align: center; padding:20px;font-size: 36px;">
+    <a href="https://www.instagram.com/_chissie/"><i class="fa fa-instagram"></i></a>  
+    <a href="https://www.linkedin.com/in/elisabeth-c-6b0660186/"><i class="fa fa-linkedin"></i></a>  
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <br>
+       <p style="text-align: center;"> Hello, This is still in the process of actually functioning. Hopefully, it will be up and running soon. Bye bye </p>
+      <br>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="feel">How are you today? </label>
+        <select id="feel" name="country">
+          <option value="good">Good</option>
+          <option value="okay">Okay</option>
+          <option value="Nope">Nope</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+  <br />
+  <br/>
+    //--- way to contact: adding email –– reference: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_email
+and other forms: https://www.w3schools.com/html/html_forms.asp --//
+    
 <style>
 
     <!------------ contact form style------>
@@ -153,90 +233,6 @@ input[type=submit]:hover {
 }
   
                                                   
-</style>
-  <link rel="stylesheet" type ="text/css" href ="main.css"/>
-</head>
-<body>
-  <div id ="page-container">
-    <div id ="content-wrap">
-                      <!---------- Side Bar --------->
-  
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-<div id = "mySidenav" class="sidenav">
-        <!-- The close button in the sidenav --------->
-  
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
-  
-  <!-- create a home button leading back to the Home(main) page--->
-  
-  <a href ="index.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
-  <a href="About.html" style ="text-align:center;">About</a>
-  <a href="Favorites.html" style ="text-align:center;">Favorites</a>
-                                  <!--drop down menu within the sidebar-->
-  <button style ="background-color:#111; border-color: #111; margin: auto;" class ="dropdown-btn"> Medium
-    </button>
-    <div class = "dropdown-container" style ="text-align:center;">
-      <a href = "2D portfolio.html"> 2-Dimensional</a>
-      <a href = "3D portfolio.html"> 3-Dimensional</a>
-      <a href = "New Media.html"> New Media</a>
-    </div>
-    <a href="Photography.html"style ="text-align:center;">Photography</a>
-    <a href="Contact.html"style ="text-align:center;">Contact</a>
-</div>
-  
-<div id="main">
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
-                      
-                                            <!-- TEXT ~ BODY STARTS ------------>
-  
-  <body2>
-    <h1> Contact </h1>
-                                <!----contact form!----->
-    <div class="container">
-  <div style="text-align:center">
-    <p style= "margin-top: 50px; text-align: center;">Feel free to leave a message <br>or<br> check out my social media!</p>
-  </div>
-                              <!----social Media buttons---->
-      
-   <div style="margin: 24px 0; text-align: center; padding:20px;font-size: 36px;">
-    <a href="https://www.instagram.com/_chissie/"><i class="fa fa-instagram"></i></a>  
-    <a href="https://www.linkedin.com/in/elisabeth-c-6b0660186/"><i class="fa fa-linkedin"></i></a>  
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <br>
-       <p style="text-align: center;"> Hello, This is still in the process of actually functioning. Hopefully, it will be up and running soon. Bye bye </p>
-      <br>
-    </div>
-    <div class="column">
-      <form action="/action_page.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="feel">How are you today? </label>
-        <select id="feel" name="country">
-          <option value="good">Good</option>
-          <option value="okay">Okay</option>
-          <option value="Nope">Nope</option>
-        </select>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </div>
-</div>
-  <br />
-  <br/>
-    <!--- way to contact: adding email –– reference: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_email
-and other forms: https://www.w3schools.com/html/html_forms.asp --->
-    
-    
-<style>                         
     * {
       box-sizing: border-box;}
 
@@ -292,18 +288,16 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-    </div>
-      </div>
       <footer id ="footer">
         <p> <sub> Lissie Chin &copy; 2020 </sub></p>
       </footer>  
-      </div> 
-  </div>
-   
-</body>
-</html>
 
-<!------
+</body2>
+</div>
+</div>
+</div>
+</html>
+//------
   /* Style the container/contact section */
 .container {
   border-radius: 5px;
