@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 <style>
   * {
@@ -37,7 +39,6 @@
       transition: background-color .5s;}
     img{margin-bottom:-7px;}
     .w3-row-padding img{margin-bottom: 12px;}
-    ss="w3-content" style="max-width:1500px">
   }
      
        
@@ -192,32 +193,44 @@
 
         /*--------------------------------------Scroll to top button-----------------------------------------------*/
 
-    #back2Top {
-      width: 40px;
-      line-height: 40px;
-      overflow: hidden;
-      z-index: 999;
-      display: none;
-      cursor: pointer;
-      -moz-transform: rotate(270deg);
-      -webkit-transform: rotate(270deg);
-      -o-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-      transform: rotate(270deg);
-      position: fixed;
-      bottom: 50px;
-      right: 0;
-      background-color: #DDD;
-      color: #555;
-      text-align: center;
-      font-size: 30px;
-      text-decoration: none;
+   #button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
   }
-    #back2Top:hover {
-      background-color: #DDF;
-      color: #000;
-    }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
 
+/* ------------------------------------------------------------------*/
       #content-wrap {
         padding-bottom: 2.5px;    /* Footer height  & em refers to the font-size (2.5 times the font size */
       }
@@ -296,9 +309,8 @@
         background: #111;
     }
 </style>
-</head>
 <body>
-  <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+  <a id="button" title="Back to top" href="#">&#10148;</a>
 
     <div id ="page-container">
       <div id ="content-wrap">
@@ -394,12 +406,12 @@ Template:
     </div>
   </div>
   
-                                           <!------ one category: Travels-
+                                           //---- one category: Travels-
   dash: &#8212;
   cafe: Caf&#233;
   Gazipasa: Gazipa&#351;a
   
-                                          <!------------ TURKEY!!!!!!!!!-------------->
+                                          //--------- TURKEY!!!!!!!!!-------------->
   <!--<div class="column travels">
     <h5>Copenhagen and <b>Gazipa&#351;a, Antalya, Turkey</b> (July-August 2019) </h5>
   </div>
@@ -1953,22 +1965,22 @@ function w3RemoveClass(element, name) {
 
         // -----------------------------------Button Script----------------------------------//
         /*Scroll to top when arrow up clicked BEGIN*/
-  $(window).scroll(function() {
-      var height = $(window).scrollTop();
-      if (height > 100) {
-          $('#back2Top').fadeIn();
-      } else {
-          $('#back2Top').fadeOut();
-      }
-  });
-  $(document).ready(function() {
-      $("#back2Top").click(function(event) {
-          event.preventDefault();
-          $("html, body").animate({ scrollTop: 0 }, "slow");
-          return false;
-      });
+ 
+   var btn = $('#button');
 
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
   });
+
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
  /*Scroll to top when arrow up clicked END*/
 
 
