@@ -81,63 +81,6 @@
       /*----Read morebutton---*/
     #more {display: none;}
     
-                 /*------THE SIDEBAR CODE ----------*/
-                  
-    /*--- Transparent Text https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_transparent_bottom--*/
-     * {
-      box-sizing: border-box;
-    }
-
-     h1{
-      text-align: center;
-      font-family: garamond;
-      border: 1px solid black;
-      
-      /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
-      
-      box-shadow: 20px 40px #caedeb;
-      font-size: 40px;
-      letter-spacing: 15px;
-      text-shadow: 3px 2px #cacbcc;
-      width: 400px;
-      height: 100px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 13px}
-
-
-    p {
-      font-family: Arial;
-      font-size: 17px;
-      color: white;
-    }
-    
-    h2,h3,h4{
-      font-family: Arial;
-      color: white;
-      text-align: center;
-    }
- 
-    .container {
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
-      
-    }
-
-    .container img {vertical-align: middle;}
-
-    .container .content {
-      position: absolute;
-      bottom: 0;
-      background: rgb(0, 0, 0); /* Fallback color */
-      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-      color: #f1f1f1;
-      width: 50%;
-      padding: 20px;
-    }
-
-    
     body {
       font-family: "Lato", sans-serif;
       transition: background-color .5s;}
@@ -145,8 +88,9 @@
      #page-container {
       position: relative;
       min-height: 100%;
-     }
-     
+    }
+      * {
+        box-sizing: border-box;}
     .sidenav{
       height: 100%;
       width: 0;
@@ -333,6 +277,62 @@
     background: #111;
 }
     /*--------------------------*/
+
+                 /*------THE SIDEBAR CODE ----------*/
+                  
+    /*--- Transparent Text https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_transparent_bottom--*/
+     * {
+      box-sizing: border-box;
+    }
+
+     h1{
+      text-align: center;
+      font-family: garamond;
+      border: 1px solid black;
+      
+      /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+      
+      box-shadow: 20px 40px #caedeb;
+      font-size: 40px;
+      letter-spacing: 15px;
+      text-shadow: 3px 2px #cacbcc;
+      width: 400px;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 13px}
+
+
+    p {
+      font-family: Arial;
+      font-size: 17px;
+      color: white;
+    }
+    
+    h2,h3,h4{
+      font-family: Arial;
+      color: white;
+      text-align: center;
+    }
+ 
+    .container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      
+    }
+
+    .container img {vertical-align: middle;}
+
+    .container .content {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 50%;
+      padding: 20px;
+    }
 
       /*--- Image
       style =" z-index:-2; overflow:hidden; background-size:cover; background-repeat: no-repeat; height = 50%; background-position: center;"-*/
