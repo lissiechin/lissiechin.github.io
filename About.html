@@ -277,24 +277,6 @@
     </footer> 
 </body> 
   <!--- Read More button function---->
-  <script>
-  function myFunction() {
-    var dots = document.getElementById("dots");
-    var more = document.getElementById("moreText");
-    var btnText = document.getElementById("myBtn");
-
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more"; 
-      more.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less"; 
-      more.style.display = "inline";
-      }
-  }
-  </script> 
-  
   <style> 
                       
     /*--- Transparent Text https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_transparent_bottom--*/
@@ -353,7 +335,7 @@
 
       /*--- Image
       style =" z-index:-2; overflow:hidden; background-size:cover; background-repeat: no-repeat; height = 50%; background-position: center;"-*/
-      </style>
+    </style>
 
   <!-- function telling the website to either close or open the menu navigation bar -->
   <script>
@@ -384,6 +366,25 @@
     }
     });
   }
+
+  <script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var more = document.getElementById("moreText");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      more.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      more.style.display = "inline";
+      }
+  }
+  </script> 
+  
   </script>
     </div>
         </div>
