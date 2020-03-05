@@ -43,6 +43,7 @@
 
         <div id="main">
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+        </div>
 
 <!-- MAIN (Center website) -->
 
@@ -57,10 +58,10 @@
   <button class="btn" onclick="filterSelection('favorites')"> Favorites</button>
   <button class="btn" onclick="filterSelection('art 205')"> Art 205</button>
   <button class="btn" onclick="filterSelection('travels')"> Travels</button>
-   <button class="btn" onclick="filterSelection('people')"> People</button>
-    <button class="btn" onclick="filterSelection('photo shoots')"> Photo Shoots</button>
-     <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-       <button class="btn" onclick="filterSelection('close ups')"> Close ups</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+  <button class="btn" onclick="filterSelection('photo shoots')"> Photo Shoots</button>
+  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+  <button class="btn" onclick="filterSelection('close ups')"> Close ups</button>
 
 
 </div>
@@ -75,10 +76,9 @@ Template:
     </div>
   </div>
 -->
-                                      <!------ one category: Favorites-------------->  
+                                      <!--------one category: Art 205--------->
 
-<div class="row">
-                                                    <!--------one category: Art 205--------->
+<div class="row">                   
   <div class="column Art 205">
     <div class="content">
     <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
@@ -1625,6 +1625,17 @@ Template:
           
 <!-- END GRID -->
   </div>
+    <div>
+ <div footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer"> 
+      <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+      <footer>
+    <div class="footer-social-links">
+      <a href="https://www.facebook.com/liz.chin.58" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/_chissie/"><i class="fa fa-instagram"></i></a>  
+      <a href="https://www.linkedin.com/in/elisabeth-c-6b0660186/"><i class="fa fa-linkedin"></i></a>  
+    </div>
+  </footer>
+    </div>
 <!-- END MAIN -->
       </div>
     </div>
@@ -1724,45 +1735,6 @@ Template:
     color: white;
   }
 
-        /*--------------------------------------Scroll to top button-----------------------------------------------*/
-
-   #button {
-    display: inline-block;
-    background-color: #FF9800;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s, 
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
-  #button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #fff;
-  }
-  #button:hover {
-    cursor: pointer;
-    background-color: #333;
-  }
-  #button:active {
-    background-color: #555;
-  }
-  #button.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
 /* ------------------------------------------------------------------*/
    /*------ styling the SIDE BAR --------->
 
@@ -1846,7 +1818,44 @@ Template:
       min-height: 100%;
   }
 
+        /*--------------------------------------Scroll to top button-----------------------------------------------*/
 
+     #button {
+      display: inline-block;
+      background-color: #FF9800;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      transition: background-color .3s, 
+        opacity .5s, visibility .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+    #button::after {
+      content: "\f077";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 2em;
+      line-height: 50px;
+      color: #fff;
+    }
+    #button:hover {
+      cursor: pointer;
+      background-color: #333;
+    }
+    #button:active {
+      background-color: #555;
+    }
+    #button.show {
+      opacity: 1;
+      visibility: visible;
+    }
 
              /* ----------footer styling ----------------*/
 
@@ -2022,17 +2031,6 @@ for (var i = 0; i < btns.length; i++) {
 
 
 </script>
-  <div>
- <div footer style= "background: #f1f1f1; padding: 10px; text-align: center;font-size:11px;font-family: garamond;color: black; display: block;" id = "footer"> 
-      <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
-      <footer>
-    <div class="footer-social-links">
-      <a href="https://www.facebook.com/liz.chin.58" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-      <a href="https://www.instagram.com/_chissie/"><i class="fa fa-instagram"></i></a>  
-      <a href="https://www.linkedin.com/in/elisabeth-c-6b0660186/"><i class="fa fa-linkedin"></i></a>  
-    </div>
-  </footer>
-    </div>
 </div>
 </html>
 
