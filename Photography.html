@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <a id="scrollTop" title="Back to top" href="#">&#10148;</a>
 
 </head>
 <body>
@@ -2408,46 +2407,6 @@ Template:
       position: relative;
       min-height: 100%;
   }
-
-        /*--------------------------------------Scroll to top button-----------------------------------------------*/
-
-     #scrollTop {
-      display: inline-block;
-      background-color: #FF9800;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      border-radius: 4px;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      transition: background-color .3s, 
-        opacity .5s, visibility .5s;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-    }
-    #scrollTop::after {
-      content: "\f077";
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      font-size: 2em;
-      line-height: 50px;
-      color: #fff;
-    }
-    #scrollTop:hover {
-      cursor: pointer;
-      background-color: #333;
-    }
-    #scrollTop:active {
-      background-color: #555;
-    }
-    #scrollTop.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
              /* ----------footer styling ----------------*/
 
       #content-wrap {
@@ -2561,27 +2520,6 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-
-        // -----------------------------------Button Script----------------------------------//
-        /*Scroll to top when arrow up clicked BEGIN*/
- 
-   var btn = $('#scrollTop');
-
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 100) {
-      btn.addClass('show');
-    } else {
-      btn.removeClass('show');
-    }
-  });
-
-  btn.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '100');
-  });
-
- /*Scroll to top when arrow up clicked END*/
-
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
