@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"div",
+				"div\t<div>"
+			],
+			[
+				"br",
+				"br\tTag"
+			],
+			[
+				"s",
+				"sub\t<sub>"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"style",
+				"style\tAttr"
+			],
+			[
 				"height",
 				"height\tproperty"
 			],
@@ -64,6 +92,10 @@
 		"selected_items":
 		[
 			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
 				"install p",
 				"Package Control: Install Package"
 			],
@@ -80,7 +112,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 151.0,
 		"history":
 		[
 		]
@@ -96,6 +128,19 @@
 	},
 	"file_history":
 	[
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/Photography.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/Photography ECorrection.html",
+		"/Users/lissiechin/Library/Application Support/Sublime Text 3/Packages/User/CSS HTML Validator.sublime-build",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/index.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/Tester.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/STO.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/New Media.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/2D portfolio.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/About.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/Favorites.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/3D portfolio.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/Contact.html",
+		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/St Olaf 2018-2022",
 		"/Users/lissiechin/Desktop/Art Photos/Art Portfolio Website (HTML)/Test.html",
 		"/Users/lissiechin/Library/Application Support/Sublime Text 3/Packages/ColorPicker/ColorPicker.sublime-settings",
 		"/Users/lissiechin/Library/Application Support/Sublime Text 3/Packages/auto-save/README.md",
@@ -141,7 +186,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -170,15 +215,19 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 121.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/User/CSS HTML Validator.sublime-build",
 	"project": "index.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -196,12 +245,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Desktop/Art Photos/Art Portfolio Website (HTML)/index.sublime-workspace"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
