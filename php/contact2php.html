@@ -1,4 +1,8 @@
-<!-- https://www.w3schools.com/php/default.asp  >> LEARN PHP --->
+<!-- https://www.w3schools.com/php/default.asp  >> LEARN PHP
+
+https://www.100forms.com/my/edit-form/LG85FPMCWUMW/
+
+ --->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
 <html>
   <head>
@@ -63,51 +67,35 @@
                   <p style="text-align: center;"> Hello, This is still in the process of actually functioning. Hopefully, it will be up and running soon. Bye bye </p>
                   <br>
                 </div>
-<?php //Post Params 
-$Name = $_POST['Name'];  
-$Email = $_POST['Email'];  
-$Comment = $_POST['Comment'];  
-$submit = $_POST['submit']
-?>
-
-<?php
-/<form id="form1" name="form1" method="post" action="contact.php">
-<label for="Name">Name</label><input type="text" name="Name" id="Name" />
-<br class="clear" /> 
-<label for="Email">Email</label><input type="text" name="Email" id="Email" />
-<br class="clear" /> 
-<label for="Comment">Comment</label><input type="text" name="Comment" id="Comment" />
-<br class="clear" /> 
+<form action="//submit.form" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+return true; }
+</script>
+<table style="max-width:550px;border:0;" cellpadding="8" cellspacing="0">
+<tr> <td>
+<label for="Name">Name*:</label>
+</td> <td>
+<input name="Name" type="text" maxlength="60" style="max-width:250px;" />
+</td> </tr> <tr> <td>
+<label for="FromEmailAddress">Email address*:</label>
+</td> <td>
+<input name="FromEmailAddress" type="text" maxlength="90" style="max-width:250px;" />
+</td> </tr> <tr> <td>
+<label for="Comments">Comments*:</label>
+</td> <td>
+<textarea name="Comments" rows="7" cols="40" style="max-width:350px;"></textarea>
+</td> </tr> <tr> <td>
+</td> <td>
+<input name="skip_Submit" type="submit" value="Submit" />
+<script src="https://www.100forms.com/js/FORMKEY:LG85FPMCWUMW" type="text/javascript"></script>
+</td> </tr>
+</table>
 </form>
-<input type="submit" name="SubmitButton" id="SubmitButton" value="Submit" />
-<br class="clear" />
-?>
-
-<?php /Query?>
-<?php
- $query = " INSERT INTO mytable ( Name, Email, Comment )  VALUES ( '$Name', '$Email', '$Comment' ) "; 
- $result = mysql_query($query); 
-
- if( $result )
- {
-  echo 'Success';
- }
- else
- {
-  echo 'Query Failed';
- } ?>
-
-                  <!--     <div class="column">
-                    <form action="/action_page.php">
-                      <label for="fname">First Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                      <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                      <label for="subject">Subject</label>
-                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                      <input type="submit" value="Submit">
-                    </form>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -115,9 +103,11 @@ $submit = $_POST['submit']
               <br/>
               <footer id ="footer">
                 <p> <sub> Lissie Chin &copy; 2020 </sub></p>
+                <div style="float:center;"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
               </footer>
             </body2>
           </div>
+        </div>
           <!-- way to contact: adding email –– reference: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_email
           and other forms: https://www.w3schools.com/html/html_forms.asp -->
           ?>
