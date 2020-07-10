@@ -146,7 +146,8 @@
 
 <body>
     <div id="page-container">
-        <div id="content-wrap">
+
+        <body id="content-wrap">
             <!---------- Side Bar --------->
             <style>
                     /*------------ Slideshow styling -------------*/
@@ -370,192 +371,194 @@
                         <p> </p>
                     </div>
                 </div>
-                <!--------------------- SECOND COLUMN-------------------------->
+        </body>
+        </div>
+        <!--------------------- SECOND COLUMN-------------------------->
 
-                <div class="column middle">
-                    <!------- TYPEWRITING styling for HELLO--------->
-                    <style>
-                        body {
-                            padding: auto;
-                        }
-                        
-                        #parent {
-                            height: 100px;
-                            white-space: wrap;
-                            overflow: hidden;
-                            font-family: 'Rouge Script', cursive;
-                            font-size: 80px;
-                            color: black;
-                            position: relative;
-                            text-align: center;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                        
-                        #border {
-                            border-bottom: solid 3px rgba(0, 255, 0, .75);
-                            position: absolute;
-                            right: -7px;
-                            width: 50%;
-                        }
-                        /* Animation */
-                        
-                        #parent {
-                            animation: animated-text 5s steps(100, end) 1s 1 normal both;
-                        }
-                        
-                        #border {
-                            animation: animated-cursor 800ms steps(20, end) infinite;
-                        }
-                        /* text animation */
-                        
-                        @keyframes animated-text {
-                            from {
-                                width: 0;
-                            }
-                            to {
-                                width: 0;
-                            }
-                        }
-                        /* cursor animations */
-                        
-                        @keyframes animated-cursor {
-                            from {
-                                border-bottom-color: black;
-                            }
-                            to {
-                                border-bottom-color: transparent;
-                            }
-                        }
-                    </style>
-
-                    <div id="parent"> Hello!
-                        <div id="border"></div>
-                    </div>
-                    <!--<h2 style= "text-align: center; font-size: 50px; font-family: 'Raleway', sans-serif;"> Hello! <br /> <br /> </h2>-->
-                    <!------ typewriter----->
-
-
-                    <!---------------------------------->
-
-                    <p style="text-align: center; font-family: garamond; font-size: 30px;"> <b>First</b> of all, I would like to warmly welcome you to my art portfolio. This portfolio will encompass many of my finished pieces as well as other projects I have done throughout my years of making art. Some mediums may be limited
-                        as I am in the process of exploring. <br /> <br /> <b>Secondly</b>, this portfolio is completely made from scratch; it's a work in progess, so please bear with me. If you would like, feel free to contact me about possible modification
-                        or fixes to the website. </p>
-
-
-                    <!------- TYPEWRITING styling for THANK YOU ALL--------->
-
-                    <style>
-                        body {
-                            padding: 50px;
-                        }
-                        
-                        #parent2 {
-                            height: 170px;
-                            white-space: wrap;
-                            overflow: hidden;
-                            font-family: 'Rouge Script', cursive;
-                            font-size: 70px;
-                            color: black;
-                            position: relative;
-                            text-align: center;
-                            margin-left: auto;
-                            margin-right: auto;
-                            padding: auto;
-                        }
-                        
-                        #border2 {
-                            border-bottom: solid 3px black;
-                            position: absolute;
-                            right: -7px;
-                            width: 50%;
-                        }
-                        /* Animation */
-                        
-                        #parent2 {
-                            animation: animated-text 5s steps(100, end) 1s 1 normal both;
-                            animation-delay: 8s;
-                        }
-                        
-                        #border2 {
-                            animation: animated-cursor 800ms steps(20, end) infinite;
-                        }
-                        /* text animation */
-                        
-                        @keyframes animated-text {
-                            from {
-                                width: 0;
-                            }
-                            to {
-                                width: 300px;
-                            }
-                        }
-                        /* cursor animations */
-                        
-                        @keyframes animated-cursor {
-                            from {
-                                border-bottom-color: black;
-                            }
-                            to {
-                                border-bottom-color: transparent;
-                            }
-                        }
-                    </style>
-
-                    <div id="parent2"> Thanks!
-                        <div id="border2"></div>
-                    </div>
-                </div>
-                <br />
-                <br />
-                <br />
-                <br>
-                <br>
-                <!------- THIRD COLUMN-------->
-
-                <div class="column side">
-                    <p>
-                    </p>
-                </div>
-            </div>
-            <br />
-            <br />
-            <br />
-
+        <div class="column middle">
+            <!------- TYPEWRITING styling for HELLO--------->
             <style>
-                    * {
-                    box-sizing: border-box;
+                body {
+                    padding: auto;
                 }
-                /* ------------------- Heading Styling ---------------- */
                 
-                h1 {
+                #parent {
+                    height: 100px;
+                    white-space: wrap;
+                    overflow: hidden;
+                    font-family: 'Rouge Script', cursive;
+                    font-size: 80px;
+                    color: black;
+                    position: relative;
                     text-align: center;
-                    font-family: garamond;
-                    border: 1px solid black;
-                    /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
-                    box-shadow: 20px 40px #caedeb;
-                    font-size: 40px;
-                    letter-spacing: 15px;
-                    text-shadow: 3px 2px #cacbcc;
-                    width: 400px;
-                    height: 200px;
                     margin-left: auto;
                     margin-right: auto;
-                    z-index: 1;
-                    padding-top: 20px;
                 }
-                /* -------------------Image Styling -------------- */
                 
-                <!--*img {
-                    display: block;
-                    margin-left: 0px;
-                    margin-right: 0px;
-                    z-index: -1;
-                    width: 100%;
-                    padding: 0px;
+                #border {
+                    border-bottom: solid 3px rgba(0, 255, 0, .75);
+                    position: absolute;
+                    right: -7px;
+                    width: 50%;
                 }
-                /* --- cropping an image ---*/
-                /*-- #resize {
+                /* Animation */
+                
+                #parent {
+                    animation: animated-text 5s steps(100, end) 1s 1 normal both;
+                }
+                
+                #border {
+                    animation: animated-cursor 800ms steps(20, end) infinite;
+                }
+                /* text animation */
+                
+                @keyframes animated-text {
+                    from {
+                        width: 0;
+                    }
+                    to {
+                        width: 0;
+                    }
+                }
+                /* cursor animations */
+                
+                @keyframes animated-cursor {
+                    from {
+                        border-bottom-color: black;
+                    }
+                    to {
+                        border-bottom-color: transparent;
+                    }
+                }
+            </style>
+
+            <div id="parent"> Hello!
+                <div id="border"></div>
+            </div>
+            <!--<h2 style= "text-align: center; font-size: 50px; font-family: 'Raleway', sans-serif;"> Hello! <br /> <br /> </h2>-->
+            <!------ typewriter----->
+
+
+            <!---------------------------------->
+
+            <p style="text-align: center; font-family: garamond; font-size: 30px;"> <b>First</b> of all, I would like to warmly welcome you to my art portfolio. This portfolio will encompass many of my finished pieces as well as other projects I have done throughout my years of making art. Some mediums may be limited as I
+                am in the process of exploring. <br /> <br /> <b>Secondly</b>, this portfolio is completely made from scratch; it's a work in progess, so please bear with me. If you would like, feel free to contact me about possible modification or fixes
+                to the website. </p>
+
+
+            <!------- TYPEWRITING styling for THANK YOU ALL--------->
+
+            <style>
+                body {
+                    padding: 50px;
+                }
+                
+                #parent2 {
+                    height: 170px;
+                    white-space: wrap;
+                    overflow: hidden;
+                    font-family: 'Rouge Script', cursive;
+                    font-size: 70px;
+                    color: black;
+                    position: relative;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: auto;
+                }
+                
+                #border2 {
+                    border-bottom: solid 3px black;
+                    position: absolute;
+                    right: -7px;
+                    width: 50%;
+                }
+                /* Animation */
+                
+                #parent2 {
+                    animation: animated-text 5s steps(100, end) 1s 1 normal both;
+                    animation-delay: 8s;
+                }
+                
+                #border2 {
+                    animation: animated-cursor 800ms steps(20, end) infinite;
+                }
+                /* text animation */
+                
+                @keyframes animated-text {
+                    from {
+                        width: 0;
+                    }
+                    to {
+                        width: 300px;
+                    }
+                }
+                /* cursor animations */
+                
+                @keyframes animated-cursor {
+                    from {
+                        border-bottom-color: black;
+                    }
+                    to {
+                        border-bottom-color: transparent;
+                    }
+                }
+            </style>
+
+            <div id="parent2"> Thanks!
+                <div id="border2"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br>
+        <br>
+        <!------- THIRD COLUMN-------->
+
+        <div class="column side">
+            <p>
+            </p>
+        </div>
+        <br />
+        <br />
+        <br />
+</body>
+
+<style>
+        * {
+        box-sizing: border-box;
+    }
+    /* ------------------- Heading Styling ---------------- */
+    
+    h1 {
+        text-align: center;
+        font-family: garamond;
+        border: 1px solid black;
+        /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+        box-shadow: 20px 40px #caedeb;
+        font-size: 40px;
+        letter-spacing: 15px;
+        text-shadow: 3px 2px #cacbcc;
+        width: 400px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        padding-top: 20px;
+    }
+    /* -------------------Image Styling -------------- */
+    
+    <!--*img {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        z-index: -1;
+        width: 100%;
+        padding: 0px;
+    }
+    /* --- cropping an image ---*/
+    /*-- #resize {
             width: 600px;
             height: 500px;
             overflow:hidden;}
@@ -565,78 +568,72 @@
 
 
                 /*------------- styling the rows and columns ------------------*/
-                
-                .column {
-                    float: left;
-                    padding: 15px;
-                }
-                /* right and left side columns */
-                
-                .column.side {
-                    width: 25%;
-                }
-                /* center column */
-                
-                .column.middle {
-                    width: 50%;
-                    height: auto;
-                }
-                
-                .row: after {
-                    content: "";
-                    display: flex;
-                    flex-wrap: wrap;
-                    clear: both;
-                }
-                
-                @media screen and (max-width: 600px) {
-                    .column.side,
-                    .column.middle {
-                        width: 100%;
-                    }
-            </style>
+    
+    .column {
+        float: left;
+        padding: 15px;
+    }
+    /* right and left side columns */
+    
+    .column.side {
+        width: 25%;
+    }
+    /* center column */
+    
+    .column.middle {
+        width: 50%;
+        height: auto;
+    }
+    
+    .row: after {
+        content: "";
+        display: flex;
+        flex-wrap: wrap;
+        clear: both;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .column.side,
+        .column.middle {
+            width: 100%;
+        }
+</style>
 
-            <body>
+<!-- function telling the website to either close or open the menu navigation bar -->
 
-                <!-- function telling the website to either close or open the menu navigation bar -->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        /* makes the right side fade to a dark gray */
+        document.body.style.backgroundColor = "rgba(0,0,0,0.25)";
+    }
 
-                <script>
-                    function openNav() {
-                        document.getElementById("mySidenav").style.width = "250px";
-                        document.getElementById("main").style.marginLeft = "250px";
-                        /* makes the right side fade to a dark gray */
-                        document.body.style.backgroundColor = "rgba(0,0,0,0.25)";
-                    }
-
-                    function closeNav() {
-                        document.getElementById("mySidenav").style.width = "0";
-                        document.getElementById("main").style.marginLeft = "0";
-                        document.body.style.backgroundColor = "white";
-                    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
 
 
-                    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-                    var dropdown = document.getElementsByClassName("dropdown-btn");
-                    var i;
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-                    for (i = 0; i < dropdown.length; i++) {
-                        dropdown[i].addEventListener("click", function() {
-                            this.classList.toggle("active");
-                            var dropdownContent = this.nextElementSibling;
-                            if (dropdownContent.style.display === "block") {
-                                dropdownContent.style.display = "none";
-                            } else {
-                                dropdownContent.style.display = "block";
-                            }
-                        });
-                    }
-                </script>
-        </div>
-        <footer id="footer">
-            <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
-        </footer>
-    </div>
-    </div>
-    </body>
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+<footer id="footer">
+    <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+</footer>
 
 </html>

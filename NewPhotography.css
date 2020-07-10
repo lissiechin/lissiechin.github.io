@@ -1,0 +1,470 @@
+                        /* Set height of body and the document to 100% to enable "full page tabs" */
+                        
+                        body,
+                        html {
+                            height: max-content;
+                            margin: 0;
+                        }
+                        /* scroll to top button */
+                        
+                        #myBtn {
+                            display: none;
+                            position: fixed;
+                            bottom: 20px;
+                            right: 30px;
+                            z-index: 99;
+                            font-size: 20px;
+                            border: none;
+                            outline: none;
+                            background-color: #ff6666;
+                            color: white;
+                            cursor: pointer;
+                            padding: 15px;
+                            border-radius: 50px;
+                        }
+                        
+                        #myBtn:hover {
+                            background-color: #555;
+                        }
+                        /*------*/
+                        
+                        * {
+                            box-sizing: border-box;
+                        }
+                        
+                        h1 {
+                            text-align: center;
+                            font-family: garamond;
+                            border: 1px solid black;
+                            /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+                            box-shadow: 20px 40px #caedeb;
+                            font-size: 40px;
+                            letter-spacing: 15px;
+                            text-shadow: 3px 2px #cacbcc;
+                            width: 450px;
+                            height: 100px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding-top: 20px
+                        }
+                        
+                        .main {
+                            max-width: auto;
+                            margin: 0;
+                        }
+                        /*------ styling the SIDE BAR --------->
+    /* the box-sizing enables the fitting (formating) of the website*/
+                        
+                        * {
+                            box-sizing: border-box;
+                        }
+                        
+                        .sidenav {
+                            height: 100%;
+                            width: 0;
+                            position: fixed;
+                            z-index: 1;
+                            top: 0;
+                            left: 0;
+                            background-color: #111;
+                            overflow-x: hidden;
+                            transition: 0.5s;
+                            padding-top: 60px;
+                            font-family: garamond
+                        }
+                        
+                        .sidenav a,
+                        .dropdown-btn {
+                            padding: 8px 8px 8px 32px;
+                            text-decoration: none;
+                            font-family: garamond;
+                            font-size: 25px;
+                            color: #818181;
+                            display: block;
+                            transition: 0.3s;
+                        }
+                        
+                        .sidenav a:hover,
+                        .dropdown-btn:hover {
+                            color: #f1f1f1;
+                        }
+                        
+                        .sidenav .closebtn {
+                            position: sticky;
+                            top: 0;
+                            right: 25px;
+                            font-size: 36px;
+                            margin-left: 50px;
+                        }
+                        
+                        .openbtn {
+                            font-size: 20px;
+                            cursor: pointer;
+                            background-color: #111;
+                            color: white;
+                            padding: 10px 15px;
+                            border: none;
+                            position: sticky;
+                        }
+                        
+                        .openbtn:hover {
+                            background-color: #444;
+                        }
+                        
+                        #main {
+                            transition: margin-left .5s;
+                            padding: 0px;
+                        }
+                        
+                        .dropdown {
+                            background-color: #111;
+                        }
+                        /* makes the drop down background lighter*/
+                        
+                        .dropdown-container {
+                            display: none;
+                            background-color: #262626;
+                            padding-left: 8px;
+                        }
+                        
+                        .fa-caret-down {
+                            float: right;
+                            padding-right: 75px;
+                        }
+                        /* active class to activate when clicked on */
+                        
+                        *.active {
+                            background-color: #caedeb;
+                            color: white;
+                        }
+                        /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+                        
+                        @media screen and (max-height: 450px) {
+                            .sidebar {
+                                padding-top: 15px;
+                            }
+                            .sidebar a {
+                                font-size: 18px;
+                            }
+                            #page-container {
+                                position: relative;
+                                min-height: 100%;
+                            }
+                            /* ----------footer styling ----------------*/
+                            #content-wrap {
+                                padding-bottom: 2.5px;
+                                /* Footer height  & em refers to the font-size (2.5 times the font size */
+                            }
+                            /*    begining new layout CSS     */
+                        }
+                        
+                        .column {
+                            float: left;
+                            width: 25%;
+                            /* 33.33 for 3 images*/
+                            padding: 5px;
+                        }
+                        /* Clearfix (clear floats) */
+                        
+                        .row::after {
+                            content: "";
+                            clear: both;
+                            display: table;
+                        }
+                        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+                        
+                        @media screen and (max-width: 500px) {
+                            .column {
+                                width: 100%;
+                            }
+                        }
+                        
+                        .container {
+                            position: relative;
+                            max-width: 800px;
+                            /* Maximum width */
+                            margin: 0 auto;
+                            /* Center it */
+                        }
+                        
+                        .container .content {
+                            position: absolute;
+                            /* Position the background text */
+                            bottom: 0;
+                            /* At the bottom. Use top:0 to append it to the top */
+                            background: rgb(0, 0, 0);
+                            /* Fallback color */
+                            background: rgba(0, 0, 0, 0.5);
+                            /* Black background with 0.5 opacity */
+                            color: #f1f1f1;
+                            /* Grey text */
+                            width: 100%;
+                            /* Full width */
+                            padding: 20px;
+                            /* Some padding */
+                            height: auto;
+                            -webkit-animation: fadeEffect 1s;
+                            animation: fadeEffect 1s;
+                        }
+                        /* Fade in tabs */
+                        
+                        @-webkit-keyframes fadeEffect {
+                            from {
+                                opacity: 0;
+                            }
+                            to {
+                                opacity: 1;
+                            }
+                        }
+                        
+                        @keyframes fadeEffect {
+                            from {
+                                opacity: 0;
+                            }
+                            to {
+                                opacity: 1;
+                            }
+                        }
+                        /*  SEARCH BAR    */
+                        
+                        input[type=text] {
+                            float: right;
+                            padding: 10px;
+                            border: rosybrown;
+                            margin-top: 8px;
+                            margin-right: 16px;
+                            font-size: 17px;
+                        }
+                        /*.search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }*/
+                        /* The Modal (background) */
+                        
+                        .modal {
+                            display: none;
+                            position: fixed;
+                            z-index: 1;
+                            padding-top: 100px;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            overflow: auto;
+                            background-color: black;
+                        }
+                        /* Modal Content */
+                        
+                        .modal-content {
+                            position: relative;
+                            background-color: #fefefe;
+                            margin: auto;
+                            padding: 0;
+                            width: 90%;
+                            max-width: 1200px;
+                        }
+                        /* The Close Button */
+                        /* Add Animation */
+                        
+                        .modal-content,
+                        #caption {
+                            -webkit-animation-name: zoom;
+                            -webkit-animation-duration: 0.6s;
+                            animation-name: zoom;
+                            animation-duration: 0.6s;
+                        }
+                        
+                        @-webkit-keyframes zoom {
+                            from {
+                                -webkit-transform: scale(0)
+                            }
+                            to {
+                                -webkit-transform: scale(1)
+                            }
+                        }
+                        
+                        @keyframes zoom {
+                            from {
+                                transform: scale(0)
+                            }
+                            to {
+                                transform: scale(1)
+                            }
+                        }
+                        
+                        .close {
+                            color: white;
+                            position: absolute;
+                            top: 10px;
+                            right: 25px;
+                            font-size: 35px;
+                            font-weight: bold;
+                        }
+                        
+                        .close:hover,
+                        .close:focus {
+                            color: #999;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                        
+                        .mySlides {
+                            display: none;
+                        }
+                        
+                        .cursor {
+                            cursor: pointer;
+                        }
+                        /* Next & previous buttons */
+                        
+                        .prev,
+                        .next {
+                            cursor: pointer;
+                            position: absolute;
+                            top: 50%;
+                            width: auto;
+                            padding: 16px;
+                            margin-top: -50px;
+                            color: white;
+                            font-weight: bold;
+                            font-size: 20px;
+                            transition: 0.6s ease;
+                            border-radius: 0 3px 3px 0;
+                            user-select: none;
+                            -webkit-user-select: none;
+                        }
+                        /* Position the "next button" to the right */
+                        
+                        .next {
+                            right: 0;
+                            border-radius: 3px 0 0 3px;
+                        }
+                        /* On hover, add a black background color with a little bit see-through */
+                        
+                        .prev:hover,
+                        .next:hover {
+                            background-color: rgba(0, 0, 0, 0.8);
+                        }
+                        /* Number text (1/3 etc) */
+                        
+                        .numbertext {
+                            color: #f2f2f2;
+                            font-size: 12px;
+                            padding: 8px 12px;
+                            position: absolute;
+                            top: 0;
+                        }
+                        
+                        img {
+                            margin-bottom: -4px;
+                        }
+                        
+                        .caption-container {
+                            text-align: center;
+                            background-color: black;
+                            padding: 2px 16px;
+                            color: white;
+                        }
+                        
+                        .demo {
+                            opacity: 0.6;
+                        }
+                        
+                        .active,
+                        .demo:hover {
+                            opacity: 1;
+                        }
+                        
+                        img.hover-shadow {
+                            transition: 0.3s;
+                            cursor: pointer;
+                        }
+                        
+                        .hover-shadow:hover {
+                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        }
+                        /* 100% Image Width on Smaller Screens */
+                        
+                        @media only screen and (max-width: 700px) {
+                            .modal-content {
+                                width: 100%;
+                            }
+                        }
+                        /*
+ CSS for the main interaction
+*/
+                        
+                        .tabset>input[type="radio"] {
+                            position: absolute;
+                            left: -200vw;
+                        }
+                        
+                        .tabset .tab-panel {
+                            display: none;
+                        }
+                        
+                        .tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,
+                        .tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),
+                        .tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),
+                        .tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),
+                        .tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5),
+                        .tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6) {
+                            display: block;
+                        }
+                        /*
+   Styling
+  */
+                        
+                        body {
+                            font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+                            color: #333;
+                            font-weight: 300;
+                        }
+                        
+                        .tabset>label {
+                            position: relative;
+                            display: inline-block;
+                            padding: 15px 15px 25px;
+                            border: 1px solid transparent;
+                            border-bottom: 0;
+                            cursor: pointer;
+                            font-weight: 600;
+                        }
+                        
+                        .tabset>label::after {
+                            content: "";
+                            position: absolute;
+                            left: 15px;
+                            bottom: 10px;
+                            width: 22px;
+                            height: 4px;
+                            background: #8d8d8d;
+                        }
+                        
+                        .tabset>label:hover,
+                        .tabset>input:focus+label {
+                            color: #06c;
+                        }
+                        
+                        .tabset>label:hover::after,
+                        .tabset>input:focus+label::after,
+                        .tabset>input:checked+label::after {
+                            background: #06c;
+                        }
+                        
+                        .tabset>input:checked+label {
+                            border-color: #ccc;
+                            border-bottom: 1px solid #fff;
+                            margin-bottom: -1px;
+                        }
+                        
+                        .tab-panel {
+                            padding: 30px 0;
+                            border-top: 1px solid #ccc;
+                        }
