@@ -5,7 +5,7 @@
             <img src="" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
             <div class="content">
                 <h2></h2>
-                <p><br><sub>Cannon EOS 77D</sub></p>
+                <p><br><sub> </sub></p>
             </div>
         </div>
     </div>
@@ -14,7 +14,7 @@
             <img src="" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
             <div class="content">
                 <h2></h2>
-                <p><br><sub>Cannon EOS 77D</sub></p>
+                <p><br><sub> </sub></p>
             </div>
         </div>
     </div>
@@ -23,20 +23,21 @@
             <img src="" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
             <div class="content">
                 <h2></h2>
-                <p><br><sub>Cannon EOS 77D</sub></p>
+                <p><br><sub> </sub></p>
             </div>
         </div>
     </div>
     <div class="column">
         <div class="container">
-            <img src="" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img src="" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
             <div class="content">
                 <h2></h2>
-                <p><br><sub>Cannon EOS 77D</sub></p>
+                <p><br><sub> </sub></p>
             </div>
         </div>
     </div>
 </div>
+<!--Close Row-->
 
 
 <!-- modal part at the end--->

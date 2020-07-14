@@ -1,302 +1,351 @@
 <!-- THE MAIN STO PAGE- -->
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link rel="stylesheet" type ="text/css" href ="main.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css" />
     <title>Computer Science</title>
-  </head>
-  <body>
-    <div id = "mySidenav" class="sidenav">
-      <!-- The close button in the sidenav --------->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style =" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
-      <!-- create a home button leading back to the Home(main) page--->
-      <a href ="index.html" style= "text-align: center; font-size: 50px;"> &#8962; </a>
-      <a href="About.html" style ="text-align:center;">About</a>
-      <!--<a href="Favorites.html" style ="text-align:center;">Favorites</a>-->
-      <a href ="STO.html" style = "text-align: center;"> St. Olaf </a>
-      <!--drop down menu within the sidebar-->
-      <button style ="background-color:#111; border-color: #111; position: center; margin: auto;" class ="dropdown-btn"> Medium
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <!-- The close button in the sidenav --------->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+        <!-- create a home button leading back to the Home(main) page--->
+        <a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
+        <a href="About.html" style="text-align:center;">About</a>
+        <!--<a href="Favorites.html" style ="text-align:center;">Favorites</a>-->
+        <a href="STO.html" style="text-align: center;"> St. Olaf </a>
+        <!--drop down menu within the sidebar-->
+        <button style="background-color:#111; border-color: #111; position: center; margin: auto;" class="dropdown-btn"> Medium
       </button>
-      <div class = "dropdown-container">
-        <a href = "2D portfolio.html"> 2-Dimensional</a>
-        <a href = "3D portfolio.html"> 3-Dimensional</a>
-        <a href = "New Media.html"> New Media</a>
-      </div>
-      <a href="Photography.html" style ="text-align:center;">Photography</a>
-      <a href="Contact.html" style ="text-align:center;">Contact</a>
+        <div class="dropdown-container">
+            <a href="2D portfolio.html"> 2-Dimensional</a>
+            <a href="3D portfolio.html"> 3-Dimensional</a>
+            <a href="New Media.html"> New Media</a>
+        </div>
+        <a href="NewPhotography.html" style="text-align:center;">Photography</a>
+        <a href="Contact.html" style="text-align:center;">Contact</a>
     </div>
     <div id="main">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
-      <div id ="page-container">
-        <div id ="content-wrap">
-          <div class="w3-content" style="max-width:1400px">
-            <!-- Header -->
-            <header class="w3-container w3-center w3-padding-32">
-              <div id ="page-container">
-                <div id ="content-wrap">
-                  <h1><b>St. Olaf College</b></h1>
-                  <br>
-                  <br>
-                  <p style="padding-bottom: -30px">Lissie Chin</p>
-                  <!--<p>Lissie Chin <br><span class="w3-tag">BA Studio Art || Chinese || Asian Studies</span></p>-->
-                </header>
-                <body class="w3-#ffffff">
-                  <!-- w3-content defines a container for fixed size centered content,
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+        <div id="page-container">
+            <div id="content-wrap">
+                <div class="w3-content" style="max-width:1400px">
+                    <!-- Header -->
+                    <header class="w3-container w3-center w3-padding-32">
+                        <div id="page-container">
+                            <div id="content-wrap">
+                                <h1><b>St. Olaf College</b></h1>
+                                <br>
+                                <br>
+                                <p style="padding-bottom: -30px">Lissie Chin</p>
+                                <!--<p>Lissie Chin <br><span class="w3-tag">BA Studio Art || Chinese || Asian Studies</span></p>-->
+                    </header>
+
+                    <body class="w3-#ffffff">
+                        <!-- w3-content defines a container for fixed size centered content,
                   and is wrapped around the whole page content, except for the footer in this example -->
-                  <nav clas="w3-bar w3-black" style="text-align: center;">
-                    <a href ="STO_SA.html" class="w3-button w3-bar-item"> Studio Art</a>
-                    <a href ="STO_AS.html" class="w3-button w3-bar-item"> Asian Studies</a>
-                    <a href ="STO_CS.html" class="w3-button w3-bar-item active"> Computer Science</a>
-                  <!-- Grid -->
-                  <div class="w3-row">
-                    <!-- Blog entries -->
-                    <div class="w3-col l8 s12">
-                      <!-- Blog entry -->
-                      <div class="w3-card-4 w3-margin w3-white">
-                        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
-                        <div class="w3-container">
-                          <h3><b>TITLE HEADING</b></h3>
-                          <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-                        </div>
-                        <div class="w3-container">
-                          <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-                          tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                          <div class="w3-row">
-                            <div class="w3-col m8 s12">
-                              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                        <nav clas="w3-bar w3-black" style="text-align: center;">
+                            <a href="STO_SA.html" class="w3-button w3-bar-item"> Studio Art</a>
+                            <a href="STO_AS.html" class="w3-button w3-bar-item"> Asian Studies</a>
+                            <a href="STO_CS.html" class="w3-button w3-bar-item active"> Computer Science</a>
+                            <!-- Grid -->
+                            <div class="w3-row">
+                                <!-- Blog entries -->
+                                <div class="w3-col l8 s12">
+                                    <!-- Blog entry -->
+                                    <div class="w3-card-4 w3-margin w3-white">
+                                        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+                                        <div class="w3-container">
+                                            <h3><b>TITLE HEADING</b></h3>
+                                            <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+                                        </div>
+                                        <div class="w3-container">
+                                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue
+                                                ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                                                </div>
+                                                <div class="w3-col m4 w3-hide-small">
+                                                    <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- Blog entry -->
+                                    <div class="w3-card-4 w3-margin w3-white">
+                                        <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
+                                        <div class="w3-container">
+                                            <h3><b>BLOG ENTRY</b></h3>
+                                            <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+                                        </div>
+                                        <div class="w3-container">
+                                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue
+                                                ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                                                </div>
+                                                <div class="w3-col m4 w3-hide-small">
+                                                    <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END BLOG ENTRIES -->
+                                    <!--- asian conversation website : https://chin688.wixsite.com/lasiancon1819---->
+                                </div>
+                                <!-- Introduction menu -->
+                                <div class="w3-col l4">
+                                    <!-- About Card -->
+                                    <div class="w3-card w3-margin w3-margin-top">
+                                        <img src="/w3images/avatar_g.jpg" style="width:100%">
+                                        <div class="w3-container w3-white" style="text-align: left;">
+                                            <h4><b>This Page</b></h4>
+                                            <p>Just me, myself and I. This page will consist of the works I have done over my time at St. Olaf College. Some works maybe major related while others are just for memory. </p>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <!-- Posts -->
+                                    <div class="w3-card w3-margin">
+                                        <div class="w3-container w3-padding">
+                                            <h4>Popular Posts</h4>
+                                        </div>
+                                        <ul class="w3-ul w3-hoverable w3-white">
+                                            <li class="w3-padding-16">
+                                                <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                                                <span class="w3-large">Lorem</span><br>
+                                                <span>Sed mattis nunc</span>
+                                            </li>
+                                            <li class="w3-padding-16">
+                                                <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                                                <span class="w3-large">Ipsum</span><br>
+                                                <span>Praes tinci sed</span>
+                                            </li>
+                                            <li class="w3-padding-16">
+                                                <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                                                <span class="w3-large">Dorum</span><br>
+                                                <span>Ultricies congue</span>
+                                            </li>
+                                            <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+                                                <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                                                <span class="w3-large">Mingsum</span><br>
+                                                <span>Lorem ipsum dipsum</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="w3-col m4 w3-hide-small">
-                              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                      <hr>
-                      <!-- Blog entry -->
-                      <div class="w3-card-4 w3-margin w3-white">
-                        <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
-                        <div class="w3-container">
-                          <h3><b>BLOG ENTRY</b></h3>
-                          <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-                        </div>
-                        <div class="w3-container">
-                          <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-                          tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                          <div class="w3-row">
-                            <div class="w3-col m8 s12">
-                              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
                             </div>
-                            <div class="w3-col m4 w3-hide-small">
-                              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END BLOG ENTRIES -->
-                      <!--- asian conversation website : https://chin688.wixsite.com/lasiancon1819---->
-                    </div>
-                    <!-- Introduction menu -->
-                    <div class="w3-col l4">
-                      <!-- About Card -->
-                      <div class="w3-card w3-margin w3-margin-top">
-                        <img src="/w3images/avatar_g.jpg" style="width:100%">
-                        <div class="w3-container w3-white" style="text-align: left;">
-                          <h4><b>This Page</b></h4>
-                          <p>Just me, myself and I. This page will consist of the works I have done over my time at St. Olaf College. Some works maybe major related while others are just for memory. </p>
-                        </div>
-                      </div><hr>
-                      
-                      <!-- Posts -->
-                      <div class="w3-card w3-margin">
-                        <div class="w3-container w3-padding">
-                          <h4>Popular Posts</h4>
-                        </div>
-                        <ul class="w3-ul w3-hoverable w3-white">
-                          <li class="w3-padding-16">
-                            <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                            <span class="w3-large">Lorem</span><br>
-                            <span>Sed mattis nunc</span>
-                          </li>
-                          <li class="w3-padding-16">
-                            <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                            <span class="w3-large">Ipsum</span><br>
-                            <span>Praes tinci sed</span>
-                          </li>
-                          <li class="w3-padding-16">
-                            <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                            <span class="w3-large">Dorum</span><br>
-                            <span>Ultricies congue</span>
-                          </li>
-                          <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-                            <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-                            <span class="w3-large">Mingsum</span><br>
-                            <span>Lorem ipsum dipsum</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
-              </div>
-              
-            </div>
-            <!-- Footer -->
-            <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-              <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-              <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-              <footer id ="footer">
-                <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
-              </footer>
-            </footer>
-          </body>
-          <style>
-          h1{
-          text-align: center;
-          font-family: garamond;
-          border: 1px solid black;
-          /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
-          box-shadow: 20px 40px #caedeb;
-          font-size: 30px;
-          letter-spacing: 15px;
-          text-shadow: 3px 2px #cacbcc;
-          width: 400px;
-          height: 100px;
-          margin-left: auto;
-          margin-right: auto;
-          padding-top: 8px
-          }
-          #page-container {
-          position: relative;
-          min-height: 100%;
-          
-          }
-          #content-wrap {
-          padding-bottom: 0em;    /* Footer height  & em refers to the font-size (2.5 times the font size */
-          }
-          #footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          /* ----------footer styling ----------------*/
-          /*footnote with name & date edited */
-          background: #f1f1f1;
-          padding: 10px;
-          text-align: center;
-          font-size: 11px;
-          font-family: garamond;
-          color: black;
-          display: block;}            /* Footer height */
-          /*------ styling the SIDE BAR --------->
+                <!-- Footer -->
+                <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+                    <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+                    <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+                    <footer id="footer">
+                        <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+                    </footer>
+                </footer>
+                </body>
+                <style>
+                        h1 {
+                        text-align: center;
+                        font-family: garamond;
+                        border: 1px solid black;
+                        /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+                        box-shadow: 20px 40px #caedeb;
+                        font-size: 30px;
+                        letter-spacing: 15px;
+                        text-shadow: 3px 2px #cacbcc;
+                        width: 400px;
+                        height: 100px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding-top: 8px
+                    }
+                    
+                    #page-container {
+                        position: relative;
+                        min-height: 100%;
+                    }
+                    
+                    #content-wrap {
+                        padding-bottom: 0em;
+                        /* Footer height  & em refers to the font-size (2.5 times the font size */
+                    }
+                    
+                    #footer {
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        /* ----------footer styling ----------------*/
+                        /*footnote with name & date edited */
+                        background: #f1f1f1;
+                        padding: 10px;
+                        text-align: center;
+                        font-size: 11px;
+                        font-family: garamond;
+                        color: black;
+                        display: block;
+                    }
+                    /* Footer height */
+                    /*------ styling the SIDE BAR --------->
           /* the box-sizing enables the fitting (formating) of the website*/
-          * {
-          box-sizing: border-box;}
-          .sidenav{
-          height: 100%;
-          width: 0;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #111;
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 60px;
-          font-family: garamond}
-          .sidenav a, .dropdown-btn {
-          padding: 8px 8px 8px 32px;
-          text-decoration: none;
-          font-family: garamond;
-          font-size: 25px;
-          color: #818181;
-          display: block;
-          transition: 0.3s;}
-          .sidenav a:hover, .dropdown-btn:hover {
-          color: #f1f1f1;}
-          .sidenav .closebtn {
-          position: sticky;
-          top: 0;
-          right: 25px;
-          font-size: 36px;
-          margin-left: 50px;}
-          .openbtn {
-          font-size: 20px;
-          cursor: pointer;
-          background-color: #111;
-          color: white;
-          padding: 10px 15px;
-          border: none;
-          position: sticky;}
-          .openbtn:hover {
-          background-color: #444;}
-          #main {
-          transition: margin-left .5s;
-          padding: 16px;}
-          .dropdown {
-          background-color:#111;
-          text-align: right;}
-          /* makes the drop down background lighter*/
-          .dropdown-container {
-          display: none;
-          background-color: #262626;
-          padding-left: 8px;
-          text-align: center;}
-          .fa-caret-down {
-          float: right;
-          padding-right: 75px;}
-          /* active class to activate when clicked on */
-          *.active {
-          background-color: #caedeb;
-          color: white;*
-          /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) -*/
-          @media screen and (max-height: 450px) {
-          .sidebar {padding-top: 15px;}
-          .sidebar a {font-size: 18px;}
-          }
-          .container {
-          position: relative;
-          max-width: 1000px;
-          margin: 0 auto;
-          
-          }
-          .container img {vertical-align: middle;}
-          .container .content {
-          position: absolute;
-          bottom: 0;
-          background: rgb(0, 0, 0); /* Fallback color */
-          background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-          color: #f1f1f1;
-          width: 50%;
-          padding: 20px;}
-          </style>
-          <script>
-          function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-          /* makes the right side fade to a dark gray */
-          document.body.style.backgroundColor = "rgba(0,0,0,0.25)";}
-          function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-          document.body.style.backgroundColor = "white";}
-          /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-          var dropdown = document.getElementsByClassName("dropdown-btn");
-          var i;
-          for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var dropdownContent = this.nextElementSibling;
-          if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-          } else {
-          dropdownContent.style.display = "block";
-          }
-          });
-          }
-          </script>
-        </html>
+                    
+                    * {
+                        box-sizing: border-box;
+                    }
+                    
+                    .sidenav {
+                        height: 100%;
+                        width: 0;
+                        position: fixed;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        background-color: #111;
+                        overflow-x: hidden;
+                        transition: 0.5s;
+                        padding-top: 60px;
+                        font-family: garamond
+                    }
+                    
+                    .sidenav a,
+                    .dropdown-btn {
+                        padding: 8px 8px 8px 32px;
+                        text-decoration: none;
+                        font-family: garamond;
+                        font-size: 25px;
+                        color: #818181;
+                        display: block;
+                        transition: 0.3s;
+                    }
+                    
+                    .sidenav a:hover,
+                    .dropdown-btn:hover {
+                        color: #f1f1f1;
+                    }
+                    
+                    .sidenav .closebtn {
+                        position: sticky;
+                        top: 0;
+                        right: 25px;
+                        font-size: 36px;
+                        margin-left: 50px;
+                    }
+                    
+                    .openbtn {
+                        font-size: 20px;
+                        cursor: pointer;
+                        background-color: #111;
+                        color: white;
+                        padding: 10px 15px;
+                        border: none;
+                        position: sticky;
+                    }
+                    
+                    .openbtn:hover {
+                        background-color: #444;
+                    }
+                    
+                    #main {
+                        transition: margin-left .5s;
+                        padding: 16px;
+                    }
+                    
+                    .dropdown {
+                        background-color: #111;
+                        text-align: right;
+                    }
+                    /* makes the drop down background lighter*/
+                    
+                    .dropdown-container {
+                        display: none;
+                        background-color: #262626;
+                        padding-left: 8px;
+                        text-align: center;
+                    }
+                    
+                    .fa-caret-down {
+                        float: right;
+                        padding-right: 75px;
+                    }
+                    /* active class to activate when clicked on */
+                    
+                    *.active {
+                        background-color: #caedeb;
+                        color: white;
+                        *
+                        /*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) -*/
+                        @media screen and (max-height: 450px) {
+                            .sidebar {
+                                padding-top: 15px;
+                            }
+                            .sidebar a {
+                                font-size: 18px;
+                            }
+                        }
+                        .container {
+                            position: relative;
+                            max-width: 1000px;
+                            margin: 0 auto;
+                        }
+                        .container img {
+                            vertical-align: middle;
+                        }
+                        .container .content {
+                            position: absolute;
+                            bottom: 0;
+                            background: rgb(0, 0, 0);
+                            /* Fallback color */
+                            background: rgba(0, 0, 0, 0.5);
+                            /* Black background with 0.5 opacity */
+                            color: #f1f1f1;
+                            width: 50%;
+                            padding: 20px;
+                        }
+                </style>
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidenav").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                        /* makes the right side fade to a dark gray */
+                        document.body.style.backgroundColor = "rgba(0,0,0,0.25)";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+                        document.getElementById("main").style.marginLeft = "0";
+                        document.body.style.backgroundColor = "white";
+                    }
+                    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;
+                    for (i = 0; i < dropdown.length; i++) {
+                        dropdown[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var dropdownContent = this.nextElementSibling;
+                            if (dropdownContent.style.display === "block") {
+                                dropdownContent.style.display = "none";
+                            } else {
+                                dropdownContent.style.display = "block";
+                            }
+                        });
+                    }
+                </script>
+
+</html>
