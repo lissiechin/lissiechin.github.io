@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
-	<html>
+<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 		<link rel="stylesheet" href="Photogallery_stylesheet.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<title> Travels</title>
 	</head>
@@ -30,74 +29,135 @@
 				
 				
 			</div>
-			 <!------------------- SIDENAV---------------------->
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<!------------------- SIDENAV---------------------->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<div id="mySidenav" class="sidenav">
+				<!-- The close button in the sidenav --------->
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+				<!-- create a home button leading back to the Home(main) page--->
+				<a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
+				<a href="About.html" style="text-align:center;">About</a>
+				<!--<a href="Favorites.html" style ="text-align:center;">Favorites</a>-->
+				<a href="STO.html" style="text-align: center;"> St. Olaf </a>
+				<!--drop down menu within the sidebar-->
+				<button style="background-color:#111; border-color: #111; position: center; margin: auto;" class="dropdown-btn"> Medium
+				</button>
+				<div class="dropdown-container">
+					<a href="2D portfolio.html"> 2-Dimensional</a>
+					<a href="3D portfolio.html"> 3-Dimensional</a>
+					<a href="New Media.html"> New Media</a>
+				</div>
+				<a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
+				<a href="Contact.html" style="text-align:center;">Contact</a>
+			</div>
+			<div id="main">
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+				<br><br>
+				<body>
+					<h1>Maui</h1>
+					<div class="row">
+						<div class="column">
+							<img src="https://lh3.googleusercontent.com/pw/ACtC-3fOjJS_Y8wH6rPHA7TZ2XajcruiHkOkZ6lRWAHefDrFHCgW20LJmkwUpEvDQKOUlryvyhoirw7HN2tSAohptfUj7WFVim9bArCj6Gp3FJLcyRhn2zim-TWhYM0dJBnYdC-4wASaclkvwJkZOK8EH3FhFA=w1618-h2156-no?authuser=0" alt="Along the Beach <br> Dec 23, 2020 <br> Iphone 6" style="width: 100%" onclick="openModal();currentSlide(0)" class="hover-shadow cursor"/>
+						</div>
+						<div class="column">
+							<img src="https://lh3.googleusercontent.com/pw/ACtC-3fUacXU8FbsvFeF20_JEux5yJDhJ0MtHoC87naqf5hQ2SEr2d7P0mpDkWZZIsWcPZPs4g3KYsJ8wR1JcH2fAQ11vpyBLVPxgQvbSpxXAVOKvYmbCMlKfIJrrErtxIStnOfRRmTw1-EfaJrkQ8FNYj_B2A=w1618-h2156-no?authuser=0" alt="The bridge at sunset" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"/>
+						</div>
+						
+						<div class="column">
+							<img src="https://lh3.googleusercontent.com/pw/ACtC-3c37BLdZEcbhjwFz2U4tvCd8-MKIqLgJHFWXmZomOxvgQW-fZkN3abouV5h_GhYHNuTnGXFvOhleYFDQ5pIWvM_3XD3gHurlYYakx-Ea-HJlNFC9ydfjuAB0tmETeSItxeO3pk_yCeKFS7Cp472aiQ01Q=w1280-h720-no?authuser=0" alt="Lissie and Meleah" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor" />
+							<img src="https://lh3.googleusercontent.com/pw/ACtC-3fXtgnQSXIxa6IznkIZwAwvUet6DueFzDBKgpWRuGRyG4UQ5yc62iq2q_fVBhHnPmlhaa970VeqD77iQNDWnWPtK_DP8fThaAUWyfdQbAcEHbewecGxGJSLnmyjEcS-dx2YFCrmYXagctSIo8nn9d1Vsw=w1194-h896-no?authuser=0" style="width: 100%" alt="Another Sunset" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img src="https://lh3.googleusercontent.com/pw/ACtC-3eRDdmo7KMgdhauLTXcor9IFMWfRbsOjJ6vQ4mndcTFfRHq5oXehMVS5u6uAGS3jCFG7pQy9Yhov5VejqddWUbj7hTPT7MWQ_2Di5_ir30ys3Wno6XBQTL01vmDkhN_uwYVs41rkcwMDQHlUk2RUpxznQ=w1194-h896-no?authuser=0" style="width: 100%" alt="sketchbook page" onclick="openModal();currentSlide(4)" class="hover-shadow cursor" />
+						</div>
+					</div>
+					<!---------------->
+										<div class="row">
 
-            <div id="mySidenav" class="sidenav">
-                <!-- The close button in the sidenav --------->
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+					<div class="column">
+						
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/pw/ACtC-3dVaX0p7wnRzablLMzFN2MRos-ZlOgW8SgusLf6YzdQwQsLjFR9KeUAIMNvXOEmQfGZRJYfZuzxC10hTjdbmMBTK_JE1HOWFEKMJahQpPSYSX3z2wWHTWoWbF44eIKRiW21gY_S1F1eWwC9EoFPqgjqTg=w1148-h862-no?authuser=0" style="width: 100%" alt="Me walking in the water during sunset" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"/>
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/pw/ACtC-3fg9ILRA_PrIKGbEj7EvFq3linPW-tQ2WxVIvro1QGzLefzhC6ExEGEGItUOLxIjCufQiVILuQXGGLMMWMkTMsTl5zG0Xbqe61fvk1z4WfzyPpcE7zFnz3Ypj_UsEkSf2QPiCl5Vou2SThJu-c800wAAA=w1148-h862-no?authuser=0" style="width: 100%" alt="Sea Turtles" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+					</div>
+					</div>
+					<!---------------->
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/pw/ACtC-3fNIv8KcaZ2NGDu0MzGxLs1QSFrOQSYWOmOl_ONzDspr-wZ_BGkKj1048cofByb0Weq3or7Oq4A3ppMfmBui3GWaeoPIOZYCmeaM1gne8KPERvsCQEAfN31gtqrl0kMH7Lw6wEeTh_ndIpy6Uh4E8PikQ=w1778-h828-no?authuser=0" style="width: 100%"alt="Sunset View" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+						
+						<img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width: 100%" alt="" />
+						
+						<img src="https://images.pexels.com/photos/1452717/pexels-photo-1452717.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width: 100%" alt="" />
+						
+						<img src="https://images.pexels.com/photos/129634/pexels-photo-129634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width: 100%" alt="" />
+					</div>
+				</div>
+				<!-------Outline-------->
+				<!--<div class="row">
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						</div>    ------Closing column ----
+						</div> -->   <!--- closing row--->
+						<!---------------------------------MODAL SLIDESHOW------------------------------------>
+						<div id="myModal" class="modal">
+							<span class="close cursor" onclick="closeModal()">&times;</span>
+							<div class="modal-content">
+								<div class="mySlides">
 
-                <!-- create a home button leading back to the Home(main) page--->
-                <a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
-                <a href="About.html" style="text-align:center;">About</a>
-                <!--<a href="Favorites.html" style ="text-align:center;">Favorites</a>-->
-                <a href="STO.html" style="text-align: center;"> St. Olaf </a>
-                <!--drop down menu within the sidebar-->
-                <button style="background-color:#111; border-color: #111; position: center; margin: auto;" class="dropdown-btn"> Medium
-          </button>
-                <div class="dropdown-container">
-                    <a href="2D portfolio.html"> 2-Dimensional</a>
-                    <a href="3D portfolio.html"> 3-Dimensional</a>
-                    <a href="New Media.html"> New Media</a>
-                </div>
-                <a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
-                <a href="Contact.html" style="text-align:center;">Contact</a>
-            </div>
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3fr0XfI7-TeGK0a-g4tQNc1OiCUmIk9rDv7EjsbpxsdNYTG4a6lUocqa2XMG3vwDkHwlEtw-u-Ve3kMoB-s1E0Lrt9GhVp7ZF5wB-fvOj-a53EaxXT3iDos4lEyEuIQ7RqN7h0i1lr58MWBNiS7wPmr6Q=w1040-h1388-no?authuser=0" style="width:100%">
 
-            <div id="main">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
-                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-						<br><br>
+								</div>
+								<div class="mySlides">
 
-<body>
-	
-<div class="container">
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3fUacXU8FbsvFeF20_JEux5yJDhJ0MtHoC87naqf5hQ2SEr2d7P0mpDkWZZIsWcPZPs4g3KYsJ8wR1JcH2fAQ11vpyBLVPxgQvbSpxXAVOKvYmbCMlKfIJrrErtxIStnOfRRmTw1-EfaJrkQ8FNYj_B2A=w1618-h2156-no?authuser=0" style="width:100%">
 
+								</div>
+								<div class="mySlides">
 
-<h1>Maui</h1>
-<div class="row">
-  <div class="column">
-    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3c37BLdZEcbhjwFz2U4tvCd8-MKIqLgJHFWXmZomOxvgQW-fZkN3abouV5h_GhYHNuTnGXFvOhleYFDQ5pIWvM_3XD3gHurlYYakx-Ea-HJlNFC9ydfjuAB0tmETeSItxeO3pk_yCeKFS7Cp472aiQ01Q=w1280-h720-no?authuser=0" style="width:100%">
+								</div>
+								
+								<div class="mySlides">
 
-    <img src="https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3fXtgnQSXIxa6IznkIZwAwvUet6DueFzDBKgpWRuGRyG4UQ5yc62iq2q_fVBhHnPmlhaa970VeqD77iQNDWnWPtK_DP8fThaAUWyfdQbAcEHbewecGxGJSLnmyjEcS-dx2YFCrmYXagctSIo8nn9d1Vsw=w1194-h896-no?authuser=0" style="width:100%">
+								</div>
+								<div class="mySlides">
 
-    <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3eRDdmo7KMgdhauLTXcor9IFMWfRbsOjJ6vQ4mndcTFfRHq5oXehMVS5u6uAGS3jCFG7pQy9Yhov5VejqddWUbj7hTPT7MWQ_2Di5_ir30ys3Wno6XBQTL01vmDkhN_uwYVs41rkcwMDQHlUk2RUpxznQ=w1194-h896-no?authuser=0" style="width:100%">
+								</div>
+								<div class="mySlides">
 
-    <img src="https://images.pexels.com/photos/1378849/pexels-photo-1378849.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-  </div>
-  <div class="column">
-    <img src="https://images.pexels.com/photos/1389994/pexels-photo-1389994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3dVaX0p7wnRzablLMzFN2MRos-ZlOgW8SgusLf6YzdQwQsLjFR9KeUAIMNvXOEmQfGZRJYfZuzxC10hTjdbmMBTK_JE1HOWFEKMJahQpPSYSX3z2wWHTWoWbF44eIKRiW21gY_S1F1eWwC9EoFPqgjqTg=w1148-h862-no?authuser=0" style="width:100%">
+								</div>
+								<div class="mySlides">
 
-    <img src="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-  </div>
-  <div class="column">
-    <img src="https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/1452717/pexels-photo-1452717.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/129634/pexels-photo-129634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-  </div>
-</div>
-</div>
-	<footer id="footer">
-    <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
-</footer>
-
-<<script src="Photogallery.js" type="text/javascript" charset="utf-8" async defer></script>
-</body>
-</html>
+									<img src="https://lh3.googleusercontent.com/pw/ACtC-3fg9ILRA_PrIKGbEj7EvFq3linPW-tQ2WxVIvro1QGzLefzhC6ExEGEGItUOLxIjCufQiVILuQXGGLMMWMkTMsTl5zG0Xbqe61fvk1z4WfzyPpcE7zFnz3Ypj_UsEkSf2QPiCl5Vou2SThJu-c800wAAA=w1148-h862-no?authuser=0" style="width:100%">
+								</div>
+						</div> <!-- Closing Modal-->
+					</body>
+					</div> <!-----closing main-->
+				</div>
+			</div>
+			<footer id="footer">
+				<p> <sub> Lissie Chin &copy; 2020 </sub> </p>
+			</footer>
+			<script src="Photogallery.js" type="text/javascript"></script>
+		</html>
