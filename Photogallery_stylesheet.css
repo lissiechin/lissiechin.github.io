@@ -176,10 +176,10 @@ figcaption {
   color: #ccc;
   font-style: italic;
   font-family: garamond;
-  padding: 10px 0;
+  padding: 20px;
   text-align: center;
   display: block;
-  margin: auto;
+  margin-bottom: 30px;
   width: 100%;
   height: auto;
 }
