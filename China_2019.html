@@ -1,107 +1,423 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-		<link rel="stylesheet" href="Photogallery_stylesheet.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-		<title> China 2019</title>
-	</head>
-	<div id="page-container">
-		<div id="content-wrap">
-			<!---------- Side Bar --------->
-			<div id="mySidenav" class="sidenav">
-				<!-- The close button in the sidenav --------->
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
-				<!-- create a home button leading back to the Home(main) page-->
-				<a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
-				<a href="About.html" style="text-align:center;">About</a>
-				<!-- <a href="Favorites.html" style="text-align:center;">Favorites</a>-->
-				<a href="STO.html" style="text-align: center;"> St. Olaf </a>
-				<!--drop down menu within the sidebar-->
-				<button style="background-color:#111; border-color: #111; margin: auto;" class="dropdown-btn"> Medium </button>
-				<div class="dropdown-container" style="text-align:center;">
-					<a href="2D portfolio.html"> 2-Dimensional</a>
-					<a href="3D portfolio.html"> 3-Dimensional</a>
-					<a href="New Media.html"> New Media</a>
-				</div>
-				<a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
-				<a href="Contact.html" style="text-align:center;">Contact</a>
-				
-				
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	<link rel="stylesheet" href="Photogallery_stylesheet.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<!------ Include the above in your HEAD tag ---------->
+	<title> China 2019</title>
+</head>
+<div id="page-container">
+	<div id="content-wrap">
+		<!---------- Side Bar --------->
+		<div id="mySidenav" class="sidenav">
+			<!-- The close button in the sidenav --------->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+			<!-- create a home button leading back to the Home(main) page-->
+			<a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
+			<a href="About.html" style="text-align:center;">About</a>
+			<!-- <a href="Favorites.html" style="text-align:center;">Favorites</a>-->
+			<a href="STO.html" style="text-align: center;"> St. Olaf </a>
+			<!--drop down menu within the sidebar-->
+			<button style="background-color:#111; border-color: #111; margin: auto;" class="dropdown-btn"> Medium </button>
+			<div class="dropdown-container" style="text-align:center;">
+				<a href="2D portfolio.html"> 2-Dimensional</a>
+				<a href="3D portfolio.html"> 3-Dimensional</a>
+				<a href="New Media.html"> New Media</a>
 			</div>
-
- <!------------------- SIDENAV---------------------->
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-            <div id="mySidenav" class="sidenav">
-                <!-- The close button in the sidenav --------->
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
-
-                <!-- create a home button leading back to the Home(main) page--->
-                <a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
-                <a href="About.html" style="text-align:center;">About</a>
-                <!--<a href="Favorites.html" style ="text-align:center;">Favorites</a>-->
-                <a href="STO.html" style="text-align: center;"> St. Olaf </a>
-                <!--drop down menu within the sidebar-->
-                <button style="background-color:#111; border-color: #111; position: center; margin: auto;" class="dropdown-btn"> Medium
-          </button>
-                <div class="dropdown-container">
-                    <a href="2D portfolio.html"> 2-Dimensional</a>
-                    <a href="3D portfolio.html"> 3-Dimensional</a>
-                    <a href="New Media.html"> New Media</a>
-                </div>
-                <a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
-                <a href="Contact.html" style="text-align:center;">Contact</a>
-            </div>
-
-            <div id="main">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
-						<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-						<br><br>
-
-<body>
-	
-<div class="container">
-
-
-<h1>China</h1>
-<div class="row">
-  <div class="column">
-   <!-- <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/1378849/pexels-photo-1378849.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-  </div>
-  <div class="column">
-    <img src="https://images.pexels.com/photos/1389994/pexels-photo-1389994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-  </div>
-  <div class="column">
-    <img src="https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/1452717/pexels-photo-1452717.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-
-    <img src="https://images.pexels.com/photos/129634/pexels-photo-129634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />-->
-  </div>
-</div>
-<footer id="footer">
-    <p> <sub> Lissie Chin &copy; 2020 </sub> </p>
-</footer>
-	
-</div>
-<script src="Photogallery.js" type="text/javascript" charset="utf-8" async defer></script>
-</body>
+			<a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
+			<a href="Contact.html" style="text-align:center;">Contact</a>
+			
+			
+		</div>
+		<!------------------- SIDENAV---------------------->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div id="mySidenav" class="sidenav">
+			<!-- The close button in the sidenav --------->
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+			<!-- create a home button leading back to the Home(main) page--->
+			<a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
+			<a href="About.html" style="text-align:center;">About</a>
+			<!--<a href="Favorites.html" style ="text-align:center;">Favorites</a>-->
+			<a href="STO.html" style="text-align: center;"> St. Olaf </a>
+			<!--drop down menu within the sidebar-->
+			<button style="background-color:#111; border-color: #111; position: center; margin: auto;" class="dropdown-btn"> Medium
+			</button>
+			<div class="dropdown-container">
+				<a href="2D portfolio.html"> 2-Dimensional</a>
+				<a href="3D portfolio.html"> 3-Dimensional</a>
+				<a href="New Media.html"> New Media</a>
+			</div>
+			<a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
+			<a href="Contact.html" style="text-align:center;">Contact</a>
+		</div>
+		<div id="main">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+			<br><br>
+			<body>
+				<h1>China</h1>
+				<div class="row">
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/pw/ACtC-3dLfFdz-bTMdzaqAXGDKwYtrxcUc_IFPpKxMQ97dmMXHWa8r3b93VFnBZIEblqYvf7nYerMcrUDm6yx-j1jZ-wXBfK7c_YJRS-HC-nm5Df0Q8x2_kQFvgH8aTj-CHDBcgc3vWdy1GqSZZVDcH_rgO06Pg=w1232-h1046-no?authuser=0" style="width: 100%;" onclick="openModal();currentSlide(0)" class="hover-shadow cursor">
+						<img src="https://lh3.googleusercontent.com/HhKRc5WWBfRxkCyhBSXFgHS2iy2uDXDS-CEE881mwDVc1-81xY1zlBVAe7dho7gkITkpozhwN9UmfJQ2Mzl2IidIA6D5vqx7NuKK1m0U79gE24a-aXG9tZ4E0qggupd9M-fyUfOUB71Id30cVCxnSCY4WRWG1PNsvgwVM9XggkYrdgjQUEvNmOEsjWl3aMprAHaG8nChSdyID5ny0TLPrxPmAH7CYg4uVgQFoy4WzeOoCbLcps-4Vny6ZdpNSgCvkPwrejn-hTNNksZNey5PZeUsQsqDMfR8bbFeGXiY4UJOL9BwMz50FNR6N7SJYWqh3uB1lNAn4QF926YQONTa5mnKLE0SedHZR4dR-f5zPTDuC7ZMUX0CcIiVPJDDtQ5i70mbwMrsWlW5zk0vWWEv88x7TcE062pEBwGM5ubBEysWrjQ__i7Qox9haVlbAKCd5mfEuL-Edpip5XcdpPbjgAGDUfq65gSBcuBytvYOpnuCtd4tky8OpR5xh5ef5ft-207hJjRQo8iv3EvWGB4SNrEPmE9kL9uZzfpDojt413t-Xbu5bDMD39Y5StqUyBEwSVV_GR6rbUar96omahrST8XLEYoGH1XwK6-h2WtxPenzfDGFjEUbpyKf3vIPWvdWOrqAGFrBBChD3-EAg8vFH2v5vrM0e8iEP4fes_oLmZx6TN_RXwrVcLViW3Lvlbhp6hnnECY_TO9NBpdev1sjRca5hD5NMILRbtmkswUkW5f8FkIy4w=w2472-h1856-no" style="width: 100%" alt="" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/fDwlGUu1gBkCbJtbR3mJVtEBbv5kz7Ao_8Y7d5X0UmoeCL-CupCuzs-45k-fG3O8uyD1JJvCU7vsKeeHn_m0JoB1ThafN_cji2YvaGpHEirhJEQOOJh7gLaAbev7wQaFAVvJ9kqdyp33Ooy0flTC5vEXEs80wgSE0PSvf9VrABA8YW1ckQIrW66C9hWN-cw2pBgmcMd-lOZBcFX9xm6whgkKgiY0OHDZAXliQ72YpY9AzN2kxbQ5WWXMe10LaZjO-35H8QrX14_M6r9CEEoTL2p8PRlI-fcdrccqAGnehZuuBvVfiz4KyKrwQbRuyPX9eHjThk0dpUAwn6M0iNrKd7lC3SxY_14_Daxxm3pcwHiSoPtRPxqESkMlQ5CLJ_HVDAuJR3WyxlRxxQwhVGGihMp_10r1z_cZ7pH63rsn5JaP9ZdW--UlqUIjyWc_48zmjinav9LEQmwV5T4bwfMjiJazul-MyHk5-tI3nzHABYaUmSJ5tx-ZFNTCYCS7-a7r30xuj7m4YNub9CRGweMixPrUhsValJL1mc07Rt7gPZFEqIAVFQFR5TUf70a0f72DfMGahB_SZr5gKrVUNMftxQk8kYHLeqL36vvqTuPw-89dHSq0neX6_jh0o47q-yadntpcPHGDf_A2GcRsLUjenJG1I4_nhI4Gjm-B4h4Hv3D0zVu59IZnfk8rSbz45U4vd9HzoLkUddZjA5veK8zefVDVgsr9vzyIo4g50vqdt_wL0mzhtA=w1238-h1856-no"
+						alt="Front of Global Harbor" style="width: 100%; padding-top: 15px;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/Zq3s0K2yr6CwumRnrp45T71wAKKqe30bAmWx9kF12U6Ksunsa9ZvGJocUrfmbgwOPn2u970Im3L5dQNCNyTE2v_jPNxXlM7kClkPd-BHzLJcyaPmPula7IOvPJ0zohgBYmW1Qioh7tVE2OQW3nqrxJprmDUfni7uiP_94x5Fd8oYTjm9qOjT5SVSvXF-37fg2XbuVxlje8U0teWA3yfKVmCgVUAmJ9jE6QE69EuHcRKbcWjY4zUxdIxdO612mJA1qe0QlMvJYC_d9x7bZQBxErgd5YOFOlkhSl17uQGLZnGLD-BGHWTp0YGO6dtGhr4NcT-nZvFLWtjFMEwFBjCa-XfWLIs1NsUGz7lcS6CvdK_SnqR2ANZhCDGdbt7O8rP8lnMbMklpdpC_PB3pidz8uIFAXbK5gj9h52ub75ksM4ZB41XtNYgI5f7Fu7SEn-wF_oPFoCTskx6b5xjElIxCRCeD_CX8KE7MUAhwaE2x5lsj6FAewbB5rIL51qX6Ghsp2b9qu745YwuiyQrE7eggR9g0spUlp8aik6ZSMymTtxw7Ij-kBxnzz8r9jq7pIx8tMvIb4ymzI4lR3czam8mIa2UBbytliBFQh4SficDZcpOmfOnlLkqPoySfDowIeE260XLBqzfyUkP5UdCn-SnbEPG79sXc5Xx3jENmUv0Ahr8kS_FUpE4co8Oh4y1ZMeBt8yieul1I5-H6QVWOXpaA9mtriT096jOd12Nw5EwpB1GlcAcG5g=w1392-h1856-no"
+						alt="Lissie and Rhea infront of the mural" style="width: 100%; padding-top: 35px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/PvEiMA9N6AZF7z7MaS_O3XxUdIdBN5zk0BkiRsZJF2tyg-HnWSjsY72kn2SWJOEl2WWub5eM0NLHgIzQiU4AFS6bF8pzw31NtwJyIIKZUEN06FkRBK2REcZjn7UCLzTdShrXMS4XZ0iLIXpJzUqmlm08f5FRCERO3mpDX7W4AdiCgETnRFRKhYGRkrf3ukioAMKiKOF3GHQePmmrrIj7YQQ2KXf1e0NgAJrRxBkTpx8jAZxoPohvwA3-gzdNkhMgLs8cP-DerKl8KJyBBVaVIO7_vqfPO5TEPgt9NZ9xSqi7ZRv6F5NWcBqBo6yfJ4xyOBoBDPUenxaqYkw-xYLMJtkvZgFCr8j6HSJFkC7DV87KmBywQrwTXYF5cxsqKGKBy79hGdJeCdTbfZmY9aYiPBTfVN7CXZgHYDUhOzNcOkfg3oL28G8el2dtmm5X95MzTYZxuFeq6OvQ5LhtLWbTXtN1c59Paw05TbrDlgRFC6sjW6v3jLAU7K07OPI7sZiS57IwS2yl7cJcCytD4VjRf72gRMnsY6CpW4Tbs6ppRG7PLqd-R5dgyCcSnlGDV9NF8xcrAWZ86hFQdLj1mKjuDwsYfwZTmFMWowabC2wwoeYl5o-dHmVsGrUnAdg8bp16vj439rA0YWp8aEnYi45mo_iwRdGV4DVperzFbF_rloofvAIQGGKMqbu8V45LbzwK-GKCjXdsb3LL0jgY4-qZjOwETjiIDlAnDVJpQWOkP2nJcf_b2Q=w1392-h1856-no"
+						alt="Ellen and Rafa infront of the mural" style="width: 100%;padding-top: 35px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!------------------>
+				<div class="row">
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/1puFSbKz_WaACbqRfB9XllTLd1BwAavCido9_CIzViSw9lVfNN_4BJyP4ByPKgVmT8maMAwZUDBaPPL6rUsWJlO9L-riD-qYc9baxK_9HoDSstGk5PxDGmhPaDK_rNSYXM7OPPeVIDV5wIpmPNbnpSd2ArvS7d3ZBWIrzwvxkebSFGZwkoEx_CfBp3vVo-2V7LvrE-8_lPruoPUxVJWyO-j5w0Os0SjxPMLYhQj4y1QMQbZCYDj4UzoPRm4HQ7bEH_UfAHOT4YsZ2VlroMd2UyzgyzTscWRg2VaBTy3fbUPpeeUYCxydzxTM9sCATLYJY9aq3yiG1G0kGyKmZpqLzcWxIBm3HK07oJ1AJCykvjDJhnacHTRBdsrpOk0WdC1YAvNNKoCg3VNfoce4mDchSciVVFiLYVRC14HgJftD9bmsokDmT8UteljidlABCvpc3zaloBGmtncur8PXetWuUkMxpsjwO8PYQg2ZA1QhIcR8FBGwbeEXTEcWTywP0ITe_QjvNacjWgtxQ-LvMIbRjf6DuHVfEb7tKueDVmc4XdxaXhFoIXUSLR_fLu1JW26O-uEzvY3E16DXLuSn5GFANN-HYNxdJ9zksZIv1bWTYDJJH47nEYJ-KMrO9dBjsPFqvjdflTWuaap9gGlj7PNdtCzoev9DE7Ow7Hg4SUVv9Ox9E1jsQRPo1Qzg7cG9OCWldIklS-Dlk75vSNzd-xdKhMyvBNabd_5BGc0frkqxw9l418M6TQ=w1392-h1856-no"
+						alt="Lissie, Ellen, and Janeve infront of the mural" style="width: 100%" alt="" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/sSQVBgpEPbYP-oJGYviK_8NKKg_wAIOfYiZk7FSkVONuwW2nbLXMz03r8DRO_M3XyKl6r3xxOIddgYJQNRKgAkraE9gPlN1fZq3UVJ7U_03lZMeYAC4r9xAsnaO30TaP9nKhGFoPXzg4K7K3ETk892GjjTRGAslt6tV3MwZrhVZ5HM1IM1STE5gPzkiq0_86vSIv9Ke6uyUZvCKFDzODqWQtIprPrwJOJuP9wnDmQq_dVNkaonSU1ZzB6Mz3gUK2SU-RS-Q5yTKq-S0v0lxQGw-0gnhRQRRWPWnnQwb_VvZ1GfjuJ-O2ojQ8pqMmRCYwASU52phtY2111M66721yfDT7U9NLJwiu-8zcNPK8j619Ov3HO1pVQyKEF-J2y43yO0lt-FaQtAih7l9tYBUTDvepMd64jUgXiFaE8S84fET8YLWNghMMvtR1C1pbTEJziNxB3OH4R52HrMt1hrYFGh6QVRvOd1OvOxq4zHHBLQo8A5PvyG3UFdIhQdqSoB389WWpM4aS6BLX_teu2CSoo_3ib49F8i_BXh6WtMpYVN-P137fJEtDJi77uJsWHgieE9vRVwYtIuwidDUTltveLFuFNCNv9zMMXsF1mJ_Zohn6Xdj3VyHUtgOy8lOt-re4XJNvlJCKcubgR5EnOLqpG7P-SyqsP23LCgGKv84jlqNhybAxSFFVWELTaO-hcklj8OLhBQCJINy0NaF2SlaO_A9rM-GKg4OQY26Lzqu0w_rfsJp_qQ=w1392-h1856-no"
+						alt="Rafa and Rhea infront of the mural" style="width: 100%" alt="" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/kDKFYkMW7nSDhbKTzPL-F9vIqr7EeEVLxbtprihbvljHrOxdqTHBz9aAl7pRIN5YMO3EW83AhXE5-lU-MEef3ILtveK7p7Tfq7c0d-B_Ls9_1slriaPH_scEze8P-HUB0lSb9aZy2fSsQaLayw1orz8orfSuPH0nRABk7L2FslCwbX7p9B9zhPXGA52M9zGznWkfEaBSMrFDADYjEiEBZ55aBrAg3u4q-wAnbF0tk632cbPoneTOrHQonCvR3CmMsFDEYTRZ-Wfxr9cvq0r04EbejFRmFGOtWdkFTFom_Osz0s3hYaa_GKgU0aitGCDg0VxXxQklzKJrVvom2OhF8SjvBXfgKt7eqG4b729UoFNzMM3QzvN4L5EC_1chJEVY4JOyvQN2zaE0yzcZx__GeJ7oERKcW7Oh5mPjob_LiEssyL74IcZaeh_joqhuNZ9iWz7_cDnszfXo_4CcgKGs-uTxfbMxY6ICBQizWmWLKW37LnxkCKxj6iirix-RlFH2pmIBGRyNNOQWaNxglSJtotmrDPQBCxGYCmAng9lNDioAxIni76OyL3vZpAYtLkY4aRzbXEjxsJbRTaVu73ZWnGh29lCmN0Hyd6_Fd4r1IMVZ2w2iAmM9qNCLHvRTio1apK7IJauZdaGii1AC7YiC96wlZSoTsf_9C-t5DcMp7EAKiqqTD5vybL-Ps-IxUAs6iIBBQyTLoPEXwK3FKe9e69uSwE9LVl9R5xWxMjEK57hP8kYoqw=w1392-h1856-no"
+						alt="Rafa with boba and jack in the background" style="width: 100%" alt="" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/BtbLMwG8cAq40qzFZzAKjGxwFYvVHXk4Rm8L7pJ2ZsiNkfmPhBFl8PZjpw9IpY8MqjtFnGOBLR4S61-nihrCHSNN2_ud3jFdnarBpVyuSOD1S4xQ1oK3iGsE3qmFTlLOoIMLxs7WXmpcpCVLZrnlg7d8i7DKKeDiDBhHt2nrqli8_VQrObdh0yS7bcIt78TNrNjtPUTAzq893BmA14K-o5c0UrWcDcryjx_5b3KZrQ1WeDG6MCtZ7cEJ_jViblw3AeqlE2SP1rAXSn7DoA6cr_GoPOYqGecA9f24OuZ7mk754XlRvCCqxcfRjCiWhPFbQvy29Yada6oRVCxjSuTJO1bIlF6kjKtRNeKEaOYFnhrKNGUAlHUIQ8dB4qUcYNpAmpoxZuWmlUsYGnJKBwkXfoF4OLh8-dZQYtPaDvYcwDw_13RMcwHVw9yrp6LYYRVF2TAz7oP-zus-pWlkVVVcm741hFpVv31pOE_M6Bo8Sp828QoNwTFCRAmCGJmAO_tcNRIkTWQN3DsLQqtGVMIKYmncMWVeBpVOeDoDtd3StxdPMpcNII5ZvehZNKocLFOrMGZrFFxpi8AxJO4rXdwE2kTnew_F_0DBC2-C5_oqYBxNCpe11Njay94OfIDuH591HubWUZPjnU_2JW-bkoapf_xT0QV__BpzCwtads2dqnJSPOZbrQjrwDsZ1bXvdPgHRcPkf7aAQw3Nug5rVZ1YraE2wRGBfcY4NWVI1cHf8n864jvnUA=w654-h272-no" style="width: 100%; padding-top: 20px" alt="" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+						<img src="https://lh3.googleusercontent.com/kQ-e6-4_fPOBlQ6cc51L7vNBBv7oBdhxbFnr9Uu9LOs1XehSpfp9junIjDRnCrIeD0cG9SGYnpSabpQhQsgX7FWEgkAzvrG5CWTFVH48RtPL0Hswd3GkYpMWUfRXtpVg8hzpLwbt5qxTvQypsVJdtybaRvrNX4_ztfasUNpWG1dq-PAdVefpvGSe3Z8tIIoa8wOlzA06Ou8BJ4v6y0S5rEYvNCuiExtAjIXdP0tUvxFF7jsiFZn3dkom5H23VAA95-sqRcF8IpykmyVNr6tUhCr2Sbyc0B0LcfeDxGI9setKCgo3a0pAsUPG6FGmhtOtT5gNYggfqchgrpOuBvJUlgC-QR1_y6appR4hB0D2ro3Y7u4JINtppRuYLDsMfWaM2UCFecf2I6qkkWuLZj79YPkR7kwl7lIxpbaTel3nlKLJk5iWZ2sB6oC6erDeZas5lwB2ccMHXN-gKaRAm83FasYTMeIYKfRnblPXtl-1NQOcQKz2M_HDoCf7lgZexz1KtkKS923MlZxvygJV_trEmLfOG0OWQF_y1orATrbC-5thFIX6BDhNHe-406A3TcMrR3IGe0bOemLLv1pOJmhw-lp6K3fRiNR6qCJ910lReW85qSMvSWE2DKfPYwWxsBDJhx4_fOa_MteiUdiosjyLOJZALkMrh1sJa-ZiaLHD6opUP81xyv5iHk3GDcRdoXes-rh_H3ayIo5H7sdcLphBT4RhGn043U0ZZIZYr9Hq9_mg6KwPGg=w2554-h1586-no" style="width: 100%; padding-top: 40px;" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!----------------->
+				<div class="row">
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/YflUAliVrIsdVNM9V5W4yx-yVUQ4-mkqorecLIVRW9OZMaWZBk5CJIc5_h-Amgw3QcgOIXvOGX-ko18SL9s1oztw2X-V8GL3JLslLfXSivCQppIBxuawgVYIqmRyhYA6gRy8Gwa5ycOt9zp6qVBWKnTvcgm9AXQTwDnC_SsD-YXK0mm9T8etkKlqgYcIVubmcv4C4akQJGOM--9Zf7q7iJ5n8obIfnFoKfP_d0OkQ9GSN_iL7pX3TfymMc0Z4jbT67g1Fq6YjWsQwLSFRkodROFtDw0Lk1qkpkZrYVWIOOxpWxJRdx5BND4JspQn1qET56KrjE0v0twDXWfUr7gtltQb68knev9M4lw80Tyvcx_Io7x7Sp11YVtIBEOzImzu3JdJ_Jnu9YICwBb9DOmvo8CgPqHl_LqIvfOCSp55AyR2dkFff1goZJ_q-xsuRRHDErUdyhXm-jE8zivcbzDjhPAufqKKt3MThuNBb80lXdxqCNR87Av-PE-35uezzyBmxFRK7lbBYpBWtG8dpbVVqhqE7O3_vsvH-RaLKXUDLHdZLmasmiVeiNeJsKnyQDL_Dq6LYPb7WYa9AaEbIiiVEo0-_qbvNjY5guXF9ZViq9aifhMz-cFyD0LeLkmS5R2j0T-wYpgbQYn0DU7ChZiRsMu6LbVQYrxCzHSdx5A9Zoe1qly8gB0yCUGvruScEshGdHqKBfBMrN2SeuWWfCN3DaFFlzrJLiKQwHMs0sdxzGchanJqlg=w1284-h1856-no"
+						alt="Walking along the streets" style="width: 100%" alt="" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!----------------->
+				<div class="row">
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(0)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!----------------->
+				<div class="row">
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/4qnHqtZtPx-mXmKDrLZXki7gLDASHU5eazOLJppVXMFpCOufAtV-vZ__rQwRbeX1Y4CJR1obsN8569LrPvuTW7N2DZ_Ciz7nT315sLmudgXa-JUi8r_Q41iCugHgd7VOEjvoCErZYgYLPGDi4w4LVcJtFGliF65pGadCTJISWbe0YFY706m7a4ZFoNY7MZl8QHSETvOEayiYgMjZSCsgXuKy4_RRvoGniEMARc7Qd6ibji9uetPRdoFY-y-novYlC6C2AuPt4VD8ldqlgtcruwiwCDEIxB6KSxNKD8vaaTZdpMfHjahiJf34BcMnS9dWpP7ZUqzrW7fVBNA3qc4NhwKtkFO-JtvwcYQKJ9hqvYCTtsiiFXYT-AfYYp7Yz5_MEvVsfjGapeAxuVHo7VpW9R68AU2DB0byYHASgepgaMcTpnZ30h5prta-eMe38dVLXLUm-5YxCWR_4l5vZO2nkPOiAWK4lK-0Fd1DoXmK1RLMQspOFy8nW1anP7ClyEjOuMSHIE4gtAiYFpMdcqMSLHLlwx0UF6IX9MoPHkyvwJEkVPm6dah_d39XydLByp4K7DGN436_l-zTfjvFYLcHVw_8fXHSgj3T8OZ3Ry7oXBfW9CC0J6GAUVB-uWCPI8rOQmT8lrMLgUsI2xeS-_OvVvOMGR0XLnMRgOSvxTBO8OUIKiEF-RK-JTqO1Xbe6ABCnd4V3BCWBiKnqNCybOA84nGneIM2DmOgNNXmD9sWSMuvjPpJ=w1258-h944-no"
+						alt="Close up of the white flowers" style="width: 100%" onclick="openModal();currentSlide(0)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/dBjDgcdEgUwHUFiZpbXIxzQwe4B9vNzfT-20b9TFTE2tPb2IaohV8GWSBlunZmTER7ZB75p79i70V_Y3zPo55s9_0uT614B7IYt45fjQ4IyMmHk56HWtlwaZK-CK0-4_fDmgK6KlsnMqxTMFdkkw7fquByqIJ5xyrFbiuZKqE1PAOJ6JKlIh1sdCKt2HIFig2p5CothUVyLZzGvDLbIiTeqHSfN4DEtvijp1n4l7EZdeNskbFLZyfOyOzBh4eQa5H43ba9C4R4zbICfaSh3V3seUO9zI9Kx4gx6PiuEdqAqo25PTR68EkpGyCbRtXencFuLtnb_Qht_iYKftxtCptPbZB49UXHtNi8ymM60lljxKw6tud1S5adY_ekd8PX9teDav2ViS9dF4FKIafnLqzshd1ReaVlVkX2zlI0wuoY1o9mgSNcdoMGOiuQs8OmkUKYMAZGNFvoq48C8isctLWDaZWzTGtxP91RyMNIGd1zzVW1b5f72uhN6VnX0piNMc-jL5SfgJ_RICGtRl7TpQLxJMa9Gy1J1CWNyGfAqO92DOSHkD0PI__Sfr6ZA3-xLnOgMQMeLryC9OO0ZBa-C72lVxfQobNQdWBvNrjbhXo-rrVpThfXHcon61MxFyWFXV4iab5-TtgLR4nvGTkOzYGWqiPPL6OvjJiOv13x_X8j_GZoyLAVeTtFUgp1dXPdo9SDtgyE8xAM82DNz1w-g9a08CBCPeq1J1h51_pyhYnIgS_6ur=w1198-h900-no"
+						alt="close up of the Koi fish!" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/xEpeCPuT8hOl7nYESLHGvWB8MTgKZ3X-988bjhOYDUywRr-vyZYz8tDaimqg6iHrOnohMJBpUqdpPwzoLBxvmDOA4tO-7d6auiqkiL_FsZWGsYyDBVIT_AAmpPTivx-5rAlTzpNqqzXB1mJUc5Idu9Zdy1rqm8QMSkJ2pGGAiVgEvKSdaNnP_jXl-x3HR4mYEJFWHcEsFz-dSCHT6JbBNFAQfWrK2yMZRkCC77eQagEOAq0sv3WMW9ahJgnx3JRsBdXvQIYsjYHmccqZxW-AffcOP_fujUkH0zSXNFjRv3iDtIGxSRy-5R6mZovD93FcDZXoj46ehT6u_wAHCe9CPCdU3gQqafIEjSZ65Z_zH6iJ__ColSRSAe-t7A6uxqXeXK54I8FclbfBUp-gGRdjac63fpBi80LF_YBMXvMTsr0gfFaQv_wzCLtQyp89uvf7is2p8BRCVEZ7rBnsdZb6ojJRGdM8AFNojay26u4ygsZ8TdJM_sd9wnk5Uh1Fi0KHsZCvvIdG8R8JPBwI-4NGHxwbVFgXsDmHygKGYq6tn17XGz1bYHZ54FAUi5otaP05hbFGPvmhgp4QVULYEHOK5tcB8jCOr_4TBFf1BX5M51ousEp7q1ui3YguowJOFdVqn1Q3lIoue6ERHlrD5CJbnC4tybQabvs9qMjfto2gJth7BUiohlir1WAWU5crAdLhNUlNsk4eGwbCSjPM0G8Q-_elb0eHof0enssDOeUCW5qRVlF3=w1256-h942-no"
+						alt="Close up of the details of the wall" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/xZlNKPgcvCw-TbteGh9f6Hs67Bb1yWhtoW3EVfrS0LSqcpp9YlbSzWBcfURw9Uz0urP1SheG_LS5bq0BjpAeswwUlyst8_B1c4AVBcwI_GWT61hEbXRqO7BzNuJk_qnJztrCbVPFUS5j086OcrtGsvsz_iEVyQMHpI_7l8MmT-3TzdQApXdKWtIC9QR13RTrYg3B3iJDPQoxPEpyzEXsy6t73-7qLtkc5B_UZdxv-jW9s80YcpNMFVFdNyfoCcPmi-PYbdG0LgO2P0d3ky2i-mx1q53XpW_JoT5M4pIrSiP0gkrHkngsd-IWbi1lj9wrsd51jGZ-0fXaNwC-QSe7Idup9DLn4tinRlDqEhYAYC0pVmUEmIhpSjEOFCRARRfNCqKWTIcKMu1hxfDDdycYBAgTbtACYaizHvWi8ZRl-G6mMUJ7dVg-1bidWCReNQKqd8nIdjA_2Y6nvZ9nMOLpd-Zm5KE0Z7lRiP6Cxq0iNmRhUwDQxAlEpcnWpAuwqAzs0BIfEy_c-yEWL1FeTxrKDHuHvZndop-enA10B2TcqpXR1Hydw-GZEvEuFvhy3-11Ghm1F56Qv3tHoHFFqEYa4moFbDcyTHpEMOLC79qh_YL61bfrOywqJ5PPLMjo2IioJZKP236BZZfdrX4nB0Lw078nouESDgMpaJO6F0BrpN-e8j90YMXKxVe-bplOySXKZZ9WnKdF8YG8N-Bavb6SBMNgLbxSkkyM9O3315r5UpxtrpNH=w1256-h942-no"
+						alt="Close up of the little guardians located near a little temple-like building" style="width: 100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!----------------->
+				<div class="row">
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/gNPsjTYCCZOs-AH5ZYkxCUFRz7Cx-du10pyzjxqb5PgT-Ol-UA3zSRUcxd1Vn2eXT9xNQOB_0HoUzy3RhDJNVeeiDmFf1qa3KjFoIto_v6LpIRKF-0hdyZfx-WyQEnIqw7rWUWC_unDKKxp2ekqRew6yhd4LEzY6Fj7-cTQoGd3nCqVXP8RLYyOakZ9oq0KAGI7V9K_yyZJl0MA7X5wEWpFO1cRkU8CnYFH4unbDdeFAafmTDWEsk-MMQ7M3N4bMJF9LG3aYtxOn117HRTaNZ3iyu6MmHBc7gwyVchirq326WjKMYZILmZDrxmSrxYXJBqMGUmF4S_jUEQ2JgWRJQGJAESLgkfhFWAnHDw5LrvXr6MGFaDAi3Ne-F3bY5l8N5OtLUjWA2eeGUN9C7dK99YpAj8hiJokz4rcmjRkQ05bloB-8tpDu3SgE63v8y_kB-N4KI4yTP4IXXz2Ghc3zAjzCUW0r18M-RzLpRIUdEFyEir1GUra6Gt-iujyKYUGLUTszVjbrzAdrBusrTh4frKxFYW7DCdAmUyUfBvDcjBiCG-lnGuadqXMxWRKQIb_a9GUopWBTrGQrJG-PbwOmKS8Zdpv4nX4xhfBNYmmqDxd1GnKWTg3CijNdZTpKVhBTbY8NNjAkIeA-qCyThd6rFhB85FpPiBLPkNdlNq1rTsEfiI61SaO6hPHbjpQI3ZjRykGXR395gYEPrGE0TBthwyxJKpGj2ncQFv5W8MJZ-hoI_lcQPupsstA=w684-h912-no" alt="The bush" style="width: 100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/SHUYb1dh-QGsb1hAJHqZ0JfgKg40kKArB6nKpNhGnlf_nQxY1P8HBmwSOnxeBuRKOjq6R_wUOwfMscnXqYO-MU3R13ktS_as4HT0meheoopP-gWTnpyHwGibadsINOZ0quF5hemCR2O8N3jJnghLk27k2ddrjBckw3znX5TUSlTIBj-A8qeq1mKcT69tamqs4YbTLuRUL7CnwEybajnWf_NoDfmQLtiLJWAkd5CUcxVcCezj-qBttUdSjUbnXpnov-3Jco00VJJIxcNxWdJu2eceHTpqvJ-wFuPhsKyZPA4aCmwO3Bzgnj2rmGWEadGNjFSaueik1Y2lwUyAsR4vIMJ4XGTmTrbzjqu2lGXlg8iB8Kf2kd5CEDM51BGtygCBkPXb3sRLzNjaZUdSYy0j4t4g1JR_Cn_xDTZiLIpN8L5r588HSNfAXrQ8L64T8OxRGEZ1QxhKY7qqrFZazXSdHKPSDYMFSFeOO8xTqQEcGav-eKlyBQAFzLuRpOpNqJJ5Q9dVxCBIM7Fo6RVlxme8BcuTO1ZEi0jjPxV0ujSyZula8Tydd3HoNEX6bnBegRIHYTwANmhi3MX8in5wKu4TlcBP82QPM_E8dDdWU5oL3jrdQC9rn0K2gX1JKxcaPXxixCYuaM13o5LGNe3rDmSx9KHvLEBWQF4RklsKylXu9DdUwkzBSl07iPuQtWw0qZrGUIs0JLJ1Fuim7XnJ-5MGVBsrCZYxcNYRHgDpZCImkMhIvqeXwFn1GlU=w684-h912-no" alt="ECNU Series: Crossing the Bridge" style="width: 100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://lh3.googleusercontent.com/pw/ACtC-3cgvtaU-Ndo8zNzIXcBPltGltMIOjUb2YLNMsgl_g7Lg32DZmCyRTg63uqnXqvyTDHOd8zfHMHBjZiVWAzppnYV-kJ_OUwmNwzhiK9KOKRjFUUlINFM4f6uqQHk75iRiiFlAqNroLYtoMjxC6pLSf5r1w=w870-h654-no?authuser=0" style="width: 100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!------------------>
+				<div class="row">
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+						<!--- if want to add a photo directly below the prior photo use this:--->
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+						<!---- then close the column--->
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!------------------>
+				<div class="row">
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+						<!--- if want to add a photo directly below the prior photo use this:--->
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+						<!---- then close the column--->
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="" style="width: 100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+					</div>
+				</div>
+				<!-----------------------Closing row ------------------------------------------------->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/pw/ACtC-3dLfFdz-bTMdzaqAXGDKwYtrxcUc_IFPpKxMQ97dmMXHWa8r3b93VFnBZIEblqYvf7nYerMcrUDm6yx-j1jZ-wXBfK7c_YJRS-HC-nm5Df0Q8x2_kQFvgH8aTj-CHDBcgc3vWdy1GqSZZVDcH_rgO06Pg=w1232-h1046-no?authuser=0" style="width:100%">
+							<figcaption> <b>4 January 2019</b><br> China Day 1 &#8212; Apartments across from the main entrance of ECNU (East China Normal University)<br><sub> iPhone XR <br><br><br><br> Shanghai, China</sub> </figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/HhKRc5WWBfRxkCyhBSXFgHS2iy2uDXDS-CEE881mwDVc1-81xY1zlBVAe7dho7gkITkpozhwN9UmfJQ2Mzl2IidIA6D5vqx7NuKK1m0U79gE24a-aXG9tZ4E0qggupd9M-fyUfOUB71Id30cVCxnSCY4WRWG1PNsvgwVM9XggkYrdgjQUEvNmOEsjWl3aMprAHaG8nChSdyID5ny0TLPrxPmAH7CYg4uVgQFoy4WzeOoCbLcps-4Vny6ZdpNSgCvkPwrejn-hTNNksZNey5PZeUsQsqDMfR8bbFeGXiY4UJOL9BwMz50FNR6N7SJYWqh3uB1lNAn4QF926YQONTa5mnKLE0SedHZR4dR-f5zPTDuC7ZMUX0CcIiVPJDDtQ5i70mbwMrsWlW5zk0vWWEv88x7TcE062pEBwGM5ubBEysWrjQ__i7Qox9haVlbAKCd5mfEuL-Edpip5XcdpPbjgAGDUfq65gSBcuBytvYOpnuCtd4tky8OpR5xh5ef5ft-207hJjRQo8iv3EvWGB4SNrEPmE9kL9uZzfpDojt413t-Xbu5bDMD39Y5StqUyBEwSVV_GR6rbUar96omahrST8XLEYoGH1XwK6-h2WtxPenzfDGFjEUbpyKf3vIPWvdWOrqAGFrBBChD3-EAg8vFH2v5vrM0e8iEP4fes_oLmZx6TN_RXwrVcLViW3Lvlbhp6hnnECY_TO9NBpdev1sjRca5hD5NMILRbtmkswUkW5f8FkIy4w=w2472-h1856-no" style="width:100%">
+							<figcaption><b>4 January 2019</b><br> Chin Day 1 &#8212; One of the many group selfies on this interim trip <br><sub> Photo Credit: Noah <br><br><br><br>iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/fDwlGUu1gBkCbJtbR3mJVtEBbv5kz7Ao_8Y7d5X0UmoeCL-CupCuzs-45k-fG3O8uyD1JJvCU7vsKeeHn_m0JoB1ThafN_cji2YvaGpHEirhJEQOOJh7gLaAbev7wQaFAVvJ9kqdyp33Ooy0flTC5vEXEs80wgSE0PSvf9VrABA8YW1ckQIrW66C9hWN-cw2pBgmcMd-lOZBcFX9xm6whgkKgiY0OHDZAXliQ72YpY9AzN2kxbQ5WWXMe10LaZjO-35H8QrX14_M6r9CEEoTL2p8PRlI-fcdrccqAGnehZuuBvVfiz4KyKrwQbRuyPX9eHjThk0dpUAwn6M0iNrKd7lC3SxY_14_Daxxm3pcwHiSoPtRPxqESkMlQ5CLJ_HVDAuJR3WyxlRxxQwhVGGihMp_10r1z_cZ7pH63rsn5JaP9ZdW--UlqUIjyWc_48zmjinav9LEQmwV5T4bwfMjiJazul-MyHk5-tI3nzHABYaUmSJ5tx-ZFNTCYCS7-a7r30xuj7m4YNub9CRGweMixPrUhsValJL1mc07Rt7gPZFEqIAVFQFR5TUf70a0f72DfMGahB_SZr5gKrVUNMftxQk8kYHLeqL36vvqTuPw-89dHSq0neX6_jh0o47q-yadntpcPHGDf_A2GcRsLUjenJG1I4_nhI4Gjm-B4h4Hv3D0zVu59IZnfk8rSbz45U4vd9HzoLkUddZjA5veK8zefVDVgsr9vzyIo4g50vqdt_wL0mzhtA=w1238-h1856-no" style="width:100%">
+							<figcaption><b>4 January 2019</b><br> China Day 1 &#8212; Entrance of Global Harbor celebrating the year of the pig! <br><sub> iPhone XR </sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/Zq3s0K2yr6CwumRnrp45T71wAKKqe30bAmWx9kF12U6Ksunsa9ZvGJocUrfmbgwOPn2u970Im3L5dQNCNyTE2v_jPNxXlM7kClkPd-BHzLJcyaPmPula7IOvPJ0zohgBYmW1Qioh7tVE2OQW3nqrxJprmDUfni7uiP_94x5Fd8oYTjm9qOjT5SVSvXF-37fg2XbuVxlje8U0teWA3yfKVmCgVUAmJ9jE6QE69EuHcRKbcWjY4zUxdIxdO612mJA1qe0QlMvJYC_d9x7bZQBxErgd5YOFOlkhSl17uQGLZnGLD-BGHWTp0YGO6dtGhr4NcT-nZvFLWtjFMEwFBjCa-XfWLIs1NsUGz7lcS6CvdK_SnqR2ANZhCDGdbt7O8rP8lnMbMklpdpC_PB3pidz8uIFAXbK5gj9h52ub75ksM4ZB41XtNYgI5f7Fu7SEn-wF_oPFoCTskx6b5xjElIxCRCeD_CX8KE7MUAhwaE2x5lsj6FAewbB5rIL51qX6Ghsp2b9qu745YwuiyQrE7eggR9g0spUlp8aik6ZSMymTtxw7Ij-kBxnzz8r9jq7pIx8tMvIb4ymzI4lR3czam8mIa2UBbytliBFQh4SficDZcpOmfOnlLkqPoySfDowIeE260XLBqzfyUkP5UdCn-SnbEPG79sXc5Xx3jENmUv0Ahr8kS_FUpE4co8Oh4y1ZMeBt8yieul1I5-H6QVWOXpaA9mtriT096jOd12Nw5EwpB1GlcAcG5g=w1392-h1856-no"
+							alt="Lissie and Rhea infront of the mural" style="width:100%">
+							<figcaption>4 January 2019</b><br> China Day 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub> Photo Credit: Taken by a friend <br><br><br><br>iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/PvEiMA9N6AZF7z7MaS_O3XxUdIdBN5zk0BkiRsZJF2tyg-HnWSjsY72kn2SWJOEl2WWub5eM0NLHgIzQiU4AFS6bF8pzw31NtwJyIIKZUEN06FkRBK2REcZjn7UCLzTdShrXMS4XZ0iLIXpJzUqmlm08f5FRCERO3mpDX7W4AdiCgETnRFRKhYGRkrf3ukioAMKiKOF3GHQePmmrrIj7YQQ2KXf1e0NgAJrRxBkTpx8jAZxoPohvwA3-gzdNkhMgLs8cP-DerKl8KJyBBVaVIO7_vqfPO5TEPgt9NZ9xSqi7ZRv6F5NWcBqBo6yfJ4xyOBoBDPUenxaqYkw-xYLMJtkvZgFCr8j6HSJFkC7DV87KmBywQrwTXYF5cxsqKGKBy79hGdJeCdTbfZmY9aYiPBTfVN7CXZgHYDUhOzNcOkfg3oL28G8el2dtmm5X95MzTYZxuFeq6OvQ5LhtLWbTXtN1c59Paw05TbrDlgRFC6sjW6v3jLAU7K07OPI7sZiS57IwS2yl7cJcCytD4VjRf72gRMnsY6CpW4Tbs6ppRG7PLqd-R5dgyCcSnlGDV9NF8xcrAWZ86hFQdLj1mKjuDwsYfwZTmFMWowabC2wwoeYl5o-dHmVsGrUnAdg8bp16vj439rA0YWp8aEnYi45mo_iwRdGV4DVperzFbF_rloofvAIQGGKMqbu8V45LbzwK-GKCjXdsb3LL0jgY4-qZjOwETjiIDlAnDVJpQWOkP2nJcf_b2Q=w1392-h1856-no" style="width:100%">
+							<figcaption><b>4 January 2019</b><br> China Day 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub>iPhone XR</sub></figcaption>
+						</div>
+						<!--------------->
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/1puFSbKz_WaACbqRfB9XllTLd1BwAavCido9_CIzViSw9lVfNN_4BJyP4ByPKgVmT8maMAwZUDBaPPL6rUsWJlO9L-riD-qYc9baxK_9HoDSstGk5PxDGmhPaDK_rNSYXM7OPPeVIDV5wIpmPNbnpSd2ArvS7d3ZBWIrzwvxkebSFGZwkoEx_CfBp3vVo-2V7LvrE-8_lPruoPUxVJWyO-j5w0Os0SjxPMLYhQj4y1QMQbZCYDj4UzoPRm4HQ7bEH_UfAHOT4YsZ2VlroMd2UyzgyzTscWRg2VaBTy3fbUPpeeUYCxydzxTM9sCATLYJY9aq3yiG1G0kGyKmZpqLzcWxIBm3HK07oJ1AJCykvjDJhnacHTRBdsrpOk0WdC1YAvNNKoCg3VNfoce4mDchSciVVFiLYVRC14HgJftD9bmsokDmT8UteljidlABCvpc3zaloBGmtncur8PXetWuUkMxpsjwO8PYQg2ZA1QhIcR8FBGwbeEXTEcWTywP0ITe_QjvNacjWgtxQ-LvMIbRjf6DuHVfEb7tKueDVmc4XdxaXhFoIXUSLR_fLu1JW26O-uEzvY3E16DXLuSn5GFANN-HYNxdJ9zksZIv1bWTYDJJH47nEYJ-KMrO9dBjsPFqvjdflTWuaap9gGlj7PNdtCzoev9DE7Ow7Hg4SUVv9Ox9E1jsQRPo1Qzg7cG9OCWldIklS-Dlk75vSNzd-xdKhMyvBNabd_5BGc0frkqxw9l418M6TQ=w1392-h1856-no"
+							alt="Lissie, Ellen, and Janeve infront of the mural" style="width:100%">
+							<figcaption><b>4 January 2019</b><br> China Day 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub> Taken by a friend <br><br><br><br>iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/sSQVBgpEPbYP-oJGYviK_8NKKg_wAIOfYiZk7FSkVONuwW2nbLXMz03r8DRO_M3XyKl6r3xxOIddgYJQNRKgAkraE9gPlN1fZq3UVJ7U_03lZMeYAC4r9xAsnaO30TaP9nKhGFoPXzg4K7K3ETk892GjjTRGAslt6tV3MwZrhVZ5HM1IM1STE5gPzkiq0_86vSIv9Ke6uyUZvCKFDzODqWQtIprPrwJOJuP9wnDmQq_dVNkaonSU1ZzB6Mz3gUK2SU-RS-Q5yTKq-S0v0lxQGw-0gnhRQRRWPWnnQwb_VvZ1GfjuJ-O2ojQ8pqMmRCYwASU52phtY2111M66721yfDT7U9NLJwiu-8zcNPK8j619Ov3HO1pVQyKEF-J2y43yO0lt-FaQtAih7l9tYBUTDvepMd64jUgXiFaE8S84fET8YLWNghMMvtR1C1pbTEJziNxB3OH4R52HrMt1hrYFGh6QVRvOd1OvOxq4zHHBLQo8A5PvyG3UFdIhQdqSoB389WWpM4aS6BLX_teu2CSoo_3ib49F8i_BXh6WtMpYVN-P137fJEtDJi77uJsWHgieE9vRVwYtIuwidDUTltveLFuFNCNv9zMMXsF1mJ_Zohn6Xdj3VyHUtgOy8lOt-re4XJNvlJCKcubgR5EnOLqpG7P-SyqsP23LCgGKv84jlqNhybAxSFFVWELTaO-hcklj8OLhBQCJINy0NaF2SlaO_A9rM-GKg4OQY26Lzqu0w_rfsJp_qQ=w1392-h1856-no"
+							alt="Rafa and Rhea infront of the mural" style="width:100%">
+							<figcaption><b>4 January 2019</b><br> China Day 1 &#8212; Small photo shoot infront of a mural inside the mall <br><sub> iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/kDKFYkMW7nSDhbKTzPL-F9vIqr7EeEVLxbtprihbvljHrOxdqTHBz9aAl7pRIN5YMO3EW83AhXE5-lU-MEef3ILtveK7p7Tfq7c0d-B_Ls9_1slriaPH_scEze8P-HUB0lSb9aZy2fSsQaLayw1orz8orfSuPH0nRABk7L2FslCwbX7p9B9zhPXGA52M9zGznWkfEaBSMrFDADYjEiEBZ55aBrAg3u4q-wAnbF0tk632cbPoneTOrHQonCvR3CmMsFDEYTRZ-Wfxr9cvq0r04EbejFRmFGOtWdkFTFom_Osz0s3hYaa_GKgU0aitGCDg0VxXxQklzKJrVvom2OhF8SjvBXfgKt7eqG4b729UoFNzMM3QzvN4L5EC_1chJEVY4JOyvQN2zaE0yzcZx__GeJ7oERKcW7Oh5mPjob_LiEssyL74IcZaeh_joqhuNZ9iWz7_cDnszfXo_4CcgKGs-uTxfbMxY6ICBQizWmWLKW37LnxkCKxj6iirix-RlFH2pmIBGRyNNOQWaNxglSJtotmrDPQBCxGYCmAng9lNDioAxIni76OyL3vZpAYtLkY4aRzbXEjxsJbRTaVu73ZWnGh29lCmN0Hyd6_Fd4r1IMVZ2w2iAmM9qNCLHvRTio1apK7IJauZdaGii1AC7YiC96wlZSoTsf_9C-t5DcMp7EAKiqqTD5vybL-Ps-IxUAs6iIBBQyTLoPEXwK3FKe9e69uSwE9LVl9R5xWxMjEK57hP8kYoqw=w1392-h1856-no"
+							alt="Rafa with boba and jack in the background" style="width:100%">
+							<figcaption><b>4 January 2019</b><br> China Day 1 &#8212; First day in China, boba first <br><sub> iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/BtbLMwG8cAq40qzFZzAKjGxwFYvVHXk4Rm8L7pJ2ZsiNkfmPhBFl8PZjpw9IpY8MqjtFnGOBLR4S61-nihrCHSNN2_ud3jFdnarBpVyuSOD1S4xQ1oK3iGsE3qmFTlLOoIMLxs7WXmpcpCVLZrnlg7d8i7DKKeDiDBhHt2nrqli8_VQrObdh0yS7bcIt78TNrNjtPUTAzq893BmA14K-o5c0UrWcDcryjx_5b3KZrQ1WeDG6MCtZ7cEJ_jViblw3AeqlE2SP1rAXSn7DoA6cr_GoPOYqGecA9f24OuZ7mk754XlRvCCqxcfRjCiWhPFbQvy29Yada6oRVCxjSuTJO1bIlF6kjKtRNeKEaOYFnhrKNGUAlHUIQ8dB4qUcYNpAmpoxZuWmlUsYGnJKBwkXfoF4OLh8-dZQYtPaDvYcwDw_13RMcwHVw9yrp6LYYRVF2TAz7oP-zus-pWlkVVVcm741hFpVv31pOE_M6Bo8Sp828QoNwTFCRAmCGJmAO_tcNRIkTWQN3DsLQqtGVMIKYmncMWVeBpVOeDoDtd3StxdPMpcNII5ZvehZNKocLFOrMGZrFFxpi8AxJO4rXdwE2kTnew_F_0DBC2-C5_oqYBxNCpe11Njay94OfIDuH591HubWUZPjnU_2JW-bkoapf_xT0QV__BpzCwtads2dqnJSPOZbrQjrwDsZ1bXvdPgHRcPkf7aAQw3Nug5rVZ1YraE2wRGBfcY4NWVI1cHf8n864jvnUA=w654-h272-no" style="width:100%">
+							<figcaption><b>5 January 2019</b><br> China Day 2 &#8212; Walking to the Yu Garden <br><sub>iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/kQ-e6-4_fPOBlQ6cc51L7vNBBv7oBdhxbFnr9Uu9LOs1XehSpfp9junIjDRnCrIeD0cG9SGYnpSabpQhQsgX7FWEgkAzvrG5CWTFVH48RtPL0Hswd3GkYpMWUfRXtpVg8hzpLwbt5qxTvQypsVJdtybaRvrNX4_ztfasUNpWG1dq-PAdVefpvGSe3Z8tIIoa8wOlzA06Ou8BJ4v6y0S5rEYvNCuiExtAjIXdP0tUvxFF7jsiFZn3dkom5H23VAA95-sqRcF8IpykmyVNr6tUhCr2Sbyc0B0LcfeDxGI9setKCgo3a0pAsUPG6FGmhtOtT5gNYggfqchgrpOuBvJUlgC-QR1_y6appR4hB0D2ro3Y7u4JINtppRuYLDsMfWaM2UCFecf2I6qkkWuLZj79YPkR7kwl7lIxpbaTel3nlKLJk5iWZ2sB6oC6erDeZas5lwB2ccMHXN-gKaRAm83FasYTMeIYKfRnblPXtl-1NQOcQKz2M_HDoCf7lgZexz1KtkKS923MlZxvygJV_trEmLfOG0OWQF_y1orATrbC-5thFIX6BDhNHe-406A3TcMrR3IGe0bOemLLv1pOJmhw-lp6K3fRiNR6qCJ910lReW85qSMvSWE2DKfPYwWxsBDJhx4_fOa_MteiUdiosjyLOJZALkMrh1sJa-ZiaLHD6opUP81xyv5iHk3GDcRdoXes-rh_H3ayIo5H7sdcLphBT4RhGn043U0ZZIZYr9Hq9_mg6KwPGg=w2554-h1586-no" style="width:100%">
+							<figcaption><b>5 January 2019</b><br> China Day 2 &#8212; Architecture in the Yu Garden <br><sub> iPhone XR</sub></figcaption>
+						</div>
+						<!------------------------->
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/YflUAliVrIsdVNM9V5W4yx-yVUQ4-mkqorecLIVRW9OZMaWZBk5CJIc5_h-Amgw3QcgOIXvOGX-ko18SL9s1oztw2X-V8GL3JLslLfXSivCQppIBxuawgVYIqmRyhYA6gRy8Gwa5ycOt9zp6qVBWKnTvcgm9AXQTwDnC_SsD-YXK0mm9T8etkKlqgYcIVubmcv4C4akQJGOM--9Zf7q7iJ5n8obIfnFoKfP_d0OkQ9GSN_iL7pX3TfymMc0Z4jbT67g1Fq6YjWsQwLSFRkodROFtDw0Lk1qkpkZrYVWIOOxpWxJRdx5BND4JspQn1qET56KrjE0v0twDXWfUr7gtltQb68knev9M4lw80Tyvcx_Io7x7Sp11YVtIBEOzImzu3JdJ_Jnu9YICwBb9DOmvo8CgPqHl_LqIvfOCSp55AyR2dkFff1goZJ_q-xsuRRHDErUdyhXm-jE8zivcbzDjhPAufqKKt3MThuNBb80lXdxqCNR87Av-PE-35uezzyBmxFRK7lbBYpBWtG8dpbVVqhqE7O3_vsvH-RaLKXUDLHdZLmasmiVeiNeJsKnyQDL_Dq6LYPb7WYa9AaEbIiiVEo0-_qbvNjY5guXF9ZViq9aifhMz-cFyD0LeLkmS5R2j0T-wYpgbQYn0DU7ChZiRsMu6LbVQYrxCzHSdx5A9Zoe1qly8gB0yCUGvruScEshGdHqKBfBMrN2SeuWWfCN3DaFFlzrJLiKQwHMs0sdxzGchanJqlg=w1284-h1856-no"
+							alt="Walking along the streets" style="width:100%">
+							<figcaption><b>5 January 2019</b><br> China 2 &#8212; Walking around in the Yu Garden <br><sub> iPhone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<!------------------->
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/4qnHqtZtPx-mXmKDrLZXki7gLDASHU5eazOLJppVXMFpCOufAtV-vZ__rQwRbeX1Y4CJR1obsN8569LrPvuTW7N2DZ_Ciz7nT315sLmudgXa-JUi8r_Q41iCugHgd7VOEjvoCErZYgYLPGDi4w4LVcJtFGliF65pGadCTJISWbe0YFY706m7a4ZFoNY7MZl8QHSETvOEayiYgMjZSCsgXuKy4_RRvoGniEMARc7Qd6ibji9uetPRdoFY-y-novYlC6C2AuPt4VD8ldqlgtcruwiwCDEIxB6KSxNKD8vaaTZdpMfHjahiJf34BcMnS9dWpP7ZUqzrW7fVBNA3qc4NhwKtkFO-JtvwcYQKJ9hqvYCTtsiiFXYT-AfYYp7Yz5_MEvVsfjGapeAxuVHo7VpW9R68AU2DB0byYHASgepgaMcTpnZ30h5prta-eMe38dVLXLUm-5YxCWR_4l5vZO2nkPOiAWK4lK-0Fd1DoXmK1RLMQspOFy8nW1anP7ClyEjOuMSHIE4gtAiYFpMdcqMSLHLlwx0UF6IX9MoPHkyvwJEkVPm6dah_d39XydLByp4K7DGN436_l-zTfjvFYLcHVw_8fXHSgj3T8OZ3Ry7oXBfW9CC0J6GAUVB-uWCPI8rOQmT8lrMLgUsI2xeS-_OvVvOMGR0XLnMRgOSvxTBO8OUIKiEF-RK-JTqO1Xbe6ABCnd4V3BCWBiKnqNCybOA84nGneIM2DmOgNNXmD9sWSMuvjPpJ=w1258-h944-no" style="width:100%">
+							<figcaption> <b> 5 January 2019 </b> <br>China Day 2 &#8212; Here's a close up of the white flower! <br><sub> Iphone XR </sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/dBjDgcdEgUwHUFiZpbXIxzQwe4B9vNzfT-20b9TFTE2tPb2IaohV8GWSBlunZmTER7ZB75p79i70V_Y3zPo55s9_0uT614B7IYt45fjQ4IyMmHk56HWtlwaZK-CK0-4_fDmgK6KlsnMqxTMFdkkw7fquByqIJ5xyrFbiuZKqE1PAOJ6JKlIh1sdCKt2HIFig2p5CothUVyLZzGvDLbIiTeqHSfN4DEtvijp1n4l7EZdeNskbFLZyfOyOzBh4eQa5H43ba9C4R4zbICfaSh3V3seUO9zI9Kx4gx6PiuEdqAqo25PTR68EkpGyCbRtXencFuLtnb_Qht_iYKftxtCptPbZB49UXHtNi8ymM60lljxKw6tud1S5adY_ekd8PX9teDav2ViS9dF4FKIafnLqzshd1ReaVlVkX2zlI0wuoY1o9mgSNcdoMGOiuQs8OmkUKYMAZGNFvoq48C8isctLWDaZWzTGtxP91RyMNIGd1zzVW1b5f72uhN6VnX0piNMc-jL5SfgJ_RICGtRl7TpQLxJMa9Gy1J1CWNyGfAqO92DOSHkD0PI__Sfr6ZA3-xLnOgMQMeLryC9OO0ZBa-C72lVxfQobNQdWBvNrjbhXo-rrVpThfXHcon61MxFyWFXV4iab5-TtgLR4nvGTkOzYGWqiPPL6OvjJiOv13x_X8j_GZoyLAVeTtFUgp1dXPdo9SDtgyE8xAM82DNz1w-g9a08CBCPeq1J1h51_pyhYnIgS_6ur=w1198-h900-no" style="width:100%">
+							<figcaption><b> 5 January 2019 </b><br> China Day 2 &#8212; Here is a close up of the Koi fishes <br><sub> Iphone XR </sub></figcaption>
+						</div>
+						
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/xEpeCPuT8hOl7nYESLHGvWB8MTgKZ3X-988bjhOYDUywRr-vyZYz8tDaimqg6iHrOnohMJBpUqdpPwzoLBxvmDOA4tO-7d6auiqkiL_FsZWGsYyDBVIT_AAmpPTivx-5rAlTzpNqqzXB1mJUc5Idu9Zdy1rqm8QMSkJ2pGGAiVgEvKSdaNnP_jXl-x3HR4mYEJFWHcEsFz-dSCHT6JbBNFAQfWrK2yMZRkCC77eQagEOAq0sv3WMW9ahJgnx3JRsBdXvQIYsjYHmccqZxW-AffcOP_fujUkH0zSXNFjRv3iDtIGxSRy-5R6mZovD93FcDZXoj46ehT6u_wAHCe9CPCdU3gQqafIEjSZ65Z_zH6iJ__ColSRSAe-t7A6uxqXeXK54I8FclbfBUp-gGRdjac63fpBi80LF_YBMXvMTsr0gfFaQv_wzCLtQyp89uvf7is2p8BRCVEZ7rBnsdZb6ojJRGdM8AFNojay26u4ygsZ8TdJM_sd9wnk5Uh1Fi0KHsZCvvIdG8R8JPBwI-4NGHxwbVFgXsDmHygKGYq6tn17XGz1bYHZ54FAUi5otaP05hbFGPvmhgp4QVULYEHOK5tcB8jCOr_4TBFf1BX5M51ousEp7q1ui3YguowJOFdVqn1Q3lIoue6ERHlrD5CJbnC4tybQabvs9qMjfto2gJth7BUiohlir1WAWU5crAdLhNUlNsk4eGwbCSjPM0G8Q-_elb0eHof0enssDOeUCW5qRVlF3=w1256-h942-no" style="width:100%">
+							<figcaption><b>10 January 2019</b><br> China Day 7 &#8212; Close up of the walls <br><sub>Iphone XR<br><br><br><br> Nanjing, Jiangsu </sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/xZlNKPgcvCw-TbteGh9f6Hs67Bb1yWhtoW3EVfrS0LSqcpp9YlbSzWBcfURw9Uz0urP1SheG_LS5bq0BjpAeswwUlyst8_B1c4AVBcwI_GWT61hEbXRqO7BzNuJk_qnJztrCbVPFUS5j086OcrtGsvsz_iEVyQMHpI_7l8MmT-3TzdQApXdKWtIC9QR13RTrYg3B3iJDPQoxPEpyzEXsy6t73-7qLtkc5B_UZdxv-jW9s80YcpNMFVFdNyfoCcPmi-PYbdG0LgO2P0d3ky2i-mx1q53XpW_JoT5M4pIrSiP0gkrHkngsd-IWbi1lj9wrsd51jGZ-0fXaNwC-QSe7Idup9DLn4tinRlDqEhYAYC0pVmUEmIhpSjEOFCRARRfNCqKWTIcKMu1hxfDDdycYBAgTbtACYaizHvWi8ZRl-G6mMUJ7dVg-1bidWCReNQKqd8nIdjA_2Y6nvZ9nMOLpd-Zm5KE0Z7lRiP6Cxq0iNmRhUwDQxAlEpcnWpAuwqAzs0BIfEy_c-yEWL1FeTxrKDHuHvZndop-enA10B2TcqpXR1Hydw-GZEvEuFvhy3-11Ghm1F56Qv3tHoHFFqEYa4moFbDcyTHpEMOLC79qh_YL61bfrOywqJ5PPLMjo2IioJZKP236BZZfdrX4nB0Lw078nouESDgMpaJO6F0BrpN-e8j90YMXKxVe-bplOySXKZZ9WnKdF8YG8N-Bavb6SBMNgLbxSkkyM9O3315r5UpxtrpNH=w1256-h942-no" style="width:100%">
+							<figcaption><b>10 January 2019</b><br> China Day 7 &#8212; <b> AAAAAAAA<br><sub>This is for you, Ellen</sub><br><br><sub>Iphone XR<br><br><br><br> Nanjing, Jiangsu</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/gNPsjTYCCZOs-AH5ZYkxCUFRz7Cx-du10pyzjxqb5PgT-Ol-UA3zSRUcxd1Vn2eXT9xNQOB_0HoUzy3RhDJNVeeiDmFf1qa3KjFoIto_v6LpIRKF-0hdyZfx-WyQEnIqw7rWUWC_unDKKxp2ekqRew6yhd4LEzY6Fj7-cTQoGd3nCqVXP8RLYyOakZ9oq0KAGI7V9K_yyZJl0MA7X5wEWpFO1cRkU8CnYFH4unbDdeFAafmTDWEsk-MMQ7M3N4bMJF9LG3aYtxOn117HRTaNZ3iyu6MmHBc7gwyVchirq326WjKMYZILmZDrxmSrxYXJBqMGUmF4S_jUEQ2JgWRJQGJAESLgkfhFWAnHDw5LrvXr6MGFaDAi3Ne-F3bY5l8N5OtLUjWA2eeGUN9C7dK99YpAj8hiJokz4rcmjRkQ05bloB-8tpDu3SgE63v8y_kB-N4KI4yTP4IXXz2Ghc3zAjzCUW0r18M-RzLpRIUdEFyEir1GUra6Gt-iujyKYUGLUTszVjbrzAdrBusrTh4frKxFYW7DCdAmUyUfBvDcjBiCG-lnGuadqXMxWRKQIb_a9GUopWBTrGQrJG-PbwOmKS8Zdpv4nX4xhfBNYmmqDxd1GnKWTg3CijNdZTpKVhBTbY8NNjAkIeA-qCyThd6rFhB85FpPiBLPkNdlNq1rTsEfiI61SaO6hPHbjpQI3ZjRykGXR395gYEPrGE0TBthwyxJKpGj2ncQFv5W8MJZ-hoI_lcQPupsstA=w684-h912-no" style="width:100%">
+							<figcaption><b>16 January 2019</b><br>China Day 13 &#8212; The bush that Nate was standing in<br><sub>Iphone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="https://lh3.googleusercontent.com/SHUYb1dh-QGsb1hAJHqZ0JfgKg40kKArB6nKpNhGnlf_nQxY1P8HBmwSOnxeBuRKOjq6R_wUOwfMscnXqYO-MU3R13ktS_as4HT0meheoopP-gWTnpyHwGibadsINOZ0quF5hemCR2O8N3jJnghLk27k2ddrjBckw3znX5TUSlTIBj-A8qeq1mKcT69tamqs4YbTLuRUL7CnwEybajnWf_NoDfmQLtiLJWAkd5CUcxVcCezj-qBttUdSjUbnXpnov-3Jco00VJJIxcNxWdJu2eceHTpqvJ-wFuPhsKyZPA4aCmwO3Bzgnj2rmGWEadGNjFSaueik1Y2lwUyAsR4vIMJ4XGTmTrbzjqu2lGXlg8iB8Kf2kd5CEDM51BGtygCBkPXb3sRLzNjaZUdSYy0j4t4g1JR_Cn_xDTZiLIpN8L5r588HSNfAXrQ8L64T8OxRGEZ1QxhKY7qqrFZazXSdHKPSDYMFSFeOO8xTqQEcGav-eKlyBQAFzLuRpOpNqJJ5Q9dVxCBIM7Fo6RVlxme8BcuTO1ZEi0jjPxV0ujSyZula8Tydd3HoNEX6bnBegRIHYTwANmhi3MX8in5wKu4TlcBP82QPM_E8dDdWU5oL3jrdQC9rn0K2gX1JKxcaPXxixCYuaM13o5LGNe3rDmSx9KHvLEBWQF4RklsKylXu9DdUwkzBSl07iPuQtWw0qZrGUIs0JLJ1Fuim7XnJ-5MGVBsrCZYxcNYRHgDpZCImkMhIvqeXwFn1GlU=w684-h912-no" style="width:100%">
+							<figcaption><b>16 January 2019</b><br>China Day 13 &#8212; Other bridge occassionally crossed over while going to and from daily adventures <br><sub> Iphone XR</sub></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+						<div class="mySlides">
+							<img src="img_lights_wide.jpg" style="width:100%">
+							<figcaption></figcaption>
+						</div>
+					</div>
+				</div>
+			</body>
+			<footer id="footer">
+				<p> <sub> Lissie Chin &copy; 2021 </sub> </p>
+			</footer>
+			
+		</div>
+		<script src="Photogallery.js" type="text/javascript" charset="utf-8" async defer></script>
+	</body>
 </html>
