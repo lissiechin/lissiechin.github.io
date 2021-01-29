@@ -13,11 +13,13 @@ body {
 
 h1 {
         text-align: center;
-        font-family: garamond bold;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold ;
         /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
-        font-size: 1000px;
-        letter-spacing: 40px;
+        /*font-size: 1000px;
+        letter-spacing: 40px;*/
         width: auto;
+        
         height: auto;
         margin-left: auto;
         margin-right: auto;
