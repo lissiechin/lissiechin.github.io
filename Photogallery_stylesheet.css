@@ -13,26 +13,26 @@ body {
 
 h1 {
         text-align: center;
-        font-family: 'Brush Script MT', cursive;
-        font-weight: bold ;
+        font-weight: bolder;
+        font-size: 100px;
+        color: white;
         /* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
         /*font-size: 1000px;
         letter-spacing: 40px;*/
-        width: auto;
-        
-        height: auto;
+        /*width: auto;
+        height: auto;*/
         margin-left: auto;
         margin-right: auto;
         z-index: 1;
-        padding: 60px;
+        padding: 20px;
         background-color: tan;  /* TBD a little later */
     }
 
-.header {
+/*.header {
   text-align: center;
   padding: 32px;
   font-size: 50px;
-}
+}*/
 
 .row {
   display: -ms-flexbox; /* IE10 */
