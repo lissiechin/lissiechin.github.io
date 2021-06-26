@@ -2,9 +2,9 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Scattered Polaroids Gallery</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Travels</title>
 		<meta name="description" content="Scattered Polaroids Gallery: A flat-style take on a Polaroid gallery" />
 		<meta name="keywords" content="scattered polaroids, image gallery, javascript, random rotation, 3d, backface, flat design" />
 		<meta name="author" content="Codrops" />
@@ -12,157 +12,200 @@
 		<link rel="stylesheet" type="text/css" href="ScatteredPolaroidsGallery/css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="ScatteredPolaroidsGallery/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="ScatteredPolaroidsGallery/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="ScatteredPolaroidsGallery/css/WebsiteBasic.css" />
+
 		<script src="ScatteredPolaroidsGallery/js/modernizr.min.js"></script>
+	<!----------------------------------------------->
+		<!-------------------SIDE BAR NAV ---------------------------->
+		<div id="page-container">
+			<div id="content-wrap">
+				<!---------- Side Bar --------->
+				<div id="mySidenav" class="sidenav">
+					<!-- The close button in the sidenav --------->
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style=" text-align: right; padding: 10px; font-family: garamond;"> &#x2715; </a>
+					<!-- create a home button leading back to the Home(main) page-->
+					<a href="index.html" style="text-align: center; font-size: 50px;"> &#8962; </a>
+					<a href="About.html" style="text-align:center;">About</a>
+					<!-- <a href="Favorites.html" style="text-align:center;">Favorites</a>-->
+					<a href="STO_SA.html" style="text-align: center;"> St. Olaf </a>
+					<!--drop down menu within the sidebar-->
+					<button style="background-color:#111; border-color: #111; margin: auto;" class="dropdown-btn"> Medium </button>
+					<div class="dropdown-container" style="text-align:center;">
+						<a href="2D portfolio.html"> 2-Dimensional</a>
+						<a href="3D portfolio.html"> 3-Dimensional</a>
+						<a href="New Media.html"> New Media</a>
+					</div>
+					<a href="NewNewPhotography.html" style="text-align:center;">Photography</a>
+					<a href="Contact.html" style="text-align:center;">Contact</a>
+					
+				</div>
+				<!---------------END OF SIDE BAR NAV--------------------------->
+				<!----------------------------------------------->
 	</head>
 	<body>
-		<section id="photostack-3" class="photostack">
-				<div>
-					<figure>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3dVaX0p7wnRzablLMzFN2MRos-ZlOgW8SgusLf6YzdQwQsLjFR9KeUAIMNvXOEmQfGZRJYfZuzxC10hTjdbmMBTK_JE1HOWFEKMJahQpPSYSX3z2wWHTWoWbF44eIKRiW21gY_S1F1eWwC9EoFPqgjqTg=w1652-h1240-no?authuser=0" class="photostack-img"><img src="
-							ScatteredPolaroidsGallery/img/Maui2016.jpg" alt="img01"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Maui 2016</h2>
-							<div class="photostack-back">
-								<p>[description of Maui to come] ere he comes Here comes Speed Racer. He's a demon on wheels. Wouldn't you like to get away? Sometimes you want to go where everybody knows <span>the</span> your name. And they're always glad you came! </p>
-							</div>
-						</figcaption>
-					</figure>
-					<figure>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3cubQCTG8sLTIfsV5SI0piUywM2wEtNiFMGnfzOg1R6EXcVysAO_JsL-k7HCRgiglMHcEnNJj8pTqFLEfEU-P5K4JwRo8ljBX0moSIKBigV7k9ybaoyrrPQWM_1exp5piQISfr1cZSaQU2y3B52wibOqA=w882-h912-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Interim01.jpg" alt="img02"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Interim01</h2>
-							<div class="photostack-back">
-								<p>These Happy Days are yours and mine Happy Days. It's a beautiful day in this neighborhood a beautiful day for a neighbor. Would you be mine?</p>
-							</div>
-						</figcaption>
-					</figure>
-					<figure>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3eigHSIplYwqnbZKGmirqLRCneP9RipOvB6b3hzWz3TShqGNNPMCyqU8u6Lb39mY_YZU4hWFGnee8HzaL2_Xhyw-hGlh6VjzzTdwHKH7TLkLFsJY8wPAIIoQFpgpyjXgF157BCqCLgT7H71T9Oaq2QJjQ=w882-h654-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Interim02.jpg" alt="img03"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Interim02</h2>
-							<div class="photostack-back">
-								<p>It's a neighborly day in this beautywood a neighborly day for a beauty. Would you be mine? Could you be mine. Now the world don't move to the beat of just one drum.</p>
-							</div>
-						</figcaption>
-					</figure>
-					<figure>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3fTh3zFSMRXBpcgffOJgn45zayYzSnkNm_IyK6Oh8OBtiFTFqOnmXhtN4n625IzSRbhsZ4K2o4WhMlfPl6wmbI20wUaX6azJmNE703GORirSj39JHQZq_EXAig91cqi7K-GXJrCSGRTF4V2D93yFo2RrQ=w882-h662-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Honolulu2019.jpg" alt="img04"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Honolulu</h2>
-							<div class="photostack-back">
-								<p>I have never been to a place so serene in my entire life before. Swimming in clear waters opened my mind to nature and reminded me of my and <span>eveybody</span> everybody else's mortality.</p>
-							</div>
-						</figcaption>
-					</figure>
-					<figure>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3eg1O3y1Rc8M7n2ZFrn-ZkveHPBB2wZIPRirOOzvdXPLZkI3h4AP33mZN1MtdIlzapeEI16c71uf7KkObH7YPmUC74kz-9ptIgi-U_87J76s109vNHLNKzzDuXHC_EKiaV6JZ-XTHV3GV4HFeDzQ3eY4g=w882-h498-k-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Denmark.jpg" alt="img05"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Denmark</h2>
-							<div class="photostack-back">
-								<p>What might be right for you may not be right for some. And we know Flipper lives in a world full of wonder flying there-under under the sea.</p>
-							</div>
-						</figcaption>
-					</figure>
-					<figure>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3c_d1iO_pcZpXxgYM7xfn2IHVpAtQqIXSFdyZXCFQ_bI3dWvJDRLo6fhjBytkPmPbS9C9i3gNwGC4ZlAOPMjZoOCJoGxpfNN786mg1kHvTlRT4VpPxXVrUtcutfSFx1uLYoOroBPSwb9e7YrJC4Y9n0IA=w882-h662-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Turkey.jpg" alt="img06"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Turkey</h2>
-							<div class="photostack-back">
-								<p>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Baby if you've ever wondered - wondered whatever became of me. </p>
-							</div>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="https://lh3.googleusercontent.com/pw/ACtC-3dRHw6rfwBxFe-zRIW5KO8msA_CteXrhaxIKOSXWdZyd47v-g4krCL-XfifAuhVNQkv2MnVOdfrDCrT3sureDcY0HLL0dBvFv-lt6NFISXvvNVkGnOJplYa3EJho9FGOr-IstYndkYGh0QdcdtMGM7YoQ=w1270-h954-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Taiwan.jpg" alt="img07"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Taiwan</h2>
-							<div class="photostack-back">
-								<p>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Baby if you've ever wondered - wondered whatever became of me. </p>
-							</div>
-						</figcaption>
-					
-					 </figure>
-					
-					<!-- <figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Love Addict</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Friendship</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
-						<figcaption>
-							<h2 class="photostack-title">White Nights</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Serendipity</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Pure Soul</h2>
-						</figcaption>
-					</figure>  -->
-
-		<!--------------------For more Photos------------------------->
-
-					<!-- <figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Winds of Peace</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Shades of blue</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Lightness</h2>
-						</figcaption>
-					</figure> -->
-				</div>
-			</section>
-			<!-- <section class="description">
-				<p>Photos by <a href="http://www.flickr.com/photos/rnugraha/">Riza Nugraha</a>, licensed under <a href="http://creativecommons.org/licenses/by/2.0/deed.en">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a></p>
-			</section> -->
 		
+				<div id="main">
+			        <span style="font-size:30px;cursor:pointer; padding: 20px" onclick="openNav()">&#9776; Menu </span>
+			        <br>
+			        <h1> Travels </h1>
+			        <br>
+			        <br>
+						<section id="photostack-3" class="photostack">
+							<div>
+								<figure>
+									<a href="https://lh3.googleusercontent.com/pw/AM-JKLUeS9NUXwzYPmIj5YMkQ_Od3d4O6n99P1LBLeHJg8oB7eHZJNh8xBa_Ux3HZ3rwkvXK7go570j0qx3tdb9C9Dh1MUT0CjYohXaXhZ-vPu4cltyuDadY2Gte-PT3PCr9v5d2GpXNG2KtEDg3yBuqlGKsuA=w1224-h1632-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Maui2016.jpg" style="object-fit: contain; overflow: hidden;" alt="img01"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Maui 2016</h2>
+									<div class="photostack-back">
+										<p>[description of Maui to come]  </p>
+									</div>
+									</figcaption>
+								</figure>
+								<figure>
+									<a href="https://lh3.googleusercontent.com/pw/AM-JKLWqx5OoVKMeyEjhkMnNT6ZDMZQKW6Mxib9cSTAaSTJci11peFcBTa0LeSvWN2AxGDPkl8mOXGoSDozyir0_0O8K0_N9DrHPAdVka9I_2RqnUc4WsI3k3pTYHpmh0ezCzxKmuV8HVwQHgQQL5_ObFnnkkA=w852-h1134-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Interim01.jpg" alt="img02"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Interim01</h2>
+									<div class="photostack-back">
+										<p>These Happy Days are yours and mine Happy Days. It's a beautiful day in this neighborhood a beautiful day for a neighbor. Would you be mine?</p>
+									</div>
+									</figcaption>
+								</figure>
+								<figure>
+									<a href="https://lh3.googleusercontent.com/pw/AM-JKLW2ZHZdsMyR620ouOT9pP-Rrupeca096hrc-4_19HT7Obad3uOKAoLK_l9mVCv_mLzw0v8usmKM8sTqgNmOFWc1PQUHKxOpskKGBhGbgktJtRGi0ahvC4bu7AVzC1aWdwmWTsvrqOkFKMtP-Pb6CSyuww=w852-h1134-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Interim02.jpg" alt="img03"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Interim02</h2>
+									<div class="photostack-back">
+										<p>It's a neighborly day in this beautywood a neighborly day for a beauty. Would you be mine? Could you be mine. Now the world don't move to the beat of just one drum.</p>
+									</div>
+									</figcaption>
+								</figure>
+								<figure>
+									<a href="https://lh3.googleusercontent.com/pw/AM-JKLUrd7mxrkbK0AFC8SFveS06RD8igaEFRY9nPUhitVtbgGqrxLbT05r9UCv7qVYqx2zTD9o6Qku29_O0UeoiwMsi_ovX7_LzAElPhsosdzYhZPbvFF2lcjSlRu-nSgbvc9eb64Fbr6FVKa6lzTRzP_mCsQ=w1224-h1632-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Honolulu2019.jpg" alt="img04"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Honolulu</h2>
+									<div class="photostack-back">
+										<p>I have never been to a place so serene in my entire life before. Swimming in clear waters opened my mind to nature and reminded me of my and <span>eveybody</span> everybody else's mortality.</p>
+									</div>
+									</figcaption>
+								</figure>
+								<figure>
+									<a href="https://lh3.googleusercontent.com/pw/ACtC-3fo98wHakl3zzWNHBYebkT6lN6rvgM9WthKZKwv_rmQ8P3NzDM1YVsMRC2iGrbJF5sX-kZH_rHussJjGtMGyCal11h3U2_iLGR8Gg1jeUUJG2-kumuh9rRolKwzWrSYO370WDtMb-Ii-9CL4hqMU1DAMw=w1222-h1628-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Denmark.jpg" alt="img05"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Denmark</h2>
+									<div class="photostack-back">
+										<p>What might be right for you may not be right for some. And we know Flipper lives in a world full of wonder flying there-under under the sea.</p>
+									</div>
+									</figcaption>
+								</figure>
+								<figure>
+									<a href="https://lh3.googleusercontent.com/pw/AM-JKLXLlajOxNVRJ9BFw7TUk0c34eSoVLBecE40RajUv9FsP3P8asCc6cz41-xlY_Yr9ahMw1dY0CyN_y6aT92UvmlM4pNeA_i0gzLuXRC6m7gDGjtxYwF-YGQL-tSBZFYmCDOBZSlzdoHjg1RF6IJvGLC9sA=w1224-h1632-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Turkey.jpg" alt="img06"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Turkey</h2>
+									<div class="photostack-back">
+										<p>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Baby if you've ever wondered - wondered whatever became of me. </p>
+									</div>
+									</figcaption>
+								</figure>
+								<figure data-dummy>
+									<a href="https://lh3.googleusercontent.com/pw/ACtC-3fPPwNkYaHIvAZnbZvHwiRPIf4AD5o6sMP0l2GHEbiUEL5XZBeUgEwBja5XKfeUH3VBZfaXjo-4rZQR-jC5zq0gJnMbPZ48WDM2T-yUaxxwP9zF2jbJTX3bycXCsRa8BHhqIS44jDzPuL_IptnOBQ3IfQ=w1022-h1360-no?authuser=0" class="photostack-img"><img src="ScatteredPolaroidsGallery/img/Taiwan.jpg" alt="img07"/></a>
+									<figcaption>
+									<h2 class="photostack-title">Taiwan</h2>
+									<div class="photostack-back">
+										<p>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Baby if you've ever wondered - wondered whatever became of me. </p>
+									</div>
+									</figcaption>
+									
+								</figure>
+								
+								<!-- <figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Love Addict</h2>
+											</figcaption>
+								</figure>
+								<figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Friendship</h2>
+											</figcaption>
+								</figure>
+								<figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
+											<figcaption>
+												<h2 class="photostack-title">White Nights</h2>
+											</figcaption>
+								</figure>
+								<figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Serendipity</h2>
+											</figcaption>
+								</figure>
+								<figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Pure Soul</h2>
+											</figcaption>
+								</figure>  -->
+								<!--------------------For more Photos------------------------->
+								<!-- <figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Winds of Peace</h2>
+											</figcaption>
+								</figure>
+								<figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Shades of blue</h2>
+											</figcaption>
+								</figure>
+								<figure data-dummy>
+											<a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
+											<figcaption>
+												<h2 class="photostack-title">Lightness</h2>
+											</figcaption>
+								</figure> -->
+							</div>
+							
+						</section>
+						<footer id="footer" style="text-align: center;">
+					<p> <sub>Lissie Chin &copy; 2021 </sub> </p>
+				</footer>
+					</div>
+				</div>
+				</div>
+				
+				<!-- <section class="description">
+							<p>Photos by <a href="http://www.flickr.com/photos/rnugraha/">Riza Nugraha</a>, licensed under <a href="http://creativecommons.org/licenses/by/2.0/deed.en">Creative Commons Attribution 2.0 Generic (CC BY 2.0)</a></p>
+				</section> -->
+				
+				<!-- </section> -->
+				<!--</div> /container -->
+				<script src="ScatteredPolaroidsGallery/js/classie.js"></script>
+				<script src="ScatteredPolaroidsGallery/js/photostack.js"></script>
+				<script src="ScatteredPolaroidsGallery/js/MenuNav.js"></script>
 
-			<!-- </section> -->
-		</div><!-- /container -->
-		<script src="ScatteredPolaroidsGallery/js/classie.js"></script>
-		<script src="ScatteredPolaroidsGallery/js/photostack.js"></script>
-		<script>
-			[].slice.call( document.querySelectorAll( '.photostack' ) ).forEach( function( el ) { new Photostack( el ); } );
-			
-			// new Photostack( document.getElementById( 'photostack-1' ), {
-			// 	callback : function( item ) {
-			// 		//console.log(item)
-			// 	}
-			// } );
-			// new Photostack( document.getElementById( 'photostack-2' ), {
-			// 	callback : function( item ) {
-			// 		//console.log(item)
-			// 	}
-			// } );
-			new Photostack( document.getElementById( 'photostack-3' ), {
-				callback : function( item ) {
-					//console.log(item)
-				}
-			} );
-		</script>
+				<script>
+					[].slice.call( document.querySelectorAll( '.photostack' ) ).forEach( function( el ) { new Photostack( el ); } );
+					
+					// new Photostack( document.getElementById( 'photostack-1' ), {
+							// 	callback : function( item ) {
+									// 		//console.log(item)
+							// 	}
+					// } );
+					// new Photostack( document.getElementById( 'photostack-2' ), {
+							// 	callback : function( item ) {
+									// 		//console.log(item)
+							// 	}
+					// } );
+					new Photostack( document.getElementById( 'photostack-3' ), {
+						callback : function( item ) {
+							//console.log(item)
+						}
+					} );
+				</script>
+			</div>
+		</div>
 	</body>
 </html>

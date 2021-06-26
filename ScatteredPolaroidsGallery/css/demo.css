@@ -12,6 +12,7 @@
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
+
 body {
 	background: #fff;
 	color: #a7a0a2;
@@ -267,3 +268,203 @@ svg.polaroid rect {
 	}
 
 }
+
+/*------ styling the SIDE BAR --------->
+/* the box-sizing enables the fitting (formating) of the website*/
+/*Adding in nav/sidebar stylistics*/
+h1 {
+text-align: center;
+font-family: garamond;
+border: 1px solid black;
+/* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+box-shadow: 20px 40px #caedeb;
+font-size: 40px;
+letter-spacing: 15px;
+text-shadow: 3px 2px #cacbcc;
+width: 450px;
+height: 100px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 20px
+}
+/* TRAVEL PAGE HEADING */
+.bg-image {
+/* Full height */
+height: 50%;
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+max-width: auto;
+}
+
+.img1 { background-image: url("DF6149AC-8F0D-4E27-8E73-38BE81EB6FE9.jpg"); }
+/* Position text in the middle of the page/image */
+.bg-text {
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+color: white;
+font-weight: bold;
+font-size: 80px;
+border: 10px solid #f1f1f1;
+position: center;
+transform: translate(150%, 60%);
+z-index: 2;
+width: 300px;
+padding: 20px;
+text-align: center;
+}
+/* Travel PAGE HEADER END
+*/
+.main {
+max-width: auto;
+margin: 0;
+}
+
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+font-family: garamond
+}
+
+.sidenav a,
+.dropdown-btn {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-family: garamond;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: sticky;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+.openbtn {
+font-size: 20px;
+cursor: pointer;
+background-color: #111;
+color: white;
+padding: 10px 15px;
+border: none;
+position: sticky;
+}
+.openbtn:hover {
+background-color: #444;
+}
+#main {
+transition: margin-left .5s;
+padding: 0px;
+}
+.dropdown {
+background-color: #111;
+}
+/* makes the drop down background lighter*/
+.dropdown-container {
+display: none;
+background-color: #262626;
+padding-left: 8px;
+}
+.fa-caret-down {
+float: right;
+padding-right: 75px;
+}
+/* active class to activate when clicked on */
+*.active {
+background-color: #caedeb;
+color: white;
+}
+/*--On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)*/
+@media screen and (max-height: 450px) {
+.sidebar {
+padding-top: 15px;
+}
+.sidebar a {
+font-size: 18px;
+}
+#page-container {
+position: relative;
+min-height: 100%;
+}
+/* ----------footer styling ----------------*/
+#content-wrap {
+padding-bottom: 2.5px;
+/* Footer height  & em refers to the font-size (2.5 times the font size */
+}
+/*    begining new layout CSS     */
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+.column {
+width: 100%;
+}
+}
+.container {
+position: relative;
+max-width: 800px;
+/* Maximum width */
+margin: 0 auto;
+/* Center it */
+}
+.container .content {
+position: absolute;
+/* Position the background text */
+bottom: 0;
+/* At the bottom. Use top:0 to append it to the top */
+background: rgb(0, 0, 0);
+/* Fallback color */
+background: rgba(0, 0, 0, 0.5);
+/* Black background with 0.5 opacity */
+color: #f1f1f1;
+/* Grey text */
+width: 100%;
+/* Full width */
+padding: 20px;
+/* Some padding */
+height: auto;
+-webkit-animation: fadeEffect 1s;
+animation: fadeEffect 1s;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+@keyframes fadeEffect {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+/* SLIDE BAR STYLING */
+/*.mySlides {
+display: none;
+}*/
+/* End of nav stylings*/
+
+
