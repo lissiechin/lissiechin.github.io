@@ -187,7 +187,7 @@ img {
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 
 figcaption {
-  background-color: #cccc;
+  background-color: black;
   color: #ccc;
   font-style: italic;
   font-family: garamond;
