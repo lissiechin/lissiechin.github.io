@@ -12,7 +12,7 @@
     window, addEventListener('resize',init);
 
     images.forEach((img, indx) => {
-        img.style.backgroundImage = `url(/Content/images/TravelSlider/${idx+1}.jpg)`
+        img.style.backgroundImage = `url(./Content/images/TravelSlider/${idx+1}.jpg)`
     })
 
     function lerp(start, end, t){
@@ -52,7 +52,7 @@
 
 
 
-/* MENU NAV button */
+/* ---------- MENU NAV button ------------- */
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
