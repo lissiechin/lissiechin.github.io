@@ -48,7 +48,7 @@
     }
 
     init();
-    animate()
+    animate();
 
 
 
