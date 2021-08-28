@@ -43,3 +43,26 @@ Working Pages:
 
 
 HTML Reference: https://www.w3schools.com/
+
+Minymom
+	Animation script
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie_svg.min.js" type="text/javascript">
+		</script>
+
+	Minymon Script
+		<script 
+		  src="https://api.minymon.com/minymon.js" 
+		  defer
+		  type="text/javascript">
+		</script>
+
+	Minymon Content
+		<div style="position:relative;z-index:2147483647">
+	  <minymon-body enableFeed="true" enableTalk="true" idsString="MWFkZmVkMjctYmM0Ny00ZjgyLWEwMGQtYjI2ODUyOWUzY2JkLmRXdWxNOElOa19SaWc1aC1feHdrWQ==" infoTitle="Hi there!" theme="blue">
+	    <minymon-feedback description="Your message will be sent to the owner of this site." mid="1adfed27-bc47-4f82-a00d-b268529e3cbd" theme="blue" uid="dWulM8INk_Rig5h-_xwkY">
+	    </minymon-feedback>
+	    <minymon-dialog dialog="%5B%7B%22id%22%3A%22zByK3EAEASLn807W7uNl_%22%2C%22prompt%22%3A%22Hello%20there%21%20%22%2C%22responses%22%3A%5B%7B%22id%22%3A%22QO2kXTfbUOAJ-LrY8STGJ%22%2C%22response%22%3A%22Hi%21%22%2C%22nextPromptId%22%3Anull%7D%5D%7D%2C%7B%22id%22%3A%22FaCyClWOnGBjbvqE2r76S%22%2C%22prompt%22%3A%22Thanks%20for%20visiting%20Lissie%u2019s%20portfolio%22%2C%22responses%22%3A%5B%5D%7D%5D" theme="blue">
+	    </minymon-dialog>
+	  </minymon-body>
+	</div>
+	
