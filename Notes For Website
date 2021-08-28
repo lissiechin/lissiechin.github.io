@@ -4,36 +4,42 @@ What to work on
 	- Relink Pages
 			Travel - Specific places of travel
 	- Adding photos from travel
-	- Parallax slider for photography page (new)
-			OR activate the pagination at the bottom
-	- Video playback
-			Studio Art / New media & 3D: play video in website, without having to open link
+	- New photography page
+			Parallax slider for photography page (new)
+					OR activate the pagination at the bottom
+
+					OR dropdown menu and no main photography page
+
 	- Making the medium page(s) - art non school related or past-past works
 
 
-New photography page
 
 Working Pages: 
-	Home
-	About
-	STO
-		Studio Art
-		Asian Studies/Chinese
+	√ Home
+	√ About
+	√ STO
+		√ Studio Art
+		√ Asian Studies/Chinese
 		Computer Science
 
 	(Medium - for artwork other than school)
 	Photography
 		( X favorites)
 		Travels
-			(X Maui)
-			(X Interim p1)
-			(X Interim p2)
-			(X Honolulu)
-			(X Denmark)
-			(X Turkey)
-			(X Taiwan)
+			√ Maui completed!
+			(√ Interim p1)
+				- Half photos completed
+			(√ Interim p2)
+			(√ Honolulu)
+			(√ Denmark)
+			(√ Turkey)
+			√ Taiwan completed!
 
 		(X collections)
 		(X animals)
 		(X other)
-	Contact
+	√ Contact
+
+
+
+HTML Reference: https://www.w3schools.com/
