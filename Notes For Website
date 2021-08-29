@@ -1,4 +1,4 @@
-Notes For Website
+Notes For Website & References
 
 What to work on
 	- Relink Pages
@@ -47,7 +47,7 @@ Working Pages:
 
 
 HTML Reference: https://www.w3schools.com/
-
+---------------------------------------------
 Minymom
 	Animation script
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie_svg.min.js" type="text/javascript">
@@ -70,3 +70,9 @@ Minymom
 	  </minymon-body>
 	</div>
 
+---------------------------------------------
+
+Embed Google Slide into HTML code
+https://www.appscare.com/2015/03/embed-google-slides-webpage/
+
+----------------------------------------------
