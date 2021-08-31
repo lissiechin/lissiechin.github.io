@@ -25,9 +25,7 @@ border-radius: 50px;
 background-color: #555;
 }
 /*------*/
-* {
-box-sizing: border-box;
-}
+
 h1 {
 text-align: center;
 font-family: garamond;
@@ -43,35 +41,7 @@ margin-left: auto;
 margin-right: auto;
 padding-top: 20px
 }
-/* TRAVEL PAGE HEADING */
-.bg-image {
-/* Full height */
-height: 50%;
 
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-max-width: auto;
-}
-.img1 { background-image: url("DF6149AC-8F0D-4E27-8E73-38BE81EB6FE9.jpg"); }
-/* Position text in the middle of the page/image */
-.bg-text {
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-color: white;
-font-weight: bold;
-font-size: 80px;
-border: 10px solid #f1f1f1;
-position: center;
-transform: translate(150%, 60%);
-z-index: 2;
-width: 300px;
-padding: 20px;
-text-align: center;
-}
-/* Travel PAGE HEADER END
-*/
 .main {
 max-width: auto;
 margin: 0;
