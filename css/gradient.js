@@ -5,7 +5,7 @@ var gradient = document.querySelector("gradient")
 
 function setGradient(){
 	gradient.style.backgroud = "linear-gradient (45deg, "
-	+ cplor1.value
+	+ color1.value
 	+", "
 	+color2.value
 	+")";
