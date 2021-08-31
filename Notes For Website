@@ -99,6 +99,7 @@ http://www.learningaboutelectronics.com/Articles/How-to-embed-a-microsoft-word-d
 More about <iframe>
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
+prevent download add #toolbar=0 after URL
 ----------------------------------------------
 
 
