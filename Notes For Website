@@ -30,6 +30,8 @@ Working Pages:
 				Paw Program sticker
 		(√ Asian Studies/Chinese)
 		(Computer Science)
+				Add py project to website
+				Maybe find my projects from CSCI 121 class?
 
 
 	(Medium - for artwork other than school)
@@ -53,6 +55,10 @@ Working Pages:
 
 
 HTML/Js/CSS Design Reference: https://www.w3schools.com/
+---------------------------------------------
+Tab Icon
+	 <link rel="icon" href="[Image link]" type="image/x-icon">
+
 ---------------------------------------------
 Minymom
 	Animation script
@@ -83,6 +89,19 @@ https://www.appscare.com/2015/03/embed-google-slides-webpage/
 
 ----------------------------------------------
 
+Embed Word document in HTML
+
+use the API provided by microsoft
+http://www.learningaboutelectronics.com/Articles/How-to-embed-a-microsoft-word-document-on-a-web-page-HTML.php
+
+----------------------------------------------
+
+More about <iframe>
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+
+----------------------------------------------
+
+
 Parallax Scrolling: https://freefrontend.com/css-parallax/
 - https://www.w3schools.com/howto/howto_css_parallax.asp (basic knowledge)
 - https://codepen.io/Booligoosh/pen/eKjeLa (horizontal)
@@ -99,6 +118,13 @@ Color Gradient (not insta ref)
 https://www.google.com/amp/s/www.geeksforgeeks.org/how-to-create-linear-gradient-color-generator-using-html-css-and-javascript/amp/
 
 --------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+
 CODING HELP
 
 Updating Github Repo
@@ -108,4 +134,11 @@ Updating Github Repo
 
 Moving files within Repo
 		git mv (file name) (destination)
+
+
+Soft Reset
+
+
+Cloning Repo (have not used this at all)
+		$ git clone https://github.com/<username>/<projectname>
 
