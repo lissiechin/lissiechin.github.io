@@ -1,6 +1,7 @@
 Notes For Website & References
 
 What to work on
+	- Index.html; fixing the "Hello" and "thanks" typewriting effect 
 	- Relink Pages
 			Travel - Specific places of travel
 	- Adding photos from travel
@@ -22,7 +23,11 @@ Working Pages:
 	√ STO
 		√ Studio Art
 		Wellness Center
-				2 squirrel stickers not visible?
+				Event & Resources
+					Fix padding edits
+				1 squirrel stickers not visible? & fix image pop-up
+				Bias Response Team Buttons
+				Paw Program sticker
 		(√ Asian Studies/Chinese)
 		(Computer Science)
 
@@ -85,5 +90,6 @@ Parallax Scrolling: https://freefrontend.com/css-parallax/
 - https://codepen.io/chalavacs/pen/jrVPLx (smooth parallax scroll)
 - https://codepen.io/iprodev/pen/rVPrdr (background parallax)
 - https://codepen.io/antho-fsy/pen/vYmLvZy (parallax slide and fade in/out text)
+-https://codepen.io/adrienloup/pen/zYZJaEg (magazine vibe sider)
 
 		- https://codepen.io/sgorneau/pen/vQzgrz (parallax text animation)
