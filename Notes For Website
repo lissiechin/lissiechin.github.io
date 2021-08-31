@@ -52,7 +52,7 @@ Working Pages:
 
 
 
-HTML Reference: https://www.w3schools.com/
+HTML/Js/CSS Design Reference: https://www.w3schools.com/
 ---------------------------------------------
 Minymom
 	Animation script
@@ -93,3 +93,19 @@ Parallax Scrolling: https://freefrontend.com/css-parallax/
 -https://codepen.io/adrienloup/pen/zYZJaEg (magazine vibe sider)
 
 		- https://codepen.io/sgorneau/pen/vQzgrz (parallax text animation)
+
+----------------------------------------------
+Color Gradient (not insta ref)
+https://www.google.com/amp/s/www.geeksforgeeks.org/how-to-create-linear-gradient-color-generator-using-html-css-and-javascript/amp/
+
+--------------------------------------------------------------------------------------------
+CODING HELP
+
+Updating Github Repo
+		git add .  OR  git add (specific file)
+		git commit -m "[comment on edits]"
+		git push origin master
+
+Moving files within Repo
+		git mv (file name) (destination)
+
