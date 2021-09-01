@@ -134,3 +134,17 @@ background-color: #555;
 }
 /*------*/
 
+/* ----------footer styling ----------------*/
+/*footnote with name & date edited */
+#footer{
+background: #f1f1f1;
+padding: 10px;
+text-align: center;
+font-size: 11px;
+font-family: garamond;
+color: black;
+display: block;
+}
+/* Footer height */
+/*------ styling the SIDE BAR --------->
+/* the box-sizing enables the fitting (formating) of the website*/
