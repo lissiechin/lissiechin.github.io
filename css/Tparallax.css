@@ -2,7 +2,7 @@
 
  /* Travel parallax slider stylesheet*/
 ::-webkit-scrollbar {
-  width: 13px; // to adjust width
+  width: 10px; // to adjust width
 }
 
 ::-webkit-scrollbar-track {
