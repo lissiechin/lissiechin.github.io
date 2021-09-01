@@ -2,13 +2,13 @@
 
  /* Travel parallax slider stylesheet*/
 ::-webkit-scrollbar {
-  width: 13px; // to adjust width
+  width: 13px; /*// to adjust width*/
 }
 
 ::-webkit-scrollbar-track {
   background: #FFFFFF;
   -webkit-box-shadow: inset 1px 1px 2px #E0E0E0;
-  border: 1px solid #D8D8D8; //color of the track of scroll bar
+  border: 1px solid #D8D8D8; /*//color of the track of scroll bar*/
 }
 
 ::-webkit-scrollbar-thumb {
