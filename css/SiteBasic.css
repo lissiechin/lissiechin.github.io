@@ -21,22 +21,6 @@ padding-top: 60px;
 font-family: garamond
 }
 
-h1 {
-text-align: center;
-font-family: garamond;
-border: 1px solid black;
-/* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
-box-shadow: 20px 40px #caedeb;
-font-size: 40px;
-letter-spacing: 15px;
-text-shadow: 3px 2px #cacbcc;
-width: 450px;
-height: 100px;
-margin-left: auto;
-margin-right: auto;
-padding-top: 20px
-}
-
 .main {
 max-width: auto;
 margin: 0;
@@ -133,6 +117,22 @@ border-radius: 50px;
 background-color: #555;
 }
 /*------*/
+
+h1 {
+text-align: center;
+font-family: garamond;
+border: 1px solid black;
+/* box-shadow: first # = horizontal offset; second # = vertical offset; last = color*/
+box-shadow: 20px 40px #caedeb;
+font-size: 40px;
+letter-spacing: 15px;
+text-shadow: 3px 2px #cacbcc;
+width: 450px;
+height: 100px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 20px
+}
 
 /* ----------footer styling ----------------*/
 /*footnote with name & date edited */
