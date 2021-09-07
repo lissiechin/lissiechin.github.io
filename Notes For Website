@@ -1,9 +1,32 @@
 Notes For Website & References
 —————————————————————————————————————————
-Personal Access Token
-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
-—————————————————————————————————————————
+Git Coding References
 
+CODING HELP
+
+Updating Github Repo
+		git add .  OR  git add (specific file)
+		git commit -m "[comment on edits]"
+		git push origin master
+
+Moving files within Repo
+		git mv (file name) (destination)
+
+
+Soft Reset
+
+
+Cloning Repo (have not used this at all)
+		$ git clone https://github.com/<username>/<projectname>
+
+When you use git fetch, you're adding changes from the remote repository to your local working branch without committing them. Unlike git pull, fetching allows you to review changes before committing them to your local branch.
+
+
+
+
+
+
+———————————————————————————————————————————
 What to work on
 	- Index.html; fixing the "Hello" and "thanks" typewriting effect 
 	- Relink Pages
@@ -123,6 +146,26 @@ Color Gradient (not insta ref)
 https://www.google.com/amp/s/www.geeksforgeeks.org/how-to-create-linear-gradient-color-generator-using-html-css-and-javascript/amp/
 
 --------------------------------------------------------------------------------------------
+
+Look throught this (other useful references)
+
+Website Reference Sites
+
+https://www.youtube.com/watch?v=dIVVaysbNNI (creating a blog PHP)
+
+Dynamic PHP blog
+https://www.seamedia.in/blog/create-dynamic-blog-in-easy-steps/
+
+Menu
+http://www.menucool.com/slider/create-image-slider-dynamically
+
+Pagniation
+https://uicookies.com/pagination-css/
+https://getuikit.com/v2/docs/pagination-js.html
+
+Database Query Builder
+https://laravel.com/docs/7.x/queries
+
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
@@ -130,20 +173,5 @@ https://www.google.com/amp/s/www.geeksforgeeks.org/how-to-create-linear-gradient
 --------------------------------------------------------------------------------------------
 
 
-CODING HELP
 
-Updating Github Repo
-		git add .  OR  git add (specific file)
-		git commit -m "[comment on edits]"
-		git push origin master
-
-Moving files within Repo
-		git mv (file name) (destination)
-
-
-Soft Reset
-
-
-Cloning Repo (have not used this at all)
-		$ git clone https://github.com/<username>/<projectname>
 
