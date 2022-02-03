@@ -12,7 +12,8 @@ width: 400px;
 height: 100px;
 margin-left: auto;
 margin-right: auto;
-padding-top: 8px
+padding-top: 8px;
+display; flex: 
 }
 
 #page-container {
