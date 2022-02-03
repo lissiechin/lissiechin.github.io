@@ -25,6 +25,8 @@ h1{
     padding-top: 5px;
     background-color: white;
     margin: auto;
+    display: table-cell;
+
   }
 
 /*.header {
@@ -33,7 +35,7 @@ h1{
   font-size: 50px;
 }*/
 
-.row h1{
+.row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
