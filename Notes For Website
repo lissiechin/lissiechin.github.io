@@ -14,7 +14,9 @@ Moving files within Repo
 
 
 Soft Reset
-
+	git reset --soft Head~#
+	
+	git reset --hard HEAD~#
 
 Cloning Repo (have not used this at all)
 		$ git clone https://github.com/<username>/<projectname>
